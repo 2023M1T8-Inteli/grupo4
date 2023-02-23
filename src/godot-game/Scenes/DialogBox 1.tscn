@@ -1,0 +1,164 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Textura Caixa.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/DialogBox 1.gd" type="Script" id=3]
+[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 39
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 310, 63 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "hover"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 310, 65 ), Vector2( 310, 60 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("DialogBox 1/TexturaCaixa/SpookRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DialogBox 1/TexturaCaixa/SpookRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "dissolve"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("DialogBox 1/TexturaCaixa/SpookRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DialogBox 1/TexturaCaixa/SpookRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="DialogBox 1" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="TexturaCaixa" type="TextureRect" parent="."]
+margin_left = 16.0
+margin_top = 544.0
+margin_right = 344.0
+margin_bottom = 623.0
+rect_pivot_offset = Vector2( 51, 17 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+dialogPath = "res://Text Files/Text0.json"
+
+[node name="NomeNPC" type="RichTextLabel" parent="TexturaCaixa"]
+margin_left = 12.0
+margin_top = -56.0
+margin_right = 315.0
+margin_bottom = -3.0
+custom_fonts/normal_font = SubResource( 1 )
+
+[node name="Label" type="RichTextLabel" parent="TexturaCaixa"]
+margin_left = 13.0
+margin_top = 9.0
+margin_right = 310.0
+margin_bottom = 69.0
+custom_fonts/normal_font = SubResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="TexturaCaixa"]
+position = Vector2( 310, 63 )
+scale = Vector2( 0.692308, 0.692308 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 8, 13, 16, 0, 7.53802, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TexturaCaixa/Polygon2D"]
+anims/RESET = SubResource( 3 )
+anims/hover = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="TexturaCaixa"]
+wait_time = 0.05
+
+[node name="SpookRect" type="ColorRect" parent="TexturaCaixa"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -16.0
+margin_top = -544.0
+margin_right = 344.0
+margin_bottom = 96.0
+
+[node name="SpookPlayer" type="AnimationPlayer" parent="TexturaCaixa/SpookRect"]
+root_node = NodePath("../../../..")
+anims/RESET = SubResource( 5 )
+anims/dissolve = SubResource( 6 )
+
+[node name="TextureButton" type="TextureButton" parent="TexturaCaixa"]
+margin_left = -16.0
+margin_top = -544.0
+margin_right = 344.0
+margin_bottom = 96.0
+action_mode = 0
+
+[node name="Timer2" type="Timer" parent="TexturaCaixa"]
+wait_time = 0.02
+
+[connection signal="pressed" from="TexturaCaixa/TextureButton" to="TexturaCaixa" method="_on_TextureButton_pressed"]
