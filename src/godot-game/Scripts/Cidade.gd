@@ -12,5 +12,20 @@ func _ready():
 	# Mostra o personagem principal e esconde o fantasma
 	get_node("Player/Ze").visible = true
 	get_node("Player/Fantasma").visible = false
-
+	
+	get_node("ColorRect/WiresTask").connect("task_complete", self, "task_complete")
+	
 	pass
+
+
+
+func _on_TextureButton_pressed():
+	$GUI.visible = false
+	$ColorRect/WiresTask.visible = true
+	
+	
+func task_complete():
+	$ColorRect/Timer.start()
+	yield($ColorRect/Timer, "timeout")
+	$GUI.visible = true
+	$ColorRect/WiresTask.visible = false
