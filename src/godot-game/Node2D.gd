@@ -19,7 +19,7 @@ var purpleCorrect = false
 var yellowCorrect = false
 
 
-func _process(delta):
+func _process(_delta):
 	if blueCorrect == true and redCorrect == true and purpleCorrect == true and yellowCorrect == true:
 		print("TODOS MEUS OVOS COLORIDOS")
 		emit_signal("task_complete")

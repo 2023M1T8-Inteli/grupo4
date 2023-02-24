@@ -29,3 +29,5 @@ func task_complete():
 	yield($ColorRect/Timer, "timeout")
 	$GUI.visible = true
 	$ColorRect/WiresTask.visible = false
+	$ColorRect/TextureButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$ColorRect.color = Color("34921d")
