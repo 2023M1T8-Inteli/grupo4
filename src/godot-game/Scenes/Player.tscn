@@ -89,12 +89,11 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="ZeCorrendo" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 12 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="ZeIdle" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 13 )
-frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
