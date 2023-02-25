@@ -109,9 +109,13 @@ func nextPhrase() -> void:
 
 
 func _on_TextureButton_pressed():
+	# Avança para a próxima frase se o diálogo foi finalizado
 	if finished:
 		nextPhrase()
+	# Caso contrário, exibe todo o texto da frase
 	else:
 		$Label.visible_characters = len($Label.text)
+		
+	# Verifica se o diálogo foi finalizado e emite o sinal de "finish"
 	if phraseNum == len(dialog) and finished == true:
 		emit_signal("finish")

@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Textura Caixa.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/DialogBox 1.gd" type="Script" id=3]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
@@ -100,7 +99,6 @@ tracks/1/keys = {
 }
 
 [node name="DialogBox 1" type="CanvasLayer"]
-script = ExtResource( 3 )
 
 [node name="TexturaCaixa" type="TextureRect" parent="."]
 margin_left = 16.0

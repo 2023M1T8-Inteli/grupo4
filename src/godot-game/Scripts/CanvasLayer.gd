@@ -1,53 +1,40 @@
 extends CanvasLayer
 
+# Variável para armazenar se a interface do usuário estava visível antes da pausa
 onready var guiWasVisible
-# onready var dialogWasVisible
-
-#func _ready():
-#	$GUI.visible = false
-#	$DialogBox.visible = true
-
-#func _on_TexturaCaixa_finish():
-#	$DialogBox.visible = false
-##	SceneTransition.change_scene("res://Scenes/Reincarn.tscn")
-##	yield(get_tree().create_timer(10), "timeout")
-#	$GUI.visible = true
-#	SceneTransition.change_scene("res://Scenes/Cidade.tscn")
 
 func _on_PauseButton_pressed():
+	# Verifica se a interface do usuário está visível
 	if $GUI.visible == true:
+		# Esconde a interface do usuário e armazena que ela estava visível antes da pausa
 		$GUI.visible = false
 		guiWasVisible = true
 	else:
+		# Esconde a interface do usuário e armazena que ela estava escondida antes da pausa
 		$GUI.visible = false
 		guiWasVisible = false
-#	if $DialogBox.visible == true:
-#		$DialogBox.visible = false
-#		dialogWasVisible = true
-#	else:
-#		$DialogBox.visible = false
-#		dialogWasVisible = false
 	
+	# Mostra a tela de pausa
 	$PauseScreen.visible = true
 	
+	# Define o filtro de mouse dos botões de início e saída da tela de pausa para não permitir interação
 	get_node("PauseScreen/StartButton").mouse_filter = Control.MOUSE_FILTER_STOP
 	get_node("PauseScreen/QuitButton").mouse_filter = Control.MOUSE_FILTER_STOP
 	
 
 func _on_StartButton_pressed():
+	# Define o filtro de mouse dos botões de início e saída da tela de pausa para permitir interação
 	get_node("PauseScreen/StartButton").mouse_filter = Control.MOUSE_FILTER_IGNORE
 	get_node("PauseScreen/QuitButton").mouse_filter = Control.MOUSE_FILTER_IGNORE
-	
-#	if dialogWasVisible:
-#		$DialogBox.visible = true
+
+	# Se a interface do usuário estava visível antes da pausa, mostra novamente
 	if guiWasVisible:
 		$GUI.visible = true
 		
+	# Esconde a tela de pausa
 	$PauseScreen.visible = false
 
 
 func _on_QuitButton_pressed():
+	# Muda a cena para a tela de título
 	SceneTransition.change_scene("res://Scenes/Title Screen.tscn")
-	
-	
-

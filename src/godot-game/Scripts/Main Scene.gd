@@ -1,16 +1,17 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
+# Função que é chamada quando a cena é carregada
 func _ready():
-	pass # Replace with function body.
+	# Obtém a textura da caixa de diálogo e conecta o sinal "finish" a esta cena
+	var textura_dialogo =  $"DialogBox 1/TexturaCaixa"
+	textura_dialogo.connect("finish", self, "_on_TexturaCaixa_finish")
+	
+	# Torna o nó do fantasma visível e o nó do Ze invisível
+	get_node("Player/Fantasma").visible = true
+	get_node("Player/Ze").visible = false
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+# Função que é chamada quando a animação da caixa de diálogo termina
+func _on_TexturaCaixa_finish():
+	
+	# Muda para a cena "Cidade.tscn" usando a classe "SceneTransition"
+	SceneTransition.change_scene("res://Scenes/Cidade.tscn")

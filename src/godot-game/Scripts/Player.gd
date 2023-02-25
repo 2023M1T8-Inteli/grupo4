@@ -81,48 +81,54 @@ func _physics_process(_delta):
 	
 	_player_dir()
 
-func _on_LeftButton_pressed():
-	print("p")
+
 #Funcao responsavel por controlar que direcao o player esta olhando enquanto/apos se mexer
 func flip_sprites(flip: bool):
+	# Inverte a sprite horizontalmente de acordo com a direcao do jogador
 	spriteA.flip_h = flip
 	spriteB.flip_h = flip
 	zeIdle.flip_h = flip
 	zeCorre.flip_h = flip
-	
+
+# Funcao que lida com a troca de sprites entre parado e andando
 func idle_sprites(show_idle: bool):
+	# Altera a visibilidade das sprites para mostrar a animacao parada ou andando
 	zeIdle.visible = show_idle
 	zeCorre.visible = not show_idle
 
 func _player_dir():
-		
-	var fLeft
-	var fRight
-	var fUp
-	var fDown
-	
+	# Variáveis para armazenar a direção do jogador
+	var fLeft = false
+	var fRight = false
+	var fUp = false
+	var fDown = false
+
+	# Verifica se o jogador está parado
 	if vel.x == 0 and vel.y == 0:
 		idle_sprites(true)
 	else:
 		idle_sprites(false)
 	
-	#Faz player olhar para direcao que esta andando	
+	# Faz o jogador olhar para a direção que está se movendo
 	if vel.x < 0:
 		fLeft = true
 		fRight = false
 	elif vel.x > 0:
 		fRight = true
 		fLeft = false
-	#Faz a sprite das costas aparecer qdo o player se move verticalmente para baixo
+	
+	# Mostra a sprite das costas quando o jogador se move verticalmente para baixo
 	if vel.y < 0:
 		fDown = true
 		fUp = false
 	elif vel.y > 0:
+		# Mostra a sprite da frente quando o jogador se move verticalmente para cima
 		spriteA.visible = true
 		spriteB.visible = false
 		fUp = true
 		fDown = false
 		
+	# Volta a sprite para a posição normal dependendo da direção em que o jogador está se movendo
 	if fLeft == true:
 		flip_sprites(true)
 	if fRight == true:

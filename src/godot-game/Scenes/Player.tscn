@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Sprites/sprite/frame_2_delay-0.2s.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Sprites/sprite_b/frame_4_delay-0.2s.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/sprite_b/frame_3_delay-0.2s.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Ze/ze_parado/frame_2_delay-0.2s.png" type="Texture" id=13]
-[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=16]
 [ext_resource path="res://Sprites/Ze/ze_parado/frame_1_delay-0.2s.png" type="Texture" id=22]
 [ext_resource path="res://Sprites/Ze/ze_correndo/ze_correndo2.png" type="Texture" id=23]
 [ext_resource path="res://Sprites/Ze/ze_correndo/ze_correndo3.png" type="Texture" id=24]
@@ -73,13 +72,14 @@ scale = Vector2( 0.42, 0.42 )
 position = Vector2( 0, -2.38095 )
 scale = Vector2( -0.298, 0.298 )
 frames = SubResource( 3 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="Ghost" type="AnimatedSprite" parent="Fantasma"]
 position = Vector2( 0, -2.38095 )
 scale = Vector2( 0.297619, 0.297619 )
 frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="Ze" type="Node2D" parent="."]
@@ -94,13 +94,12 @@ playing = true
 
 [node name="ZeIdle" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 13 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 smoothing_enabled = true
-script = ExtResource( 16 )
 
 [node name="JoystickButtons" type="CanvasLayer" parent="."]
 
