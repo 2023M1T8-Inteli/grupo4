@@ -89,6 +89,12 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 0.1.3.1 - 27/02/2023
     * MUDANÇA: Recomentar scene_transition.gd 
       Mudar animation smoothing do player 
+* 0.1.4.0 - 27/02/2023
+    *  Adicionar task DrunkWireTask
+    *  Adicionar logo do Jogo
+    *  Adicionar 2 TileMaps (Thomas)
+    *  Atualizar Versao para 0.1.4.0
+    *  Remover executaveis para preparar export novo
 
 ## 📋 Licença/License
 
