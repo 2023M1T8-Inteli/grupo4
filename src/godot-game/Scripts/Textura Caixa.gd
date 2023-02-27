@@ -19,7 +19,6 @@ var phraseNum = 0
 
 func _ready():
 	$FinishArrow/AnimationPlayer.play("hover")
-#	$ReturnArrow/AnimationPlayer.play("hover")
 	$ReturnArrow/ReturnButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	
 	# Define o tempo de espera do Timer
@@ -37,11 +36,11 @@ func _ready():
 func _process(_delta):
 	# Torna as setinhas visíveis quando o diálogo termina e ativa o botao de retorno de dialogo
 	$FinishArrow.visible = finished
-	if phraseNum > 1:
-		$ReturnArrow.visible = finished
+	if phraseNum > 1 and finished == true:
+		$ReturnArrow.color = ("ffffff")
+		$ReturnArrow/ReturnButton.mouse_filter = Control.MOUSE_FILTER_STOP
 	else:
-		$ReturnArrow.visible = false
-	$ReturnArrow/ReturnButton.mouse_filter = Control.MOUSE_FILTER_STOP
+		$ReturnArrow.color = ("656565")
 	
 	# Verifica se o botão de interação foi pressionado
 	if Input.is_action_just_pressed("interact"):
