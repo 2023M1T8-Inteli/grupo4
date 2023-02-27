@@ -18,4 +18,5 @@ func _on_QuitButton_pressed():
 
 # Quando o botão "Controles" é pressionado, a cena com informações sobre as mecânicas do jogo é exibida.
 func _on_ControlsButton_pressed():
-	get_tree().change_scene("res://Scenes/Controls.tscn")
+	if get_tree().change_scene("res://Scenes/Controls.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the scene")

@@ -7,7 +7,8 @@ func _ready():
 	get_node("Player/Fantasma").visible = false
 	
 	# Conecta o sinal de conclusão da tarefa ao método task_complete
-	get_node("ColorRect/WiresTask").connect("task_complete", self, "task_complete")
+	if get_node("ColorRect/WiresTask").connect("task_complete", self, "task_complete") != OK:
+		print ("An unexpected error occured when trying to connect to the signal")
 	
 	# Passa o controle para o próximo método
 	pass

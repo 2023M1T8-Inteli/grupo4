@@ -75,7 +75,8 @@ func _physics_process(_delta):
 		vel.y += speed
 		
 	if Input.is_action_pressed("pause"):
-		get_tree().change_scene("res://Scenes/Title Screen.tscn")
+			if get_tree().change_scene("res://Scenes/Title Screen.tscn") != OK:
+				print ("An unexpected error occured when trying to switch to the scene")
 
 	vel = move_and_slide(vel, Vector2.UP)
 	
