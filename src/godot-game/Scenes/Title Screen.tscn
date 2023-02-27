@@ -100,14 +100,14 @@ custom_fonts/normal_font = SubResource( 2 )
 text = " CONTROLES"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 304.0
+margin_left = 300.0
 margin_top = 616.0
-margin_right = 398.0
+margin_right = 394.0
 margin_bottom = 656.0
 mouse_filter = 2
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
-text = " VER 0.1"
+text = " VER 0.1.1"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
