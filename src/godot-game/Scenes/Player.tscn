@@ -72,14 +72,14 @@ scale = Vector2( 0.42, 0.42 )
 position = Vector2( 0, -2.38095 )
 scale = Vector2( -0.298, 0.298 )
 frames = SubResource( 3 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="Ghost" type="AnimatedSprite" parent="Fantasma"]
 position = Vector2( 0, -2.38095 )
 scale = Vector2( 0.297619, 0.297619 )
 frames = SubResource( 2 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="Ze" type="Node2D" parent="."]
@@ -94,11 +94,13 @@ playing = true
 
 [node name="ZeIdle" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 13 )
+frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 smoothing_enabled = true
+smoothing_speed = 10.0
 
 [node name="JoystickButtons" type="CanvasLayer" parent="."]
 

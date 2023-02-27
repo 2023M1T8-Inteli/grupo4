@@ -5,8 +5,9 @@
 [ext_resource path="res://Scripts/Cidade.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/trees_and_bushes_pack/trees-and-bushes.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Buildings/isometric_office_5.svg" type="Texture" id=5]
-[ext_resource path="res://Scenes/CanvasLayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/WireTask.tscn" type="PackedScene" id=7]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "tilemap_packed.png 0"
