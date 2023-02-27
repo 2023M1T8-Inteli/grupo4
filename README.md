@@ -4,7 +4,7 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Moralética
 
 ## Group for()
 
@@ -24,19 +24,10 @@ O desenvolvimento desse jogo tem como objetivo suprir as necessidades do nosso c
 ° O objetivo do jogo é tornar o aprendizado mais interativo e dinâmico, proporcionando um aprendizado mais eficiente de forma gamificada.
 
 
-
-
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
 <br><br>
 
 ## 🛠 Estrutura de pastas
 
--Raiz<br>
-|<br>
 |-->docs<br>
 |-->documentos<br>
   &emsp;|-->antigos<br>
@@ -46,14 +37,14 @@ May the force be with you!
   &emsp;|-->android<br>
   &emsp;|-->HTML<br>
 |-->imagens<br>
-|-->src<br>
-|readme.md<br>
+|-->src/godot-game<br>
+|.gitattributes<br>
+|.gitignore<br>
+|README.md<br>
+|README.md.bak<br>
 
-A pasta raiz contem dois arquivos que devem ser alterados:
 
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-Há também 4 pastas que seguem da seguinte forma:
+Descrição das funções das pastas:
 
 <b>docs</b>: Aqui serão colocados os arquivos compilados em HTML do jogo.
 <b>documentos</b>: Aqui estarão todos os documentos do projeto, mas principalmente o <b>GDD (Game Design Document)/Documentação do Sistema</b>. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
@@ -95,18 +86,9 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.1.3.1 - 27/02/2023
+    * MUDANÇA: Recomentar scene_transition.gd 
+      Mudar animation smoothing do player 
 
 ## 📋 Licença/License
 
