@@ -6,20 +6,24 @@
 
 # Nome do Projeto
 
-## Nome do Grupo
+## Group for()
 
 ## Integrantes: Gabrielle Dias Cartaxo, Gustavo Wagon Widman, Izadora Luz Rodrigues Novaes, Matheus Ferreira Mendes, Olin Medeiros Costa, Thomas Reitzfeld.
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
-<br><br>
-A redenção do Zé
-<br><br>
-<p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
+O desenvolvimento desse jogo tem como objetivo suprir as necessidades do nosso cliente, V. Tal, em gamificar o atual processo de treinamento do código de ética da empresa. A gamificação visa tornar melhor a didática do treinamento e dinamizar a experiência do colaborador ao longo do processo. Além disso, a ideia também é ter uma maior aderência e aumentar o conhecimento referente ao código de ética e evitar infrações a esse código.
+É um jogo mundo aberto e singleplayer com modo história, desenvolvido em 2.5D. Além disso, o jogo conta com tasks e mini games interativos e recreativos, para desenvolver o conhecimento do usuário acerca dos temas propostos pela V. Tal.
+
+° Jogo mundo aberto, singleplayer, jornada do herói em 2.5D que tem como objetivo gamificar o treinamento de ética existente da V.Tal;
+
+° O jogo se passa em uma cidade fictícia e como principais cenários temos o limbo e a empresa;
+
+° Durante o jogo, o protagonista, Zé, não é o único personagem jogável, já que nosso herói vivencia diversas vidas ao longo do game. Além do Zé temos o fantasminha do Zé, a Tereza, o Jonas e o João Vicente, todos eles sendo jogáveis, um de cada vez;
+
+° O objetivo do jogo é tornar o aprendizado mais interativo e dinâmico, proporcionando um aprendizado mais eficiente de forma gamificada.
+
+
 
 
 💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
