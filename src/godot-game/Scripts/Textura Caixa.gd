@@ -18,6 +18,10 @@ var buttonPressed
 var phraseNum = 0
 
 func _ready():
+	$FinishArrow/AnimationPlayer.play("hover")
+#	$ReturnArrow/AnimationPlayer.play("hover")
+	$ReturnArrow/ReturnButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
 	# Define o tempo de espera do Timer
 	$Timer.wait_time = textSpeed
 	
@@ -31,9 +35,14 @@ func _ready():
 	nextPhrase()
 	
 func _process(_delta):
-	# Torna o Polygon2D visível quando o diálogo termina
-	$Polygon2D.visible = finished
-
+	# Torna as setinhas visíveis quando o diálogo termina e ativa o botao de retorno de dialogo
+	$FinishArrow.visible = finished
+	if phraseNum > 1:
+		$ReturnArrow.visible = finished
+	else:
+		$ReturnArrow.visible = false
+	$ReturnArrow/ReturnButton.mouse_filter = Control.MOUSE_FILTER_STOP
+	
 	# Verifica se o botão de interação foi pressionado
 	if Input.is_action_just_pressed("interact"):
 		# Avança para a próxima frase se o diálogo foi finalizado
@@ -119,3 +128,12 @@ func _on_TextureButton_pressed():
 	# Verifica se o diálogo foi finalizado e emite o sinal de "finish"
 	if phraseNum == len(dialog) and finished == true:
 		emit_signal("finish")
+
+
+func _on_ReturnButton_pressed():
+	if finished:
+		finished = false
+		if phraseNum > 1:
+			phraseNum -= 2
+		nextPhrase()
+		

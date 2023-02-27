@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Textura Caixa.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=2]
@@ -40,7 +40,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 310, 65 ), Vector2( 310, 60 ) ]
+"values": [ Vector2( 310, 64 ), Vector2( 310, 59 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -98,6 +98,37 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 321, -20 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "hover"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 321, -20 ), Vector2( 317, -20 ) ]
+}
+
 [node name="DialogBox 1" type="CanvasLayer"]
 
 [node name="TexturaCaixa" type="TextureRect" parent="."]
@@ -124,12 +155,12 @@ margin_right = 310.0
 margin_bottom = 69.0
 custom_fonts/normal_font = SubResource( 2 )
 
-[node name="Polygon2D" type="Polygon2D" parent="TexturaCaixa"]
+[node name="FinishArrow" type="Polygon2D" parent="TexturaCaixa"]
 position = Vector2( 310, 63 )
 scale = Vector2( 0.692308, 0.692308 )
 polygon = PoolVector2Array( 0, 0, 0, 0, 8, 13, 16, 0, 7.53802, 0 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TexturaCaixa/Polygon2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TexturaCaixa/FinishArrow"]
 anims/RESET = SubResource( 3 )
 anims/hover = SubResource( 4 )
 
@@ -150,13 +181,29 @@ anims/RESET = SubResource( 5 )
 anims/dissolve = SubResource( 6 )
 
 [node name="TextureButton" type="TextureButton" parent="TexturaCaixa"]
-margin_left = -16.0
-margin_top = -544.0
-margin_right = 344.0
-margin_bottom = 96.0
+margin_left = -14.0
+margin_top = -461.0
+margin_right = 346.0
+margin_bottom = 179.0
+mouse_filter = 1
 action_mode = 0
 
-[node name="Timer2" type="Timer" parent="TexturaCaixa"]
-wait_time = 0.02
+[node name="ReturnArrow" type="Polygon2D" parent="TexturaCaixa"]
+position = Vector2( 321, -20 )
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 8, 13, 16, 0, 7.53802, 0 )
+
+[node name="ReturnButton" type="TextureButton" parent="TexturaCaixa/ReturnArrow"]
+margin_left = -22.0
+margin_top = -16.0
+margin_right = 36.0
+margin_bottom = 28.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TexturaCaixa/ReturnArrow"]
+method_call_mode = 1
+anims/RESET = SubResource( 7 )
+anims/hover = SubResource( 8 )
 
 [connection signal="pressed" from="TexturaCaixa/TextureButton" to="TexturaCaixa" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TexturaCaixa/ReturnArrow/ReturnButton" to="TexturaCaixa" method="_on_ReturnButton_pressed"]
