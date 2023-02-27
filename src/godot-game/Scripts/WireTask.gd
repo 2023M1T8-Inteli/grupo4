@@ -156,6 +156,13 @@ func _on_redBlueButton_pressed():
 	# Mostra o fio vermelho que vai para o azul
 	$redWire/redToBlue.visible = true
 
+func _on_redYellowButton_pressed():
+	# Oculta todos os fios vermelhos
+	for i in redWires:
+		i.visible = false
+	# Mostra o fio vermelho que vai para o azul
+	$redWire/redToYellow.visible = true
+
 # Função chamada quando o botão yellowYellowButton é pressionado
 func _on_yellowYellowButton_pressed():
 	# Oculta todos os fios amarelos
