@@ -83,18 +83,15 @@ frame = 1
 playing = true
 
 [node name="Ze" type="Node2D" parent="."]
-visible = false
 position = Vector2( 0, 8 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="ZeCorrendo" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 12 )
-frame = 3
 playing = true
 
 [node name="ZeIdle" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 13 )
-frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

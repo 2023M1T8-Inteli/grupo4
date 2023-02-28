@@ -2,6 +2,10 @@ extends KinematicBody2D
 
 var speed = 450
 
+var timer = Timer.new()
+
+var last_offset = Vector2.ZERO
+
 var vel : Vector2 = Vector2()
 
 #Atribuindo nossa sprite como variavel
@@ -11,9 +15,9 @@ onready var spriteB : AnimatedSprite = get_node("Fantasma/GhostBack")
 onready var zeIdle : AnimatedSprite = get_node("Ze/ZeIdle")
 onready var zeCorre : AnimatedSprite = get_node("Ze/ZeCorrendo")
 
-# var sprite_list = [spriteA, spriteB, zeIdle, zeCorre]
+var isDrunk = false
 
-onready var	root_node = get_tree().get_root()
+onready var root_node = get_tree().get_root()
 
 #definir variáveis de movimentação
 var leftPress = false
@@ -21,57 +25,113 @@ var rightPress = false
 var upPress = false
 var downPress = false
 
+var leftPressDebug = false
+var rightPressDebug = false
+var upPressDebug = false
+var downPressDebug = false
+
 func _ready():
 	spriteB.visible = false # a sprite do fantasminha de costas não aparece.
+
+	add_child(timer)
+	timer.set_wait_time(0.0025)
+	timer.set_one_shot(false)
+	timer.connect("timeout", self, "_on_timer_timeout")
+	timer.start()
+	
+
+	if str(self.get_parent()).get_slice(":", 0) == "Prelude":
+		if get_node("/root/Prelude").connect("is_drunk", self, "is_drunk") != OK:
+			print ("An unexpected error occured when trying to connect to the signal")
+		else:
+			print("CONNECTED")
+	
+	
+	if isDrunk == true:
+		speed = 225
+		
+func is_drunk():
+	print("MF DRUNK")
+	isDrunk = true
 
 #enquanto a setinha não ta apertada o player não se mexe 
 func _on_LeftButton_button_up():
 	leftPress = false
-	
+	leftPressDebug = false
 #quando aperta a setinha da esquerda o personagem vai para a esquerda
 func _on_LeftButton_button_down():
 	leftPress = true
-	
+	leftPressDebug = true
 #enquanto a setinha não ta apertada o player não se mexe 
 func _on_RightButton_button_up():
 	rightPress = false
-	
+	rightPressDebug = false
 #quando aperta a setinha da direita o personagem vai para a direita
 func _on_RightButton_button_down():
 	rightPress = true
-
+	rightPressDebug = true
 #enquanto a setinha não ta apertada o player não se mexe 
 func _on_UpButton_button_up():
 	upPress = false
-	
+	upPressDebug = false
 #quando aperta a setinha de cima o personagem vai para cima
 func _on_UpButton_button_down():
 	upPress = true
-
+	upPressDebug = true
 #enquanto a setinha não ta apertada o player não se mexe 
 func _on_DownButton_button_up():
 	downPress = false
-
+	downPressDebug = false
 #quando aperta a setinha de baixo o personagem vai para baixo
 func _on_DownButton_button_down():
 	downPress = true
+	downPressDebug = true
+
+func simulate_drunk_movement(strength: float):
+	var target_vel = Vector2(rand_range(-strength, strength), rand_range(-strength, strength))
+	var lerp_speed = 0.05
+	vel = vel.linear_interpolate(target_vel, lerp_speed)
 
 
+func _on_timer_timeout():
+	if isDrunk == true:
+		var target_zoom = Vector2(rand_range(0.5, 1.5), rand_range(0.5, 1.5))
+		var lerp_speed = 0.005
+		# Lerp the camera zoom
+		$Camera2D.zoom = $Camera2D.zoom.linear_interpolate(target_zoom, lerp_speed)
+	
 #física do jogo
 func _physics_process(_delta):
 	
 	vel.x = 0
 	vel.y = 0
-
-
-	#Controles do player
-	if Input.is_action_pressed("move_left") or leftPress == true:
+	
+	if isDrunk == true:
+		simulate_drunk_movement(450)
+	
+	if Input.is_action_pressed("move_left") or leftPressDebug:
+		leftPress = true
+	else:
+		leftPress = false
+	if leftPress == true:
 		vel.x -= speed
-	if Input.is_action_pressed("move_right") or rightPress == true:
+	if Input.is_action_pressed("move_right") or rightPressDebug:
+		rightPress = true
+	else:
+		rightPress = false
+	if rightPress == true:
 		vel.x += speed
-	if Input.is_action_pressed("move_up") or upPress == true:
+	if Input.is_action_pressed("move_up") or upPressDebug:
+		upPress = true
+	else:
+		upPress = false
+	if upPress == true:
 		vel.y -= speed
-	if Input.is_action_pressed("move_down") or downPress == true:
+	if Input.is_action_pressed("move_down") or downPressDebug:
+		downPress = true
+	else:
+		downPress = false
+	if downPress == true:
 		vel.y += speed
 		
 	if Input.is_action_pressed("pause"):
@@ -105,24 +165,24 @@ func _player_dir():
 	var fDown = false
 
 	# Verifica se o jogador está parado
-	if vel.x == 0 and vel.y == 0:
+	if leftPress == false and rightPress == false and upPress == false and downPress == false:
 		idle_sprites(true)
 	else:
 		idle_sprites(false)
 	
 	# Faz o jogador olhar para a direção que está se movendo
-	if vel.x < 0:
+	if leftPress ==  true:
 		fLeft = true
 		fRight = false
-	elif vel.x > 0:
+	elif rightPress == true:
 		fRight = true
 		fLeft = false
 	
 	# Mostra a sprite das costas quando o jogador se move verticalmente para baixo
-	if vel.y < 0:
+	if downPress == true:
 		fDown = true
 		fUp = false
-	elif vel.y > 0:
+	elif upPress == true:
 		# Mostra a sprite da frente quando o jogador se move verticalmente para cima
 		spriteA.visible = true
 		spriteB.visible = false

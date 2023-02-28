@@ -106,14 +106,14 @@ custom_fonts/normal_font = SubResource( 2 )
 text = " CONTROLES"
 
 [node name="GameVersion" type="RichTextLabel" parent="."]
-margin_left = 290.0
+margin_left = 289.0
 margin_top = 616.0
-margin_right = 384.0
+margin_right = 383.0
 margin_bottom = 656.0
 mouse_filter = 2
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
-text = " VER 0.1.4.0
+text = " VER 0.1.4.1
 "
 scroll_active = false
 

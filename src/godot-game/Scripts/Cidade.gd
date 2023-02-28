@@ -1,5 +1,7 @@
 extends Node2D
 
+signal go_to_prelude
+
 func _ready():
 
 	# Mostra o personagem principal e esconde o fantasma
@@ -7,8 +9,9 @@ func _ready():
 	get_node("Player/Fantasma").visible = false
 	
 	# Conecta o sinal de conclusão da tarefa ao método task_complete
-	if get_node("ColorRect/WiresTask").connect("task_complete", self, "task_complete") != OK:
+	if $ColorRect/WiresTask.connect("task_complete", self, "task_complete") != OK:
 		print ("An unexpected error occured when trying to connect to the signal")
+	
 	
 	# Passa o controle para o próximo método
 	pass
@@ -35,3 +38,7 @@ func task_complete():
 	# Desativa o filtro de mouse do botão de textura e muda a cor do retângulo de cores
 	$ColorRect/TextureButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$ColorRect.color = Color("34921d")
+
+
+func _on_PreludeButton_pressed():
+	SceneTransition.change_scene("res://Scenes/Prelude.tscn")
