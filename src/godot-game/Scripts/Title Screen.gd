@@ -4,7 +4,7 @@ extends Control
 
 # Quando o botão "Jogar" é pressionado, é feita a transição para a cena principal do jogo.
 func _on_StartButton_pressed() -> void:
-	SceneTransition.change_scene("res://Scenes/Main Scene.tscn")
+	SceneTransition.change_scene("res://Scenes/Limbo1.tscn")
 
 # O método _physics_process é executado a cada quadro renderizado. Quando a ação "start" é pressionada, 
 # a cena principal do jogo é carregada.

@@ -9,7 +9,9 @@ func _ready():
 	# Torna o nó do fantasma visível e o nó do Ze invisível
 	get_node("Player/Fantasma").visible = true
 	get_node("Player/Ze").visible = false
-
+	
+	$LimboMusic.playing = true
+	$LimboAmbience.playing = true
 # Função que é chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
 	

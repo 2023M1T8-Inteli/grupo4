@@ -20,15 +20,15 @@ var isDrunk = false
 onready var root_node = get_tree().get_root()
 
 #definir variáveis de movimentação
-var leftPress = false
-var rightPress = false
-var upPress = false
-var downPress = false
+onready var leftPress = Global.leftPress
+onready var rightPress = Global.rightPress
+onready var upPress = Global.upPress
+onready var downPress = Global.downPress
 
-var leftPressDebug = false
-var rightPressDebug = false
-var upPressDebug = false
-var downPressDebug = false
+onready var leftPressDebug = Global.leftPress
+onready var rightPressDebug = Global.rightPress
+onready var upPressDebug = Global.upPress
+onready var downPressDebug = Global.downPress
 
 func _ready():
 	spriteB.visible = false # a sprite do fantasminha de costas não aparece.
@@ -58,34 +58,42 @@ func is_drunk():
 func _on_LeftButton_button_up():
 	leftPress = false
 	leftPressDebug = false
+	Global.leftPress = false
 #quando aperta a setinha da esquerda o personagem vai para a esquerda
 func _on_LeftButton_button_down():
 	leftPress = true
 	leftPressDebug = true
+	Global.leftPress = true
 #enquanto a setinha não ta apertada o player não se mexe 
 func _on_RightButton_button_up():
 	rightPress = false
 	rightPressDebug = false
+	Global.rightPress = false
 #quando aperta a setinha da direita o personagem vai para a direita
 func _on_RightButton_button_down():
 	rightPress = true
 	rightPressDebug = true
+	Global.rightPress = true
 #enquanto a setinha não ta apertada o player não se mexe 
 func _on_UpButton_button_up():
 	upPress = false
 	upPressDebug = false
+	Global.upPress = false
 #quando aperta a setinha de cima o personagem vai para cima
 func _on_UpButton_button_down():
 	upPress = true
 	upPressDebug = true
+	Global.upPress = true
 #enquanto a setinha não ta apertada o player não se mexe 
 func _on_DownButton_button_up():
 	downPress = false
 	downPressDebug = false
+	Global.downPress = false
 #quando aperta a setinha de baixo o personagem vai para baixo
 func _on_DownButton_button_down():
 	downPress = true
 	downPressDebug = true
+	Global.downPress = true
 
 func simulate_drunk_movement(strength: float):
 	var target_vel = Vector2(rand_range(-strength, strength), rand_range(-strength, strength))

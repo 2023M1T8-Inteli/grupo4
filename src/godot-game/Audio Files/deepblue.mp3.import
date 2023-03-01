@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/deepblue.mp3-9ef8b56362c9b213242a1326132cd9b3.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/deepblue.mp3"
+dest_files=[ "res://.import/deepblue.mp3-9ef8b56362c9b213242a1326132cd9b3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

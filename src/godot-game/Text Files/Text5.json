@@ -1,0 +1,6 @@
+[
+    {"Name":"Supervisor", "Text":"Bom dia, Jonas. Está atrasado!"},
+    {"Name":"Jonas", "Text":"Mas não faltam 10 minutos para o início do expediente?"},
+    {"Name":"Supervisor", "Text":"Não interessa. Eu cheguei primeiro que você, então você está atrasado."},
+    {"Name":"Supervisor", "Text":"Agora começe a fazer seu trabalho."},
+]

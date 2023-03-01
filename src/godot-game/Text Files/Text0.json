@@ -1,4 +1,4 @@
-[
+    [
     {"Name":"???", "Text":"Bem-vindo ao limbo, Zé"},
     {"Name":"Zé", "Text":"O-oque está acontecendo?"},
     {"Name":"???", "Text":"Você morreu."},
@@ -19,5 +19,5 @@
     {"Name":"Moralética", "Text":"Você será desafiado a viver diferentes vidas, que te proporcionarão o aprendizado que precisa."},
     {"Name":"Moralética", "Text":"Está preparado?"},
     {"Name":"Zé", "Text":"Éééé... Sim?"},
-    {"Name":"Moralética", "Text":"Ótimo! Sua jornada começa aqui!"},
-]
+    {"Name":"Moralética", "Text":"Ótimo! Sua jornada começa aqui!"}
+    ]

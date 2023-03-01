@@ -72,26 +72,28 @@ scale = Vector2( 0.42, 0.42 )
 position = Vector2( 0, -2.38095 )
 scale = Vector2( -0.298, 0.298 )
 frames = SubResource( 3 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Ghost" type="AnimatedSprite" parent="Fantasma"]
 position = Vector2( 0, -2.38095 )
 scale = Vector2( 0.297619, 0.297619 )
 frames = SubResource( 2 )
-frame = 1
 playing = true
 
 [node name="Ze" type="Node2D" parent="."]
+visible = false
 position = Vector2( 0, 8 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="ZeCorrendo" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 12 )
+frame = 1
 playing = true
 
 [node name="ZeIdle" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 13 )
+frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -107,6 +109,7 @@ margin_top = 496.0
 margin_right = 222.0
 margin_bottom = 560.0
 rect_pivot_offset = Vector2( 168, -10.575 )
+mouse_filter = 1
 action_mode = 0
 keep_pressed_outside = true
 
@@ -116,6 +119,7 @@ margin_top = 504.0
 margin_right = 345.0
 margin_bottom = 560.0
 rect_pivot_offset = Vector2( 39.26, -10.575 )
+mouse_filter = 1
 
 [node name="UpButton" type="TextureButton" parent="JoystickButtons"]
 margin_left = 222.0
@@ -123,6 +127,7 @@ margin_top = 432.0
 margin_right = 280.0
 margin_bottom = 506.0
 rect_pivot_offset = Vector2( 97.35, 64 )
+mouse_filter = 1
 
 [node name="DownButton" type="TextureButton" parent="JoystickButtons"]
 margin_left = 222.0
@@ -130,6 +135,7 @@ margin_top = 560.0
 margin_right = 280.0
 margin_bottom = 634.0
 rect_pivot_offset = Vector2( 97.35, -59.245 )
+mouse_filter = 1
 
 [connection signal="button_down" from="JoystickButtons/LeftButton" to="." method="_on_LeftButton_button_down"]
 [connection signal="button_up" from="JoystickButtons/LeftButton" to="." method="_on_LeftButton_button_up"]
