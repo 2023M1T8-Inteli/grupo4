@@ -100,18 +100,18 @@ A cada atualização os detalhes devem ser lançados aqui.
     *  Add efeitos bebado
     *  Add Predio thomas
 * 0.1.5.0 - 01/03/2023
-    *  Inserir dialogo da gabi no game
+  -  Inserir dialogo da gabi no game
     *  Copiar e editar cenas
     *  Testar todos dialogos
-  *  Inserir musica do thomas no limbo
+  -  Inserir musica do thomas no limbo
     *  Diminuir som dos audios
     *  Testar
-  *  Inserir setinhas apertadas do Thomas
+  -  Inserir setinhas apertadas do Thomas
     *  Criar variaveis globais de botoes apertados/nao apertados
     *  Linkar variaveis do script player com o script do GUI atraves de um script global
     *  Alinhar e posicionar sprites to thomas em cima do joystick existente
     *  Testar compatibilidade com cenas e dispositivos
-  *  Extras
+  -  Extras
     *  Retirar algumas funcoes print() dentro do codigo que foram utilizadas para debugging
     *  Renomear cena do limbo de "Main Scene" para LImbo1
     *  Renomear script CanvasLayer.gd (anexado a GUI) para GUI.gd
