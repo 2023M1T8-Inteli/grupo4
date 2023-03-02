@@ -124,9 +124,9 @@ func _on_TextureButton_pressed():
 
 
 func _on_ReturnButton_pressed():
-	if finished:
+	if finished and phraseNum > 1:
+		phraseNum -= 2
 		finished = false
-		if phraseNum > 1:
-			phraseNum -= 2
+		$ReturnArrowFlash/AnimationPlayer.play("flash")
 		nextPhrase()
 		
