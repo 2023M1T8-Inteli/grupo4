@@ -42,19 +42,19 @@ position = Vector2( 521, 301 )
 [node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
-position = Vector2( 518, 718 )
+position = Vector2( 518, 640 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
-position = Vector2( 525, -112 )
+position = Vector2( 518, -29 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
-position = Vector2( -368.906, 259 )
+position = Vector2( 222, 268 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
-position = Vector2( 1417.69, 331 )
+position = Vector2( 770, 349 )
 shape = SubResource( 3 )
 
 [node name="DialogBox 1" parent="." instance=ExtResource( 2 )]
