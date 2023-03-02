@@ -95,7 +95,27 @@ A cada atualização os detalhes devem ser lançados aqui.
     *  Adicionar 2 TileMaps (Thomas)
     *  Atualizar Versao para 0.1.4.0
     *  Remover executaveis para preparar export novo
-
+* 0.1.4.1 - 28/02/2023
+    *  Add Cena Preludio
+    *  Add efeitos bebado
+    *  Add Predio thomas
+* 0.1.5.0 - 01/03/2023
+  -  Inserir dialogo da gabi no game
+    *  Copiar e editar cenas
+    *  Testar todos dialogos
+  -  Inserir musica do thomas no limbo
+    *  Diminuir som dos audios
+    *  Testar
+  -  Inserir setinhas apertadas do Thomas
+    *  Criar variaveis globais de botoes apertados/nao apertados
+    *  Linkar variaveis do script player com o script do GUI atraves de um script global
+    *  Alinhar e posicionar sprites to thomas em cima do joystick existente
+    *  Testar compatibilidade com cenas e dispositivos
+  -  Extras
+    *  Retirar algumas funcoes print() dentro do codigo que foram utilizadas para debugging
+    *  Renomear cena do limbo de "Main Scene" para LImbo1
+    *  Renomear script CanvasLayer.gd (anexado a GUI) para GUI.gd
+    *  Remover exports velhos em preparacao ao export da nova versao alpha
 ## 📋 Licença/License
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
