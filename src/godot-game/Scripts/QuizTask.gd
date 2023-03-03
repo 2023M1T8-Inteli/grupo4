@@ -12,7 +12,7 @@ func _on_TexturaCaixa_finish():
 
 func _process(_delta):
 	if Global.correctAnswerQuiz1 == true:
-		yield(get_tree().create_timer(1.0), "timeout")
+		yield(get_tree().create_timer(0.25), "timeout")
 		#$DialogBox/TexturaCaixa.jumpStart(2,2)
 		$Opcoes.visible = false
 		$DialogBox.visible = true

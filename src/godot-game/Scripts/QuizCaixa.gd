@@ -42,10 +42,9 @@ func _process(_delta):
 	if Global.jumpStartQuiz1 == true:
 		jumpStart(0, 2)
 		Global.jumpStartQuiz1 = false
-	if Global.jumpStartFeedback1 == true:
+	if Global.correctAnswerQuiz1 == true:
 		jumpStart(2, 2)
 		Global.correctAnswerQuiz1 = false
-		Global.jumpStartFeedback1 = false
 	# Torna as setinhas visíveis quando o diálogo termina e ativa o botao de retorno de dialogo
 	$FinishArrow.visible = finished
 	if (phraseNum - startPhraseNum) > 1 and finished == true:
