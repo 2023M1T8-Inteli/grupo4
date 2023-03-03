@@ -1,0 +1,9 @@
+[
+    {"Name":"Colega", "Text":"Tereza, você recebeu um e-mail da diretoria de compliance fora do domínio da empresa?"},
+    {"Name":"Colega", "Text":"Acho que devem ter mandado pela conta pessoal por engano. Vou ver o que tem no link anexado."},
+    {"Name":"Colega", "Text":"Tem razão, Tereza."},
+    {"Name":"Colega", "Text":"Vou contactar a equipe de compliance e descobrir a procedência do email."},   
+    {"IsCorrect": "Y", "Resposta": "Falar para ele contactar o gestor para confirmar a origem do e-mail."},
+    {"IsCorrect": "N", "Resposta": "Falar para ele confiar no link e abri-lo."},
+    {"IsCorrect": "N", "Resposta": "Falar para simplesmente ignorar."},
+    ]
