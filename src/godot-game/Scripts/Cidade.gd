@@ -1,6 +1,6 @@
 extends Node2D
 
-signal go_to_prelude
+#signal go_to_prelude
 
 func _ready():
 
