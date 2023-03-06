@@ -68,7 +68,6 @@ offset = Vector2( 1404.62, 156.923 )
 
 [node name="JoystickMidPressed" type="Sprite" parent="GUI/Joystick"]
 visible = false
-scale = Vector2( 1, 1 )
 texture = ExtResource( 11 )
 offset = Vector2( 1404.62, 156.923 )
 

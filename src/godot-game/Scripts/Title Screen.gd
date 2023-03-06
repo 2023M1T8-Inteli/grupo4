@@ -4,13 +4,10 @@ extends Control
 
 # Quando o botão "Jogar" é pressionado, é feita a transição para a cena principal do jogo.
 func _on_StartButton_pressed() -> void:
-	SceneTransition.change_scene("res://Scenes/Limbo1.tscn")
-
-# O método _physics_process é executado a cada quadro renderizado. Quando a ação "start" é pressionada, 
-# a cena principal do jogo é carregada.
-func _physics_process(_delta):
-	if Input.is_action_pressed("start"):
+	if Global.finishDialog1 == false:
 		SceneTransition.change_scene("res://Scenes/Limbo1.tscn")
+	else:
+		SceneTransition.change_scene("res://Scenes/Cidade.tscn")
 
 # Quando o botão "Sair" é pressionado, o programa é encerrado.
 #func _on_QuitButton_pressed():

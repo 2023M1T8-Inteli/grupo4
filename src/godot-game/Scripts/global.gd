@@ -1,5 +1,7 @@
 extends Node
 
+var finishDialog1 = false
+
 var leftPress = false
 var rightPress = false
 var upPress = false

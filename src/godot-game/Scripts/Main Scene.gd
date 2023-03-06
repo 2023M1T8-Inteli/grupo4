@@ -14,6 +14,6 @@ func _ready():
 	$LimboAmbience.playing = true
 # Função que é chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
-	
+	Global.finishDialog1 = true
 	# Muda para a cena "Cidade.tscn" usando a classe "SceneTransition"
 	SceneTransition.change_scene("res://Scenes/Cidade.tscn")
