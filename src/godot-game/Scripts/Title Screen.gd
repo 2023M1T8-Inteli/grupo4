@@ -20,3 +20,8 @@ func _physics_process(_delta):
 func _on_ControlsButton_pressed():
 	if get_tree().change_scene("res://Scenes/Controls.tscn") != OK:
 		print ("An unexpected error occured when trying to switch to the scene")
+
+
+func _on_OvoButton_pressed():
+	if get_tree().change_scene("res://Sprites/Ze/Ovo.tscn") != OK:
+		print("ERRO OVO")

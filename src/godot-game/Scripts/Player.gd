@@ -188,3 +188,13 @@ func _player_dir():
 		spriteA.visible = true
 		spriteB.visible = false
 		
+
+
+
+
+func _on_MidButton_button_up():
+	Global.midPress = false
+
+
+func _on_MidButton_button_down():
+	Global.midPress = true

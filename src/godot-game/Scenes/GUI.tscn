@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Sprites/Interface/joystick_apertado/joystick_left_pressed.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/Interface/joystick_apertado/joystick_mid_pressed.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Interface/joystick_apertado/joystick_right_pressed.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Interface/joystick_apertado/joystick_mid_unavailable.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -55,14 +56,20 @@ visible = false
 texture = ExtResource( 12 )
 offset = Vector2( 1404.62, 156.923 )
 
-[node name="JoystickMidPressed" type="Sprite" parent="GUI/Joystick"]
-visible = false
-texture = ExtResource( 11 )
-offset = Vector2( 1404.62, 156.923 )
-
 [node name="JoystickLeftPressed" type="Sprite" parent="GUI/Joystick"]
 visible = false
 texture = ExtResource( 10 )
+offset = Vector2( 1404.62, 156.923 )
+
+[node name="JoystickMidUnavailable" type="Sprite" parent="GUI/Joystick"]
+visible = false
+texture = ExtResource( 13 )
+offset = Vector2( 1404.62, 156.923 )
+
+[node name="JoystickMidPressed" type="Sprite" parent="GUI/Joystick"]
+visible = false
+scale = Vector2( 1, 1 )
+texture = ExtResource( 11 )
 offset = Vector2( 1404.62, 156.923 )
 
 [node name="Pause" type="Sprite" parent="GUI"]

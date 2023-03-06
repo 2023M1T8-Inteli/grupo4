@@ -7,13 +7,10 @@ var downPress
 
 
 func _process(_delta):
-	leftPress = Global.leftPress
-	rightPress = Global.rightPress
-	upPress = Global.upPress
-	downPress = Global.downPress
-	$JoystickLeftPressed.visible = leftPress
-	$JoystickRightPressed.visible = rightPress
-	$JoystickUpPressed.visible = upPress
-	$JoystickDownPressed.visible = downPress
+	$JoystickLeftPressed.visible = Global.leftPress
+	$JoystickRightPressed.visible = Global.rightPress
+	$JoystickUpPressed.visible = Global.upPress
+	$JoystickDownPressed.visible = Global.downPress
+	$JoystickMidPressed.visible = Global.midPress if Global.closeToSomething else false
 
-#	$JoystickMidPressed.visible = false
+	$JoystickMidUnavailable.visible = Global.closeToSomething

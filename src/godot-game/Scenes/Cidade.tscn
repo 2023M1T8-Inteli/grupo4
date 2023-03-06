@@ -2503,6 +2503,9 @@ visible = false
 
 [node name="Timer" type="Timer" parent="ColorRect"]
 
+[node name="AmongAncora" type="Node2D" parent="ColorRect"]
+position = Vector2( 20, 20 )
+
 [node name="PreludeRect" type="ColorRect" parent="."]
 margin_left = 2088.0
 margin_right = 2194.0
@@ -2519,6 +2522,15 @@ text = " PRELUDE"
 [node name="PreludeButton" type="TextureButton" parent="PreludeRect"]
 margin_right = 106.0
 margin_bottom = 40.0
+
+[node name="PosteAncora" type="Node2D" parent="."]
+position = Vector2( 925, 246 )
+
+[node name="ColorRect" type="ColorRect" parent="PosteAncora"]
+margin_left = -21.0
+margin_top = -19.0
+margin_right = 19.0
+margin_bottom = 21.0
 
 [connection signal="pressed" from="ColorRect/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="PreludeRect/PreludeButton" to="." method="_on_PreludeButton_pressed"]
