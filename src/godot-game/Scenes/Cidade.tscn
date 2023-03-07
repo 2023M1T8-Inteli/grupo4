@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Sprites/kenney_rpgUrbanKit/Tilemap/tilemap_packed.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -2409,6 +2409,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 175.75, 194.5 )
+
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 2611.5, 11.5 )
 
@@ -2455,17 +2458,33 @@ tile_data = PoolIntArray( -917519, 7, 0, -917517, 7, 0, -917515, 7, 0, -917513, 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 368, 624 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1584, 855 )
-scale = Vector2( 6, 6 )
-frames = SubResource( 39 )
-
 [node name="vTal" type="Sprite" parent="."]
 visible = false
 position = Vector2( 1621, 883 )
 texture = ExtResource( 5 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
+
+[node name="admAncora" type="Node2D" parent="."]
+position = Vector2( 1545, 1059 )
+
+[node name="admRect" type="ColorRect" parent="admAncora"]
+margin_left = -66.0
+margin_top = -46.0
+margin_right = 40.0
+margin_bottom = -6.0
+rect_scale = Vector2( 1.36, 2 )
+
+[node name="Predio" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Predio"]
+position = Vector2( 1584, 855 )
+scale = Vector2( 6, 6 )
+frames = SubResource( 39 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Predio"]
+position = Vector2( 1584, 898 )
+shape = SubResource( 40 )
 
 [node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]
 position = Vector2( 360, 104 )

@@ -2,6 +2,7 @@ extends Node2D
 
 var closeToPoste = false
 var closeToAmong = false
+var closeToADM = false
 
 var amongComplete = false
 
@@ -34,10 +35,14 @@ func _process(_delta):
 	elif $Player/HitBox.global_position.distance_to($ColorRect/AmongAncora.global_position) < 90 and amongComplete == false:
 		Global.closeToSomething = true
 		closeToAmong = true
+	elif $Player/HitBox.global_position.distance_to($admAncora.global_position) < 90:
+		Global.closeToSomething = true
+		closeToADM = true
 	else:
 		Global.closeToSomething = false
 		closeToPoste = false
 		closeToAmong = false
+		closeToADM = false
 	
 	
 	if closeToAmong and Global.midPress and lockIf0:
@@ -50,7 +55,12 @@ func _process(_delta):
 		pos.posCidade = $Player.global_position
 		if get_tree().change_scene("res://Scenes/PosteCima.tscn") != OK:
 			print("ERRO")
-		
+	if closeToADM and Global.midPress and lockIf1:
+		lockIf2 = false
+		yield(get_tree().create_timer(0.15), "timeout")
+		#pos.posADM = $Player.global_position #gustavo -> nao entendi mto bem como funciona o pos.[....] entao quando der arruma isso
+		if get_tree().change_scene("res://Scenes/Administrativo.tscn") != OK:
+			print("ERRO")	
 	
 	
 func _on_TextureButton_pressed():
