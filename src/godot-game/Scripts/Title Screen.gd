@@ -4,13 +4,10 @@ extends Control
 
 # Quando o botão "Jogar" é pressionado, é feita a transição para a cena principal do jogo.
 func _on_StartButton_pressed() -> void:
-	SceneTransition.change_scene("res://Scenes/Limbo1.tscn")
-
-# O método _physics_process é executado a cada quadro renderizado. Quando a ação "start" é pressionada, 
-# a cena principal do jogo é carregada.
-func _physics_process(_delta):
-	if Input.is_action_pressed("start"):
-		SceneTransition.change_scene("res://Scenes/Limbo1.tscn")
+	if Global.finishDialog1 == false:
+		SceneTransition.change_scene("res://Scenes/ZeAnim.tscn", 1, 1)
+	else:
+		SceneTransition.change_scene("res://Scenes/Cidade.tscn",1, 1)
 
 # Quando o botão "Sair" é pressionado, o programa é encerrado.
 #func _on_QuitButton_pressed():
@@ -20,3 +17,8 @@ func _physics_process(_delta):
 func _on_ControlsButton_pressed():
 	if get_tree().change_scene("res://Scenes/Controls.tscn") != OK:
 		print ("An unexpected error occured when trying to switch to the scene")
+
+
+func _on_OvoButton_pressed():
+	if get_tree().change_scene("res://Sprites/Ze/Ovo.tscn") != OK:
+		print("ERRO OVO")

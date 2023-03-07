@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Sprites/kenney_rpgUrbanKit/Tilemap/tilemap_packed.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,8 +6,6 @@
 [ext_resource path="res://Sprites/trees_and_bushes_pack/trees-and-bushes.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Buildings/isometric_office_5.svg" type="Texture" id=5]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/WireTask.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Sprites/Buildings/Predio Vtal2.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Buildings/Predio Vtal1.png" type="Texture" id=10]
 
@@ -2409,6 +2407,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 175.75, 194.5 )
+
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 2611.5, 11.5 )
 
@@ -2417,10 +2418,6 @@ extents = Vector2( 2610.5, 7 )
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 5.90625, 1300 )
-
-[sub_resource type="DynamicFont" id=38]
-size = 27
-font_data = ExtResource( 8 )
 
 [node name="Cidade" type="Node2D"]
 position = Vector2( 128, 64 )
@@ -2455,17 +2452,33 @@ tile_data = PoolIntArray( -917519, 7, 0, -917517, 7, 0, -917515, 7, 0, -917513, 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 368, 624 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1584, 855 )
-scale = Vector2( 6, 6 )
-frames = SubResource( 39 )
-
 [node name="vTal" type="Sprite" parent="."]
 visible = false
 position = Vector2( 1621, 883 )
 texture = ExtResource( 5 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
+
+[node name="admAncora" type="Node2D" parent="."]
+position = Vector2( 1545, 1059 )
+
+[node name="admRect" type="ColorRect" parent="admAncora"]
+margin_left = -66.0
+margin_top = -46.0
+margin_right = 40.0
+margin_bottom = -6.0
+rect_scale = Vector2( 1.36, 2 )
+
+[node name="Predio" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Predio"]
+position = Vector2( 1584, 855 )
+scale = Vector2( 6, 6 )
+frames = SubResource( 39 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Predio"]
+position = Vector2( 1584, 898 )
+shape = SubResource( 40 )
 
 [node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]
 position = Vector2( 360, 104 )
@@ -2485,40 +2498,3 @@ shape = SubResource( 23 )
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
 position = Vector2( 1840, 320 )
 shape = SubResource( 23 )
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 1368.0
-margin_top = 480.0
-margin_right = 1408.0
-margin_bottom = 520.0
-color = Color( 0.572549, 0.113725, 0.113725, 1 )
-
-[node name="TextureButton" type="TextureButton" parent="ColorRect"]
-margin_right = 40.0
-margin_bottom = 40.0
-action_mode = 0
-
-[node name="WiresTask" parent="ColorRect" instance=ExtResource( 7 )]
-visible = false
-
-[node name="Timer" type="Timer" parent="ColorRect"]
-
-[node name="PreludeRect" type="ColorRect" parent="."]
-margin_left = 2088.0
-margin_right = 2194.0
-margin_bottom = 40.0
-
-[node name="PreludeTextLabel" type="RichTextLabel" parent="PreludeRect"]
-margin_left = -2.0
-margin_right = 102.0
-margin_bottom = 40.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = SubResource( 38 )
-text = " PRELUDE"
-
-[node name="PreludeButton" type="TextureButton" parent="PreludeRect"]
-margin_right = 106.0
-margin_bottom = 40.0
-
-[connection signal="pressed" from="ColorRect/TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="PreludeRect/PreludeButton" to="." method="_on_PreludeButton_pressed"]

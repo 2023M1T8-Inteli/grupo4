@@ -30,6 +30,7 @@ func _ready():
 	# Verifica se o diálogo foi encontrado
 	assert(dialog, "Dialog not found")
 
+func start_dialog():
 	# Avança para a próxima frase
 	nextPhrase()
 	

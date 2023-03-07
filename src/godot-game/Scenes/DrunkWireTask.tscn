@@ -34,7 +34,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0.352941, 0.176471, 0.0705882, 0.592157 ), Color( 0.501961, 0.235294, 0.0745098, 0.866667 ) ]
+"values": [ Color( 0.352941, 0.176471, 0.0705882, 0.231373 ), Color( 0.501961, 0.235294, 0.0745098, 0.517647 ) ]
 }
 
 [node name="WiresTask" type="CanvasLayer"]
@@ -342,6 +342,9 @@ texture = ExtResource( 4 )
 anims/RESET = SubResource( 1 )
 anims/flash = SubResource( 2 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="pressed" from="blueWire/blueButton" to="." method="_on_blueButton_pressed"]
 [connection signal="pressed" from="blueWire/blueYellowButton" to="." method="_on_blueYellowButton_pressed"]
 [connection signal="pressed" from="blueWire/blueBlueButton" to="." method="_on_blueBlueButton_pressed"]
@@ -362,3 +365,4 @@ anims/flash = SubResource( 2 )
 [connection signal="pressed" from="purpleWire/purpleRedButton" to="." method="_on_purpleRedButton_pressed"]
 [connection signal="pressed" from="purpleWire/purpleBlueButton" to="." method="_on_purpleBlueButton_pressed"]
 [connection signal="pressed" from="purpleWire/purplePurpleButton" to="." method="_on_purplePurpleButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

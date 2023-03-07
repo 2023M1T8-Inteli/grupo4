@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Ze/image.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Ze/Ovo.gd" type="Script" id=2]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 180, 320 )
+scale = Vector2( 1.40078, 3.26531 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = -128.0
+margin_top = -98.0
+margin_right = 129.0
+margin_bottom = 98.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
