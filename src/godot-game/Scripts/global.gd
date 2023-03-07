@@ -2,6 +2,8 @@ extends Node
 
 var finishDialog1 = false
 
+var isDrunk = false
+
 var leftPress = false
 var rightPress = false
 var upPress = false

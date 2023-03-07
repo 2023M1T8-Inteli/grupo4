@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scripts/Prelude.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -2445,6 +2445,9 @@ extents = Vector2( 2610.5, 7 )
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 5.90625, 1300 )
 
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 10, 56 )
+
 [node name="Prelude" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -2478,8 +2481,6 @@ tile_data = PoolIntArray( -917518, 7, 0, -917516, 7, 0, -917514, 7, 0, -917512, 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 117, 175 )
 
-[node name="GUI" parent="." instance=ExtResource( 5 )]
-
 [node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]
 position = Vector2( 360, 104 )
 
@@ -2504,7 +2505,27 @@ position = Vector2( 1047, 271 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 6 )
 
+[node name="Node2D" type="Node2D" parent="PosteCaixa"]
+position = Vector2( 0, 174.667 )
+scale = Vector2( 1.33333, 1.33333 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PosteCaixa"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PosteCaixa/StaticBody2D"]
+position = Vector2( 0, 136 )
+shape = SubResource( 31 )
+
 [node name="PosteCaixa2" type="Sprite" parent="."]
 position = Vector2( 1536, 258 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 6 )
+
+[node name="GUI" parent="." instance=ExtResource( 5 )]
+
+[node name="DrunkFilter" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="DrunkFilter"]
+margin_right = 360.0
+margin_bottom = 640.0
+mouse_filter = 2
+color = Color( 0.505882, 0.282353, 0.172549, 0.435294 )

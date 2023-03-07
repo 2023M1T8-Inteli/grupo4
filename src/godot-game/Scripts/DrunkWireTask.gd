@@ -24,15 +24,17 @@ var blueCorrect = false
 var redCorrect = false
 var purpleCorrect = false
 var yellowCorrect = false
+var alpha
 
 func _ready():
 	$DrunkRect/AnimationPlayer.play("flash")
-	
-	while 1 != 0:
-		for sprite in sprites:
-			var alpha = rand_range(0, 150) / 255.0
-			sprite.modulate.a = alpha
-			yield(get_tree().create_timer(.05), "timeout")
+	$Timer.start()
+
+func _on_Timer_timeout():
+	for sprite in sprites:
+		alpha = rand_range(0, 150) / 255.0
+		sprite.modulate.a = alpha
+	$Timer.start()
 
 # Função que é chamada a cada quadro do jogo, verificando se o objetivo foi alcançado.
 func _process(_delta):
@@ -252,3 +254,4 @@ func _on_purplePurpleButton_pressed():
 	for i in purpleButtons:
 		i.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$purpleWire/purpleButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
+

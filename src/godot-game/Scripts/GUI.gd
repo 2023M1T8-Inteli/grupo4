@@ -37,4 +37,4 @@ func _on_StartButton_pressed():
 
 func _on_QuitButton_pressed():
 	# Muda a cena para a tela de título
-	SceneTransition.change_scene("res://Scenes/Title Screen.tscn")
+	SceneTransition.change_scene("res://Scenes/Title Screen.tscn", 1.5 , 1.5)

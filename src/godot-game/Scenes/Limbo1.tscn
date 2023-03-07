@@ -58,6 +58,7 @@ position = Vector2( 770, 349 )
 shape = SubResource( 3 )
 
 [node name="DialogBox 1" parent="." instance=ExtResource( 2 )]
+visible = false
 
 [node name="LimboMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

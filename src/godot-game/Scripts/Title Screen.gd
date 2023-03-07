@@ -5,9 +5,7 @@ extends Control
 # Quando o botão "Jogar" é pressionado, é feita a transição para a cena principal do jogo.
 func _on_StartButton_pressed() -> void:
 	if Global.finishDialog1 == false:
-		SceneTransition.change_scene("res://Scenes/Limbo1.tscn")
-	else:
-		SceneTransition.change_scene("res://Scenes/Cidade.tscn")
+		SceneTransition.change_scene("res://Scenes/Prelude.tscn", 1, 1)
 
 # Quando o botão "Sair" é pressionado, o programa é encerrado.
 #func _on_QuitButton_pressed():

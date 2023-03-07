@@ -25,6 +25,9 @@ onready var rightPress = Global.rightPress
 onready var upPress = Global.upPress
 onready var downPress = Global.downPress
 
+func _process(_delta):
+	isDrunk = Global.isDrunk
+
 func _ready():
 	spriteB.visible = false # a sprite do fantasminha de costas não aparece.
 
@@ -33,13 +36,6 @@ func _ready():
 	timer.set_one_shot(false)
 	timer.connect("timeout", self, "_on_timer_timeout")
 	timer.start()
-	
-
-	if str(self.get_parent()).get_slice(":", 0) == "Prelude":
-		if get_node("/root/Prelude").connect("is_drunk", self, "is_drunk") != OK:
-			print ("An unexpected error occured when trying to connect to the signal")
-		else:
-			print("CONNECTED")
 	
 	
 	if isDrunk == true:

@@ -2,18 +2,24 @@ extends Node2D
 
 # Função que é chamada quando a cena é carregada
 func _ready():
-	# Obtém a textura da caixa de diálogo e conecta o sinal "finish" a esta cena
-	var textura_dialogo =  $"DialogBox 1/TexturaCaixa"
-	textura_dialogo.connect("finish", self, "_on_TexturaCaixa_finish")
+	Global.isDrunk = false
+	$LimboMusic.playing = true
+	$LimboAmbience.playing = true
 	
 	# Torna o nó do fantasma visível e o nó do Ze invisível
 	get_node("Player/Fantasma").visible = true
 	get_node("Player/Ze").visible = false
 	
-	$LimboMusic.playing = true
-	$LimboAmbience.playing = true
+	yield(get_tree().create_timer(3), "timeout")
+	$"DialogBox 1".visible = true
+	$"DialogBox 1/TexturaCaixa".start_dialog()
+	# Obtém a textura da caixa de diálogo e conecta o sinal "finish" a esta cena
+	var textura_dialogo =  $"DialogBox 1/TexturaCaixa"
+	textura_dialogo.connect("finish", self, "_on_TexturaCaixa_finish")
+	
+	
 # Função que é chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
 	Global.finishDialog1 = true
 	# Muda para a cena "Cidade.tscn" usando a classe "SceneTransition"
-	SceneTransition.change_scene("res://Scenes/Cidade.tscn")
+	SceneTransition.change_scene("res://Scenes/Cidade.tscn", 1, 1)
