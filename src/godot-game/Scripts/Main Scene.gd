@@ -3,14 +3,15 @@ extends Node2D
 # Função que é chamada quando a cena é carregada
 func _ready():
 	Global.isDrunk = false
-	$LimboMusic.playing = true
 	$LimboAmbience.playing = true
 	
 	# Torna o nó do fantasma visível e o nó do Ze invisível
 	get_node("Player/Fantasma").visible = true
 	get_node("Player/Ze").visible = false
 	
-	yield(get_tree().create_timer(3), "timeout")
+	yield(get_tree().create_timer(3.3), "timeout")
+	BangSound.playing = false
+	$LimboMusic.playing = true
 	$"DialogBox 1".visible = true
 	$"DialogBox 1/TexturaCaixa".start_dialog()
 	# Obtém a textura da caixa de diálogo e conecta o sinal "finish" a esta cena

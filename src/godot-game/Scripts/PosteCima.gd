@@ -42,9 +42,10 @@ func renderAmong(value):
 	# Esconde a interface do usuário e mostra a tarefa de fios
 	$GUI.visible = not value
 	$ColorRect/WiresTask.visible = value
+	$DrunkFilter.visible = not value
 	
 	if value == true:
-		$ExplodeTimer.wait_time = 1
+		$ExplodeTimer.wait_time = 6
 		$ExplodeTimer.start()
 	
 func task_complete():
@@ -70,6 +71,7 @@ func _on_ExplodeTimer_timeout():
 	if lockIf2 == true:
 		lockIf2 = false
 		renderAmong(false)
+		BangSound.playing = true
 		$ExplodeSprite.frame = 0
 		$ExplodeSprite.visible = true
 		$ExplodeSprite.playing = true

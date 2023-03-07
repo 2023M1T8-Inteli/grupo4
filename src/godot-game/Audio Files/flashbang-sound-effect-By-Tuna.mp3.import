@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/flashbang-sound-effect-By-Tuna.mp3-0ddc779184adc703b561bf3b1088e676.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/flashbang-sound-effect-By-Tuna.mp3"
+dest_files=[ "res://.import/flashbang-sound-effect-By-Tuna.mp3-0ddc779184adc703b561bf3b1088e676.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -20,6 +20,7 @@ config/icon="res://icon.png"
 SceneTransition="*res://Scenes/scene_transition.tscn"
 Global="*res://Scripts/global.gd"
 pos="*res://Scripts/PosSave.gd"
+BangSound="*res://Scenes/BangSound.tscn"
 
 [display]
 

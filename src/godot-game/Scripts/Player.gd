@@ -29,6 +29,14 @@ func _process(_delta):
 	isDrunk = Global.isDrunk
 
 func _ready():
+	Global.leftPress = false
+	Global.rightPress = false
+	Global.upPress = false
+	Global.downPress = false
+	Global.midPress = false
+	
+	
+	
 	spriteB.visible = false # a sprite do fantasminha de costas não aparece.
 
 	add_child(timer)
