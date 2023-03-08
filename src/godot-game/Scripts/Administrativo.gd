@@ -23,7 +23,7 @@ func _ready():
 func _process(_delta):
 	var camera_limits = Rect2(map.global_position, Vector2(map_width, map_height))
 	camera.limit_left = camera_limits.position.x
-	camera.limit_top = camera_limits.position.y
+	#camera.limit_top = camera_limits.position.y
 	camera.limit_right = 768 #mudar depois para funcao que pega os limites
 	camera.limit_bottom = 1344 #mudar depois para funcao que pega os limites
 	

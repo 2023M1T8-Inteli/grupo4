@@ -1,16 +1,17 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Sprites/PixelOffice/PixelOfficeFinal-1.png.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/PixelOffice/OfficeWoodenFloor.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Administrativo.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/Elevador/Elevador.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 394, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 10, 686 )
+extents = Vector2( 10, 729 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 117.75, 124 )
@@ -50,10 +51,15 @@ script = ExtResource( 3 )
 
 [node name="map" type="Node2D" parent="."]
 
+[node name="Elevador" type="Sprite" parent="map"]
+position = Vector2( 380, -72 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 6 )
+
 [node name="bounds" type="StaticBody2D" parent="map"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 381, -9 )
+position = Vector2( 383, -76 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="map/bounds"]
@@ -61,11 +67,11 @@ position = Vector2( 387, 1344 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( -10, 669 )
+position = Vector2( -10, 652 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 778, 668 )
+position = Vector2( 778, 642 )
 shape = SubResource( 3 )
 
 [node name="OfficeWoodenFloor" type="Sprite" parent="map"]
