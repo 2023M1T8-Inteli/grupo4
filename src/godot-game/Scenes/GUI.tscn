@@ -109,7 +109,7 @@ margin_bottom = 63.0
 mouse_filter = 2
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = " RESUMIR"
+text = " RETORNAR"
 
 [node name="QuitButton" type="TextureButton" parent="PauseScreen"]
 margin_left = -136.0

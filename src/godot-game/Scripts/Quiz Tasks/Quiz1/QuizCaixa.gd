@@ -53,9 +53,6 @@ func _process(_delta):
 	else:
 		$ReturnArrow.color = ("656565")
 	
-	# Verifica se o botão de interação foi pressionado
-	if Input.is_action_just_pressed("interact"):
-		_on_TextureButton_pressed()
 
 
 func getDialog() -> Array:

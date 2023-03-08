@@ -8,6 +8,8 @@ var closeToAmong = false
 var amongComplete = false
 
 func _ready():
+	Global.activeObjective[0] = false
+	# Global.activeObjective[1] = nada
 	# Conecta o sinal de conclusão da tarefa ao método task_complete
 	if $ColorRect/WiresTask.connect("task_complete", self, "task_complete") != OK:
 		print ("An unexpected error occured when trying to connect to the signal")

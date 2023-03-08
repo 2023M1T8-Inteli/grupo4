@@ -5,6 +5,8 @@ var closeToADM = false
 onready var lockIf1 = true
 
 func _ready():
+	Global.activeObjective[0] = true
+	Global.activeObjective[1] = $admAncora.global_position
 	$Player.global_position = pos.posCidade
 	
 	# Mostra o personagem principal e esconde o fantasma
