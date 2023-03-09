@@ -4,11 +4,11 @@ var speed = 450
 
 onready var arrow = $Arrow
 
-var timer = Timer.new()
-
-var last_offset = Vector2.ZERO
+var amplitude = 60
+var frequency = 5
 
 var vel : Vector2 = Vector2()
+
 
 #Atribuindo nossa sprite como variavel
 onready var spriteA : AnimatedSprite = get_node("Fantasma/Ghost")
@@ -16,8 +16,6 @@ onready var spriteB : AnimatedSprite = get_node("Fantasma/GhostBack")
 
 onready var zeIdle : AnimatedSprite = get_node("Ze/ZeIdle")
 onready var zeCorre : AnimatedSprite = get_node("Ze/ZeCorrendo")
-
-var isDrunk = false
 
 onready var root_node = get_tree().get_root()
 
@@ -34,13 +32,13 @@ func _process(_delta):
 		pos.posScene = get_parent().get_path()
 		SceneTransition.change_scene("res://Scenes/Title Screen.tscn", 1.5 , 1.5)
 		
-	isDrunk = Global.isDrunk
 	
 	arrow.active_objective = Global.activeObjective[1]
 	if self.global_position.distance_to(Global.activeObjective[1]) < 200:
 		$Arrow.visible = false
 	else:
 		$Arrow.visible = true
+		
 func _ready():
 	Global.leftPress = false
 	Global.rightPress = false
@@ -51,20 +49,8 @@ func _ready():
 	
 	
 	spriteB.visible = false # a sprite do fantasminha de costas não aparece.
-
-	add_child(timer)
-	timer.set_wait_time(0.0025)
-	timer.set_one_shot(false)
-	timer.connect("timeout", self, "_on_timer_timeout")
-	timer.start()
 	
-	
-	if isDrunk == true:
-		speed = 225
 		
-func is_drunk():
-	print("MF DRUNK")
-	isDrunk = true
 
 #enquanto a setinha não ta apertada o player não se mexe 
 func _on_LeftButton_button_up():
@@ -91,56 +77,68 @@ func _on_DownButton_button_up():
 func _on_DownButton_button_down():
 	Global.downPress = true
 
-func simulate_drunk_movement(strength: float):
-	var target_vel = Vector2(rand_range(-strength, strength), rand_range(-strength, strength))
-	var lerp_speed = 0.05
-	vel = vel.linear_interpolate(target_vel, lerp_speed)
-
-
-func _on_timer_timeout():
-	if isDrunk == true:
-		var target_zoom = Vector2(rand_range(0.5, 1.5), rand_range(0.5, 1.5))
-		var lerp_speed = 0.005
-		# Lerp the camera zoom
-		$Camera2D.zoom = $Camera2D.zoom.linear_interpolate(target_zoom, lerp_speed)
 	
 #física do jogo
 func _physics_process(_delta):
-	
-	vel.x = 0
-	vel.y = 0
-	
-	if isDrunk == true:
-		simulate_drunk_movement(450)
-	
-	if Input.is_action_pressed("move_left") or Global.leftPress == true:
-		leftPress = true
+	if Global.isDrunk == true:
+		var time = OS.get_ticks_msec() / 1000.0
+		var x_offset = amplitude * sin(time * frequency)
+		var y_offset = amplitude * cos(time * frequency)
+		var speed = Vector2(450, 450)
+		var direction = Vector2()
+		if Input.is_action_pressed("move_left") or Global.leftPress == true:
+			direction.x -= 1
+			leftPress = true
+		else:
+			leftPress = false
+		if Input.is_action_pressed("move_right") or Global.rightPress == true:
+			direction.x += 1
+			rightPress = true
+		else:
+			rightPress = false
+		if Input.is_action_pressed("move_up") or Global.upPress == true:
+			direction.y -= 1
+			upPress = true
+		else:
+			upPress = false
+		if Input.is_action_pressed("move_down") or Global.downPress == true:
+			direction.y += 1
+			downPress = true
+		else:
+			downPress = false
+		direction = direction.normalized()
+		if leftPress or downPress or upPress or rightPress:
+			var velocity = direction * speed + Vector2(x_offset, y_offset)
+			vel = move_and_slide(velocity, Vector2.UP)
+		_player_dir()
 	else:
-		leftPress = false
-	if leftPress == true:
-		vel.x -= speed
-	if Input.is_action_pressed("move_right") or Global.rightPress == true:
-		rightPress = true
-	else:
-		rightPress = false
-	if rightPress == true:
-		vel.x += speed
-	if Input.is_action_pressed("move_up") or Global.upPress == true:
-		upPress = true
-	else:
-		upPress = false
-	if upPress == true:
-		vel.y -= speed
-	if Input.is_action_pressed("move_down") or Global.downPress == true:
-		downPress = true
-	else:
-		downPress = false
-	if downPress == true:
-		vel.y += speed
-
-	vel = move_and_slide(vel, Vector2.UP)
+		var speed = Vector2(450, 450) 
+		var direction = Vector2()
+		if Input.is_action_pressed("move_left") or Global.leftPress == true:
+			direction.x -= 1
+			leftPress = true
+		else:
+			leftPress = false
+		if Input.is_action_pressed("move_right") or Global.rightPress == true:
+			direction.x += 1
+			rightPress = true
+		else:
+			rightPress = false
+		if Input.is_action_pressed("move_up") or Global.upPress == true:
+			direction.y -= 1
+			upPress = true
+		else:
+			upPress = false
+		if Input.is_action_pressed("move_down") or Global.downPress == true:
+			direction.y += 1
+			downPress = true
+		else:
+			downPress = false
+		direction = direction.normalized()
+		vel = direction * speed
+		vel = move_and_slide(vel, Vector2.UP)
 	
-	_player_dir()
+		_player_dir()
 
 
 #Funcao responsavel por controlar que direcao o player esta olhando enquanto/apos se mexer
