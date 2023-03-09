@@ -2560,7 +2560,7 @@ margin_top = 285.0
 margin_right = 337.0
 margin_bottom = 349.0
 custom_fonts/normal_font = SubResource( 32 )
-text = "Clique e segure na tela para se movimentar"
+text = "Clique e segure na tela para se movimentar!"
 scroll_active = false
 
 [node name="TextureButton" type="TextureButton" parent="Prompt/CanvasLayer"]
