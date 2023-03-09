@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sprites/Anims/zeAnim.webm" type="VideoStream" id=1]
+[ext_resource path="res://Sprites/Anims/zeAnimRapido.webm" type="VideoStream" id=1]
 [ext_resource path="res://Scripts/ZeAnim.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Interface/seta.png" type="Texture" id=3]
 
 [node name="ZeAnim" type="VideoPlayer"]
 margin_right = 360.0
@@ -10,4 +11,17 @@ stream = ExtResource( 1 )
 autoplay = true
 script = ExtResource( 2 )
 
+[node name="Seta" type="Sprite" parent="."]
+position = Vector2( 40, 40 )
+rotation = 3.14159
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="Seta"]
+margin_left = -40.0
+margin_top = -40.0
+margin_right = 40.0
+margin_bottom = 40.0
+
 [connection signal="finished" from="." to="." method="_on_ZeAnim_finished"]
+[connection signal="pressed" from="Seta/TextureButton" to="." method="_on_TextureButton_pressed"]

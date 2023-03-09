@@ -10,6 +10,7 @@ var lockIf0 = true
 var closeToPorta
 
 func _ready():
+	Global.activeObjective[0] == false
 	$Player.global_position = pos.posADM
 	if pos.posADM == Vector2(381,79):
 		$Player.downPress = true

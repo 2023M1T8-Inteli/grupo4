@@ -43,18 +43,7 @@ func _process(_delta):
 	else:
 		$ReturnArrow.color = ("656565")
 	
-	# Verifica se o botão de interação foi pressionado
-	if Input.is_action_just_pressed("interact"):
-		# Avança para a próxima frase se o diálogo foi finalizado
-		if finished:
-			nextPhrase()
-		# Caso contrário, exibe todo o texto da frase
-		else:
-			$Label.visible_characters = len($Label.text)
 
-	# Verifica se o diálogo foi finalizado e o botão de interação foi pressionado
-	if phraseNum == len(dialog) and finished == true and Input.is_action_just_pressed("interact"):
-		emit_signal("finish")
 
 	# Realiza uma animação quando a terceira frase é exibida
 	if phraseNum == 3 and finished == false:
