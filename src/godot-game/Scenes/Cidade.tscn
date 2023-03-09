@@ -3871,7 +3871,7 @@ shape = SubResource( 40 )
 position = Vector2( 1545, 1004 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 42 )
-frame = 8
+frame = 3
 playing = true
 
 [node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]
