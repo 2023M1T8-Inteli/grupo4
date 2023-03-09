@@ -2516,19 +2516,19 @@ margin_bottom = 640.0
 mouse_filter = 2
 color = Color( 0.505882, 0.282353, 0.172549, 0.435294 )
 
-[node name="PosteCaixa3" type="Sprite" parent="."]
+[node name="PosteCaixa" type="Sprite" parent="."]
 position = Vector2( 1030, 309 )
 scale = Vector2( 0.871681, 0.747619 )
 texture = ExtResource( 7 )
 
-[node name="Node2D" type="Node2D" parent="PosteCaixa3"]
+[node name="Node2D" type="Node2D" parent="PosteCaixa"]
 position = Vector2( -3, 197 )
 scale = Vector2( 0.999997, 0.999997 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="PosteCaixa3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="PosteCaixa"]
 position = Vector2( 0, 59 )
 scale = Vector2( 0.75, 0.75 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PosteCaixa3/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PosteCaixa/StaticBody2D"]
 position = Vector2( 2.66675, 136 )
 shape = SubResource( 31 )
