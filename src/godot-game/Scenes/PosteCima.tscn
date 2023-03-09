@@ -7,7 +7,7 @@
 [ext_resource path="res://Sprites/TileMaps/tilemap escritorio.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/TileMaps/Skorpio's Pack/Objects.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/PosteCima.gd" type="Script" id=7]
-[ext_resource path="res://Scenes/DrunkWireTask.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/DrunkWireTaskNew.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprites/FX/Explosion1.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/FX/Explosion2.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/FX/Explosion3.png" type="Texture" id=11]
@@ -432,13 +432,13 @@ margin_right = 72.0
 margin_bottom = 73.0
 color = Color( 0.572549, 0.113725, 0.113725, 1 )
 
+[node name="WiresTask" parent="ColorRect" instance=ExtResource( 8 )]
+visible = false
+
 [node name="TextureButton" type="TextureButton" parent="ColorRect"]
 margin_right = 40.0
 margin_bottom = 40.0
 action_mode = 0
-
-[node name="WiresTask" parent="ColorRect" instance=ExtResource( 8 )]
-visible = false
 
 [node name="Timer" type="Timer" parent="ColorRect"]
 
@@ -454,7 +454,11 @@ shape = SubResource( 10 )
 position = Vector2( 52, 11 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 9 )
+<<<<<<< HEAD
 frame = 8
+=======
+frame = 7
+>>>>>>> 1dc8d1793dbcb88a9d6e7624ddd78dccbb8d8d8b
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]

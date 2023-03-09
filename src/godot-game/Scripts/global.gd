@@ -19,6 +19,3 @@ var jumpStartFeedback1 = false
 var closeToSomething = false
 
 var activeObjective = [false, Vector2(0,0)]
-
-
-var amongDone = false
