@@ -27,15 +27,15 @@ var yellowCorrect = false
 var alpha
 
 func _ready():
-	$DrunkRect/AnimationPlayer.play("flash")
-	$Timer.start()
+#	$DrunkRect/AnimationPlayer.play("flash")
+#	$Timer.start()
 
-func _on_Timer_timeout():
-	for sprite in sprites:
-		alpha = rand_range(0, 150) / 255.0
-		sprite.modulate.a = alpha
-	$Timer.start()
-
+#func _on_Timer_timeout():
+#	for sprite in sprites:
+#		alpha = rand_range(0, 150) / 255.0
+#		sprite.modulate.a = alpha
+#	$Timer.start()
+	pass
 # Função que é chamada a cada quadro do jogo, verificando se o objetivo foi alcançado.
 func _process(_delta):
 	

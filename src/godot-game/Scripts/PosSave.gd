@@ -8,3 +8,5 @@ var posPrelude = Vector2(117, 175)
 
 var posScene
 var currentPos = Vector2(0,0)
+
+var touchPos:Vector2
