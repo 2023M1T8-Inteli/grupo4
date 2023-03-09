@@ -1,9 +1,10 @@
 extends Node2D
 
-var closeToEscada
 onready var lockIf1 = true
 onready var lockIf0 = true
 onready var lockIf2 = true
+
+var closeToEscada = false
 var closeToAmong = false
 var amongComplete = false
 
@@ -18,27 +19,12 @@ func _ready():
 
 func _process(_delta):
 	if $Player/HitBox.global_position.distance_to($EscadaAncora.global_position) < 45:
-		Global.closeToSomething = true
 		closeToEscada = true
 	elif $Player/HitBox.global_position.distance_to($ColorRect/AmongAncora.global_position) < 60 and amongComplete == false:
-		Global.closeToSomething = true
 		closeToAmong = true
 	else:
-		Global.closeToSomething = false
 		closeToEscada = false
 		closeToAmong = false
-	
-	
-	if closeToAmong and Global.midPress and lockIf0:
-		lockIf0 = false
-		yield(get_tree().create_timer(0.15), "timeout")
-		renderAmong(true)
-	
-	if closeToEscada and Global.midPress and lockIf1:
-		lockIf1 = false
-		yield(get_tree().create_timer(0.15), "timeout")
-		if get_tree().change_scene("res://Scenes/Prelude.tscn") != OK:
-			print("ERRO")
 
 func renderAmong(value):
 	# Esconde a interface do usuário e mostra a tarefa de fios
@@ -66,8 +52,6 @@ func task_complete():
 	
 	#$ColorRect/WiresTask.queue_free()
 	amongComplete = true
-	
-	
 
 func _on_ExplodeTimer_timeout():
 	if lockIf2 == true:
@@ -81,3 +65,17 @@ func _on_ExplodeTimer_timeout():
 
 func _on_SceneChangeTimer_timeout():
 	SceneTransition.change_scene("res://Scenes/Limbo1.tscn", 3, 0.1)
+
+func _on_amongButton_pressed():
+	if closeToAmong and lockIf0:
+		lockIf0 = false
+		yield(get_tree().create_timer(0.15), "timeout")
+		renderAmong(true)
+
+func _on_escadaButton_pressed():
+	print("pressed")
+	if closeToEscada and lockIf1:
+		lockIf1 = false
+		yield(get_tree().create_timer(0.15), "timeout")
+		if get_tree().change_scene("res://Scenes/Prelude.tscn") != OK:
+			print("ERRO")

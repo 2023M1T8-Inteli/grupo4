@@ -13,7 +13,6 @@ func _ready():
 	Global.activeObjective[0] == false
 	$Player.global_position = pos.posADM
 	if pos.posADM == Vector2(381,79):
-		$Player.downPress = true
 		$WalkInPlayer.play("WalkIn")
 	camera.zoom = Vector2(0.6,0.6)
 	$Player/Fantasma.visible = false

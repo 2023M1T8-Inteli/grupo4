@@ -1,6 +1,6 @@
 extends Node2D
 
-var closeToADM = false
+var closeToADM = true
 
 onready var lockIf1 = true
 
@@ -23,11 +23,12 @@ func _process(_delta):
 	else:
 		Global.closeToSomething = false
 		closeToADM = false
-	
 
-	if closeToADM and Global.midPress and lockIf1:
+func _on_admButton_pressed():
+	if closeToADM and lockIf1:
 		lockIf1 = false
 		yield(get_tree().create_timer(0.15), "timeout")
 		pos.posCidade = $Player.global_position
 		if get_tree().change_scene("res://Scenes/Administrativo.tscn") != OK:
-			print("ERRO")
+				print("ERRO")
+

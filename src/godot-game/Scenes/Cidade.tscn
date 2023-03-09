@@ -4,7 +4,6 @@
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Cidade.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/trees_and_bushes_pack/trees-and-bushes.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Buildings/isometric_office_5.svg" type="Texture" id=5]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sprites/TileMaps/edificios.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export7.png" type="Texture" id=8]
@@ -3777,6 +3776,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 71/shapes = [  ]
 71/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=43]
+
 [sub_resource type="SpriteFrames" id=39]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ) ],
@@ -3839,11 +3840,6 @@ tile_data = PoolIntArray( -917519, 7, 0, -917517, 7, 0, -917515, 7, 0, -917513, 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 368, 624 )
 
-[node name="vTal" type="Sprite" parent="."]
-visible = false
-position = Vector2( 1621, 883 )
-texture = ExtResource( 5 )
-
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
 [node name="admAncora" type="Node2D" parent="."]
@@ -3855,6 +3851,11 @@ margin_top = -46.0
 margin_right = 40.0
 margin_bottom = -6.0
 rect_scale = Vector2( 1.36, 2 )
+
+[node name="admButton" type="TouchScreenButton" parent="admAncora"]
+position = Vector2( -59, -40 )
+scale = Vector2( 6.88825, 3.91016 )
+shape = SubResource( 43 )
 
 [node name="Predio" type="StaticBody2D" parent="."]
 
@@ -3871,7 +3872,7 @@ shape = SubResource( 40 )
 position = Vector2( 1545, 1004 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 42 )
-frame = 8
+frame = 7
 playing = true
 
 [node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]
@@ -3892,3 +3893,5 @@ shape = SubResource( 23 )
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
 position = Vector2( 1840, 320 )
 shape = SubResource( 23 )
+
+[connection signal="pressed" from="admAncora/admButton" to="." method="_on_admButton_pressed"]
