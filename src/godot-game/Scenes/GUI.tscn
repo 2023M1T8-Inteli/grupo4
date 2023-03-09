@@ -102,14 +102,14 @@ texture_normal = ExtResource( 6 )
 texture_hover = ExtResource( 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PauseScreen/StartButton"]
-margin_left = 80.0
+margin_left = 92.0
 margin_top = 23.0
-margin_right = 200.0
+margin_right = 185.0
 margin_bottom = 63.0
 mouse_filter = 2
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = " RETORNAR"
+text = "VOLTAR"
 
 [node name="QuitButton" type="TextureButton" parent="PauseScreen"]
 margin_left = -136.0
