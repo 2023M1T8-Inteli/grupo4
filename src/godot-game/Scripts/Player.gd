@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 var speed = 450
 
+onready var arrow = $Arrow
+
 var timer = Timer.new()
 
 var last_offset = Vector2.ZERO
@@ -26,8 +28,19 @@ onready var upPress = Global.upPress
 onready var downPress = Global.downPress
 
 func _process(_delta):
+	if pos.savePosCommand == true:
+		pos.savePosCommand = false
+		pos.currentPos = self.global_position
+		pos.posScene = get_parent().get_path()
+		SceneTransition.change_scene("res://Scenes/Title Screen.tscn", 1.5 , 1.5)
+		
 	isDrunk = Global.isDrunk
-
+	
+	arrow.active_objective = Global.activeObjective[1]
+	if self.global_position.distance_to(Global.activeObjective[1]) < 200:
+		$Arrow.visible = false
+	else:
+		$Arrow.visible = true
 func _ready():
 	Global.leftPress = false
 	Global.rightPress = false
@@ -124,10 +137,6 @@ func _physics_process(_delta):
 		downPress = false
 	if downPress == true:
 		vel.y += speed
-		
-	if Input.is_action_pressed("pause"):
-			if get_tree().change_scene("res://Scenes/Title Screen.tscn") != OK:
-				print ("An unexpected error occured when trying to switch to the scene")
 
 	vel = move_and_slide(vel, Vector2.UP)
 	

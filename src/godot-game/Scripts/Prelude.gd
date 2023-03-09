@@ -6,6 +6,8 @@ var lockIf0 = true
 var lockIf1 = true
 
 func _ready():
+	Global.activeObjective[0] = true
+	Global.activeObjective[1] = $PosteCaixa/Node2D.global_position
 	Global.isDrunk = true
 	$Player.global_position = pos.posPrelude
 	$Player/Ze.visible = true
