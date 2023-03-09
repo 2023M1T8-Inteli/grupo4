@@ -2540,3 +2540,28 @@ scale = Vector2( 1.50476, -4.09894 )
 shape = SubResource( 32 )
 
 [connection signal="pressed" from="PosteCaixa/posteSobeButton" to="." method="_on_posteSobeButton_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Prompt"]
+
+[node name="ColorRect" type="ColorRect" parent="Prompt/CanvasLayer"]
+margin_right = 360.0
+margin_bottom = 640.0
+color = Color( 0, 0, 0, 0.698039 )
+
+[node name="Sprite" type="Sprite" parent="Prompt/CanvasLayer"]
+position = Vector2( 180, 320 )
+texture = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Prompt/CanvasLayer"]
+margin_left = 24.0
+margin_top = 285.0
+margin_right = 337.0
+margin_bottom = 349.0
+custom_fonts/normal_font = SubResource( 32 )
+text = "Clique e segure na tela para se movimentar!"
+scroll_active = false
+
+[node name="TextureButton" type="TextureButton" parent="Prompt/CanvasLayer"]
+margin_right = 360.0
+margin_bottom = 640.0
+
+[connection signal="pressed" from="Prompt/CanvasLayer/TextureButton" to="." method="_on_TextureButton_pressed"]

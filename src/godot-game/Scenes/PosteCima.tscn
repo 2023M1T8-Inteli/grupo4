@@ -454,11 +454,7 @@ shape = SubResource( 10 )
 position = Vector2( 52, 11 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 9 )
-<<<<<<< HEAD
 frame = 8
-=======
-frame = 7
->>>>>>> 1dc8d1793dbcb88a9d6e7624ddd78dccbb8d8d8b
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
