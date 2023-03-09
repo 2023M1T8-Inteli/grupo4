@@ -21,9 +21,6 @@
 [ext_resource path="res://Sprites/Ze/ze_correndo/ze_correndo4.png" type="Texture" id=26]
 [ext_resource path="res://Sprites/Ze/ze_parado/frame_0_delay-0.2s.png" type="Texture" id=27]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 65.75, 139.5 )
-
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ) ],
@@ -56,14 +53,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 65.75, 139.5 )
+
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 4
 script = ExtResource( 2 )
-
-[node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2( -0.25, 9.5 )
-scale = Vector2( 0.25, 0.25 )
-shape = SubResource( 1 )
 
 [node name="Fantasma" type="Node2D" parent="."]
 visible = false
@@ -74,13 +69,14 @@ scale = Vector2( 0.42, 0.42 )
 position = Vector2( 0, -2.38095 )
 scale = Vector2( -0.298, 0.298 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="Ghost" type="AnimatedSprite" parent="Fantasma"]
 position = Vector2( 0, -2.38095 )
 scale = Vector2( 0.297619, 0.297619 )
 frames = SubResource( 2 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="Ze" type="Node2D" parent="."]
@@ -90,12 +86,18 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="ZeCorrendo" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 12 )
+frame = 2
 playing = true
 
 [node name="ZeIdle" type="AnimatedSprite" parent="Ze"]
 frames = SubResource( 13 )
-frame = 2
+frame = 1
 playing = true
+
+[node name="HitBox" type="CollisionShape2D" parent="."]
+position = Vector2( -0.25, 9.5 )
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
