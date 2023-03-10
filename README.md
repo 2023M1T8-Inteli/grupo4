@@ -121,93 +121,93 @@ A cada atualização os detalhes devem ser lançados aqui.
     *  Remover exports velhos em preparacao ao export da nova versao alpha
 
 * 0.1.5.1 - 02/03/2023
-    *Adicionar "flash" de setinhas quando volta uma frase do dialogo. (Aplicado em todas as caixas de dialogo criadas ate agora)  
-    *Deletar TaskExec1 (Prototipo falho de uma task "quiz")
+    * Adicionar "flash" de setinhas quando volta uma frase do dialogo. (Aplicado em todas as caixas de dialogo criadas ate agora)  
+    * Deletar TaskExec1 (Prototipo falho de uma task "quiz")
 
-*0.1.5.2 - 02/03/2023
-    *Pequenos Patches:
-    -Mudar levemente o codigo da title screen
-    -Polir codigo do player
+* 0.1.5.2 - 02/03/2023
+    * Pequenos Patches:
+    - Mudar levemente o codigo da title screen
+    - Polir codigo do player
 
-*0.1.5.3 - 03/03/2023
-    *Inicio da add da parte administrativa
-    *Implementacao da task quiz, não funciona
+* 0.1.5.3 - 03/03/2023
+    * Inicio da add da parte administrativa
+    * Implementacao da task quiz, não funciona
 
- *0.1.5.4 - 03/03/2023 
-    *Conserto da task do quiz
+* 0.1.5.4 - 03/03/2023 
+    * Conserto da task do quiz
     
-*0.1.5.5 - 03/03/2023
-    *Ultimos patches na task de quiz
+* 0.1.5.5 - 03/03/2023
+    * Últimos patches na task de quiz
     
-*0.1.5.6 - 06/03/2023
-    *Adicionar segunda task de quiz
+* 0.1.5.6 - 06/03/2023
+    * Adicionar segunda task de quiz
     
-*0.1.6.0 - 06/03/2023
-    *Add cena temporaria em cima do poste
-    *Add alguns tilemaps/tilesets da internet
-    *Add funcionalidade botao de interacao (na task among e para ir para cena em cima do poste)
-    *Apagar exports velhos em preparacao para nova versao alpha
+* 0.1.6.0 - 06/03/2023
+    * Add cena temporaria em cima do poste
+    * Add alguns tilemaps/tilesets da internet
+    * Add funcionalidade botao de interacao (na task among e para ir para cena em cima do poste)
+    * Apagar exports velhos em preparacao para nova versao alpha
     
-*0.1.6.1 - 06/03/2023
-    *Se o jogador ja viu o dialogo do limbo uma vez, pula diretamente para a cena da cidade.
+* 0.1.6.1 - 06/03/2023
+    * Se o jogador ja viu o dialogo do limbo uma vez, pula diretamente para a cena da cidade.
     
-*0.1.7.0 - 07/03/2023
-    *Refinar cenas ja existentes e ordenar tudo
-    Title Screen -> Prelude -> PosteCima (explode) -> limbo -> cidade -> adm
+* 0.1.7.0 - 07/03/2023
+    * Refinar cenas ja existentes e ordenar tudo
+    * Title Screen -> Prelude -> PosteCima (explode) -> limbo -> cidade -> adm
     
-*0.2.0.0 - 07/03/2023
-   *NEW BETA:
-    *Animação adicionada.
-   *Historia flui:
-    *Title Screen -> Anim -> Prelude -> PosteCima (explode e tem barulho agr) -> Limbo (sons e musicas sincronizados) -> cidade -> adm (opcional)
-    *Caso o player ja passou do dialogo do limbo:
-    *TItle Screen -> Cidade -> ADM
+* 0.2.0.0 - 07/03/2023
+   * NEW BETA:
+   * Animação adicionada.
+   * Historia flui:
+    * Title Screen -> Anim -> Prelude -> PosteCima (explode e tem barulho agr) -> Limbo (sons e musicas sincronizados) -> cidade -> adm (opcional)
+    * Caso o player ja passou do dialogo do limbo:
+    * TItle Screen -> Cidade -> ADM
  
  * 0.2.1.0 - 08/03/2023
-    *add setinha guia
-    *add alerta alerta
-    *acelerar animmação
-    *tentativa falha de posSave ao sair do jogo pela tela de pause (em desenvolvimento)
+    * add setinha guia
+    * add alerta alerta
+    * acelerar animmação
+    * tentativa falha de posSave ao sair do jogo pela tela de pause (em desenvolvimento)
   
-*0.2.1.1 - 09/03/2023
-    *Adicionar botao para pular animacao
+* 0.2.1.1 - 09/03/2023
+    * Adicionar botao para pular animacao
     
 * 0.2.1.3 - 09/03/2023
-    *Alterar o diálogo do limbo.
+    * Alterar o diálogo do limbo.
     
-*0.2.1.4 - 09/03/2023
-    *Editar bebado (vertigo)
-    *Comecar a editar task among bebada (EM PROGRESSO)
+* 0.2.1.4 - 09/03/2023
+    * Editar bebado (vertigo)
+    * Comecar a editar task among bebada (EM PROGRESSO)
     
-*0.2.2.0 - 09/03/2023
-    *Mudar controles para touch screen
+* 0.2.2.0 - 09/03/2023
+    * Mudar controles para touch screen
+     
+* 0.2.2.1 - 10/03/2023
+    * Adicionar prompt ao entrar no prelude
+    * Retirar botao controles da title screen
     
-*0.2.2.1 - 10/03/2023
-    *Adicionar prompt ao entrar no prelude
-    *Retirar botao controles da title screen
+* 0.2.3.0 - 10/03/2023
+    * Consertando merge do thomas
+    * Aprimorando sistema de interacao com botoes touch
+    * Mudar sprite da seta guia
+    * Adicionar sprites jonas e tereza
+    * Debugging e polimentos finais para entrega
     
-*0.2.3.0 - 10/03/2023
-    *Consertando merge do thomas
-    *Aprimorando sistema de interacao com botoes touch
-    *Mudar sprite da seta guia
-    *Adicionar sprites jonas e tereza
-    *Debugging e polimentos finais para entrega
+* 0.2.4.0 - 10/03/2023
+    * Refazer/reajustar animacoes
+    * Animacao depois explosao, antes do limbo (hospital)
+    * Reexportar jogo para gitpages
     
-*0.2.4.0 - 10/03/2023
-    *Refazer/reajustar animacoes
-    *Animacao depois explosao, antes do limbo (hospital)
-    *Reexportar jogo para gitpages
+* 0.2.4.1 - 10/03/2023
+    * Mudar levemente os volumes dos sons dentro do jogo
+    * Mudar levemente o tamanho da hitbox do player para ser mais coerente com o tamanho real das sprites
+    * Mudar levemente a animacao do ze no hospital
+    * Consertar bug que fazia com que o barulho de explosão repetia varias vezes enquanto o jogo estava na cena de hospital
+    * Jogo salva em qual cena e aonde voce saiu (se voce ja passou da cena do limbo): se vai na tela de pause dentro da adm, por exemplo, qdo voltar ao jogo volta pro msm lugar dentro da adm
     
-*0.2.4.1 - 10/03/2023
-    *Mudar levemente os volumes dos sons dentro do jogo
-    *Mudar levemente o tamanho da hitbox do player para ser mais coerente com o tamanho real das sprites
-      *Mudar levemente a animacao do ze no hospital
-    *Consertar bug que fazia com que o barulho de explosao repetia varias vezes enquanto o jogo estava na cena de hospital
-    *Jogo salva em qual cena e aonde voce saiu (se voce ja passou da cena do limbo): se vai na tela de pause dentro da adm, por exemplo, qdo voltar ao jogo volta pro msm lugar dentro da adm
-    
-*0.2.4.2 - 10/03/2023
-    *Modificar final temporario (declarado na cena adm apos 3 segundos)
-    *Export gitpages
+* 0.2.4.2 - 10/03/2023
+    * Modificar final temporario (declarado na cena adm apos 3 segundos)
+    * Export gitpages
 
 ## 📋 Licença/License
 
