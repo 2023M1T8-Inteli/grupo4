@@ -23,3 +23,5 @@ var activeObjective = [false, Vector2(0,0)]
 var amongDone = false
 
 var canMove = true
+
+var moving = false

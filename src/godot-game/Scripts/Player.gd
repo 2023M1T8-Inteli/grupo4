@@ -28,9 +28,10 @@ onready var root_node = get_tree().get_root()
 
 func _process(_delta):
 	if pos.savePosCommand == true:
+		print("res://Scenes/",str(get_parent().get_path()).get_slice("/",2),".tscn")
 		pos.savePosCommand = false
 		pos.currentPos = self.global_position
-		pos.posScene = get_parent().get_path()
+		pos.posScene = "res://Scenes/"+str(get_parent().get_path()).get_slice("/",2)+".tscn"
 		SceneTransition.change_scene("res://Scenes/Title Screen.tscn", 1.5 , 1.5)
 		
 	arrow.active_objective = Global.activeObjective[1]
@@ -79,10 +80,12 @@ func idle_sprites(show_idle: bool):
 
 func _player_dir(velocity):
 	# Verifica se o jogador está parado
-	if velocity == Vector2(0,0):
-		idle_sprites(true)
-	else:
+	if velocity != Vector2(0,0):
 		idle_sprites(false)
+	elif Global.moving:
+		idle_sprites(false)
+	else:
+		idle_sprites(true)
 	
 	# Faz o jogador olhar para a direção que está se movendo
 	if velocity.x < 0:

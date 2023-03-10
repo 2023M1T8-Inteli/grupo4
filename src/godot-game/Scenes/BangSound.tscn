@@ -4,3 +4,4 @@
 
 [node name="BangSound" type="AudioStreamPlayer2D"]
 stream = ExtResource( 1 )
+volume_db = -10.0

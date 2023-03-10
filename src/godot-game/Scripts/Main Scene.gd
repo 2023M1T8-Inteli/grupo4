@@ -5,6 +5,7 @@ func _ready():
 	Global.canMove = false
 	Global.isDrunk = false
 	$LimboAmbience.playing = true
+	$LimboMusic.playing = true
 	
 	# Torna o nó do fantasma visível e o nó do Ze invisível
 	get_node("Player/Fantasma").visible = true
@@ -13,8 +14,6 @@ func _ready():
 	get_node("Player/Jonas").visible = false
 	
 	yield(get_tree().create_timer(3.3), "timeout")
-	BangSound.playing = false
-	$LimboMusic.playing = true
 	$"DialogBox 1".visible = true
 	$"DialogBox 1/TexturaCaixa".start_dialog()
 	# Obtém a textura da caixa de diálogo e conecta o sinal "finish" a esta cena

@@ -17,10 +17,13 @@ func _ready():
 	
 	Global.canMove = true
 	
-	Global.activeObjective[0] == false
-	$Player.global_position = pos.posADM
-	if pos.posADM == Vector2(381,79):
+	if pos.posScene == "res://Scenes/Administrativo.tscn":
+		$Player.global_position = pos.currentPos
+		pos.posScene = null
+	else:
+		$Player.global_position = pos.posADM
 		$WalkInPlayer.play("WalkIn")
+		Global.moving = true
 	camera.zoom = Vector2(0.8,0.8)
 	_getMapLimits()
 	set_process(true)
@@ -57,3 +60,7 @@ func _on_TextureButton_pressed():
 		yield(get_tree().create_timer(0.15), "timeout")
 		if get_tree().change_scene("res://Scenes/Cidade.tscn") != OK:
 			print("ERRO")
+
+
+func _on_WalkInPlayer_animation_finished(_anim_name):
+	Global.moving = false

@@ -7,7 +7,11 @@ onready var lockIf1 = true
 func _ready():
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $admAncora.global_position
-	$Player.global_position = pos.posCidade
+	if pos.posScene == "res://Scenes/Cidade.tscn":
+		$Player.global_position = pos.currentPos
+		pos.posScene = null
+	else:
+		$Player.global_position = pos.posCidade
 	
 	Global.canMove = true
 	

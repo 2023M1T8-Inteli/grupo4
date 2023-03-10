@@ -40,5 +40,6 @@ func _on_StartButton_pressed():
 
 
 func _on_QuitButton_pressed():
+	
 	pos.savePosCommand = true
 	# Muda a cena para a tela de título
