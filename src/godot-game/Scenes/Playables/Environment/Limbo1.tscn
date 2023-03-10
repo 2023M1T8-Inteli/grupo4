@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Playables/Limbo1.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Backgrounds/sky-starry-black-night-background-with-star-starry-galaxy-space-8bit-texture-in-flat-style.jpg" type="Texture" id=4]
+[ext_resource path="res://Audio Files/deepblue.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Audio Files/wind woosh loop.ogg" type="AudioStream" id=6]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2611.5, 11.5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2610.5, 7 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5.90625, 699.5 )
+
+[node name="Main Scene" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Backgrounds"]
+position = Vector2( -794, -34 )
+texture = ExtResource( 4 )
+offset = Vector2( 1312, 345 )
+
+[node name="Sprite2" type="Sprite" parent="Backgrounds"]
+position = Vector2( -793, -277 )
+texture = ExtResource( 4 )
+offset = Vector2( 1312, 345 )
+
+[node name="Sprite3" type="Sprite" parent="Backgrounds"]
+position = Vector2( -800, 168 )
+texture = ExtResource( 4 )
+offset = Vector2( 1312, 345 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 521, 301 )
+
+[node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
+position = Vector2( 518, 640 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
+position = Vector2( 518, -29 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
+position = Vector2( 222, 268 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]
+position = Vector2( 770, 349 )
+shape = SubResource( 3 )
+
+[node name="DialogBox 1" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="LimboMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -5.0
+
+[node name="LimboAmbience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
