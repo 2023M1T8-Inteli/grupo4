@@ -11,16 +11,16 @@ config_version=4
 [application]
 
 config/name="group for"
-run/main_scene="res://Scenes/Title Screen.tscn"
+run/main_scene="res://Scenes/Non Playables/misc/Title Screen.tscn"
 run/delta_smoothing=false
 config/icon="res://icon.png"
 
 [autoload]
 
-SceneTransition="*res://Scenes/scene_transition.tscn"
-Global="*res://Scripts/global.gd"
-pos="*res://Scripts/PosSave.gd"
-BangSound="*res://Scenes/BangSound.tscn"
+Global="*res://Scripts/misc/global.gd"
+pos="*res://Scripts/misc/PosSave.gd"
+SceneTransition="*res://Scenes/Overlays/misc/scene_transition.tscn"
+BangSound="*res://Scenes/Overlays/misc/BangSound.tscn"
 
 [display]
 
