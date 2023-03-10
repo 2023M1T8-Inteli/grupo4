@@ -89,16 +89,19 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 0.1.3.1 - 27/02/2023
     * MUDANÇA: Recomentar scene_transition.gd 
       Mudar animation smoothing do player 
+      
 * 0.1.4.0 - 27/02/2023
     *  Adicionar task DrunkWireTask
     *  Adicionar logo do Jogo
     *  Adicionar 2 TileMaps (Thomas)
     *  Atualizar Versao para 0.1.4.0
     *  Remover executaveis para preparar export novo
+
 * 0.1.4.1 - 28/02/2023
     *  Add Cena Preludio
     *  Add efeitos bebado
     *  Add Predio thomas
+
 * 0.1.5.0 - 01/03/2023
   -  Inserir dialogo da gabi no game
     *  Copiar e editar cenas
@@ -116,6 +119,96 @@ A cada atualização os detalhes devem ser lançados aqui.
     *  Renomear cena do limbo de "Main Scene" para LImbo1
     *  Renomear script CanvasLayer.gd (anexado a GUI) para GUI.gd
     *  Remover exports velhos em preparacao ao export da nova versao alpha
+
+* 0.1.5.1 - 02/03/2023
+    *Adicionar "flash" de setinhas quando volta uma frase do dialogo. (Aplicado em todas as caixas de dialogo criadas ate agora)  
+    *Deletar TaskExec1 (Prototipo falho de uma task "quiz")
+
+*0.1.5.2 - 02/03/2023
+    *Pequenos Patches:
+    -Mudar levemente o codigo da title screen
+    -Polir codigo do player
+
+*0.1.5.3 - 03/03/2023
+    *Inicio da add da parte administrativa
+    *Implementacao da task quiz, não funciona
+
+ *0.1.5.4 - 03/03/2023 
+    *Conserto da task do quiz
+    
+*0.1.5.5 - 03/03/2023
+    *Ultimos patches na task de quiz
+    
+*0.1.5.6 - 06/03/2023
+    *Adicionar segunda task de quiz
+    
+*0.1.6.0 - 06/03/2023
+    *Add cena temporaria em cima do poste
+    *Add alguns tilemaps/tilesets da internet
+    *Add funcionalidade botao de interacao (na task among e para ir para cena em cima do poste)
+    *Apagar exports velhos em preparacao para nova versao alpha
+    
+*0.1.6.1 - 06/03/2023
+    *Se o jogador ja viu o dialogo do limbo uma vez, pula diretamente para a cena da cidade.
+    
+*0.1.7.0 - 07/03/2023
+    *Refinar cenas ja existentes e ordenar tudo
+    Title Screen -> Prelude -> PosteCima (explode) -> limbo -> cidade -> adm
+    
+*0.2.0.0 - 07/03/2023
+   *NEW BETA:
+    *Animação adicionada.
+   *Historia flui:
+    *Title Screen -> Anim -> Prelude -> PosteCima (explode e tem barulho agr) -> Limbo (sons e musicas sincronizados) -> cidade -> adm (opcional)
+    *Caso o player ja passou do dialogo do limbo:
+    *TItle Screen -> Cidade -> ADM
+ 
+ * 0.2.1.0 - 08/03/2023
+    *add setinha guia
+    *add alerta alerta
+    *acelerar animmação
+    *tentativa falha de posSave ao sair do jogo pela tela de pause (em desenvolvimento)
+  
+*0.2.1.1 - 09/03/2023
+    *Adicionar botao para pular animacao
+    
+* 0.2.1.3 - 09/03/2023
+    *Alterar o diálogo do limbo.
+    
+*0.2.1.4 - 09/03/2023
+    *Editar bebado (vertigo)
+    *Comecar a editar task among bebada (EM PROGRESSO)
+    
+*0.2.2.0 - 09/03/2023
+    *Mudar controles para touch screen
+    
+*0.2.2.1 - 10/03/2023
+    *Adicionar prompt ao entrar no prelude
+    *Retirar botao controles da title screen
+    
+*0.2.3.0 - 10/03/2023
+    *Consertando merge do thomas
+    *Aprimorando sistema de interacao com botoes touch
+    *Mudar sprite da seta guia
+    *Adicionar sprites jonas e tereza
+    *Debugging e polimentos finais para entrega
+    
+*0.2.4.0 - 10/03/2023
+    *Refazer/reajustar animacoes
+    *Animacao depois explosao, antes do limbo (hospital)
+    *Reexportar jogo para gitpages
+    
+*0.2.4.1 - 10/03/2023
+    *Mudar levemente os volumes dos sons dentro do jogo
+    *Mudar levemente o tamanho da hitbox do player para ser mais coerente com o tamanho real das sprites
+      *Mudar levemente a animacao do ze no hospital
+    *Consertar bug que fazia com que o barulho de explosao repetia varias vezes enquanto o jogo estava na cena de hospital
+    *Jogo salva em qual cena e aonde voce saiu (se voce ja passou da cena do limbo): se vai na tela de pause dentro da adm, por exemplo, qdo voltar ao jogo volta pro msm lugar dentro da adm
+    
+*0.2.4.2 - 10/03/2023
+    *Modificar final temporario (declarado na cena adm apos 3 segundos)
+    *Export gitpages
+
 ## 📋 Licença/License
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
