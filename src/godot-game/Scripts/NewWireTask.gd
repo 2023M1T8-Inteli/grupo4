@@ -25,9 +25,6 @@ var pinkPlaced = false
 
 var touch_position
 
-func _ready():
-	$Prompt.visible = true
-	$DrunkFilter.visible = false
 
 # Função que é chamada a cada quadro do jogo, verificando se o objetivo foi alcançado.
 func _process(_delta):
@@ -195,6 +192,4 @@ func _on_pinkButton_button_up():
 
 
 func _on_TextureButton_pressed():
-	$Prompt/CanvasLayer.visible = false
 	$Prompt.visible = false
-	$DrunkFilter.visible = true

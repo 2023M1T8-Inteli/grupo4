@@ -368,8 +368,6 @@
 11/shapes = [  ]
 11/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=10]
-
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ ExtResource( 29 ), ExtResource( 26 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 22 ) ],
@@ -377,6 +375,8 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=10]
 
 [sub_resource type="RectangleShape2D" id=11]
 
@@ -435,20 +435,11 @@ color = Color( 0.572549, 0.113725, 0.113725, 1 )
 [node name="WiresTask" parent="ColorRect" instance=ExtResource( 8 )]
 visible = false
 
-[node name="TextureButton" type="TextureButton" parent="ColorRect"]
-margin_right = 40.0
-margin_bottom = 40.0
-action_mode = 0
-
 [node name="Timer" type="Timer" parent="ColorRect"]
 
-[node name="AmongAncora" type="Node2D" parent="ColorRect"]
-position = Vector2( 20, 20 )
-
-[node name="amongButton" type="TouchScreenButton" parent="ColorRect/AmongAncora"]
-position = Vector2( -20, -20 )
-scale = Vector2( 2, 1.96 )
-shape = SubResource( 10 )
+[node name="Control" type="Control" parent="ColorRect"]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="."]
 position = Vector2( 52, 11 )
@@ -458,6 +449,14 @@ frame = 8
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+
+[node name="AmongAncora" type="Node2D" parent="."]
+position = Vector2( 52, 53 )
+
+[node name="amongButton" type="TouchScreenButton" parent="AmongAncora"]
+position = Vector2( -20, -20 )
+scale = Vector2( 2, 1.96 )
+shape = SubResource( 10 )
 
 [node name="EscadaAncora" type="Node2D" parent="."]
 position = Vector2( -48, -48 )
@@ -508,7 +507,7 @@ margin_bottom = 640.0
 mouse_filter = 2
 color = Color( 0.505882, 0.282353, 0.172549, 0.435294 )
 
-[connection signal="pressed" from="ColorRect/AmongAncora/amongButton" to="." method="_on_amongButton_pressed"]
+[connection signal="pressed" from="AmongAncora/amongButton" to="." method="_on_amongButton_pressed"]
 [connection signal="pressed" from="EscadaAncora/escadaButton" to="." method="_on_escadaButton_pressed"]
 [connection signal="timeout" from="SceneChangeTimer" to="." method="_on_SceneChangeTimer_timeout"]
 [connection signal="timeout" from="ExplodeTimer" to="." method="_on_ExplodeTimer_timeout"]

@@ -10,13 +10,18 @@ var lockIf0 = true
 var closeToPorta
 
 func _ready():
+	get_node("Player/Ze").visible = false
+	get_node("Player/Fantasma").visible = false
+	get_node("Player/Tereza").visible = true
+	get_node("Player/Jonas").visible = false
+	
+	Global.canMove = true
+	
 	Global.activeObjective[0] == false
 	$Player.global_position = pos.posADM
 	if pos.posADM == Vector2(381,79):
 		$WalkInPlayer.play("WalkIn")
-	camera.zoom = Vector2(0.6,0.6)
-	$Player/Fantasma.visible = false
-	$Player/Ze.visible = true
+	camera.zoom = Vector2(0.8,0.8)
 	_getMapLimits()
 	set_process(true)
 
@@ -27,20 +32,12 @@ func _process(_delta):
 	camera.limit_right = 768 #mudar depois para funcao que pega os limites
 	camera.limit_bottom = 1344 #mudar depois para funcao que pega os limites
 	
-	if $Player/HitBox.global_position.distance_to($PortaAncora.global_position) < 90:
-		Global.closeToSomething = true
+	if $Player/HitBox.global_position.distance_to($PortaAncora.global_position) < 160:
 		closeToPorta = true
 	else:
-		Global.closeToSomething = false
 		closeToPorta = false
 	
-	if closeToPorta and Global.midPress and lockIf0:
-		lockIf0 = false
-		yield(get_tree().create_timer(0.15), "timeout")
-		pos.posADM = $Player.global_position
-		if get_tree().change_scene("res://Scenes/Cidade.tscn") != OK:
-			print("ERRO")
-	
+
 func _getMapLimits():
 	# Iterate through all child nodes of the map node
 	for child in children:
@@ -51,3 +48,12 @@ func _getMapLimits():
 			# Update map_width and map_height if necessary
 			map_width = max(map_width, sprite_pos.x + child.texture.get_size().x * child.scale.x)
 			map_height = max(map_height, sprite_pos.y + child.texture.get_size().y * child.scale.y)
+
+
+func _on_TextureButton_pressed():
+	print("pressed")
+	if closeToPorta:
+		Global.canMove = false
+		yield(get_tree().create_timer(0.15), "timeout")
+		if get_tree().change_scene("res://Scenes/Cidade.tscn") != OK:
+			print("ERRO")

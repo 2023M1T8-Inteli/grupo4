@@ -2,12 +2,15 @@ extends Node2D
 
 # Função que é chamada quando a cena é carregada
 func _ready():
+	Global.canMove = false
 	Global.isDrunk = false
 	$LimboAmbience.playing = true
 	
 	# Torna o nó do fantasma visível e o nó do Ze invisível
 	get_node("Player/Fantasma").visible = true
 	get_node("Player/Ze").visible = false
+	get_node("Player/Tereza").visible = false
+	get_node("Player/Jonas").visible = false
 	
 	yield(get_tree().create_timer(3.3), "timeout")
 	BangSound.playing = false

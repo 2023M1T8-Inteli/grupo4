@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Sprites/Interface/joystick_apertado/joystick_mid_pressed.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Interface/joystick_apertado/joystick_right_pressed.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Interface/joystick_apertado/joystick_mid_unavailable.png" type="Texture" id=13]
+
+[sub_resource type="RectangleShape2D" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -77,11 +79,10 @@ position = Vector2( -140, -280 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
-[node name="PauseButton" type="TextureButton" parent="GUI/Pause"]
-margin_left = -40.0
-margin_top = -40.0
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="PauseButton" type="TouchScreenButton" parent="GUI/Pause"]
+position = Vector2( 40, 40 )
+scale = Vector2( -4.03384, -4.01055 )
+shape = SubResource( 3 )
 
 [node name="PauseScreen" type="Node2D" parent="."]
 visible = false

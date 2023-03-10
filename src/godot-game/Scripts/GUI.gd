@@ -4,6 +4,8 @@ extends CanvasLayer
 onready var guiWasVisible
 
 func _on_PauseButton_pressed():
+	Global.canMove = false
+	
 	# Verifica se a interface do usuário está visível
 	if $GUI.visible == true:
 		# Esconde a interface do usuário e armazena que ela estava visível antes da pausa
@@ -23,6 +25,8 @@ func _on_PauseButton_pressed():
 	
 
 func _on_StartButton_pressed():
+	Global.canMove = true
+	
 	# Define o filtro de mouse dos botões de início e saída da tela de pausa para permitir interação
 	get_node("PauseScreen/StartButton").mouse_filter = Control.MOUSE_FILTER_IGNORE
 	get_node("PauseScreen/QuitButton").mouse_filter = Control.MOUSE_FILTER_IGNORE

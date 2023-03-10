@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Scripts/Prelude.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,18 @@
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Poste/poste_caixa.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Poste/poste_caixa3.png" type="Texture" id=7]
+[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export6.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export5.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export7.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export8.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export9.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export10.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export1.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export2.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export3.png" type="Texture" id=19]
 
 [sub_resource type="TileSet" id=21]
 0/name = "tilemap_packed.png 0"
@@ -2451,6 +2463,18 @@ extents = Vector2( 10, 56 )
 
 [sub_resource type="RectangleShape2D" id=32]
 
+[sub_resource type="SpriteFrames" id=34]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=33]
+size = 27
+font_data = ExtResource( 8 )
+
 [node name="Prelude" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -2535,11 +2559,21 @@ position = Vector2( 2.66675, 136 )
 shape = SubResource( 31 )
 
 [node name="posteSobeButton" type="TouchScreenButton" parent="PosteCaixa"]
-position = Vector2( -13.7666, 203.312 )
-scale = Vector2( 1.50476, -4.09894 )
+position = Vector2( -33.2692, 201.975 )
+scale = Vector2( 3.24849, -7.36263 )
 shape = SubResource( 32 )
 
-[connection signal="pressed" from="PosteCaixa/posteSobeButton" to="." method="_on_posteSobeButton_pressed"]
+[node name="BalaoPoste" type="AnimatedSprite" parent="PosteCaixa"]
+position = Vector2( 0, 132.42 )
+scale = Vector2( 0.125, 0.125 )
+frames = SubResource( 34 )
+frame = 6
+playing = true
+
+[node name="Prompt" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="Prompt"]
 
 [node name="ColorRect" type="ColorRect" parent="Prompt/CanvasLayer"]
@@ -2549,14 +2583,14 @@ color = Color( 0, 0, 0, 0.698039 )
 
 [node name="Sprite" type="Sprite" parent="Prompt/CanvasLayer"]
 position = Vector2( 180, 320 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Prompt/CanvasLayer"]
 margin_left = 24.0
 margin_top = 285.0
 margin_right = 337.0
 margin_bottom = 349.0
-custom_fonts/normal_font = SubResource( 32 )
+custom_fonts/normal_font = SubResource( 33 )
 text = "Clique e segure na tela para se movimentar!"
 scroll_active = false
 
@@ -2564,4 +2598,5 @@ scroll_active = false
 margin_right = 360.0
 margin_bottom = 640.0
 
+[connection signal="pressed" from="PosteCaixa/posteSobeButton" to="." method="_on_posteSobeButton_pressed"]
 [connection signal="pressed" from="Prompt/CanvasLayer/TextureButton" to="." method="_on_TextureButton_pressed"]

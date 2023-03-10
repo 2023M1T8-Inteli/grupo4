@@ -12,6 +12,10 @@ font_data = ExtResource( 3 )
 [node name="WiresTask" type="CanvasLayer"]
 script = ExtResource( 2 )
 
+[node name="Mouse Stopper" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
 [node name="FundoTaskFios" type="Sprite" parent="."]
 position = Vector2( 180, 320 )
 texture = ExtResource( 1 )
@@ -70,32 +74,20 @@ margin_right = 360.0
 margin_bottom = 640.0
 color = Color( 0, 1, 0.0156863, 0.298039 )
 
-[node name="DrunkFilter" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="DrunkFilter"]
-margin_right = 360.0
-margin_bottom = 640.0
-mouse_filter = 2
-color = Color( 0.505882, 0.282353, 0.172549, 0.435294 )
-
 [node name="Prompt" type="Control" parent="."]
 margin_right = 360.0
 margin_bottom = 640.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Prompt"]
-layer = 5
-
-[node name="ColorRect" type="ColorRect" parent="Prompt/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="Prompt"]
 margin_right = 360.0
 margin_bottom = 640.0
 color = Color( 0, 0, 0, 0.698039 )
 
-[node name="Sprite" type="Sprite" parent="Prompt/CanvasLayer"]
+[node name="Sprite" type="Sprite" parent="Prompt"]
 position = Vector2( 180, 320 )
 texture = ExtResource( 4 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Prompt/CanvasLayer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Prompt"]
 margin_left = 24.0
 margin_top = 285.0
 margin_right = 337.0
@@ -104,7 +96,7 @@ custom_fonts/normal_font = SubResource( 1 )
 text = "Ligue os cabos da forma correta!"
 scroll_active = false
 
-[node name="TextureButton" type="TextureButton" parent="Prompt/CanvasLayer"]
+[node name="TextureButton" type="TextureButton" parent="Prompt"]
 margin_right = 360.0
 margin_bottom = 640.0
 
@@ -116,4 +108,4 @@ margin_bottom = 640.0
 [connection signal="button_up" from="yellowButton" to="." method="_on_yellowButton_button_up"]
 [connection signal="button_down" from="pinkButton" to="." method="_on_pinkButton_button_down"]
 [connection signal="button_up" from="pinkButton" to="." method="_on_pinkButton_button_up"]
-[connection signal="pressed" from="Prompt/CanvasLayer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Prompt/TextureButton" to="." method="_on_TextureButton_pressed"]
