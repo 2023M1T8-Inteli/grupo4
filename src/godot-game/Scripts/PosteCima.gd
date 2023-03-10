@@ -68,7 +68,7 @@ func _on_ExplodeTimer_timeout():
 		$SceneChangeTimer.start()
 
 func _on_SceneChangeTimer_timeout():
-	SceneTransition.change_scene("res://Scenes/Limbo1.tscn", 3, 0.1)
+	SceneTransition.change_scene("res://Scenes/ZeHospital.tscn", 3, 1)
 
 func _on_amongButton_pressed():
 	print("amongPressed")
