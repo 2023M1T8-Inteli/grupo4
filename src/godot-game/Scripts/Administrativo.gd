@@ -14,7 +14,6 @@ func _ready():
 	get_node("Player/Fantasma").visible = false
 	get_node("Player/Tereza").visible = true
 	get_node("Player/Jonas").visible = false
-	
 	Global.canMove = true
 	
 	if pos.posScene == "res://Scenes/Administrativo.tscn":
@@ -27,7 +26,11 @@ func _ready():
 	camera.zoom = Vector2(0.8,0.8)
 	_getMapLimits()
 	set_process(true)
-
+	
+	yield(get_tree().create_timer(3.0), "timeout")
+	SceneTransition.change_scene("res://Scenes/Reincarn.tscn", 1, 1)
+	pos.posScene = "res://Scenes/Cidade.tscn"
+	
 func _process(_delta):
 	var camera_limits = Rect2(map.global_position, Vector2(map_width, map_height))
 	camera.limit_left = camera_limits.position.x
