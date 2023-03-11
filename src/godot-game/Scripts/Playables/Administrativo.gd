@@ -36,12 +36,15 @@ func _ready():
 	_getMapLimits()
 	set_process(true)
 	
+	# Salvaguarda para nao sair da cena antes de acabar o yield
+	$map/Elevador/TextureButton.visible = false
+	
 	# Aguarda 3 segundos e toca a animação de transição para o novo cenário
 	yield(get_tree().create_timer(3.0), "timeout")
 	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)
 	pos.posScene = "res://Scenes/Playables/Environment/Cidade.tscn"
 	pos.currentPos = pos.posCidade
-	
+	$map/Elevador/TextureButton.visible = true
 func _process(_delta):
 	# Define os limites da câmera para o tamanho do mapa
 	var camera_limits = Rect2(map.global_position, Vector2(map_width, map_height))
