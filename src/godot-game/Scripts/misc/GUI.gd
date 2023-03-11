@@ -4,42 +4,28 @@ extends CanvasLayer
 onready var guiWasVisible
 
 func _on_PauseButton_pressed():
+	# Desabilita o movimento do jogador
 	Global.canMove = false
 	
-	# Verifica se a interface do usuário está visível
-	if $GUI.visible == true:
-		# Esconde a interface do usuário e armazena que ela estava visível antes da pausa
-		$GUI.visible = false
-		guiWasVisible = true
-	else:
-		# Esconde a interface do usuário e armazena que ela estava escondida antes da pausa
-		$GUI.visible = false
-		guiWasVisible = false
+	# Esconde a interface do usuário
+	$GUI.visible = false
 	
 	# Mostra a tela de pausa
 	$PauseScreen.visible = true
 	
-	# Define o filtro de mouse dos botões de início e saída da tela de pausa para não permitir interação
-	get_node("PauseScreen/StartButton").mouse_filter = Control.MOUSE_FILTER_STOP
-	get_node("PauseScreen/QuitButton").mouse_filter = Control.MOUSE_FILTER_STOP
 	
 
 func _on_StartButton_pressed():
+	# Habilita o movimento do jogador
 	Global.canMove = true
-	
-	# Define o filtro de mouse dos botões de início e saída da tela de pausa para permitir interação
-	get_node("PauseScreen/StartButton").mouse_filter = Control.MOUSE_FILTER_IGNORE
-	get_node("PauseScreen/QuitButton").mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-	# Se a interface do usuário estava visível antes da pausa, mostra novamente
-	if guiWasVisible:
-		$GUI.visible = true
+	# Mostra novamente a interface do usuário
+	$GUI.visible = true
 		
 	# Esconde a tela de pausa
 	$PauseScreen.visible = false
 
 
 func _on_QuitButton_pressed():
-	
+	# Executa a função de salvar a posição e cena atual do jogador e sair para tela de início (essa função é executada no script Player.gd)
 	pos.savePosCommand = true
-	# Muda a cena para a tela de título

@@ -1,18 +1,23 @@
 extends Node2D
 
+# Variável que indica se o jogador está perto do objeto 'ADM' (Representa a entrada do prédio)
 var closeToADM = true
 
-onready var lockIf1 = true
-
 func _ready():
+	# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $admAncora.global_position
+	
+	# Verifica se o jogador tem uma posição salva na cena Cidade
 	if pos.posScene == "res://Scenes/Playables/Environment/Cidade.tscn":
+		# Redefine a posição atual do jogador
 		$Player.global_position = pos.currentPos
 		pos.posScene = null
 	else:
+		# Caso contrário, define a posição do jogador na cidade como a posição padrão
 		$Player.global_position = pos.posCidade
 	
+	# Permite o movimento do jogador
 	Global.canMove = true
 	
 	# Mostra o personagem principal e esconde o fantasma
@@ -20,23 +25,24 @@ func _ready():
 	get_node("Player/Fantasma").visible = false
 	get_node("Player/Tereza").visible = true
 	get_node("Player/Jonas").visible = false
-	# Passa o controle para o próximo método
-	pass
 
 func _process(_delta):
+	# Verifica se o jogador está perto do objeto 'ADM' (Representa a entrada do prédio)
 	if $Player/HitBox.global_position.distance_to($admAncora.global_position) < 150:
-		Global.closeToSomething = true
 		closeToADM = true
 	else:
-		Global.closeToSomething = false
 		closeToADM = false
 
 func _on_admButton_pressed():
-	if closeToADM and lockIf1:
+	# Verifica se o jogador está perto do objeto 'ADM' (Representa a entrada do prédio)
+	if closeToADM:
+		# Impede o movimento do jogador temporariamente
 		Global.canMove = false
-		lockIf1 = false
+		# Espera um curto período de tempo antes de continuar
 		yield(get_tree().create_timer(0.15), "timeout")
+		# Define a posição do jogador na cidade para a posição atual do objeto 'ADM'
 		pos.posCidade = $Player.global_position
+		# Tenta mudar para a cena 'Administrativo'
 		if get_tree().change_scene("res://Scenes/Playables/Environment/Administrativo.tscn") != OK:
-				print("ERRO")
+			print("ERRO")
 

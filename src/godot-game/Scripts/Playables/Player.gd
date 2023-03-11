@@ -7,8 +7,6 @@ onready var arrow = $Arrow
 var amplitude = 60
 var frequency = 5
 
-var vel : Vector2 = Vector2()
-
 var target_position: Vector2
 
 #Atribuindo nossa sprite como variavel
@@ -28,10 +26,10 @@ onready var root_node = get_tree().get_root()
 
 func _process(_delta):
 	if pos.savePosCommand == true:
-		print("res://Scenes/Playables/Environment",str(get_parent().get_path()).get_slice("/",2),".tscn")
+		print("res://Scenes/Playables/Environment/",str(get_parent().get_path()).get_slice("/",2),".tscn")
 		pos.savePosCommand = false
 		pos.currentPos = self.global_position
-		pos.posScene = "res://Scenes/Playables/Environment"+str(get_parent().get_path()).get_slice("/",2)+".tscn"
+		pos.posScene = "res://Scenes/Playables/Environment/"+str(get_parent().get_path()).get_slice("/",2)+".tscn"
 		SceneTransition.change_scene("res://Scenes/Non Playables/misc/Title Screen.tscn", 1.5 , 1.5)
 		
 	arrow.active_objective = Global.activeObjective[1]
@@ -46,14 +44,20 @@ func _ready():
 #física do jogo
 func _physics_process(_delta):
 	if Input.is_action_pressed("touch") and Global.canMove:
+		# Define a posição do alvo do jogador com base na posição do mouse
 		target_position = get_viewport().get_mouse_position()
+		# Calcula o ângulo entre a posição do jogador e do alvo
 		var angle = atan2(target_position.x - (get_viewport_transform().xform(self.global_position)).x, target_position.y - (get_viewport_transform().xform(self.global_position)).y)
+		# Calcula as velocidades horizontal e vertical com base no ângulo e na velocidade
 		var x = sin(angle) * 1
 		var y = cos(angle) * 1
 		var velocity = Vector2(x*speed, y*speed)
+		# Move o jogador e lida com colisões
 		var _moveAndSlide = move_and_slide(velocity, Vector2.UP)
+		# Altera a orientação das sprites do jogador
 		_player_dir(velocity)
 	else:
+		# Para o jogador
 		_player_dir(Vector2(0,0))
 
 #Funcao responsavel por controlar que direcao o player esta olhando enquanto/apos se mexer

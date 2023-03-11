@@ -118,12 +118,17 @@ func _on_TextureButton_pressed():
 	if phraseNum == len(dialog) and finished == true:
 		emit_signal("finish")
 
-
+# Funcao que roda para voltar falas
 func _on_ReturnButton_pressed():
+	# Checa se o dialogo acabou de rolar e se ha alguma fala para voltar (fala > 1)
 	if finished and phraseNum > 1:
+		# Volta a variavel de falas por 2 (Compensa o terminar da fala o terminar da fala anterior)
 		phraseNum -= 2
+		# Define o rolamento de diálogo como não terminado
 		finished = false
+		# Toca a animação de voltar dialogo
 		$ReturnArrowFlash/AnimationPlayer.play("flash")
+		# Prossegue o dialogo
 		nextPhrase()
 
 		
