@@ -208,6 +208,10 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 0.2.4.2 - 10/03/2023
     * Modificar final temporario (declarado na cena adm apos 3 segundos)
     * Export gitpages
+    
+* 0.2.4.4 - 10/03/2023
+    * Comentarios e polimentos finais do jogo para entrega de sprint
+    * Adicionar plugin para RichPresence de discord
 
 ## 📋 Licença/License
 
