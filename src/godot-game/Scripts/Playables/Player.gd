@@ -7,20 +7,14 @@ onready var arrow = $Arrow
 var amplitude = 60
 var frequency = 5
 
+var angle
+var x = 0
+var y = 0
+var velocity
+
 var target_position: Vector2
 
-#Atribuindo nossa sprite como variavel
-onready var spriteA : AnimatedSprite = get_node("Fantasma/Ghost")
-onready var spriteB : AnimatedSprite = get_node("Fantasma/GhostBack")
-
-onready var zeIdle : AnimatedSprite = get_node("Ze/ZeIdle")
-onready var zeCorre : AnimatedSprite = get_node("Ze/ZeCorrendo")
-
-onready var terezaIdle = $Tereza/TerezaIdle
-onready var terezaCorre = $Tereza/TerezaCorrendo
-
-onready var jonasIdle = $Jonas/JonasIdle
-onready var jonasCorre = $Jonas/JonasCorrendo
+export(String) var personagemAtivo = "zezinho"
 
 onready var root_node = get_tree().get_root()
 
@@ -37,9 +31,9 @@ func _process(_delta):
 		$Arrow.visible = false
 	else:
 		$Arrow.visible = true
-		
+
 func _ready():
-	spriteB.visible = false # a sprite do fantasminha de costas não aparece.
+	$ActiveSprite.animation = personagemAtivo+"Baixo"
 
 #física do jogo
 func _physics_process(_delta):
@@ -47,52 +41,47 @@ func _physics_process(_delta):
 		# Define a posição do alvo do jogador com base na posição do mouse
 		target_position = get_viewport().get_mouse_position()
 		# Calcula o ângulo entre a posição do jogador e do alvo
-		var angle = atan2(target_position.x - (get_viewport_transform().xform(self.global_position)).x, target_position.y - (get_viewport_transform().xform(self.global_position)).y)
+		angle = atan2(target_position.x - (get_viewport_transform().xform(self.global_position)).x, target_position.y - (get_viewport_transform().xform(self.global_position)).y)
 		# Calcula as velocidades horizontal e vertical com base no ângulo e na velocidade
-		var x = sin(angle) * 1
-		var y = cos(angle) * 1
-		var velocity = Vector2(x*speed, y*speed)
+		x = sin(angle) * 1
+		y = cos(angle) * 1
+		velocity = Vector2(x*speed, y*speed)
 		# Move o jogador e lida com colisões
 		var _moveAndSlide = move_and_slide(velocity, Vector2.UP)
-		# Altera a orientação das sprites do jogador
-		_player_dir(velocity)
-	else:
-		# Para o jogador
-		_player_dir(Vector2(0,0))
 
-#Funcao responsavel por controlar que direcao o player esta olhando enquanto/apos se mexer
-func flip_sprites(flip: bool):
-	# Inverte a sprite horizontalmente de acordo com a direcao do jogador
-	jonasCorre.flip_h = flip
-	jonasIdle.flip_h = flip
-	terezaCorre.flip_h = flip
-	terezaIdle.flip_h = flip
-	spriteA.flip_h = flip
-	spriteB.flip_h = flip
-	zeIdle.flip_h = flip
-	zeCorre.flip_h = flip
-
-# Funcao que lida com a troca de sprites entre parado e andando
-func idle_sprites(show_idle: bool):
-	# Altera a visibilidade das sprites para mostrar a animacao parada ou andando
-	zeIdle.visible = show_idle
-	zeCorre.visible = not show_idle
-	jonasIdle.visible = show_idle
-	jonasCorre.visible = not show_idle
-	terezaIdle.visible = show_idle
-	terezaCorre.visible = not show_idle
-
-func _player_dir(velocity):
-	# Verifica se o jogador está parado
-	if velocity != Vector2(0,0):
-		idle_sprites(false)
+		$ActiveSprite.playing = true
+		
+		if y < cos(PI/12) and y > -cos(-PI/12):
+			if x > 0:
+				$ActiveSprite.animation = personagemAtivo+"Lado"
+				$ActiveSprite.flip_h = true
+			else:
+				$ActiveSprite.animation = personagemAtivo+"Lado"
+				$ActiveSprite.flip_h = false
+				
+		else:
+			if y > 0:
+				$ActiveSprite.animation = personagemAtivo+"Baixo"
+			else:
+				$ActiveSprite.animation = personagemAtivo+"Cima"
+			
+		
 	elif Global.moving:
-		idle_sprites(false)
+		$ActiveSprite.animation = personagemAtivo+"Baixo"
 	else:
-		idle_sprites(true)
-	
-	# Faz o jogador olhar para a direção que está se movendo
-	if velocity.x < 0:
-		flip_sprites(true)
-	elif velocity.x > 0:
-		flip_sprites(false)
+		$ActiveSprite.playing = false
+		$ActiveSprite.frame = 1
+		if y < cos(PI/12) and y > -cos(-PI/12):
+			if x > 0:
+				# sexo horizontal pra direita parado
+				pass
+			else:
+				# sexo horizontal pra esquerda parado
+				pass
+		else:
+			if y > 0:
+				# nao sexo vertical pra baixo parado
+				pass
+			else:
+				# nao sexo vertical pra cima parado
+				pass

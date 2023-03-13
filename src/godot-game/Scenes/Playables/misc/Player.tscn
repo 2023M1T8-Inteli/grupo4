@@ -1,102 +1,58 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Sprites/sprite/frame_2_delay-0.2s.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Playables/Player.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/sprite/frame_4_delay-0.2s.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/sprite/frame_1_delay-0.2s.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/sprite/frame_0_delay-0.2s.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/sprite/frame_3_delay-0.2s.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/sprite_b/frame_0_delay-0.2s.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/sprite_b/frame_1_delay-0.2s.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/sprite_b/frame_2_delay-0.2s.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/sprite_b/frame_4_delay-0.2s.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/sprite_b/frame_3_delay-0.2s.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Overlays/misc/Arrow.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Sprites/Ze/ze_parado/frame_2_delay-0.2s.png" type="Texture" id=13]
 [ext_resource path="res://Scripts/misc/Camera2D.gd" type="Script" id=14]
-[ext_resource path="res://Sprites/Tereza/Tereza_Correndo/Tereza correndo1.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Tereza/Tereza_Correndo/Tereza correndo2.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Tereza/Tereza_Correndo/Tereza correndo3.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Tereza/Tereza_Correndo/Tereza correndo4.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Jonas/Jonas_Correndo/jonas_corrndo2.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Jonas/Jonas_Correndo/jonas_corrndo4.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Jonas/Jonas_Correndo/jonas_corrndo3.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Ze/ze_parado/frame_1_delay-0.2s.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Ze/ze_correndo/ze_correndo2.png" type="Texture" id=23]
-[ext_resource path="res://Sprites/Ze/ze_correndo/ze_correndo3.png" type="Texture" id=24]
-[ext_resource path="res://Sprites/Ze/ze_correndo/ze_correndo1.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Ze/ze_correndo/ze_correndo4.png" type="Texture" id=26]
-[ext_resource path="res://Sprites/Ze/ze_parado/frame_0_delay-0.2s.png" type="Texture" id=27]
-[ext_resource path="res://Sprites/Tereza/Tereza_Parada/Tereza_respirando1.png" type="Texture" id=28]
-[ext_resource path="res://Sprites/Tereza/Tereza_Parada/Tereza_respirando2.png" type="Texture" id=29]
-[ext_resource path="res://Sprites/Jonas/Jonas_Correndo/jonas_corrndo1.png" type="Texture" id=30]
-[ext_resource path="res://Sprites/Tereza/Tereza_Parada/Tereza_respirando3.png" type="Texture" id=31]
-[ext_resource path="res://Sprites/Jonas/Jonas_Parado/gif jonas parado1.png" type="Texture" id=32]
-[ext_resource path="res://Sprites/Jonas/Jonas_Parado/gif jonas parado2.png" type="Texture" id=33]
-[ext_resource path="res://Sprites/Jonas/Jonas_Parado/gif jonas parado3.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Ze/zezinhoBaixo (3).png" type="Texture" id=35]
+[ext_resource path="res://Sprites/Ze/zezinhoBaixo (1).png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Ze/zezinhoBaixo (2).png" type="Texture" id=37]
+[ext_resource path="res://Sprites/Ze/zezinhoLado (1).png" type="Texture" id=38]
+[ext_resource path="res://Sprites/Ze/zezinhoLado (3).png" type="Texture" id=39]
+[ext_resource path="res://Sprites/Ze/zezinhoCima (2).png" type="Texture" id=40]
+[ext_resource path="res://Sprites/Ze/zezinhoCima (3).png" type="Texture" id=41]
+[ext_resource path="res://Sprites/Ze/zezinhoCima (1).png" type="Texture" id=42]
+[ext_resource path="res://Sprites/Ze/zezinhoLado (2).png" type="Texture" id=43]
+[ext_resource path="res://Sprites/Tereza/terezinhaLadopng (2).png" type="Texture" id=44]
+[ext_resource path="res://Sprites/Tereza/terezinhaLadopng (3).png" type="Texture" id=45]
+[ext_resource path="res://Sprites/Tereza/terezinhaCima (1).png" type="Texture" id=46]
+[ext_resource path="res://Sprites/Tereza/terezinhaLadopng (1).png" type="Texture" id=47]
+[ext_resource path="res://Sprites/Tereza/terezinhaBaixo (1).png" type="Texture" id=48]
+[ext_resource path="res://Sprites/Tereza/terezinhaCima (2).png" type="Texture" id=49]
+[ext_resource path="res://Sprites/Tereza/terezinhaBaixo (3).png" type="Texture" id=50]
+[ext_resource path="res://Sprites/Tereza/terezinhaBaixo (2).png" type="Texture" id=51]
+[ext_resource path="res://Sprites/Tereza/terezinhaCima (3).png" type="Texture" id=52]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=18]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 48 ), ExtResource( 51 ), ExtResource( 50 ) ],
 "loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=12]
-animations = [ {
-"frames": [ ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 26 ) ],
-"loop": true,
-"name": "default",
+"name": "terezinhaBaixo",
 "speed": 10.0
-} ]
-
-[sub_resource type="SpriteFrames" id=13]
-animations = [ {
-"frames": [ ExtResource( 27 ), ExtResource( 22 ), ExtResource( 13 ) ],
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 49 ), ExtResource( 52 ) ],
 "loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=14]
-animations = [ {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "default",
+"name": "terezinhaCima",
 "speed": 10.0
-} ]
-
-[sub_resource type="SpriteFrames" id=15]
-animations = [ {
-"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 31 ) ],
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 47 ), ExtResource( 45 ) ],
 "loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=16]
-animations = [ {
-"frames": [ ExtResource( 30 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "default",
+"name": "terezinhaLado",
 "speed": 10.0
-} ]
-
-[sub_resource type="SpriteFrames" id=17]
-animations = [ {
-"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 35 ) ],
 "loop": true,
-"name": "default",
-"speed": 5.0
+"name": "zezinhoBaixo",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "zezinhoCima",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "zezinhoLado",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -106,69 +62,10 @@ extents = Vector2( 80, 170 )
 collision_mask = 4
 script = ExtResource( 2 )
 
-[node name="Fantasma" type="Node2D" parent="."]
-visible = false
-position = Vector2( 0, 8 )
-scale = Vector2( 0.42, 0.42 )
-
-[node name="GhostBack" type="AnimatedSprite" parent="Fantasma"]
-position = Vector2( 0, -2.38095 )
-scale = Vector2( -0.298, 0.298 )
-frames = SubResource( 3 )
-frame = 4
+[node name="ActiveSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 18 )
+animation = "terezinhaLado"
 playing = true
-
-[node name="Ghost" type="AnimatedSprite" parent="Fantasma"]
-position = Vector2( 0, -2.38095 )
-scale = Vector2( 0.297619, 0.297619 )
-frames = SubResource( 2 )
-frame = 1
-playing = true
-
-[node name="Ze" type="Node2D" parent="."]
-visible = false
-position = Vector2( 0, 8 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="ZeCorrendo" type="AnimatedSprite" parent="Ze"]
-frames = SubResource( 12 )
-frame = 2
-playing = true
-
-[node name="ZeIdle" type="AnimatedSprite" parent="Ze"]
-frames = SubResource( 13 )
-playing = true
-
-[node name="Tereza" type="Node2D" parent="."]
-visible = false
-scale = Vector2( 0.5, 0.5 )
-
-[node name="TerezaCorrendo" type="AnimatedSprite" parent="Tereza"]
-position = Vector2( 0, 8 )
-frames = SubResource( 14 )
-frame = 2
-playing = true
-
-[node name="TerezaIdle" type="AnimatedSprite" parent="Tereza"]
-position = Vector2( 0, 8 )
-frames = SubResource( 15 )
-frame = 2
-playing = true
-
-[node name="Jonas" type="Node2D" parent="."]
-visible = false
-scale = Vector2( 0.5, 0.5 )
-
-[node name="JonasCorrendo" type="AnimatedSprite" parent="Jonas"]
-position = Vector2( 0, 8 )
-frames = SubResource( 16 )
-playing = true
-
-[node name="JonasIdle" type="AnimatedSprite" parent="Jonas"]
-frames = SubResource( 17 )
-frame = 1
-playing = true
-offset = Vector2( 0, 8 )
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 6.5 )

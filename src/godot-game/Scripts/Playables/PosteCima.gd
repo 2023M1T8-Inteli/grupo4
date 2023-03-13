@@ -14,9 +14,6 @@ func _ready():
 	
 	# Habilita o movimento do jogador
 	Global.canMove = true
-	
-	# Torna o jogador Zé visível na cena
-	$Player/Ze.visible = true
 
 func renderAmong(value):
 	# Esconde a interface do usuário e mostra a tarefa de fios e desativa o filtro de cor

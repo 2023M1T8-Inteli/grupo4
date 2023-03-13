@@ -12,12 +12,6 @@ var lockIf0 = true
 var closeToPorta
 
 func _ready():
-	# Esconde os personagens que não estão sendo utilizados
-	get_node("Player/Ze").visible = false
-	get_node("Player/Fantasma").visible = false
-	get_node("Player/Tereza").visible = true
-	get_node("Player/Jonas").visible = false
-	
 	# Habilita o movimento do jogador
 	Global.canMove = true
 	
@@ -28,8 +22,8 @@ func _ready():
 		pos.posScene = null
 	else:
 		$Player.global_position = pos.posCidade
-		$WalkInPlayer.play("WalkIn")
-		Global.moving = true
+		#$WalkInPlayer.play("WalkIn")
+		#Global.moving = true
 	
 	# Define o zoom da câmera e obtém os limites do mapa
 	camera.zoom = Vector2(0.8,0.8)
@@ -40,10 +34,11 @@ func _ready():
 	$map/Elevador/TextureButton.visible = false
 	
 	# Aguarda 3 segundos e toca a animação de transição para o novo cenário
-	yield(get_tree().create_timer(3.0), "timeout")
-	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)
-	pos.posScene = "res://Scenes/Playables/Environment/Cidade.tscn"
-	pos.currentPos = pos.posCidade
+#	yield(get_tree().create_timer(3.0), "timeout")
+#	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)
+#	pos.posScene = "res://Scenes/Playables/Environment/Cidade.tscn"
+#	pos.currentPos = pos.posCidade
+
 	$map/Elevador/TextureButton.visible = true
 func _process(_delta):
 	# Define os limites da câmera para o tamanho do mapa

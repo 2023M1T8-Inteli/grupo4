@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Playables/Administrativo.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=4]
@@ -9,12 +9,6 @@
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=7]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 394, 10 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 8.5, 729 )
 
 [sub_resource type="TileSet" id=6]
 0/name = "Room_Builder_free_32x32.png 0"
@@ -885,19 +879,15 @@ shape = SubResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/bounds"]
 position = Vector2( 383, -76 )
-shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="map/bounds"]
 position = Vector2( 383, 569 )
-shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="map/bounds"]
 position = Vector2( 97, 639 )
-shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="map/bounds"]
 position = Vector2( 672, 641 )
-shape = SubResource( 3 )
 
 [node name="Chao andavel" type="TileMap" parent="map"]
 position = Vector2( 1, 0 )
