@@ -5,11 +5,9 @@
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/TopDownHouse_FurnitureState1.png-bacf6c13f64479faa66e43cb417ab95f.stex"
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
-load_path = "res://.import/top down living room 1 .png-73b404c3a2a23a27835f64b6188bc184.stex"
 
 [sub_resource type="TileSet" id=3]
 0/name = "Inside_A2.png 0"
