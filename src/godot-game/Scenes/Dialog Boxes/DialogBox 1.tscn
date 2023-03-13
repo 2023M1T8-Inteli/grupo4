@@ -1,0 +1,217 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Textura Caixa.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=2]
+[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 39
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 310, 63 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "hover"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 310, 64 ), Vector2( 310, 59 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("DialogBox 1/TexturaCaixa/SpookRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DialogBox 1/TexturaCaixa/SpookRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "dissolve"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("DialogBox 1/TexturaCaixa/SpookRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DialogBox 1/TexturaCaixa/SpookRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "flash"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="DialogBox 1" type="CanvasLayer"]
+
+[node name="TexturaCaixa" type="TextureRect" parent="."]
+margin_left = 16.0
+margin_top = 544.0
+margin_right = 344.0
+margin_bottom = 623.0
+rect_pivot_offset = Vector2( 51, 17 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+dialogPath = "res://Text Files/Text0.json"
+
+[node name="NomeNPC" type="RichTextLabel" parent="TexturaCaixa"]
+margin_left = 34.0
+margin_top = -56.0
+margin_right = 337.0
+margin_bottom = -3.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+
+[node name="Label" type="RichTextLabel" parent="TexturaCaixa"]
+margin_left = 13.0
+margin_top = 9.0
+margin_right = 310.0
+margin_bottom = 69.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[node name="FinishArrow" type="Polygon2D" parent="TexturaCaixa"]
+position = Vector2( 310, 63 )
+scale = Vector2( 0.692308, 0.692308 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 8, 13, 16, 0, 7.53802, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TexturaCaixa/FinishArrow"]
+anims/RESET = SubResource( 3 )
+anims/hover = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="TexturaCaixa"]
+wait_time = 0.05
+
+[node name="SpookRect" type="ColorRect" parent="TexturaCaixa"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -16.0
+margin_top = -544.0
+margin_right = 344.0
+margin_bottom = 96.0
+
+[node name="SpookPlayer" type="AnimationPlayer" parent="TexturaCaixa/SpookRect"]
+root_node = NodePath("../../../..")
+anims/RESET = SubResource( 5 )
+anims/dissolve = SubResource( 6 )
+
+[node name="TextureButton" type="TextureButton" parent="TexturaCaixa"]
+margin_left = -14.0
+margin_top = -461.0
+margin_right = 346.0
+margin_bottom = 179.0
+mouse_filter = 1
+action_mode = 0
+
+[node name="ReturnArrow" type="Polygon2D" parent="TexturaCaixa"]
+position = Vector2( 20, -28 )
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 8, 13, 16, 0, 7.53802, 0 )
+
+[node name="ReturnButton" type="TextureButton" parent="TexturaCaixa/ReturnArrow"]
+margin_left = -22.0
+margin_top = -16.0
+margin_right = 36.0
+margin_bottom = 28.0
+
+[node name="ReturnArrowFlash" type="Polygon2D" parent="TexturaCaixa"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 232, -288 )
+rotation = 1.5708
+scale = Vector2( 7, 10 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 8, 13, 16, 0, 7.53802, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TexturaCaixa/ReturnArrowFlash"]
+anims/RESET = SubResource( 7 )
+anims/flash = SubResource( 8 )
+
+[connection signal="pressed" from="TexturaCaixa/TextureButton" to="TexturaCaixa" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TexturaCaixa/ReturnArrow/ReturnButton" to="TexturaCaixa" method="_on_ReturnButton_pressed"]

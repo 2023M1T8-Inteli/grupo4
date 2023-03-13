@@ -1,0 +1,264 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fundo task fios.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/WireTask.gd" type="Script" id=2]
+
+[node name="WiresTask" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="FundoTaskFios" type="Sprite" parent="."]
+position = Vector2( 180, 320 )
+texture = ExtResource( 1 )
+
+[node name="blueWire" type="Node2D" parent="."]
+position = Vector2( 25, 232 )
+
+[node name="blueToYellow" type="Line2D" parent="blueWire"]
+visible = false
+position = Vector2( 25, 232 )
+points = PoolVector2Array( -26, -240, 271, -90 )
+default_color = Color( 0.196078, 0.298039, 0.596078, 1 )
+
+[node name="blueToRed" type="Line2D" parent="blueWire"]
+visible = false
+position = Vector2( 25, 232 )
+points = PoolVector2Array( -26, -238, 271, -240 )
+default_color = Color( 0.196078, 0.298039, 0.596078, 1 )
+
+[node name="blueToPurple" type="Line2D" parent="blueWire"]
+visible = false
+position = Vector2( 25, 232 )
+points = PoolVector2Array( -23, -238, 270, -13 )
+default_color = Color( 0.196078, 0.298039, 0.596078, 1 )
+
+[node name="blueToBlue" type="Line2D" parent="blueWire"]
+visible = false
+position = Vector2( 25, 232 )
+points = PoolVector2Array( -28, -240, 273, -164 )
+default_color = Color( 0.196078, 0.298039, 0.596078, 1 )
+
+[node name="blueButton" type="TextureButton" parent="blueWire"]
+margin_left = -25.0
+margin_top = -28.0
+margin_right = 44.0
+margin_bottom = 12.0
+
+[node name="blueYellowButton" type="TextureButton" parent="blueWire"]
+margin_left = 263.0
+margin_top = 124.0
+margin_right = 335.0
+margin_bottom = 164.0
+mouse_filter = 2
+
+[node name="blueBlueButton" type="TextureButton" parent="blueWire"]
+margin_left = 263.0
+margin_top = 49.0
+margin_right = 335.0
+margin_bottom = 89.0
+mouse_filter = 2
+
+[node name="blueRedButton" type="TextureButton" parent="blueWire"]
+margin_left = 263.0
+margin_top = -28.0
+margin_right = 335.0
+margin_bottom = 12.0
+mouse_filter = 2
+
+[node name="bluePurpleButton" type="TextureButton" parent="blueWire"]
+margin_left = 263.0
+margin_top = 196.0
+margin_right = 335.0
+margin_bottom = 236.0
+mouse_filter = 2
+
+[node name="redWire" type="Node2D" parent="."]
+
+[node name="redToRed" type="Line2D" parent="redWire"]
+visible = false
+points = PoolVector2Array( 27, 300, 320, 225 )
+default_color = Color( 0.882353, 0.133333, 0.12549, 1 )
+
+[node name="redToBlue" type="Line2D" parent="redWire"]
+visible = false
+points = PoolVector2Array( 27, 300, 317, 301 )
+default_color = Color( 0.882353, 0.133333, 0.12549, 1 )
+
+[node name="redToYellow" type="Line2D" parent="redWire"]
+visible = false
+points = PoolVector2Array( 27, 300, 317, 374 )
+default_color = Color( 0.882353, 0.133333, 0.12549, 1 )
+
+[node name="redToPurple" type="Line2D" parent="redWire"]
+visible = false
+points = PoolVector2Array( 27, 300, 320, 450 )
+default_color = Color( 0.882353, 0.133333, 0.12549, 1 )
+
+[node name="redButton" type="TextureButton" parent="redWire"]
+margin_top = 281.0
+margin_right = 69.0
+margin_bottom = 321.0
+
+[node name="redYellowButton" type="TextureButton" parent="redWire"]
+margin_left = 288.0
+margin_top = 356.0
+margin_right = 360.0
+margin_bottom = 396.0
+mouse_filter = 2
+
+[node name="redBlueButton" type="TextureButton" parent="redWire"]
+margin_left = 288.0
+margin_top = 281.0
+margin_right = 360.0
+margin_bottom = 321.0
+mouse_filter = 2
+
+[node name="redRedButton" type="TextureButton" parent="redWire"]
+margin_left = 288.0
+margin_top = 204.0
+margin_right = 360.0
+margin_bottom = 244.0
+mouse_filter = 2
+
+[node name="redPurpleButton" type="TextureButton" parent="redWire"]
+margin_left = 288.0
+margin_top = 428.0
+margin_right = 360.0
+margin_bottom = 468.0
+mouse_filter = 2
+
+[node name="yellowWire" type="Node2D" parent="."]
+
+[node name="yellowToYellow" type="Line2D" parent="yellowWire"]
+visible = false
+points = PoolVector2Array( 28, 373, 321, 374 )
+default_color = Color( 0.984314, 0.913725, 0.0823529, 1 )
+
+[node name="yellowToBlue" type="Line2D" parent="yellowWire"]
+visible = false
+points = PoolVector2Array( 28, 373, 320, 301 )
+default_color = Color( 0.984314, 0.913725, 0.0823529, 1 )
+
+[node name="yellowToRed" type="Line2D" parent="yellowWire"]
+visible = false
+points = PoolVector2Array( 28, 373, 321, 224 )
+default_color = Color( 0.984314, 0.913725, 0.0823529, 1 )
+
+[node name="yellowToPurple" type="Line2D" parent="yellowWire"]
+visible = false
+points = PoolVector2Array( 28, 373, 321, 449 )
+default_color = Color( 0.984314, 0.913725, 0.0823529, 1 )
+
+[node name="yellowButton" type="TextureButton" parent="yellowWire"]
+margin_top = 356.0
+margin_right = 69.0
+margin_bottom = 396.0
+
+[node name="yellowYellowButton" type="TextureButton" parent="yellowWire"]
+margin_left = 288.0
+margin_top = 356.0
+margin_right = 360.0
+margin_bottom = 396.0
+mouse_filter = 2
+
+[node name="yellowBlueButton" type="TextureButton" parent="yellowWire"]
+margin_left = 288.0
+margin_top = 281.0
+margin_right = 360.0
+margin_bottom = 321.0
+mouse_filter = 2
+
+[node name="yellowPurpleButton" type="TextureButton" parent="yellowWire"]
+margin_left = 288.0
+margin_top = 428.0
+margin_right = 360.0
+margin_bottom = 468.0
+mouse_filter = 2
+
+[node name="yellowRedButton" type="TextureButton" parent="yellowWire"]
+margin_left = 288.0
+margin_top = 204.0
+margin_right = 360.0
+margin_bottom = 244.0
+mouse_filter = 2
+
+[node name="purpleWire" type="Node2D" parent="."]
+
+[node name="purpleToPurple" type="Line2D" parent="purpleWire"]
+visible = false
+points = PoolVector2Array( 27, 449, 320, 447 )
+default_color = Color( 0.643137, 0.321569, 0.603922, 1 )
+
+[node name="purpleToYellow" type="Line2D" parent="purpleWire"]
+visible = false
+points = PoolVector2Array( 27, 449, 318, 374 )
+default_color = Color( 0.643137, 0.321569, 0.603922, 1 )
+
+[node name="purpleToBlue" type="Line2D" parent="purpleWire"]
+visible = false
+points = PoolVector2Array( 27, 449, 318, 299 )
+default_color = Color( 0.643137, 0.321569, 0.603922, 1 )
+
+[node name="purpleToRed" type="Line2D" parent="purpleWire"]
+visible = false
+points = PoolVector2Array( 27, 449, 326, 221 )
+default_color = Color( 0.643137, 0.321569, 0.603922, 1 )
+
+[node name="purpleButton" type="TextureButton" parent="purpleWire"]
+margin_top = 428.0
+margin_right = 69.0
+margin_bottom = 468.0
+
+[node name="purpleYellowButton" type="TextureButton" parent="purpleWire"]
+margin_left = 288.0
+margin_top = 356.0
+margin_right = 360.0
+margin_bottom = 396.0
+mouse_filter = 2
+
+[node name="purpleRedButton" type="TextureButton" parent="purpleWire"]
+margin_left = 288.0
+margin_top = 204.0
+margin_right = 360.0
+margin_bottom = 244.0
+mouse_filter = 2
+
+[node name="purpleBlueButton" type="TextureButton" parent="purpleWire"]
+margin_left = 288.0
+margin_top = 281.0
+margin_right = 360.0
+margin_bottom = 321.0
+mouse_filter = 2
+
+[node name="purplePurpleButton" type="TextureButton" parent="purpleWire"]
+margin_left = 288.0
+margin_top = 428.0
+margin_right = 360.0
+margin_bottom = 468.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 360.0
+margin_bottom = 640.0
+color = Color( 0, 1, 0.0156863, 0.298039 )
+
+[connection signal="pressed" from="blueWire/blueButton" to="." method="_on_blueButton_pressed"]
+[connection signal="pressed" from="blueWire/blueYellowButton" to="." method="_on_blueYellowButton_pressed"]
+[connection signal="pressed" from="blueWire/blueBlueButton" to="." method="_on_blueBlueButton_pressed"]
+[connection signal="pressed" from="blueWire/blueRedButton" to="." method="_on_blueRedButton_pressed"]
+[connection signal="pressed" from="blueWire/bluePurpleButton" to="." method="_on_bluePurpleButton_pressed"]
+[connection signal="pressed" from="redWire/redButton" to="." method="_on_redButton_pressed"]
+[connection signal="pressed" from="redWire/redYellowButton" to="." method="_on_redYellowButton_pressed"]
+[connection signal="pressed" from="redWire/redBlueButton" to="." method="_on_redBlueButton_pressed"]
+[connection signal="pressed" from="redWire/redRedButton" to="." method="_on_redRedButton_pressed"]
+[connection signal="pressed" from="redWire/redPurpleButton" to="." method="_on_redPurpleButton_pressed"]
+[connection signal="pressed" from="yellowWire/yellowButton" to="." method="_on_yellowButton_pressed"]
+[connection signal="pressed" from="yellowWire/yellowYellowButton" to="." method="_on_yellowYellowButton_pressed"]
+[connection signal="pressed" from="yellowWire/yellowBlueButton" to="." method="_on_yellowBlueButton_pressed"]
+[connection signal="pressed" from="yellowWire/yellowPurpleButton" to="." method="_on_yellowPurpleButton_pressed"]
+[connection signal="pressed" from="yellowWire/yellowRedButton" to="." method="_on_yellowRedButton_pressed"]
+[connection signal="pressed" from="purpleWire/purpleButton" to="." method="_on_purpleButton_pressed"]
+[connection signal="pressed" from="purpleWire/purpleYellowButton" to="." method="_on_purpleYellowButton_pressed"]
+[connection signal="pressed" from="purpleWire/purpleRedButton" to="." method="_on_purpleRedButton_pressed"]
+[connection signal="pressed" from="purpleWire/purpleBlueButton" to="." method="_on_purpleBlueButton_pressed"]
+[connection signal="pressed" from="purpleWire/purplePurpleButton" to="." method="_on_purplePurpleButton_pressed"]
