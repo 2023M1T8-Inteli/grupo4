@@ -74,7 +74,7 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 ## 💻 Configuração para Desenvolvimento
 
-1 - Faça o download do GODOT e deste repositório.
+1 - Faça o download do GODOT 3.5.x e deste repositório.
 2 - Abra o GODOT, ao ser prontificado clique em IMPORTAR.
 3 - Selecione a pasta onde descompactou este repositório.
 
