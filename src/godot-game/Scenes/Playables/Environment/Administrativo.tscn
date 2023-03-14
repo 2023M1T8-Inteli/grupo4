@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Playables/Administrativo.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=4]
@@ -1030,7 +1030,8 @@ tracks/0/keys = {
 "values": [ Vector2( 381, 30 ), Vector2( 381, 200 ) ]
 }
 
-[node name="Administrativo" type="Node2D"]
+[node name="Administrativo2" type="Node2D"]
+position = Vector2( -97, 64 )
 script = ExtResource( 3 )
 
 [node name="map" type="Node2D" parent="."]
@@ -1112,8 +1113,6 @@ tile_data = PoolIntArray( -131064, 48, 0, -131054, 47, 0, -131036, 48, 0, 851976
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 381, 79 )
-personagemAtivo = "terezinha"
-speed = 250
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 

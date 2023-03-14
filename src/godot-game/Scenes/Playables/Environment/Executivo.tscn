@@ -1256,6 +1256,20 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 74/shape_one_way_margin = 0.0
 74/shapes = [  ]
 74/z_index = 0
+75/name = "Modern_Office_16x16 - Copia.png 75"
+75/texture = ExtResource( 1 )
+75/tex_offset = Vector2( 0, 0 )
+75/modulate = Color( 1, 1, 1, 1 )
+75/region = Rect2( 184, 8, 32, 40 )
+75/tile_mode = 0
+75/occluder_offset = Vector2( 0, 0 )
+75/navigation_offset = Vector2( 0, 0 )
+75/shape_offset = Vector2( 0, 0 )
+75/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+75/shape_one_way = false
+75/shape_one_way_margin = 0.0
+75/shapes = [  ]
+75/z_index = 0
 
 [sub_resource type="TileSet" id=15]
 0/name = "Room_Builder_free_32x32.png 0"
@@ -1304,6 +1318,7 @@ tracks/0/keys = {
 }
 
 [node name="Administrativo" type="Node2D"]
+position = Vector2( -96, 64 )
 script = ExtResource( 3 )
 
 [node name="map" type="Node2D" parent="."]
@@ -1375,7 +1390,7 @@ cell_quadrant_size = 64
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -131045, 28, 0, -65517, 13, 0, -65515, 10, 0, -65510, 10, 0, 8, 71, 0, 10, 74, 0, 11, 71, 0, 13, 74, 0, 14, 71, 0, 262163, 10, 0, 262173, 10, 0, 327688, 71, 0, 327690, 74, 0, 327691, 74, 0, 327692, 74, 0, 327693, 74, 0, 327694, 71, 0, 655379, 10, 0, 655389, 10, 0, 917523, 10, 0, 917533, 10, 0, 1310739, 10, 0, 1310749, 10, 0, 1572883, 10, 0, 1572893, 10, 0, 1900570, 10, 0, 1900574, 10, 0 )
+tile_data = PoolIntArray( -131045, 28, 0, -65517, 13, 0, -65515, 10, 0, -65510, 10, 0, 8, 71, 0, 10, 74, 0, 11, 71, 0, 13, 74, 0, 14, 71, 0, 131105, 47, 0, 131107, 75, 0, 131108, 75, 0, 131109, 47, 0, 262154, 57, 0, 262158, 57, 0, 262163, 10, 0, 262173, 10, 0, 327688, 71, 0, 327690, 74, 0, 327691, 74, 0, 327692, 74, 0, 327693, 74, 0, 327694, 71, 0, 655379, 10, 0, 655389, 10, 0, 917523, 10, 0, 917533, 10, 0, 1310739, 10, 0, 1310749, 10, 0, 1572883, 10, 0, 1572893, 10, 0, 1900570, 10, 0, 1900574, 10, 0, 2097161, 47, 0, 2097172, 47, 0 )
 
 [node name="Objeto3" type="TileMap" parent="map"]
 tile_set = SubResource( 14 )
@@ -1384,7 +1399,7 @@ cell_quadrant_size = 64
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( 10, 74, 0, 14, 74, 0, 327693, 74, 0 )
+tile_data = PoolIntArray( -65530, 10, 0, 10, 74, 0, 14, 74, 0, 17, 45, 0, 131105, 17, 0, 131108, 75, 0, 131109, 23, 0, 196642, 51, 0, 327686, 10, 0, 327689, 26, 0, 327693, 24, 0, 2097163, 75, 0, 2097164, 75, 0, 2097165, 75, 0, 2097166, 75, 0, 2097167, 75, 0, 2097168, 75, 0, 2097169, 75, 0, 2097170, 75, 0, 2097171, 75, 0 )
 
 [node name="Objeto4" type="TileMap" parent="map"]
 tile_set = SubResource( 14 )
@@ -1393,11 +1408,14 @@ cell_quadrant_size = 64
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, 10, 54, 0, 14, 54, 0 )
+tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, -65505, 8, 0, -65502, 11, 0, -65500, 12, 0, -65497, 13, 0, -65495, 8, 0, 10, 54, 0, 14, 54, 0, 196642, 55, 0, 196646, 55, 0 )
 
 [node name="Paredes4" type="TileMap" parent="map"]
 tile_set = SubResource( 15 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 format = 1
+tile_data = PoolIntArray( 393222, 0, 0, 393226, 0, 0, 393230, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 381, 79 )
