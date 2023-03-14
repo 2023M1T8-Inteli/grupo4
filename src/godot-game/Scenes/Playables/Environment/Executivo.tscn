@@ -1304,6 +1304,7 @@ tracks/0/keys = {
 }
 
 [node name="Administrativo" type="Node2D"]
+position = Vector2( -97, 64 )
 script = ExtResource( 3 )
 
 [node name="map" type="Node2D" parent="."]
@@ -1321,19 +1322,19 @@ shape = SubResource( 7 )
 [node name="bounds" type="StaticBody2D" parent="map"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 383, -76 )
+position = Vector2( 382, -43 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 383, 569 )
+position = Vector2( 383, 586 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 97, 639 )
+position = Vector2( 88, 641 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 672, 641 )
+position = Vector2( 681, 641 )
 shape = SubResource( 3 )
 
 [node name="Chao andavel" type="TileMap" parent="map"]

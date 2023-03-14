@@ -56,7 +56,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 80, 170 )
+extents = Vector2( 56, 80 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 4
@@ -65,11 +65,11 @@ script = ExtResource( 2 )
 [node name="ActiveSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
 animation = "terezinhaLado"
-frame = 3
+frame = 1
 playing = true
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 6.5 )
+position = Vector2( -1, 0 )
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 1 )
 
