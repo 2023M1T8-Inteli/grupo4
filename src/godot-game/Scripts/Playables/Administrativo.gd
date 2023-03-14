@@ -27,7 +27,6 @@ func _ready():
 	
 	# Define o zoom da câmera e obtém os limites do mapa
 	camera.zoom = Vector2(0.8,0.8)
-	_getMapLimits()
 	set_process(true)
 	
 	# Salvaguarda para nao sair da cena antes de acabar o yield
@@ -42,31 +41,16 @@ func _ready():
 	$map/Elevador/TextureButton.visible = true
 func _process(_delta):
 	# Define os limites da câmera para o tamanho do mapa
-	var camera_limits = Rect2(map.global_position, Vector2(map_width, map_height))
-	camera.limit_left = camera_limits.position.x
-	#camera.limit_top = camera_limits.position.y
-	camera.limit_right = 768 #mudar depois para funcao que pega os limites
-	camera.limit_bottom = 1344 #mudar depois para funcao que pega os limites
+	camera.limit_left = 0
+	camera.limit_top = 0
+	camera.limit_right = 576
+	camera.limit_bottom = 640
 	
 	# Verifica se o jogador está próximo da porta de interação
 	if $Player/HitBox.global_position.distance_to($PortaAncora.global_position) < 160:
 		closeToPorta = true
 	else:
 		closeToPorta = false
-	
-
-func _getMapLimits():
-	# Itera por todos os nós filhos do mapa
-	for child in children:
-		# Verifica se o nó filho é um sprite
-		if child is Sprite:
-			# Obtém a posição global do sprite
-			var sprite_pos = child.global_position
-			# Atualiza a largura e altura do mapa, se necessário
-			map_width = max(map_width, sprite_pos.x + child.texture.get_size().x * child.scale.x)
-			map_height = max(map_height, sprite_pos.y + child.texture.get_size().y * child.scale.y)
-
-
 
 func _on_TextureButton_pressed():
 	# Verifica se o jogador está perto da porta
