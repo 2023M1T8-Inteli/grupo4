@@ -1,8 +1,8 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Scripts/Playables/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Scripts/Playables/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Overlays/misc/Arrow.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scripts/misc/Camera2D.gd" type="Script" id=14]
+[ext_resource path="res://Scenes/Scripts/misc/Camera2D.gd" type="Script" id=14]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (3).png" type="Texture" id=35]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (1).png" type="Texture" id=36]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (2).png" type="Texture" id=37]
@@ -56,20 +56,21 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 56, 80 )
+extents = Vector2( 54, 82 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 4
 script = ExtResource( 2 )
+personagemAtivo = "terezinha"
 
 [node name="ActiveSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
-animation = "terezinhaLado"
-frame = 2
+animation = "zezinhoLado"
 playing = true
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 17 )
+visible = false
+position = Vector2( -0.5, -0.5 )
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 1 )
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scripts/Non Playables/Title Screen.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Scripts/Non Playables/Title Screen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Logo/logo frame 2.png" type="Texture" id=2]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/Interface/botao-export.png" type="Texture" id=4]

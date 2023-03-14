@@ -1,9 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites/Tasks/fundo task fios.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Playables/NewWireTask.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Scripts/Playables/NewWireTask.gd" type="Script" id=2]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=4]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 27

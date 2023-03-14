@@ -1,12 +1,13 @@
 [gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://Scripts/Playables/Administrativo.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Scripts/Playables/Administrativo.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Overlays/misc/GUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Elevador/Elevador.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/TileMaps/Room_Builder_free_32x32.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/TileMaps/tilemap escritorio.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16.png" type="Texture" id=10]
+
 
 [sub_resource type="RectangleShape2D" id=7]
 

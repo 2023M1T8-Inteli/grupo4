@@ -1,6 +1,6 @@
 [gd_scene load_steps=48 format=2]
 
-[ext_resource path="res://Scripts/Playables/Prelude.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Scripts/Playables/Prelude.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/kenney_rpgUrbanKit/Tilemap/tilemap_packed.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/trees_and_bushes_pack/trees-and-bushes.png" type="Texture" id=4]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export1.png" type="Texture" id=17]
 [ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export2.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export3.png" type="Texture" id=19]
+
 
 [sub_resource type="TileSet" id=21]
 0/name = "tilemap_packed.png 0"
