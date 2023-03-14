@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scripts/Non Playables/Title Screen.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Scripts/Non Playables/Title Screen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Logo/logo frame 2.png" type="Texture" id=2]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/Interface/botao-export.png" type="Texture" id=4]
@@ -121,7 +121,7 @@ margin_bottom = 656.0
 mouse_filter = 2
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
-text = " VER 0.2.5.2"
+text = " VER 0.2.5.3"
 scroll_active = false
 
 [connection signal="pressed" from="Logo/AnimatedSprite/OvoButton" to="." method="_on_OvoButton_pressed"]

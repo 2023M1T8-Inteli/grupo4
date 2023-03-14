@@ -5,8 +5,8 @@
 [ext_resource path="res://Sprites/TileMaps/nuvens tile.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/TileMaps/predio.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/TileMaps/tilemap escritorio.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Poste/poste_caixa.png" type="Texture" id=6]
-[ext_resource path="res://Scripts/Playables/PosteCima.gd" type="Script" id=7]
+[ext_resource path="res://Sprites/TileMaps/Skorpio's Pack/Objects.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Scripts/Playables/PosteCima.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Playables/Tasks/NewWireTask.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprites/FX/Explosion1.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/FX/Explosion2.png" type="Texture" id=10]
@@ -35,6 +35,7 @@
 [ext_resource path="res://Sprites/TileMaps/edificios.png" type="Texture" id=33]
 [ext_resource path="res://Sprites/kenney_rpgUrbanKit/Tilemap/tilemap_packed.png" type="Texture" id=34]
 [ext_resource path="res://Sprites/TileMaps/escada.png" type="Texture" id=35]
+
 
 [sub_resource type="TileSet" id=2]
 0/name = "tilemap escritorio.png 0"

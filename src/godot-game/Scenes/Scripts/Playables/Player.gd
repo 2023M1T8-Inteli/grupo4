@@ -52,7 +52,6 @@ func _physics_process(_delta):
 		velocity = Vector2(x*speed, y*speed)
 		# Move o jogador e lida com colisões
 		var _moveAndSlide = move_and_slide(velocity, Vector2.UP)
-
 		$ActiveSprite.playing = true
 		
 		if y < cos(PI/12) and y > -cos(-PI/12):
@@ -62,7 +61,6 @@ func _physics_process(_delta):
 			else:
 				$ActiveSprite.animation = personagemAtivo+"Lado"
 				$ActiveSprite.flip_h = false
-				
 		else:
 			if y > 0:
 				$ActiveSprite.animation = personagemAtivo+"Baixo"

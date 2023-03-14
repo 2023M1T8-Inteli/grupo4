@@ -89,8 +89,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Scripts/misc/global.gd"
-pos="*res://Scripts/misc/PosSave.gd"
+Global="*res://Scenes/Scripts/misc/global.gd"
+pos="*res://Scenes/Scripts/misc/PosSave.gd"
 SceneTransition="*res://Scenes/Overlays/misc/scene_transition.tscn"
 BangSound="*res://Scenes/Overlays/misc/BangSound.tscn"
 
@@ -118,6 +118,12 @@ enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
 
 [input]
 
