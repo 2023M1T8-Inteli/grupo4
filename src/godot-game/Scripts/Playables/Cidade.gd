@@ -19,12 +19,6 @@ func _ready():
 	
 	# Permite o movimento do jogador
 	Global.canMove = true
-	
-	# Mostra o personagem principal e esconde o fantasma
-	get_node("Player/Ze").visible = false
-	get_node("Player/Fantasma").visible = false
-	get_node("Player/Tereza").visible = true
-	get_node("Player/Jonas").visible = false
 
 func _process(_delta):
 	# Verifica se o jogador está perto do objeto 'ADM' (Representa a entrada do prédio)

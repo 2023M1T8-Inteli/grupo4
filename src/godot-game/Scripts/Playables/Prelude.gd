@@ -11,12 +11,6 @@ func _ready():
 	# Define que o jogador não pode se mover até que seja permitido
 	Global.canMove = false
 	
-	# Define qual personagem deve aparecer na cena
-	get_node("Player/Ze").visible = true
-	get_node("Player/Fantasma").visible = false
-	get_node("Player/Tereza").visible = false
-	get_node("Player/Jonas").visible = false
-	
 	# Define um objetivo como ativo e sua posição
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $PosteCaixa/Node2D.global_position

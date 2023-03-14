@@ -14,7 +14,7 @@ func _process(_delta):
 		# Calcula o ângulo entre o objeto atual e o objetivo
 		var angle = atan2(active_objective.y - self.global_position.y, active_objective.x - self.global_position.x)
 		# Define o raio do círculo ao redor do objetivo
-		var radius = 60  # Ajuste aqui para mudar o raio do círculo
+		var radius = 45  # Ajuste aqui para mudar o raio do círculo
 		# Calcula as coordenadas do objeto dentro do círculo ao redor do objetivo
 		var x = cos(angle) * radius
 		var y = sin(angle) * radius

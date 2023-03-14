@@ -1,19 +1,19 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Scripts/misc/Quiz Tasks/Quiz1/TextoBut1.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=2]
-[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Scripts/misc/Quiz Tasks/Quiz1/QuizTask.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/misc/Quiz Tasks/Quiz1/QuizTaskOpcoes.gd" type="Script" id=5]
-[ext_resource path="res://Scripts/misc/Quiz Tasks/Quiz1/QuizCaixa.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/misc/Quiz Tasks/Quiz/TextoBut.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/misc/Quiz Tasks/Quiz/QuizTaskOpcoes.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/misc/Quiz Tasks/Quiz/QuizCaixa.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/misc/Quiz Tasks/Quiz/QuizTask.gd" type="Script" id=4]
+[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 39
-font_data = ExtResource( 3 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 13
-font_data = ExtResource( 3 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -91,15 +91,15 @@ tracks/0/keys = {
 
 [sub_resource type="DynamicFont" id=7]
 size = 13
-font_data = ExtResource( 3 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 13
-font_data = ExtResource( 3 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=9]
 size = 13
-font_data = ExtResource( 3 )
+font_data = ExtResource( 5 )
 
 [node name="QuizTask" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -112,9 +112,11 @@ margin_top = 544.0
 margin_right = 344.0
 margin_bottom = 623.0
 rect_pivot_offset = Vector2( 51, 17 )
-texture = ExtResource( 2 )
-script = ExtResource( 6 )
+texture = ExtResource( 6 )
+script = ExtResource( 3 )
 dialogPath = "res://Quiz Files/Quiz1.json"
+jumpStartQuery = [ 0, 2 ]
+jumpStartFeedBack = [ 2, 3 ]
 
 [node name="NomeNPC" type="RichTextLabel" parent="DialogBox/TexturaCaixa"]
 margin_left = 34.0
@@ -182,13 +184,15 @@ margin_left = 69.0
 margin_top = 232.0
 margin_right = 69.0
 margin_bottom = 232.0
-script = ExtResource( 5 )
+mouse_filter = 2
+script = ExtResource( 2 )
 questionPath = "res://Quiz Files/Quiz1.json"
+firstCorrect = 5
 
 [node name="Opcao1" type="Sprite" parent="Opcoes"]
 position = Vector2( 111, 278 )
 scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 2 )
+texture = ExtResource( 6 )
 
 [node name="Opcao1" type="RichTextLabel" parent="Opcoes/Opcao1"]
 margin_left = -154.667
@@ -200,17 +204,17 @@ custom_fonts/normal_font = SubResource( 7 )
 bbcode_enabled = true
 scroll_active = false
 
-[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao1"]
-margin_left = -164.0
-margin_top = -40.0
-margin_right = 164.0
-margin_bottom = 40.0
+[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao1/Opcao1"]
+margin_left = -7.00149
+margin_top = -8.00201
+margin_right = 320.999
+margin_bottom = 71.998
 script = ExtResource( 1 )
 
 [node name="Opcao2" type="Sprite" parent="Opcoes"]
 position = Vector2( 111, 88 )
 scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 2 )
+texture = ExtResource( 6 )
 
 [node name="Opcao2" type="RichTextLabel" parent="Opcoes/Opcao2"]
 margin_left = -155.0
@@ -222,17 +226,17 @@ custom_fonts/normal_font = SubResource( 8 )
 bbcode_enabled = true
 scroll_active = false
 
-[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao2"]
-margin_left = -164.0
-margin_top = -40.0
-margin_right = 165.0
-margin_bottom = 40.0
+[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao2/Opcao2"]
+margin_left = -6.75169
+margin_top = -6.75168
+margin_right = 322.248
+margin_bottom = 73.2483
 script = ExtResource( 1 )
 
 [node name="Opcao3" type="Sprite" parent="Opcoes"]
 position = Vector2( 111, -102 )
 scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 2 )
+texture = ExtResource( 6 )
 
 [node name="Opcao3" type="RichTextLabel" parent="Opcoes/Opcao3"]
 margin_left = -155.0
@@ -244,15 +248,21 @@ custom_fonts/normal_font = SubResource( 9 )
 bbcode_enabled = true
 scroll_active = false
 
-[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao3"]
-margin_left = -164.0
-margin_top = -40.0
-margin_right = 165.0
-margin_bottom = 40.0
+[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao3/Opcao3"]
+margin_left = -6.75169
+margin_top = -6.75169
+margin_right = 322.248
+margin_bottom = 73.2483
 script = ExtResource( 1 )
+
+[node name="MouseFilter" type="Control" parent="Opcoes"]
+margin_left = -69.0
+margin_top = -232.0
+margin_right = 291.0
+margin_bottom = 408.0
 
 [connection signal="pressed" from="DialogBox/TexturaCaixa/TextureButton" to="DialogBox/TexturaCaixa" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="DialogBox/TexturaCaixa/ReturnArrow/ReturnButton" to="DialogBox/TexturaCaixa" method="_on_ReturnButton_pressed"]
-[connection signal="pressed" from="Opcoes/Opcao1/TextoBut" to="Opcoes/Opcao1/TextoBut" method="_on_TextoBut_pressed"]
-[connection signal="pressed" from="Opcoes/Opcao2/TextoBut" to="Opcoes/Opcao2/TextoBut" method="_on_TextoBut_pressed"]
-[connection signal="pressed" from="Opcoes/Opcao3/TextoBut" to="Opcoes/Opcao3/TextoBut" method="_on_TextoBut_pressed"]
+[connection signal="pressed" from="Opcoes/Opcao1/Opcao1/TextoBut" to="Opcoes/Opcao1/Opcao1/TextoBut" method="_on_TextoBut_pressed"]
+[connection signal="pressed" from="Opcoes/Opcao2/Opcao2/TextoBut" to="Opcoes/Opcao2/Opcao2/TextoBut" method="_on_TextoBut_pressed"]
+[connection signal="pressed" from="Opcoes/Opcao3/Opcao3/TextoBut" to="Opcoes/Opcao3/Opcao3/TextoBut" method="_on_TextoBut_pressed"]

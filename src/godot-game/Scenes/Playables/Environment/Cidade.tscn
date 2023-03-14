@@ -3874,6 +3874,7 @@ tile_data = PoolIntArray( -917519, 7, 0, -917517, 7, 0, -917515, 7, 0, -917513, 
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 368, 624 )
+personagemAtivo = "terezinha"
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
@@ -3907,7 +3908,7 @@ shape = SubResource( 40 )
 position = Vector2( 1543, 962 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 42 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]

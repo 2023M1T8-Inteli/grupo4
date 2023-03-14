@@ -7,12 +7,6 @@ func _ready():
 	$LimboAmbience.playing = true  # Toca o barulho de fundo do limbo
 	$LimboMusic.playing = true  # Toca a música do limbo
 	
-	# Configura o estado inicial dos personagens
-	get_node("Player/Fantasma").visible = true  # Deixa o fantasma visível
-	get_node("Player/Ze").visible = false  # Esconde o personagem Ze
-	get_node("Player/Tereza").visible = false  # Esconde a personagem Tereza
-	get_node("Player/Jonas").visible = false  # Esconde o personagem Jonas
-	
 	# Espera 3.3 segundos antes de exibir a caixa de diálogo
 	yield(get_tree().create_timer(3.3), "timeout")
 	$"DialogBox 1".visible = true  # Exibe a caixa de diálogo

@@ -10,12 +10,6 @@
 
 [sub_resource type="RectangleShape2D" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 394, 10 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 8.5, 729 )
-
 [sub_resource type="TileSet" id=6]
 0/name = "Room_Builder_free_32x32.png 0"
 0/texture = ExtResource( 7 )
@@ -1055,19 +1049,15 @@ shape = SubResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/bounds"]
 position = Vector2( 383, -76 )
-shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="map/bounds"]
 position = Vector2( 383, 569 )
-shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="map/bounds"]
 position = Vector2( 97, 639 )
-shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="map/bounds"]
 position = Vector2( 672, 641 )
-shape = SubResource( 3 )
 
 [node name="Chao andavel" type="TileMap" parent="map"]
 position = Vector2( 1, 0 )
@@ -1122,6 +1112,8 @@ tile_data = PoolIntArray( -131064, 48, 0, -131054, 47, 0, -131036, 48, 0, 851976
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 381, 79 )
+personagemAtivo = "terezinha"
+speed = 250
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 
