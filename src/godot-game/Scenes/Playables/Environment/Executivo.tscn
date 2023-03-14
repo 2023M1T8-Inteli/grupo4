@@ -1582,6 +1582,9 @@ tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, -65505, 8, 0, -65502, 11
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 381, 79 )
+personagemAtivo = "terezinha"
+speed = 250
+size = 0.7
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 
