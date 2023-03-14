@@ -24,32 +24,32 @@
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
-"frames": [ ExtResource( 48 ), ExtResource( 51 ), ExtResource( 50 ) ],
+"frames": [ ExtResource( 48 ), ExtResource( 51 ), ExtResource( 50 ), ExtResource( 51 ) ],
 "loop": true,
 "name": "terezinhaBaixo",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 46 ), ExtResource( 49 ), ExtResource( 52 ) ],
+"frames": [ ExtResource( 46 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 49 ) ],
 "loop": true,
 "name": "terezinhaCima",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 44 ), ExtResource( 47 ), ExtResource( 45 ) ],
+"frames": [ ExtResource( 44 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 47 ) ],
 "loop": true,
 "name": "terezinhaLado",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 37 ) ],
 "loop": true,
 "name": "zezinhoBaixo",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 42 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"frames": [ ExtResource( 42 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 40 ) ],
 "loop": true,
 "name": "zezinhoCima",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 43 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"frames": [ ExtResource( 43 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 38 ) ],
 "loop": true,
 "name": "zezinhoLado",
 "speed": 10.0
@@ -65,6 +65,7 @@ script = ExtResource( 2 )
 [node name="ActiveSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
 animation = "terezinhaLado"
+frame = 3
 playing = true
 
 [node name="HitBox" type="CollisionShape2D" parent="."]

@@ -21,7 +21,7 @@ func _ready():
 		$Player.global_position = pos.currentPos
 		pos.posScene = null
 	else:
-		$Player.global_position = pos.posCidade
+		$Player.global_position = pos.posADM
 		#$WalkInPlayer.play("WalkIn")
 		#Global.moving = true
 	

@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-var speed = 450
-
 onready var arrow = $Arrow
 
 var amplitude = 60
@@ -15,6 +13,7 @@ var velocity
 var target_position: Vector2
 
 export(String) var personagemAtivo = "zezinho"
+export(int) var speed = 350
 
 onready var root_node = get_tree().get_root()
 
@@ -34,6 +33,7 @@ func _process(_delta):
 
 func _ready():
 	$ActiveSprite.animation = personagemAtivo+"Baixo"
+	$ActiveSprite.speed_scale = float(speed)/350.0
 
 #física do jogo
 func _physics_process(_delta):
