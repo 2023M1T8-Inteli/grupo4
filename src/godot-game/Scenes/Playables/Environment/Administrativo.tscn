@@ -8,7 +8,6 @@
 [ext_resource path="res://Sprites/TileMaps/tilemap escritorio.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16.png" type="Texture" id=10]
 
-
 [sub_resource type="RectangleShape2D" id=7]
 
 [sub_resource type="SegmentShape2D" id=16]
@@ -1146,7 +1145,6 @@ tile_data = PoolIntArray( -131064, 48, 0, -131054, 47, 0, -131036, 48, 0, 851976
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 381, 79 )
-personagemAtivo = "terezinha"
 speed = 250
 size = 0.7
 
