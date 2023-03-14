@@ -65,11 +65,11 @@ script = ExtResource( 2 )
 [node name="ActiveSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
 animation = "terezinhaLado"
-frame = 1
+frame = 2
 playing = true
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2( -1, 0 )
+position = Vector2( 1, 17 )
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 1 )
 
@@ -80,58 +80,3 @@ smoothing_speed = 10.0
 script = ExtResource( 14 )
 
 [node name="Arrow" parent="." instance=ExtResource( 12 )]
-
-[node name="JoystickButtons" type="CanvasLayer" parent="."]
-
-[node name="LeftButton" type="TextureButton" parent="JoystickButtons"]
-margin_left = 144.0
-margin_top = 496.0
-margin_right = 222.0
-margin_bottom = 560.0
-rect_pivot_offset = Vector2( 168, -10.575 )
-mouse_filter = 1
-action_mode = 0
-keep_pressed_outside = true
-
-[node name="RightButton" type="TextureButton" parent="JoystickButtons"]
-margin_left = 280.0
-margin_top = 504.0
-margin_right = 345.0
-margin_bottom = 560.0
-rect_pivot_offset = Vector2( 39.26, -10.575 )
-mouse_filter = 1
-
-[node name="UpButton" type="TextureButton" parent="JoystickButtons"]
-margin_left = 222.0
-margin_top = 432.0
-margin_right = 280.0
-margin_bottom = 506.0
-rect_pivot_offset = Vector2( 97.35, 64 )
-mouse_filter = 1
-
-[node name="DownButton" type="TextureButton" parent="JoystickButtons"]
-margin_left = 222.0
-margin_top = 560.0
-margin_right = 280.0
-margin_bottom = 634.0
-rect_pivot_offset = Vector2( 97.35, -59.245 )
-mouse_filter = 1
-
-[node name="MidButton" type="TextureButton" parent="JoystickButtons"]
-anchor_right = 0.05
-anchor_bottom = 0.025
-margin_left = 222.0
-margin_top = 504.0
-margin_right = 262.0
-margin_bottom = 544.0
-
-[connection signal="button_down" from="JoystickButtons/LeftButton" to="." method="_on_LeftButton_button_down"]
-[connection signal="button_up" from="JoystickButtons/LeftButton" to="." method="_on_LeftButton_button_up"]
-[connection signal="button_down" from="JoystickButtons/RightButton" to="." method="_on_RightButton_button_down"]
-[connection signal="button_up" from="JoystickButtons/RightButton" to="." method="_on_RightButton_button_up"]
-[connection signal="button_down" from="JoystickButtons/UpButton" to="." method="_on_UpButton_button_down"]
-[connection signal="button_up" from="JoystickButtons/UpButton" to="." method="_on_UpButton_button_up"]
-[connection signal="button_down" from="JoystickButtons/DownButton" to="." method="_on_DownButton_button_down"]
-[connection signal="button_up" from="JoystickButtons/DownButton" to="." method="_on_DownButton_button_up"]
-[connection signal="button_down" from="JoystickButtons/MidButton" to="." method="_on_MidButton_button_down"]
-[connection signal="button_up" from="JoystickButtons/MidButton" to="." method="_on_MidButton_button_up"]

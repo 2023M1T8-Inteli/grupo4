@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/Playables/Administrativo.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=4]
@@ -10,17 +10,24 @@
 
 [sub_resource type="RectangleShape2D" id=7]
 
-[sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 307, 10 )
+[sub_resource type="SegmentShape2D" id=16]
+a = Vector2( 584, -2.28882e-05 )
+b = Vector2( -59, 0 )
 
-[sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 308.5, 10 )
+[sub_resource type="SegmentShape2D" id=17]
+a = Vector2( -55, -16 )
+b = Vector2( 521, -16 )
 
-[sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 10, 372.5 )
+[sub_resource type="SegmentShape2D" id=18]
+a = Vector2( 11, -539 )
+b = Vector2( 11, 106 )
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 10, 383 )
+extents = Vector2( 133.5, 33.5 )
+
+[sub_resource type="SegmentShape2D" id=20]
+a = Vector2( -16, 24 )
+b = Vector2( 39, 24 )
 
 [sub_resource type="TileSet" id=6]
 0/name = "Room_Builder_free_32x32.png 0"
@@ -1061,20 +1068,29 @@ shape = SubResource( 7 )
 [node name="bounds" type="StaticBody2D" parent="map"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 390, -39 )
+position = Vector2( 97, -5 )
+rotation = 1.5708
 shape = SubResource( 16 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 381, 586 )
+position = Vector2( 152, 592 )
 shape = SubResource( 17 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 86, 276 )
+position = Vector2( 662, 471 )
 shape = SubResource( 18 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="map/bounds"]
-position = Vector2( 683, 269 )
+position = Vector2( 230.5, -33.5 )
 shape = SubResource( 19 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="map/bounds"]
+position = Vector2( 552, -33 )
+shape = SubResource( 19 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="map/bounds"]
+position = Vector2( 381, -38 )
+shape = SubResource( 20 )
 
 [node name="Chao andavel" type="TileMap" parent="map"]
 position = Vector2( 1, 0 )
@@ -1131,6 +1147,7 @@ tile_data = PoolIntArray( -131064, 48, 0, -131054, 47, 0, -131036, 48, 0, 851976
 position = Vector2( 381, 79 )
 personagemAtivo = "terezinha"
 speed = 250
+size = 0.7
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 

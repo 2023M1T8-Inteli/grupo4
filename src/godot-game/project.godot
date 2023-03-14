@@ -83,6 +83,8 @@ _global_script_class_icons={
 config/name="group for"
 run/main_scene="res://Scenes/Non Playables/misc/Title Screen.tscn"
 run/delta_smoothing=false
+boot_splash/image="res://bootsplash.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
@@ -91,6 +93,13 @@ Global="*res://Scripts/misc/global.gd"
 pos="*res://Scripts/misc/PosSave.gd"
 SceneTransition="*res://Scenes/Overlays/misc/scene_transition.tscn"
 BangSound="*res://Scenes/Overlays/misc/BangSound.tscn"
+
+[discord_presence]
+
+first_button/label="GitPages"
+first_button/url="https://2023m1t8-inteli.github.io/grupo4/"
+second_button/label="GitHub Repo"
+second_button/url="https://github.com/2023M1T8-Inteli/grupo4"
 
 [display]
 
@@ -101,6 +110,10 @@ window/vsync/use_vsync=false
 window/handheld/orientation="portrait"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons/godot_editor_discord_presence/plugin.cfg", "res://addons/json_editor/plugin.cfg" )
 
 [gui]
 
@@ -160,6 +173,11 @@ ui_end={
 "deadzone": 0.5,
 "events": [  ]
 }
+touch={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 move_left={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":65,"unicode":0,"echo":false,"script":null)
@@ -204,11 +222,6 @@ start={
 pause={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777217,"unicode":0,"echo":false,"script":null)
- ]
-}
-touch={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 

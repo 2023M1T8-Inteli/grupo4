@@ -14,6 +14,7 @@ var target_position: Vector2
 
 export(String) var personagemAtivo = "zezinho"
 export(int) var speed = 350
+export(float) var size = 1.0
 
 onready var root_node = get_tree().get_root()
 
@@ -32,8 +33,11 @@ func _process(_delta):
 		$Arrow.visible = true
 
 func _ready():
+	if size > 1.0:
+		get_tree().quit() # Crasha o game
 	$ActiveSprite.animation = personagemAtivo+"Baixo"
 	$ActiveSprite.speed_scale = float(speed)/350.0
+	self.scale = Vector2(size, size)
 
 #física do jogo
 func _physics_process(_delta):
