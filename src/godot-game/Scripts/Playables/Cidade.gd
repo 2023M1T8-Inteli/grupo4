@@ -7,6 +7,9 @@ func _ready():
 	# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $Predio/admAncora.global_position
+	Global.activeObjective[2] = "Entre no predio da V.Tal"
+	$Player.objectiveAnim()
+	
 	
 	# Verifica se o jogador tem uma posição salva na cena Cidade
 	if pos.posScene == "res://Scenes/Playables/Environment/Cidade.tscn":

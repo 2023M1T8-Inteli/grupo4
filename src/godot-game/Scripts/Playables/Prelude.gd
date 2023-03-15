@@ -19,8 +19,13 @@ func _ready():
 	$Player.global_position = pos.posPrelude
 
 	# Define a visibilidade do prompt e do filtro de cores
-	$Prompt.visible = true
-	$DrunkFilter.visible = false
+	if Global.firstTime == true:
+		$Prompt/CanvasLayer.visible = true
+		Global.firstTime = false
+		print(Global.firstTime)
+		$DrunkFilter.visible = false
+	else:
+		$DrunkFilter.visible = true
 
 func _process(_delta):
 	# Verifica se o jogador está perto do poste

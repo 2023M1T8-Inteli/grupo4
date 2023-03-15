@@ -1,8 +1,21 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=38 format=2]
 
+[ext_resource path="res://Sprites/Jonas/joninhasCima1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Playables/Player.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Jonas/joninhasLado4.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Jonas/joninhasLado1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Jonas/joninhasCima3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Jonas/joninhasBaixo (1).png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Jonas/joninhasBaixo (2).png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Jonas/joninhasLado2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Jonas/joninhasBaixo (4).png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Jonas/joninhasBaixo (3).png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Jonas/joninhasCima2.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Overlays/misc/Arrow.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sprites/Jonas/joninhasCima4.png" type="Texture" id=13]
 [ext_resource path="res://Scripts/misc/Camera2D.gd" type="Script" id=14]
+[ext_resource path="res://Sprites/Jonas/joninhasLado3.png" type="Texture" id=15]
+[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (3).png" type="Texture" id=35]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (1).png" type="Texture" id=36]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (2).png" type="Texture" id=37]
@@ -24,6 +37,21 @@
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "joninhasBaixo",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 1 ), ExtResource( 11 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "joninhasCima",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "joninhasLado",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 48 ), ExtResource( 51 ), ExtResource( 50 ), ExtResource( 51 ) ],
 "loop": true,
 "name": "terezinhaBaixo",
@@ -58,15 +86,20 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 54, 76 )
 
+[sub_resource type="DynamicFont" id=19]
+size = 27
+font_data = ExtResource( 16 )
+
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 180, 320 )
 collision_mask = 4
 script = ExtResource( 2 )
 personagemAtivo = "terezinha"
 
 [node name="ActiveSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
-animation = "zezinhoLado"
-frame = 1
+animation = "joninhasLado"
+frame = 3
 playing = true
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
@@ -81,3 +114,29 @@ smoothing_speed = 10.0
 script = ExtResource( 14 )
 
 [node name="Arrow" parent="." instance=ExtResource( 12 )]
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+margin_left = 72.0
+margin_right = 360.0
+margin_bottom = 80.0
+color = Color( 1, 1, 1, 0.588235 )
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+margin_left = 76.0
+margin_top = 4.0
+margin_right = 387.0
+margin_bottom = 84.0
+rect_scale = Vector2( 0.9, 0.9 )
+color = Color( 0, 0, 0, 0.588235 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 72.0
+margin_right = 360.0
+margin_bottom = 80.0
+custom_fonts/normal_font = SubResource( 19 )
+bbcode_enabled = true
+scroll_active = false

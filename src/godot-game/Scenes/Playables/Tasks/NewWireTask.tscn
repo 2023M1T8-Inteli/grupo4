@@ -5,7 +5,6 @@
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=4]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 27
 font_data = ExtResource( 3 )

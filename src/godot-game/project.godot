@@ -196,6 +196,7 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_2="Andavel"
 2d_physics/layer_3="Nao Andavel"
 2d_physics/layer_4="Objetos"
+2d_physics/layer_5="Sala"
 
 [mono]
 

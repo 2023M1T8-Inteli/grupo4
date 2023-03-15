@@ -3100,7 +3100,7 @@ scale = Vector2( 1.54245, 1.20402 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -104, 160 )
+position = Vector2( -186, 160 )
 scale = Vector2( 0.279528, 0.474441 )
 texture = ExtResource( 35 )
 
@@ -3124,14 +3124,14 @@ margin_right = -160.0
 margin_bottom = -17.0
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="."]
-position = Vector2( -152, -88 )
+position = Vector2( -148, -67 )
 scale = Vector2( 0.0808908, 0.0797043 )
 frames = SubResource( 9 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -104, 0 )
+position = Vector2( -182, 4 )
 personagemAtivo = "zezinho"
 
 [node name="AmongAncora" type="Node2D" parent="."]
@@ -3146,11 +3146,12 @@ shape = SubResource( 10 )
 position = Vector2( -48, -48 )
 
 [node name="escadaButton" type="TouchScreenButton" parent="EscadaAncora"]
-position = Vector2( -72, 72 )
-scale = Vector2( 1.52, 1.48588 )
+position = Vector2( -164, 69 )
+scale = Vector2( 2.79999, 14.5259 )
 shape = SubResource( 11 )
 
 [node name="Bounds" type="StaticBody2D" parent="."]
+position = Vector2( -79, 0 )
 
 [node name="Bound1" type="CollisionShape2D" parent="Bounds"]
 position = Vector2( -144, -16 )

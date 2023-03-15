@@ -3811,9 +3811,6 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=43]
 
-[sub_resource type="RectangleShape2D" id=51]
-extents = Vector2( 153.75, 162.25 )
-
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 2611.5, 11.5 )
 
@@ -3895,6 +3892,7 @@ shape = SubResource( 52 )
 position = Vector2( 1540, 968 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 42 )
+frame = 4
 playing = true
 
 [node name="admAncora" type="Node2D" parent="Predio"]
@@ -3907,7 +3905,6 @@ shape = SubResource( 43 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Predio"]
 position = Vector2( 1538.75, 865.25 )
-shape = SubResource( 51 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Predio"]
 position = Vector2( 1623, 1114 )

@@ -16,6 +16,9 @@ func _ready():
 	Global.canMove = true
 
 func renderAmong(value):
+	$AmongAncora/amongButton.visible = not value
+	$EscadaAncora/escadaButton.visible = not value
+	
 	# Esconde a interface do usuário e mostra a tarefa de fios e desativa o filtro de cor
 	$GUI.visible = not value
 	$ColorRect/WiresTask.visible = value
@@ -23,7 +26,7 @@ func renderAmong(value):
 	
 	
 	if value == true:
-		$ExplodeTimer.wait_time = 5
+		$ExplodeTimer.wait_time = 3
 		$ExplodeTimer.start() # Inicia o timer para a explosão do jogador
 	
 func task_complete():
