@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Non Playables/ReuniaoExec.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 2.tscn" type="PackedScene" id=2]
+
+[node name="Reuniao" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="DialogBox 2" parent="." instance=ExtResource( 2 )]

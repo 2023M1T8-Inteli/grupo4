@@ -1,13 +1,24 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16 - Copia.png" type="Texture" id=1]
-[ext_resource path="res://Scenes/Scripts/Playables/Administrativo.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Playables/Executivo.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Overlays/misc/GUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Elevador/Elevador.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/TileMaps/Room_Builder_free_32x32.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/TileMaps/tilemap escritorio.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export6.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export9.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export8.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export7.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export5.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export4.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Overlays/Quizes/QuizTask0.tscn" type="PackedScene" id=19]
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -1441,6 +1452,16 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=21]
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
@@ -1471,7 +1492,80 @@ tracks/0/keys = {
 "values": [ Vector2( 381, 30 ), Vector2( 381, 200 ) ]
 }
 
-[node name="Administrativo" type="Node2D"]
+[sub_resource type="Animation" id=16]
+resource_name = "CameraFlyOver"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ReuniaoAncora/ReuniaoAnim/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 358, 596 ), Vector2( 37, 596 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "CameraReverseFlyOver"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ReuniaoAncora/ReuniaoAnim/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 37, 596 ), Vector2( 358, 596 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "CameraZoomIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ReuniaoAncora/ReuniaoAnim/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.17, 0.17 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ReuniaoAncora/ReuniaoAnim/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 358, 596 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ReuniaoAncora/ReuniaoAnim/Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ) ]
+}
+
+[node name="Executivo" type="Node2D"]
 position = Vector2( -97, 64 )
 script = ExtResource( 3 )
 
@@ -1580,11 +1674,33 @@ collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, -65505, 8, 0, -65502, 11, 0, -65500, 12, 0, -65497, 13, 0, -65495, 8, 0, 10, 54, 0, 14, 54, 0, 196642, 55, 0, 196646, 55, 0, 393227, 82, 0, 393252, 83, 0, 524302, 76, 0, 589830, 8, 0, 589832, 81, 0, 589834, 11, 0, 589841, 8, 0, 589859, 22, 0, 655394, 63, 0, 655396, 54, 0, 655398, 66, 0, 655400, 45, 0, 983074, 53, 0, 1048587, 83, 0, 1048612, 83, 0, 1179686, 78, 0, 1245190, 8, 0, 1245192, 69, 0, 1245198, 23, 0, 1245201, 8, 0, 1245215, 13, 0, 1245216, 43, 0, 1245218, 11, 0, 1245222, 10, 0, 1572902, 54, 0, 1835017, 78, 0, 1835020, 77, 0, 1835023, 79, 0, 1900551, 13, 0 )
 
+[node name="NPCQuiz1" type="ColorRect" parent="."]
+margin_left = 310.0
+margin_top = 31.0
+margin_right = 331.0
+margin_bottom = 63.0
+
+[node name="Quiz1Button" type="TouchScreenButton" parent="NPCQuiz1"]
+position = Vector2( -1, -19 )
+scale = Vector2( 1.10835, 2.54183 )
+shape = SubResource( 21 )
+
+[node name="BalaoExclamacao" type="AnimatedSprite" parent="NPCQuiz1"]
+position = Vector2( 10, -7 )
+scale = Vector2( 0.05, 0.05 )
+frames = SubResource( 20 )
+playing = true
+
+[node name="AncoraQuiz1" type="Node2D" parent="NPCQuiz1"]
+position = Vector2( 0, -1 )
+
+[node name="QuizTask" parent="NPCQuiz1" instance=ExtResource( 19 )]
+visible = false
+
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 381, 79 )
-personagemAtivo = "terezinha"
-speed = 250
-size = 0.7
+speed = 150
+size = 0.6
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 
@@ -1595,5 +1711,30 @@ anims/WalkIn = SubResource( 5 )
 [node name="PortaAncora" type="Node2D" parent="."]
 position = Vector2( 381, -9 )
 
+[node name="ReuniaoAncora" type="Node2D" parent="."]
+position = Vector2( 455, 600 )
+
+[node name="ReuniaoAtivador" type="Node2D" parent="ReuniaoAncora"]
+position = Vector2( -1, -57 )
+
+[node name="ReuniaoAnim" type="AnimationPlayer" parent="ReuniaoAncora"]
+root_node = NodePath("../..")
+anims/CameraFlyOver = SubResource( 16 )
+anims/CameraReverseFlyOver = SubResource( 19 )
+anims/CameraZoomIn = SubResource( 18 )
+anims/RESET = SubResource( 17 )
+
+[node name="Camera2D" type="Camera2D" parent="ReuniaoAncora/ReuniaoAnim"]
+position = Vector2( 358, 596 )
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 576
+limit_bottom = 640
+
+[node name="DialogBox 2" parent="ReuniaoAncora/ReuniaoAnim" instance=ExtResource( 2 )]
+visible = false
+
 [connection signal="pressed" from="map/Elevador/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="NPCQuiz1/Quiz1Button" to="." method="_on_Quiz1Button_pressed"]
 [connection signal="animation_finished" from="WalkInPlayer" to="." method="_on_WalkInPlayer_animation_finished"]
