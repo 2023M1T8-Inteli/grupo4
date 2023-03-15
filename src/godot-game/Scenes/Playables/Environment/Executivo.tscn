@@ -1701,6 +1701,7 @@ visible = false
 position = Vector2( 381, 79 )
 speed = 150
 size = 0.6
+personagemAtivo = "terezinha"
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 
