@@ -3892,7 +3892,7 @@ shape = SubResource( 52 )
 position = Vector2( 1540, 968 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 42 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="admAncora" type="Node2D" parent="Predio"]

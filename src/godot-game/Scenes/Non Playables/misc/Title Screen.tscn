@@ -94,11 +94,10 @@ custom_fonts/normal_font = SubResource( 2 )
 text = " SAIR"
 
 [node name="ControlsButton" type="TextureButton" parent="."]
-visible = false
 margin_left = 48.0
-margin_top = 393.0
+margin_top = 469.0
 margin_right = 320.0
-margin_bottom = 481.0
+margin_bottom = 557.0
 texture_normal = ExtResource( 4 )
 texture_hover = ExtResource( 6 )
 
