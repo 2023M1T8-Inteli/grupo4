@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizAlt/QuizCaixa.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizAlt/QuizTask.gd" type="Script" id=2]
@@ -93,9 +93,13 @@ tracks/0/keys = {
 size = 13
 font_data = ExtResource( 5 )
 
+[sub_resource type="RectangleShape2D" id=9]
+
 [sub_resource type="DynamicFont" id=8]
 size = 13
 font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=10]
 
 [node name="QuizTask" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -206,11 +210,10 @@ custom_fonts/normal_font = SubResource( 7 )
 bbcode_enabled = true
 scroll_active = false
 
-[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao1/Opcao1"]
-margin_left = -7.0
-margin_top = -8.0
-margin_right = 239.0
-margin_bottom = 53.0
+[node name="TextoBut" type="TouchScreenButton" parent="Opcoes/Opcao1/Opcao1"]
+position = Vector2( -7.00149, -8.00201 )
+scale = Vector2( 12.4175, 2.994 )
+shape = SubResource( 9 )
 script = ExtResource( 4 )
 
 [node name="Opcao2" type="Sprite" parent="Opcoes"]
@@ -228,11 +231,10 @@ custom_fonts/normal_font = SubResource( 8 )
 bbcode_enabled = true
 scroll_active = false
 
-[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao2/Opcao2"]
-margin_left = -7.0
-margin_top = -7.0
-margin_right = 239.0
-margin_bottom = 53.0
+[node name="TextoBut" type="TouchScreenButton" parent="Opcoes/Opcao2/Opcao2"]
+position = Vector2( -6.75169, -6.75169 )
+scale = Vector2( 12.5589, 3.17217 )
+shape = SubResource( 10 )
 script = ExtResource( 4 )
 
 [node name="MouseFilter" type="Control" parent="Opcoes"]

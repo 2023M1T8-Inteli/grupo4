@@ -14,6 +14,7 @@ func _ready():
 	# Define um objetivo como ativo e sua posição
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $PosteCaixa/Node2D.global_position
+	Global.activeObjective[2] = "CoNsErTe A cAiXa De FiOs!1!"
 	
 	# Coloca o player na sua posição global
 	$Player.global_position = pos.posPrelude
@@ -54,7 +55,7 @@ func _on_posteSobeButton_pressed():
 func _on_TextureButton_pressed():
 	# Permite que o jogador se mova e ativa o filtro de cores
 	Global.canMove = true
-	Global.isDrunk = true
+	$Player.objective(true)
 	
 	# Esconde o prompt
 	$Prompt/CanvasLayer.visible = false
@@ -62,3 +63,9 @@ func _on_TextureButton_pressed():
 	
 	# Mostra o filtro de cores
 	$DrunkFilter.visible = true
+	
+	yield(get_tree().create_timer(4.05), "timeout")
+	
+	Global.isDrunk = true
+	
+	yield()

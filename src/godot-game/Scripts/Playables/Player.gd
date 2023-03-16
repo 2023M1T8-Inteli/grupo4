@@ -40,6 +40,10 @@ func _process(_delta):
 		$CanvasLayer.visible = Global.activeObjective[0]
 
 func _ready():
+	if Global.parte == "executivo":
+		personagemAtivo = "terezinha"
+	elif Global.parte == "administrativo":
+		personagemAtivo = "joninhas"
 	$CanvasLayer.visible = false
 	if size > 1.0:
 		get_tree().quit() # Crasha o game
@@ -102,30 +106,31 @@ func _physics_process(_delta):
 				# nao sexo vertical pra cima parado
 				pass
 
-func objectiveAnim():
-	yield(get_tree().create_timer(0.5), "timeout")
-	Global.canMove = false
+func objective(withAnim):
+	if withAnim:
+		yield(get_tree().create_timer(0.5), "timeout")
+		Global.canMove = false
 	
-	var currentCameraPos = $Camera2D.global_position
-	var currentCameraZoom = $Camera2D.zoom
-	$Tween.interpolate_property($Camera2D, "global_position", self.global_position, Global.activeObjective[1], 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	$Tween.start()
-	yield($Tween, "tween_completed")
+		var currentCameraZoom = $Camera2D.zoom
+		$Tween.interpolate_property($Camera2D, "global_position", self.global_position, Global.activeObjective[1], 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		$Tween.start()
+		yield($Tween, "tween_completed")
 	
-	yield(get_tree().create_timer(0.5), "timeout")
+		yield(get_tree().create_timer(0.5), "timeout")
 	
-	$Tween.interpolate_property($Camera2D, "zoom", currentCameraZoom, Vector2(currentCameraZoom.x-0.2,currentCameraZoom.y-0.2), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	$Tween.start()
-	yield($Tween, "tween_completed")
+		$Tween.interpolate_property($Camera2D, "zoom", currentCameraZoom, Vector2(currentCameraZoom.x-0.2,currentCameraZoom.y-0.2), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		$Tween.start()
+		yield($Tween, "tween_completed")
 	
-	$Tween.interpolate_property($Camera2D, "zoom", Vector2(currentCameraZoom.x-0.2,currentCameraZoom.y-0.2), currentCameraZoom, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	$Tween.start()
-	yield($Tween, "tween_completed")
+		$Tween.interpolate_property($Camera2D, "zoom", Vector2(currentCameraZoom.x-0.2,currentCameraZoom.y-0.2), currentCameraZoom, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		$Tween.start()
+		yield($Tween, "tween_completed")
 	
-	$Tween.interpolate_property($Camera2D, "global_position", Global.activeObjective[1], self.global_position, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	$Tween.start()
-	yield($Tween, "tween_completed")
+		$Tween.interpolate_property($Camera2D, "global_position", Global.activeObjective[1], self.global_position, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		$Tween.start()
+		yield($Tween, "tween_completed")
+	
+		Global.canMove = true
 	
 	$CanvasLayer.visible = true
 	$CanvasLayer/RichTextLabel.bbcode_text = "[center]"+Global.activeObjective[2]+"[/center]"
-	Global.canMove = true

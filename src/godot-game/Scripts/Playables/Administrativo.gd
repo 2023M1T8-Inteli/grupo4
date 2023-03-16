@@ -70,3 +70,7 @@ func _on_TextureButton_pressed():
 # Quando a animação de entrada do jogador termina, define a variável Global.moving (que controla a animação de andar) como false
 func _on_WalkInPlayer_animation_finished(_anim_name):
 	Global.moving = false
+
+
+func _on_BotaoComputador_pressed():
+	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)

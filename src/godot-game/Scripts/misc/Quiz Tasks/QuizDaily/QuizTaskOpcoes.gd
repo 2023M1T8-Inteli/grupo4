@@ -3,12 +3,10 @@
 extends Control
 
 export var questionPath = ""
-export(int) var firstCorrect
 
 
 onready var caixasTexto = [$Opcao1/Opcao1, $Opcao2/Opcao2, $Opcao3/Opcao3]
 
-var dialog = []
 var questions = []
 
 var phraseNum = 0
@@ -17,7 +15,8 @@ func _ready():
 	$MouseFilter.visible = false
 
 func startQuiz():
-	dialog = getQuestions()
+	self.visible = true
+	questions = getQuestions()
 	renderQuestions()
 
 func _process(_delta):
@@ -42,18 +41,15 @@ func getQuestions() -> Array:
 		return []
 		
 func renderQuestions() -> void:
-	questions.append(dialog[firstCorrect])
-	questions.append(dialog[firstCorrect+1])
-	questions.append(dialog[firstCorrect+2])
 	var retries = randi() % 20
+	randomize()
 	for i in retries:
-		randomize()
 		questions.shuffle()
 	
 	for i in caixasTexto:
-		i.bbcode_text = questions[phraseNum]["Resposta"]
+		i.bbcode_text = "[center]"+questions[phraseNum]["Resposta"]+"[/center]"
 		if questions[phraseNum]["IsCorrect"] == "Y":
 			Global.correctBoxQuiz = i
 		phraseNum += 1
-
+		print('asd')
 	return
