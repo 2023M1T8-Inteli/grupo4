@@ -6,7 +6,7 @@
 [ext_resource path="res://Sprites/TileMaps/predio.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/TileMaps/tilemap escritorio.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/TileMaps/poste_caixa.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/Scripts/Playables/PosteCima.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Playables/PosteCima.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Playables/Tasks/NewWireTask.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprites/FX/Explosion1.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/FX/Explosion2.png" type="Texture" id=10]
@@ -3100,7 +3100,7 @@ scale = Vector2( 1.54245, 1.20402 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -104, 160 )
+position = Vector2( -186, 160 )
 scale = Vector2( 0.279528, 0.474441 )
 texture = ExtResource( 35 )
 
@@ -3124,14 +3124,15 @@ margin_right = -160.0
 margin_bottom = -17.0
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="."]
-position = Vector2( -152, -88 )
+position = Vector2( -148, -67 )
 scale = Vector2( 0.0808908, 0.0797043 )
 frames = SubResource( 9 )
-frame = 8
+frame = 3
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -104, 0 )
+position = Vector2( -182, 4 )
+personagemAtivo = "zezinho"
 
 [node name="AmongAncora" type="Node2D" parent="."]
 position = Vector2( -144, -48 )
@@ -3145,11 +3146,12 @@ shape = SubResource( 10 )
 position = Vector2( -48, -48 )
 
 [node name="escadaButton" type="TouchScreenButton" parent="EscadaAncora"]
-position = Vector2( -72, 72 )
-scale = Vector2( 1.52, 1.48588 )
+position = Vector2( -164, 69 )
+scale = Vector2( 2.79999, 14.5259 )
 shape = SubResource( 11 )
 
 [node name="Bounds" type="StaticBody2D" parent="."]
+position = Vector2( -79, 0 )
 
 [node name="Bound1" type="CollisionShape2D" parent="Bounds"]
 position = Vector2( -144, -16 )
@@ -3168,11 +3170,10 @@ position = Vector2( -72, 56 )
 shape = SubResource( 6 )
 
 [node name="ExplodeSprite" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( -144, -16 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 8 )
-frame = 12
-playing = true
 
 [node name="SceneChangeTimer" type="Timer" parent="."]
 pause_mode = 1
@@ -3185,10 +3186,8 @@ wait_time = 0.6
 [node name="DrunkFilter" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="DrunkFilter"]
-margin_left = -800.0
-margin_top = -352.0
-margin_right = -440.0
-margin_bottom = 288.0
+margin_right = 360.0
+margin_bottom = 640.0
 mouse_filter = 2
 color = Color( 0.505882, 0.282353, 0.172549, 0.435294 )
 

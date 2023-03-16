@@ -1,9 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Scenes/Scripts/misc/Textura Caixa 2.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/misc/Textura Caixa 2.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=2]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=4]
-
 
 [sub_resource type="DynamicFont" id=1]
 size = 39

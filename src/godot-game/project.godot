@@ -89,10 +89,11 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Scenes/Scripts/misc/global.gd"
-pos="*res://Scenes/Scripts/misc/PosSave.gd"
+Global="*res://Scripts/misc/globals/global.gd"
+pos="*res://Scripts/misc/globals/PosSave.gd"
 SceneTransition="*res://Scenes/Overlays/misc/scene_transition.tscn"
 BangSound="*res://Scenes/Overlays/misc/BangSound.tscn"
+ExecutivoGlobals="*res://Scripts/misc/globals/ExecutivoGlobals.gd"
 
 [discord_presence]
 
@@ -195,6 +196,7 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_2="Andavel"
 2d_physics/layer_3="Nao Andavel"
 2d_physics/layer_4="Objetos"
+2d_physics/layer_5="Sala"
 
 [mono]
 
