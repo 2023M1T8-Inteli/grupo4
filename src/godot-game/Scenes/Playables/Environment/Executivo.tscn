@@ -25,6 +25,7 @@
 [ext_resource path="res://Fonte/DTM-Mono.ttf" type="DynamicFontData" id=23]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 14.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 15.tscn" type="PackedScene" id=25]
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -1823,7 +1824,6 @@ anims/WalkUp = SubResource( 26 )
 anims/WalkUpBackwards = SubResource( 28 )
 
 [node name="Eq Compliance" type="Control" parent="ControlAssedio"]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -1843,6 +1843,7 @@ margin_bottom = 386.0
 position = Vector2( 11, 16 )
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
+visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
@@ -1850,6 +1851,7 @@ frame = 1
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
+visible = false
 position = Vector2( 0, -19 )
 scale = Vector2( 1.08, 2.59999 )
 shape = SubResource( 27 )
@@ -1895,6 +1897,7 @@ margin_right = 653.0
 margin_bottom = 559.0
 
 [node name="BaloesExclamacao" type="Control" parent="ControlQuiz2"]
+visible = false
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 544, 480 )
@@ -1933,10 +1936,11 @@ position = Vector2( 591, 527 )
 visible = false
 
 [node name="Timer" type="Timer" parent="ControlQuiz2"]
-wait_time = 2.0
+wait_time = 10.0
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="ControlQuiz2"]
+layer = 2
 visible = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ControlQuiz2/CanvasLayer"]
@@ -1953,6 +1957,7 @@ anims/RESET = SubResource( 31 )
 anims/flash = SubResource( 32 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="ControlQuiz2"]
+layer = 2
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="ControlQuiz2/CanvasLayer2"]
@@ -1961,6 +1966,28 @@ margin_bottom = 640.0
 color = Color( 1, 1, 1, 0 )
 
 [node name="DialogBox 14" parent="ControlQuiz2" instance=ExtResource( 24 )]
+visible = false
+
+[node name="Eq Compliance" type="Control" parent="ControlQuiz2"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="NPCBomAncora" type="Node2D" parent="ControlQuiz2/Eq Compliance"]
+position = Vector2( 156, 370 )
+
+[node name="BalaoExclamacao" type="AnimatedSprite" parent="ControlQuiz2/Eq Compliance"]
+position = Vector2( 156, 347 )
+scale = Vector2( 0.05, 0.05 )
+frames = SubResource( 20 )
+playing = true
+
+[node name="NPCCompQuiz2Botao" type="TouchScreenButton" parent="ControlQuiz2/Eq Compliance"]
+position = Vector2( 145, 335 )
+scale = Vector2( 1.08, 2.59999 )
+shape = SubResource( 27 )
+
+[node name="DialogBox 15" parent="ControlQuiz2/Eq Compliance" instance=ExtResource( 25 )]
 visible = false
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
@@ -2009,4 +2036,5 @@ visible = false
 [connection signal="body_entered" from="Assedio" to="." method="_on_Assedio_body_entered"]
 [connection signal="pressed" from="ControlAssedio/Eq Compliance/NPC2 (O BOM)/NPCBomBotao" to="." method="_on_NPCBomBotao_pressed"]
 [connection signal="timeout" from="ControlQuiz2/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="ControlQuiz2/Eq Compliance/NPCCompQuiz2Botao" to="." method="_on_NPCCompQuiz2Botao_pressed"]
 [connection signal="animation_finished" from="WalkInPlayer" to="." method="_on_WalkInPlayer_animation_finished"]

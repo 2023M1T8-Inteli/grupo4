@@ -1,5 +1,7 @@
 extends Node
 
+var parte
+
 # Flag que controla se o diálogo de numero 1 foi exibido ou não
 var finishDialog1 = false
 

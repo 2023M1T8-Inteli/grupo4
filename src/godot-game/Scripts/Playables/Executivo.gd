@@ -21,7 +21,7 @@ func _ready():
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $ReuniaoAncora.global_position
 		Global.activeObjective[2] = "Atenda a \n reuniao"
-		$Player.objectiveAnim()
+		$Player.objective(true)
 		$NPCQuiz1.visible = false
 		$GUI/Audio.set_volume(Global.volPercentage)
 		$GUI/Audio.play_ambient("res://Audio Files/OfficeAmbiente.mp3")
@@ -118,7 +118,9 @@ func _reuniao_anim():
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $NPCQuiz1/AncoraQuiz1.global_position
 	Global.activeObjective[2] = "Fale com o seu \n colega"
-	$Player.objectiveAnim()
+
+	$Player.objective(false)
+	
 	
 func _assedio_anim():
 	$ControlAssedio/ColorRect.visible = true
@@ -142,7 +144,8 @@ func _assedio_anim():
 	$ControlAssedio/AnimationPlayer.play("WalkUpBackwards")
 	yield($ControlAssedio/AnimationPlayer, "animation_finished")
 	$ControlAssedio/ColorRect.visible = false
-	$"ControlAssedio/Eq Compliance".visible = true
+	$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/BalaoExclamacao".visible = true
+	$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/NPCBomBotao".visible = true
 	
 	$Player/Camera2D.current = true
 	$ControlAssedio/Camera2D.current = false
@@ -152,8 +155,8 @@ func _assedio_anim():
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $"ControlAssedio/Eq Compliance/NPC2 (O BOM)/NPCBomAncora".global_position
 	Global.activeObjective[2] = "Fale com a equipe de compliance"
-	$Player.objectiveAnim()
-	
+
+	$Player.objective(true)
 	
 	pass
 
@@ -174,7 +177,14 @@ func _finish_quiz1():
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $ControlQuiz2/Quiz2Ancora.global_position
 	Global.activeObjective[2] = "Fale com seus \n colegas"
-	$Player.objectiveAnim()
+
+	
+	
+	$NPCQuiz1/QuizTask.visible = false
+	$NPCQuiz1/QuizTask/DialogBox.visible = false
+	
+	
+	$Player.objective(false)
 	$Assedio/CollisionShape2D.disabled = false
 	$Quiz2/CollisionShape2D.disabled = false
 	
@@ -212,32 +222,12 @@ func _finish_quiz2():
 	$ControlQuiz2/CanvasLayer.visible = true
 	$ControlQuiz2/Timer.start()
 	updateTimer = true
-
-func _finish_quiz2_part2():
-	$ControlQuiz2/CanvasLayer.visible = false
-	updateTimer = false
-	Global.canMove = false
-	$"ControlQuiz2/DialogBox 14".visible = true
-	$"ControlQuiz2/DialogBox 14/TexturaCaixa"._startDialog()
 	
-	yield($"ControlQuiz2/DialogBox 14/TexturaCaixa", "finish")
 	
-	yield(get_tree().create_timer(0.4), "timeout")
-	
-	$ControlQuiz2/CanvasLayer2.visible = true
-	
-	$ControlQuiz2/AnimationPlayer.play("flash")
-	yield($ControlQuiz2/AnimationPlayer, 'animation_finished')
-	
-	$Player.global_position = playerSavePos
-	
-	Global.quizAnswered = false
-	_on_Area2D_body_entered($Player)
-	
-	$ControlQuiz2/AnimationPlayer.play_backwards("flash")
-	yield($ControlQuiz2/AnimationPlayer, 'animation_finished')
-	
-	print("SEEXO")
+	$"ControlQuiz2/Eq Compliance".visible = true
+	Global.activeObjective[1] = $"ControlQuiz2/Eq Compliance/NPCBomAncora".global_position
+	Global.activeObjective[2] = "Fale com a equipe de compliance"
+	$Player.objective(false)
 
 func _on_Reuniao_body_entered(body):
 	if body == $Player and ExecutivoGlobals.reuniao:
@@ -257,18 +247,80 @@ func _on_NPCBomBotao_pressed():
 		Global.activeObjective[0] = false
 		$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/DialogBox 13".visible = true
 		$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/DialogBox 13/TexturaCaixa"._startDialog()
-		
+		$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/NPCBomBotao".visible = false
 		$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/BalaoExclamacao".visible = false
-		
+		print("yielded")
 		yield($"ControlAssedio/Eq Compliance/NPC2 (O BOM)/DialogBox 13/TexturaCaixa", "finish")
-	
+		print("resumed")
 		Global.canMove = true
+		$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/DialogBox 13".visible = false
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $ControlQuiz2/Quiz2Ancora.global_position
 		Global.activeObjective[2] = "Fale com seus \n colegas"
-		$Player.objectiveAnim()
-		
+		$ControlQuiz2/BaloesExclamacao.visible = true
+		$Player.objective(false)
 
 
 func _on_Timer_timeout():
 	_finish_quiz2_part2()
+
+func _finish_quiz2_part2():
+	$ControlQuiz2/CanvasLayer.visible = false
+	updateTimer = false
+	Global.canMove = false
+	$"ControlQuiz2/DialogBox 14".visible = true
+	$"ControlQuiz2/DialogBox 14/TexturaCaixa".phraseNum = 0
+	$"ControlQuiz2/DialogBox 14/TexturaCaixa".dialog = null
+	$"ControlQuiz2/DialogBox 14/TexturaCaixa".buttonPressed = null
+	
+	$"ControlQuiz2/DialogBox 14/TexturaCaixa"._startDialog()
+	
+	yield($"ControlQuiz2/DialogBox 14/TexturaCaixa", "finish")
+	
+	yield(get_tree().create_timer(0.4), "timeout")
+	
+	$ControlQuiz2/CanvasLayer2.visible = true
+	
+	$ControlQuiz2/AnimationPlayer.play("flash")
+	yield($ControlQuiz2/AnimationPlayer, 'animation_finished')
+	
+	$Player.global_position = playerSavePos
+	
+	Global.quizAnswered = false
+	$ControlQuiz2/QuizTask._reset()
+	_on_Area2D_body_entered($Player)
+	
+	$ControlQuiz2/AnimationPlayer.play_backwards("flash")
+	yield($ControlQuiz2/AnimationPlayer, 'animation_finished')
+	
+	$ControlQuiz2/CanvasLayer2.visible = false
+	
+	print("SEEXO")
+	
+
+func _on_NPCCompQuiz2Botao_pressed():
+	if $Player/HitBox.global_position.distance_to($"ControlQuiz2/Eq Compliance/NPCBomAncora".global_position) < 50:
+		$ControlQuiz2/CanvasLayer.visible = false
+		$ControlQuiz2/Timer.stop()
+		updateTimer = false
+		
+		Global.canMove = false
+		Global.activeObjective[0] = false
+		$"ControlQuiz2/Eq Compliance/DialogBox 15".visible = true
+		$"ControlQuiz2/Eq Compliance/DialogBox 15/TexturaCaixa"._startDialog()
+		$"ControlQuiz2/Eq Compliance/NPCCompQuiz2Botao".visible = false
+		$"ControlQuiz2/Eq Compliance/BalaoExclamacao".visible = false
+		print("yielded")
+		yield($"ControlQuiz2/Eq Compliance/DialogBox 15/TexturaCaixa", "finish")
+		print("resumed")
+		Global.canMove = true
+		$"ControlQuiz2/Eq Compliance/DialogBox 15".visible = false
+		
+		Global.activeObjective[0] = true
+		Global.activeObjective[1] = $PortaAncora.global_position
+		Global.activeObjective[2] = "Va para casa"
+		$Player.objective(false)
+		
+		yield(get_tree().create_timer(3.0), "timeout")
+		
+		SceneTransition.change_scene("res://Scenes/Playables/Environment/Limbo2.tscn", 1, 1)

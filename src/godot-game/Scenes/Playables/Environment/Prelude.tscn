@@ -3610,7 +3610,6 @@ scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 6 )
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="Audio" parent="GUI" instance=ExtResource( 22 )]
 

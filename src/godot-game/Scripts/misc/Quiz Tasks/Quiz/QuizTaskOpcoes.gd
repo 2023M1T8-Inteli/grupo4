@@ -45,9 +45,9 @@ func renderQuestions() -> void:
 	questions.append(dialog[firstCorrect])
 	questions.append(dialog[firstCorrect+1])
 	questions.append(dialog[firstCorrect+2])
-	randomize()
 	var retries = randi() % 20
 	for i in retries:
+		randomize()
 		questions.shuffle()
 	
 	for i in caixasTexto:

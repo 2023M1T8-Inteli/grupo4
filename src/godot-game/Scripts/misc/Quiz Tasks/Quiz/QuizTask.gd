@@ -25,4 +25,7 @@ func _answered_quiz():
 	
 func _finish_quiz():
 	print("FINISHING QUIZ")
-	self.queue_free()
+	self.visible = false
+	$DialogBox.visible = false	
+	Global.quizAnswered = false
+	#self.queue_free()

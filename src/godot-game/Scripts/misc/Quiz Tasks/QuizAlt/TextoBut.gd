@@ -1,5 +1,5 @@
 # O CÓDIGO ABAIXO NÃO ESTA COMENTADO, POIS NÃO ESTA IMPLEMENTADO NO JOGO AINDA E ESTEVE SERVINDO SOMENTE PARA TESTAGEM
-extends TextureButton
+extends TouchScreenButton
 
 signal answeredQuiz
 

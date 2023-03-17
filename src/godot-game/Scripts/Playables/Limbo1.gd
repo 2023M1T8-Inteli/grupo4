@@ -22,5 +22,7 @@ func _ready():
 # Função chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
 	Global.finishDialog1 = true  # Indica que a caixa de diálogo acabou / já foi tocada
+	Global.parte = "executivo"
 	# Muda para a cena "Cidade.tscn" usando a classe "SceneTransition"
 	SceneTransition.change_scene("res://Scenes/Playables/Environment/Cidade.tscn", 1, 1)
+	
