@@ -105,33 +105,33 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 0.1.5.0 - 01/03/2023
   -  Inserir diálogos no jogo:
     *  Copiar e editar cenas;
-    *  Testar todos dialogos.
-  -  Inserir musica no limbo:
-    *  Diminuir som dos audios;
+    *  Testar todos diálogos.
+  -  Inserir música no limbo:
+    *  Diminuir som dos áudios;
     *  Testar.
   -  Inserir setinhas apertadas:
-    *  Criar variaveis globais de botoes apertados/nao apertados;
-    *  Linkar variaveis do script player com o script do GUI atraves de um script global;
+    *  Criar variáveis globais de botões apertados/não apertados;
+    *  Linkar variáveis do script player com o script do GUI através de um script global;
     *  Alinhar e posicionar sprite em cima do joystick existente;
     *  Testar compatibilidade com cenas e dispositivos.
   -  Extras:
-    *  Retirar algumas funcoes print() dentro do codigo que foram utilizadas para debugging;
+    *  Retirar algumas funções print() dentro do código que foram utilizadas para debugging;
     *  Renomear cena do limbo de "Main Scene" para LImbo1;
     *  Renomear script CanvasLayer.gd (anexado a GUI) para GUI.gd;
-    *  Remover exports velhos em preparacao ao export da nova versao alpha;
+    *  Remover exports velhos em preparação ao export da nova versão alpha;
 
 * 0.1.5.1 - 02/03/2023
-    * Adicionar "flash" de setinhas quando volta uma frase do dialogo. (Aplicado em todas as caixas de dialogo criadas até agora);
-    * Deletar TaskExec1 (Prototipo falho de uma task "quiz").
+    * Adicionar "flash" de setinhas quando volta uma frase do diálogo. (Aplicado em todas as caixas de diálogo criadas até agora);
+    * Deletar TaskExec1 (Protótipo falho de uma task "quiz").
 
 * 0.1.5.2 - 02/03/2023
     * Pequenos Patches:
-    - Mudar levemente o codigo da title screen;
-    - Polir codigo do player.
+    - Mudar levemente o código da title screen;
+    - Polir código do player.
 
 * 0.1.5.3 - 03/03/2023
     * Inicio da adição da parte administrativa;
-    * Implementacao da task quiz, que ainda não funciona.
+    * Implementação da task quiz, que ainda não funciona.
 
 * 0.1.5.4 - 03/03/2023 
     * Conserto da task do quiz.
@@ -143,7 +143,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Adicionar segunda task de quiz.
     
 * 0.1.6.0 - 06/03/2023
-    * Adicionar cena temporaria em cima do poste;
+    * Adicionar cena temporária em cima do poste;
     * Adicionar alguns tilemaps/tilesets da internet.
     * Adicionar funcionalidade botão de interação (Na Wiretask e para ir para cena em cima do poste);
     * Apagar exports velhos em preparação para nova versão alpha.
@@ -152,7 +152,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Se o jogador já viu o diálogo do limbo uma vez, pula diretamente para a cena da cidade.
     
 * 0.1.7.0 - 07/03/2023
-    * Refinar cenas ja existentes e ordenar tudo.
+    * Refinar cenas já existentes e ordenar tudo.
     * Title Screen -> Prelude -> PosteCima (explode) -> limbo -> cidade -> adm
     
 * 0.2.0.0 - 07/03/2023
@@ -160,12 +160,12 @@ A cada atualização os detalhes devem ser lançados aqui.
    * Animação adicionada.
    * Historia flui:
     * Title Screen -> Anim -> Prelude -> PosteCima (explode e tem barulho agr) -> Limbo (sons e musicas sincronizados) -> cidade -> adm (opcional)
-    * Caso o player ja passou do dialogo do limbo:
+    * Caso o player já passou do diálogo do limbo:
     * TItle Screen -> Cidade -> ADM
  
  * 0.2.1.0 - 08/03/2023
     * Adicionar setinha guia;
-    * Adicionar alerta alerta;
+    * Adicionar alerta;
     * Acelerar animação;
     * Tentativa falha de posSave ao sair do jogo pela tela de pause (em desenvolvimento).
   
@@ -176,19 +176,19 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Alterar o diálogo do limbo.
     
 * 0.2.1.4 - 09/03/2023
-    * Editar bêbado (vertigo);
-    * Comecar a editar a Wiretask bêbada (EM PROGRESSO).
+    * Editar bêbado (vertigem);
+    * Começar a editar a Wiretask bêbada (EM PROGRESSO).
     
 * 0.2.2.0 - 09/03/2023
     * Mudar controles para touch screen.
      
 * 0.2.2.1 - 10/03/2023
-    * Adicionar prompt ao entrar no prelédio;
+    * Adicionar prompt ao entrar no prelúdio;
     * Retirar botão controles da title screen.
     
 * 0.2.3.0 - 10/03/2023
     * Consertando erros de merge;
-    * Aprimorando sistema de interacao com botões touch;
+    * Aprimorando sistema de interação com botões touch;
     * Mudar sprite da seta guia;
     * Adicionar sprites Jonas e Tereza;
     * Debugging e polimentos finais para entrega.
@@ -203,10 +203,10 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Mudar levemente o tamanho da hitbox do player para ser mais coerente com o tamanho real das sprites;
     * Mudar levemente a animação do Zé no hospital;
     * Consertar bug que fazia com que o barulho de explosão repetia varias vezes enquanto o jogo estava na cena de hospital;
-    * Jogo salva em qual cena estava e onde o jogador saiu (se ja passou da cena do limbo): se vai na tela de pause dentro da tela adiministrativa, por exemplo, quando voltar ao jogo volta pro msm lugar dentro da tela administrativa.
+    * Jogo salva em qual cena estava e onde o jogador saiu (se ja passou da cena do limbo): se vai na tela de pause dentro da tela administrativa, por exemplo, quando voltar ao jogo volta pro msm lugar dentro da tela administrativa.
     
 * 0.2.4.2 - 10/03/2023
-    * Modificar final temporario (declarado na cena adm apos 3 segundos)´;
+    * Modificar final temporário (declarado na cena adm apos 3 segundos)´;
     * Export gitpages.
     
 * 0.2.4.4 - 10/03/2023
@@ -214,7 +214,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Adicionar plugin para RichPresence de discord.
 
 * 0.2.4.5 - 10/03/2023
-    * Adicionar salvaguarda na cena Administrativo para consertar um erro que acontecia caso o jogador interagisse com o botao de elevador antes de um "yield" acabar.
+    * Adicionar salvaguarda na cena Administrativo para consertar um erro que acontecia caso o jogador interagisse com o botão de elevador antes de um "yield" acabar.
     
 * 0.2.4.6 - 12/03/2023
     * Adicionar bootsplash;
@@ -223,14 +223,14 @@ A cada atualização os detalhes devem ser lançados aqui.
     
 * 0.2.5.0 - 12/03/2023
     * Modificação da cena administrativa;
-    * Importando Zezinho e Terezinha, otimizando script player e adicionando funcao de direcao das sprites;
-    * Otimizacao e polimentos da caixa de diálogo;
+    * Importando Zezinho e Terezinha, otimizando script player e adicionando função de direção das sprites;
+    * Otimização e polimentos da caixa de diálogo;
     * Consertando merge ruim - não está tudo consertado ainda;
-    * Uploads gitpages e exports normais (por versao alpha).
+    * Uploads gitpages e exports normais (por versão alpha).
     
 * 0.2.5.1 - 13/03/2023
-    * Consertar bug ao entrar na cena administrativa (relacionado a posicao padrao do player);
-    * Refinar animações das sprites de player e adicionar variável exportavel que controla a velocidade do player, individualmente por cena (padrao 350, na tela administrativa está como 250 agr);
+    * Consertar bug ao entrar na cena administrativa (relacionado a posição padrão do player);
+    * Refinar animações das sprites de player e adicionar variável exportável que controla a velocidade do player, individualmente por cena (padrão 350, na tela administrativa está como 250 agora);
     * Velocidade de animação de sprite representa 10fps - (velocidade atual / velocidade padrão);
     * Export GitPages.
     
@@ -246,7 +246,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Animação ingame da reunião da tereza (executivo);
     * Integrar primeiro quiz após reunião Tereza (executivo);
     * Polir quiz e suas funções;
-    * Polir player, objetivos etc.
+    * Polir player, objetivos, etc.
 
 * 0.2.6.1 - 15/03/2023
     * Consertar merge.
@@ -258,17 +258,17 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Adicionar função objectiveAnim (zoom in no objetivo ativo e renderiza texto respectivo ao objetivo/descricao);
     * Aperfeiçoar script executivo;
     * Aperfeiçoar animação da reunião;
-    * Adicionar função de animaçao "assédio";
+    * Adicionar função de animação "assédio";
     * Adicionar equipe de compliance e seu diálogo respectivo (ocorre após assédio);
     * Finalizar quiz1 e aperfeiçoar/polir seu script;
-    * Adicionar quiz2 (PARCIAL, NAO FUNCIONA DIREITO AINDA);
+    * Adicionar quiz2 (PARCIAL, NÃO FUNCIONA DIREITO AINDA);
     * Export GitPages.
     
 * 0.3.0.0 - 16/03/2023
     * FINALIZAR TOTALMENTE CENA EXECUTIVA, INCLUINDO O QUIZ FINAL!
-    * Criar limbo2 com 2 tasks dailys e 2 dialogos;
+    * Criar limbo2 com 2 tasks dailys e 2 diálogos;
     * Separar a cena cidade em duas (tecnicamente), para executivo e administrativo;
-    * Refinar e polir cena preludio e administrativa para melhor apresentatividade;
+    * Refinar e polir cena prelúdio e administrativa para melhor apresentatividade;
     * Outros patches pequenos aleatórios.
     
 * 0.3.0.1 - 16/0/2023
@@ -277,7 +277,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     
 * 0.3.1.0 - 17/0/2023
     * Adicionar abordagem do chefe do jonas no início da cena administrativo;
-    * Polir partes da cena do apartamento (criar script novo, clonado do de cena adiministrativa, modificar o script do apartamento para poder rodar e modificar tamanho e velocidade do player nessa cena, além de zoom da câmera);
+    * Polir partes da cena do apartamento (criar script novo, clonado do de cena administrativa, modificar o script do apartamento para poder rodar e modificar tamanho e velocidade do player nessa cena, além de zoom da câmera);
     * Modificar velocidade de animação de andar do player (em algumas cenas ficava muito e lento parecia que o player estava deslizando).
 
 ## 📋 Licença/License
