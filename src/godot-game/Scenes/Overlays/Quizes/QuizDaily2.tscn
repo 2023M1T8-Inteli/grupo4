@@ -3,8 +3,8 @@
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/QuizTask.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/TextoBut.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/QuizTaskOpcoes.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Interface/dialogue_box_bigger.png" type="Texture" id=4]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=7]
 size = 13
@@ -41,16 +41,17 @@ script = ExtResource( 3 )
 questionPath = "res://Quiz Files/Daily2.json"
 
 [node name="Opcao1" type="Sprite" parent="Opcoes"]
-position = Vector2( 111, 278 )
+position = Vector2( 111, 272.313 )
 scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 
 [node name="Opcao1" type="RichTextLabel" parent="Opcoes/Opcao1"]
 margin_left = -155.0
-margin_top = -32.9999
+margin_top = -57.6667
 margin_right = 77.0
-margin_bottom = 20.0001
+margin_bottom = 35.3333
 rect_scale = Vector2( 1.333, 1.333 )
+rect_clip_content = false
 custom_fonts/normal_font = SubResource( 7 )
 bbcode_enabled = true
 scroll_active = false
@@ -59,20 +60,21 @@ scroll_active = false
 margin_left = -7.0
 margin_top = -8.0
 margin_right = 239.0
-margin_bottom = 53.0
+margin_bottom = 91.0
 script = ExtResource( 2 )
 
 [node name="Opcao2" type="Sprite" parent="Opcoes"]
-position = Vector2( 111, 88 )
+position = Vector2( 111, 79.3125 )
 scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 
 [node name="Opcao2" type="RichTextLabel" parent="Opcoes/Opcao2"]
 margin_left = -155.0
-margin_top = -35.0
+margin_top = -56.6667
 margin_right = 77.0
-margin_bottom = 25.0
+margin_bottom = 32.3333
 rect_scale = Vector2( 1.333, 1.333 )
+rect_clip_content = false
 custom_fonts/normal_font = SubResource( 8 )
 bbcode_enabled = true
 scroll_active = false
@@ -81,20 +83,21 @@ scroll_active = false
 margin_left = -7.0
 margin_top = -7.0
 margin_right = 239.0
-margin_bottom = 53.0
+margin_bottom = 91.0
 script = ExtResource( 2 )
 
 [node name="Opcao3" type="Sprite" parent="Opcoes"]
-position = Vector2( 111, -102 )
+position = Vector2( 111, -90 )
 scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 
 [node name="Opcao3" type="RichTextLabel" parent="Opcoes/Opcao3"]
 margin_left = -155.0
-margin_top = -35.0
+margin_top = -55.6666
 margin_right = 77.0
-margin_bottom = 18.0
+margin_bottom = 36.3334
 rect_scale = Vector2( 1.333, 1.333 )
+rect_clip_content = false
 custom_fonts/normal_font = SubResource( 9 )
 bbcode_enabled = true
 scroll_active = false
@@ -103,7 +106,7 @@ scroll_active = false
 margin_left = -7.0
 margin_top = -7.0
 margin_right = 239.0
-margin_bottom = 53.0
+margin_bottom = 91.0
 script = ExtResource( 2 )
 
 [node name="MouseFilter" type="Control" parent="Opcoes"]
@@ -115,9 +118,9 @@ margin_bottom = 408.0
 
 [node name="Pergunta" type="RichTextLabel" parent="Opcoes"]
 margin_left = -12.0
-margin_top = -208.0
+margin_top = -220.0
 margin_right = 234.0
-margin_bottom = -147.0
+margin_bottom = -159.0
 custom_fonts/normal_font = SubResource( 10 )
 bbcode_enabled = true
 bbcode_text = "[center]Qual a melhor forma de garantir que minha opinião pessoal nas mídias sociais não gera consequências ruins para a empresa?[/center]"

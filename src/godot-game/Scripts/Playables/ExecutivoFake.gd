@@ -51,6 +51,7 @@ func _on_TextureButton_pressed():
 
 
 func _on_NPC1Botao_pressed():
+	$SegInfo/NPC1/NPC1Botao.visible = false
 	$SegInfo/NPC1/BalaoExclamacao.visible = false
 	$"SegInfo/DialogBox 16".visible = true
 	$"SegInfo/DialogBox 16/TexturaCaixa"._startDialog()

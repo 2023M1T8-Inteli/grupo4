@@ -28,7 +28,7 @@ func _ready():
 		$map/Elevador/TextureButton.visible = false
 		$Task1ADM.visible = true
 	elif AdmGlobals.currentTask == 1:
-		pass
+		reincarn()
 		
 		
 	# Se a posição atual for em um cenário jogável, posicione o jogador na posição atual
@@ -107,3 +107,6 @@ func _finish_dialog_6():
 	$Player.objective(true)
 	$map/Elevador/TextureButton.visible = true
 
+func reincarn():
+	yield(get_tree().create_timer(3.0), "timeout")
+	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)
