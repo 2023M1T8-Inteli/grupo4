@@ -4,12 +4,6 @@ extends Node2D
 var closeToADM = true
 
 func _ready():
-	# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
-	Global.activeObjective[0] = true
-	Global.activeObjective[1] = $Predio/admAncora.global_position
-	Global.activeObjective[2] = "Entre no predio da V.Tal"
-	$Player.objectiveAnim()
-	# Play na musica da cidade
 	if Global.playbackPos == 0:
 		$GUI/Audio.set_playback_pos("res://Audio Files/Cidade.mp3", 0)
 	else:

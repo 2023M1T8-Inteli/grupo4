@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/QuizTask.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/TextoBut.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/QuizTaskOpcoes.gd" type="Script" id=3]
+[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=7]
+size = 13
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 13
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 13
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 14
+font_data = ExtResource( 5 )
+
+[node name="QuizTask" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Filter" type="ColorRect" parent="."]
+margin_right = 360.0
+margin_bottom = 637.0
+color = Color( 0, 0, 0, 0.286275 )
+
+[node name="Opcoes" type="Control" parent="."]
+visible = false
+margin_left = 69.0
+margin_top = 232.0
+margin_right = 69.0
+margin_bottom = 232.0
+mouse_filter = 2
+script = ExtResource( 3 )
+questionPath = "res://Quiz Files/Daily3.json"
+
+[node name="Opcao1" type="Sprite" parent="Opcoes"]
+position = Vector2( 111, 278 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 6 )
+
+[node name="Opcao1" type="RichTextLabel" parent="Opcoes/Opcao1"]
+margin_left = -155.0
+margin_top = -32.9999
+margin_right = 77.0
+margin_bottom = 20.0001
+rect_scale = Vector2( 1.333, 1.333 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+scroll_active = false
+
+[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao1/Opcao1"]
+margin_left = -7.0
+margin_top = -8.0
+margin_right = 239.0
+margin_bottom = 53.0
+script = ExtResource( 2 )
+
+[node name="Opcao2" type="Sprite" parent="Opcoes"]
+position = Vector2( 111, 98 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 6 )
+
+[node name="Opcao2" type="RichTextLabel" parent="Opcoes/Opcao2"]
+margin_left = -155.0
+margin_top = -35.0
+margin_right = 77.0
+margin_bottom = 25.0
+rect_scale = Vector2( 1.333, 1.333 )
+custom_fonts/normal_font = SubResource( 8 )
+bbcode_enabled = true
+scroll_active = false
+
+[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao2/Opcao2"]
+margin_left = -7.0
+margin_top = -7.0
+margin_right = 239.0
+margin_bottom = 53.0
+script = ExtResource( 2 )
+
+[node name="Opcao3" type="Sprite" parent="Opcoes"]
+position = Vector2( 111, -67 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 6 )
+
+[node name="Opcao3" type="RichTextLabel" parent="Opcoes/Opcao3"]
+margin_left = -155.0
+margin_top = -35.0
+margin_right = 77.0
+margin_bottom = 18.0
+rect_scale = Vector2( 1.333, 1.333 )
+custom_fonts/normal_font = SubResource( 9 )
+bbcode_enabled = true
+scroll_active = false
+
+[node name="TextoBut" type="TextureButton" parent="Opcoes/Opcao3/Opcao3"]
+margin_left = -7.0
+margin_top = -7.0
+margin_right = 239.0
+margin_bottom = 53.0
+script = ExtResource( 2 )
+
+[node name="MouseFilter" type="Control" parent="Opcoes"]
+visible = false
+margin_left = -69.0
+margin_top = -232.0
+margin_right = 291.0
+margin_bottom = 408.0
+
+[node name="Pergunta" type="RichTextLabel" parent="Opcoes"]
+margin_left = -12.0
+margin_top = -192.0
+margin_right = 234.0
+margin_bottom = -131.0
+custom_fonts/normal_font = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "[center]Qual seria a opção mais racional nessa situação?[/center]"
+text = "Qual seria a opção mais racional nessa situação?"
+scroll_active = false
+
+[connection signal="pressed" from="Opcoes/Opcao1/Opcao1/TextoBut" to="Opcoes/Opcao1/Opcao1/TextoBut" method="_on_TextoBut_pressed"]
+[connection signal="pressed" from="Opcoes/Opcao2/Opcao2/TextoBut" to="Opcoes/Opcao2/Opcao2/TextoBut" method="_on_TextoBut_pressed"]
+[connection signal="pressed" from="Opcoes/Opcao3/Opcao3/TextoBut" to="Opcoes/Opcao3/Opcao3/TextoBut" method="_on_TextoBut_pressed"]

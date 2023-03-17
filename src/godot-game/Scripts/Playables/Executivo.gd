@@ -23,6 +23,7 @@ func _ready():
 		Global.activeObjective[2] = "Atenda a \n reuniao"
 		$Player.objective(true)
 		$NPCQuiz1.visible = false
+		
 		$GUI/Audio.set_volume(Global.volPercentage)
 		$GUI/Audio.play_ambient("res://Audio Files/OfficeAmbiente.mp3")
 	# Habilita o movimento do jogador
@@ -81,7 +82,6 @@ func _on_TextureButton_pressed():
 # Quando a animação de entrada do jogador termina, define a variável Global.moving (que controla a animação de andar) como false
 func _on_WalkInPlayer_animation_finished(_anim_name):
 	Global.moving = false
-
 
 # LIDAR COM A ANIMACAO INGAME DE REUNIAO
 func _reuniao_anim():

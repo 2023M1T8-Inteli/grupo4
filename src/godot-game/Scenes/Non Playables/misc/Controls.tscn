@@ -37,7 +37,6 @@ position = Vector2( 176, 80 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Logo"]
 position = Vector2( 8, 520 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="Seta" type="Sprite" parent="."]
