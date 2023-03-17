@@ -2,8 +2,34 @@
 
 extends CanvasLayer
 
-func _ready():
+func _reset():
+	$DialogBox/TexturaCaixa.phraseNum = 0
+	$DialogBox/TexturaCaixa.finished = false
+	$DialogBox/TexturaCaixa.deadbolt = true
+	self.visible = true
+	
+	
+	$Opcoes.phraseNum = 0
+	
+	$DialogBox/TexturaCaixa.visible = false
+	$Opcoes.visible = false
+	$Opcoes/MouseFilter.visible = false
+	
+	Global.quizAnswered = false
+
+	$Opcoes.dialog = []
+	$Opcoes.questions = []
+	
+	$Filter.visible = true
+	
+#func _finish_quiz2():
+	#_reset()
+	#print("RESET")
+	
+#func _ready():
 	#_startQuiz()
+	#if $DialogBox/TexturaCaixa.connect("quizCorrect", self, "_finish_quiz2") != OK:
+	#		print("ERROR ON QUIZCORRECT CONNECT")
 	pass
 
 func _startQuiz():

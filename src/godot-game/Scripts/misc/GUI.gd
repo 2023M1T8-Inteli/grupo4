@@ -3,6 +3,14 @@ extends CanvasLayer
 # Variável para armazenar se a interface do usuário estava visível antes da pausa
 onready var guiWasVisible
 
+func _ready():
+	$PauseScreen/HSlider.value = Global.volPercentage
+
+func _on_HSlider_value_changed(value):
+	# Set volume global com o valor do slider
+	Global.volPercentage = value
+	$Audio.set_volume(value)
+	
 func _on_PauseButton_pressed():
 	# Desabilita o movimento do jogador
 	Global.canMove = false

@@ -94,6 +94,7 @@ pos="*res://Scripts/misc/globals/PosSave.gd"
 SceneTransition="*res://Scenes/Overlays/misc/scene_transition.tscn"
 BangSound="*res://Scenes/Overlays/misc/BangSound.tscn"
 ExecutivoGlobals="*res://Scripts/misc/globals/ExecutivoGlobals.gd"
+AdmGlobals="*res://Scripts/misc/globals/ADMGlobals.gd"
 
 [discord_presence]
 

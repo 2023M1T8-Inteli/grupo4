@@ -4,8 +4,10 @@ func _ready():
 	# Define variáveis globais para controle do jogo
 	Global.canMove = false  # Indica se o jogador pode se mover
 	Global.isDrunk = false  # Indica se o jogador está bêbado
-	$LimboAmbience.playing = true  # Toca o barulho de fundo do limbo
-	$LimboMusic.playing = true  # Toca a música do limbo
+	
+	$Audio.set_volume(Global.volPercentage) # Define o volume
+	$Audio.play_ambient("res://Audio Files/wind woosh loop.ogg") # Toca o barulho de fundo do limbo
+	$Audio.set_playback_pos("res://Audio Files/deepblue.mp3" , 0) # Toca a música do limbo
 	
 	# Espera 3.3 segundos antes de exibir a caixa de diálogo
 	yield(get_tree().create_timer(3.3), "timeout")
@@ -20,5 +22,7 @@ func _ready():
 # Função chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
 	Global.finishDialog1 = true  # Indica que a caixa de diálogo acabou / já foi tocada
+	Global.parte = "executivo"
 	# Muda para a cena "Cidade.tscn" usando a classe "SceneTransition"
 	SceneTransition.change_scene("res://Scenes/Playables/Environment/Cidade.tscn", 1, 1)
+	

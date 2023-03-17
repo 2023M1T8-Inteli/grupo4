@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/OfficeAmbiente.mp3-f9c68af9c2fc87e9e0de81e8ee099ad0.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/OfficeAmbiente.mp3"
+dest_files=[ "res://.import/OfficeAmbiente.mp3-f9c68af9c2fc87e9e0de81e8ee099ad0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

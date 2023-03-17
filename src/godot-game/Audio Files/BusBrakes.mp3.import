@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BusBrakes.mp3-f20eee88b4e60850c1e279f7dae72f67.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/BusBrakes.mp3"
+dest_files=[ "res://.import/BusBrakes.mp3-f20eee88b4e60850c1e279f7dae72f67.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

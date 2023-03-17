@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CidadeAmbiente.mp3-1ca28ebad6148c02cc27891c65e07240.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/CidadeAmbiente.mp3"
+dest_files=[ "res://.import/CidadeAmbiente.mp3-1ca28ebad6148c02cc27891c65e07240.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

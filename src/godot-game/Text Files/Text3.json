@@ -1,6 +1,7 @@
 [
-    {"Name":"Moralética", "Text":"Bem-vindo de volta, Zé! Como foi seu dia?"},
-    {"Name":"Zé", "Text":"Foi diferente, nunca imaginei vivenciar os desafios éticos de uma executiva."},
-    {"Name":"Moralética", "Text":"Esse é o objetivo. Pronto para testar os conhecimentos aprendidos hoje?"},
-    {"Name":"Zé", "Text":"Estou pronto."}
+    {"Name":"Moralética", "Text":"Bem vindo de volta, Zé! O que achou de viver a vida de Teresa?"},
+    {"Name":"Zé", "Text":"Foi… diferente. Aparentemente todo mundo é testado moralmente todos os dias, né?"},
+    {"Name":"Moralética", "Text":"Certamente."},
+    {"Name":"Moralética", "Text":"Está preparado para revisar o que aprendeu?"},
+    {"Name":"Zé", "Text":"Vamos nessa!"}
 ]
