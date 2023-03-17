@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Sprites/TileMaps/Tileset_16x16_13.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/TileMaps/2_LivingRoom_16x16.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Playables/Administrativo.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Playables/Apartamento.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Overlays/misc/GUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Elevador/Elevador.png" type="Texture" id=6]
@@ -1584,7 +1584,7 @@ tracks/0/keys = {
 "values": [ Vector2( 381, 30 ), Vector2( 381, 200 ) ]
 }
 
-[node name="Administrativo" type="Node2D"]
+[node name="Apartamento" type="Node2D"]
 position = Vector2( -97, 64 )
 script = ExtResource( 3 )
 
@@ -1704,9 +1704,9 @@ format = 1
 tile_data = PoolIntArray( 458794, 70, 0, 786492, 79, 0, 983096, 77, 0, 1179704, 73, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 908, 39 )
-speed = 250
-size = 0.6
+position = Vector2( 381, 79 )
+speed = 70
+size = 0.4
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 

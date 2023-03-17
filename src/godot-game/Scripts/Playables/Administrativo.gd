@@ -12,6 +12,10 @@ var lockIf0 = true
 var closeToPorta
 
 func _ready():
+	if $"AbordagemControl/DialogBox 6/TexturaCaixa".connect("finish", self, "_finish_dialog_6") != OK:
+			print("ERROR ON DIALOGBOX 6 CONNECT")
+	
+	
 	# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $ComputadorJonas/ComputadorAncora.global_position
@@ -36,6 +40,9 @@ func _ready():
 	
 	# Salvaguarda para nao sair da cena antes de acabar o yield
 	$map/Elevador/TextureButton.visible = false
+	
+	_play_abordagem_anim()
+	
 	
 	# Aguarda 3 segundos e toca a animação de transição para o novo cenário
 #	yield(get_tree().create_timer(3.0), "timeout")
@@ -74,3 +81,30 @@ func _on_WalkInPlayer_animation_finished(_anim_name):
 
 func _on_BotaoComputador_pressed():
 	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)
+
+func _play_abordagem_anim():
+	Global.canMove = false
+	
+	yield(get_tree().create_timer(0.2), "timeout")
+
+	Global.activeObjective[0] = false
+	
+	$AnimationHandler.get_animation("AbordagemAnim").track_set_key_value(0, 1, Vector2($Player.position.x-106, 120))
+	$AnimationHandler.play("AbordagemAnim")
+	yield($AnimationHandler, "animation_finished")
+	
+	$"AbordagemControl/DialogBox 6".visible = true
+	$"AbordagemControl/DialogBox 6/TexturaCaixa"._startDialog()
+	
+	# AQUI A GNT ESPERA A CAIXA DE DIALOGO ACABAR (FUNCAO _FINISH_DIALOG_6())
+	
+func _finish_dialog_6():
+	$"AbordagemControl/DialogBox 6".visible = false
+	yield(get_tree().create_timer(0.1), "timeout")
+	Global.canMove = true
+	
+	Global.activeObjective[0] = true
+	Global.activeObjective[1] = $ComputadorJonas/ComputadorAncora.global_position
+	Global.activeObjective[2] = "Va para o seu computador trabalhar"
+	$Player.objective(true)
+

@@ -17,6 +17,10 @@ var dialog
 var buttonPressed
 var phraseNum = 0
 
+func _ready():
+	#_startDialog()
+	pass
+
 func _startDialog():
 	$FinishArrow/AnimationPlayer.play("hover")
 	$ReturnArrow/ReturnButton.mouse_filter = Control.MOUSE_FILTER_IGNORE

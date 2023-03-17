@@ -48,7 +48,12 @@ func _ready():
 	if size > 1.0:
 		get_tree().quit() # Crasha o game
 	$ActiveSprite.animation = personagemAtivo+"Baixo"
-	$ActiveSprite.speed_scale = float(speed)/350.0
+	
+	# Redefine a velocidade de animacao de andar em relacao a velocidade atual do jogador
+	#$ActiveSprite.speed_scale = float(speed)/350.0
+	if float(speed) != 350:
+		$ActiveSprite.speed_scale = 0.7
+	
 	self.scale = Vector2(size, size)
 	
 	closeEnough = closeEnough * size

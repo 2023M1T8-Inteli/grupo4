@@ -127,6 +127,8 @@ func _assedio_anim():
 	
 	Global.canMove = false
 	Global.activeObjective[0] = false
+	
+	# desnecessario???
 	$ControlAssedio/Camera2D.global_position = $Player/Camera2D.global_position
 	$ControlAssedio/Camera2D.current = true
 	$Player/Camera2D.current = false
