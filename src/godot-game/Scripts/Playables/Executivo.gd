@@ -23,7 +23,8 @@ func _ready():
 		Global.activeObjective[2] = "Atenda a \n reuniao"
 		$Player.objectiveAnim()
 		$NPCQuiz1.visible = false
-	
+		$GUI/Audio.set_volume(Global.volPercentage)
+		$GUI/Audio.play_ambient("res://Audio Files/OfficeAmbiente.mp3")
 	# Habilita o movimento do jogador
 	Global.canMove = true
 	

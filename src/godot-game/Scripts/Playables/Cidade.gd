@@ -9,8 +9,13 @@ func _ready():
 	Global.activeObjective[1] = $Predio/admAncora.global_position
 	Global.activeObjective[2] = "Entre no predio da V.Tal"
 	$Player.objectiveAnim()
-	
-	
+	# Play na musica da cidade
+	if Global.playbackPos == 0:
+		$GUI/Audio.set_playback_pos("res://Audio Files/Cidade.mp3", 0)
+	else:
+		$GUI/Audio.set_playback_pos("res://Audio Files/Cidade.mp3", Global.playbackPos)
+	$GUI/Audio.play_ambient("res://Audio Files/CidadeAmbiente.mp3")
+	$GUI/Audio.set_volume(Global.volPercentage)
 	# Verifica se o jogador tem uma posição salva na cena Cidade
 	if pos.posScene == "res://Scenes/Playables/Environment/Cidade.tscn":
 		# Redefine a posição atual do jogador
@@ -29,7 +34,7 @@ func _process(_delta):
 		closeToADM = true
 	else:
 		closeToADM = false
-
+		
 func _on_admButton_pressed():
 	# Verifica se o jogador está perto do objeto 'ADM' (Representa a entrada do prédio)
 	if closeToADM:
@@ -43,3 +48,5 @@ func _on_admButton_pressed():
 		if get_tree().change_scene("res://Scenes/Playables/Environment/Executivo.tscn") != OK:
 			print("ERRO")
 
+func _on_Cidade_tree_exiting():
+	$GUI/Audio.get_playback_pos()

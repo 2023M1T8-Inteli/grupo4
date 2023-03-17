@@ -25,3 +25,13 @@ var canMove = true
 
 # Flag que controla se o personagem está se movendo ou não (controla a animação do personagem)
 var moving = false
+
+# Variavel que armazena playback position da musica sendo tocada
+var playbackPos = 0.0
+
+# Variavel que armazena a % de volume do jogo
+var volPercentage = 100
+
+# Variavel que armazena o volume do jogo
+var volume = (volPercentage * 0.25) - 35
+

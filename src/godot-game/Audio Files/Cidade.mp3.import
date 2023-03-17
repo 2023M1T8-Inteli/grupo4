@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cidade.mp3-4e3e60e9c65a164f4857ae820a5e8c3c.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Cidade.mp3"
+dest_files=[ "res://.import/Cidade.mp3-4e3e60e9c65a164f4857ae820a5e8c3c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

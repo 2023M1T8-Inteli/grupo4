@@ -5,6 +5,7 @@ var amongComplete = false # Variável para verificar se a tarefa de fois foi com
 onready var lockIf0 = true # Variável de controle para o método _on_ExplodeTimer_timeout()
 
 func _ready():
+	$GUI/Audio.set_volume(Global.volPercentage)
 	Global.isDrunk = true # Define o personagem como bêbado
 	Global.activeObjective[0] = false # Define a primeira tarefa como inativa
 
@@ -46,7 +47,7 @@ func _on_ExplodeTimer_timeout():
 	if lockIf0 == true: 
 		lockIf0 = false  # Desativa a variável de controle
 		renderAmong(false)  # Esconde a tarefa de fios
-		BangSound.playing = true  # Toca o som de explosão
+		$GUI/Audio.play_ambient("res://Audio Files/explosion.mp3") # Toca o som de explosão
 		$ExplodeSprite.frame = 0  # Define o primeiro frame da animação de explosão
 		$ExplodeSprite.visible = true  # Torna o sprite de explosão visível
 		$ExplodeSprite.playing = true  # Inicia a animação de explosão

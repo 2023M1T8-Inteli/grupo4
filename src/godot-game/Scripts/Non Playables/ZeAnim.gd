@@ -8,7 +8,9 @@ func _ready():
 	$zeAcordando.playing = true  # Inicia a animação
 	$zeAcordando.frame = 0  # Define o quadro inicial
 	$zeAcordando.visible = true  # Torna a animação visível na tela
-
+	
+	# Set variavel global playbackPos para 0 para ser usada para a cidade
+	Global.playbackPos = 0
 
 # Função chamada quando o botão de pular animação é pressionado
 func _on_TextureButton_pressed():
