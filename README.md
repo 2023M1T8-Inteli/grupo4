@@ -242,43 +242,43 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 0.2.5.3 - 13/03/2023
     * Arrumar sprites (filtro desativado).
     
-*0.2.6.0 - 15/03/2023
-    *Animação ingame da reunião da tereza (executivo);
-    *Integrar primeiro quiz após reunião Tereza (executivo);
-    *Polir quiz e suas funções;
-    *Polir player, objetivos etc.
+* 0.2.6.0 - 15/03/2023
+    * Animação ingame da reunião da tereza (executivo);
+    * Integrar primeiro quiz após reunião Tereza (executivo);
+    * Polir quiz e suas funções;
+    * Polir player, objetivos etc.
 
-*0.2.6.1 - 15/03/2023
-    *Consertar merge.
-    *Polir cenas prelude e postecima, arrumar alguns bugs;
-    *Export gitpages.
+* 0.2.6.1 - 15/03/2023
+    * Consertar merge.
+    * Polir cenas prelude e postecima, arrumar alguns bugs;
+    * Export gitpages.
   
-*0.2.7.0 - 15/03/2023
-    *Aperfeiçoar cena postecima e prelúdio (toques finais);
-    *Adicionar função objectiveAnim (zoom in no objetivo ativo e renderiza texto respectivo ao objetivo/descricao);
-    *Aperfeiçoar script executivo;
-    *Aperfeiçoar animação da reunião;
-    *Adicionar função de animaçao "assédio";
-    *Adicionar equipe de compliance e seu diálogo respectivo (ocorre após assédio);
-    *Finalizar quiz1 e aperfeiçoar/polir seu script;
-    *Adicionar quiz2 (PARCIAL, NAO FUNCIONA DIREITO AINDA);
-    *Export GitPages.
+* 0.2.7.0 - 15/03/2023
+    * Aperfeiçoar cena postecima e prelúdio (toques finais);
+    * Adicionar função objectiveAnim (zoom in no objetivo ativo e renderiza texto respectivo ao objetivo/descricao);
+    * Aperfeiçoar script executivo;
+    * Aperfeiçoar animação da reunião;
+    * Adicionar função de animaçao "assédio";
+    * Adicionar equipe de compliance e seu diálogo respectivo (ocorre após assédio);
+    * Finalizar quiz1 e aperfeiçoar/polir seu script;
+    * Adicionar quiz2 (PARCIAL, NAO FUNCIONA DIREITO AINDA);
+    * Export GitPages.
     
-*0.3.0.0 - 16/03/2023
-    *FINALIZAR TOTALMENTE CENA EXECUTIVA, INCLUINDO O QUIZ FINAL!
-    *Criar limbo2 com 2 tasks dailys e 2 dialogos;
-    *Separar a cena cidade em duas (tecnicamente), para executivo e administrativo;
-    *Refinar e polir cena preludio e administrativa para melhor apresentatividade;
-    *Outros patches pequenos aleatórios.
+* 0.3.0.0 - 16/03/2023
+    * FINALIZAR TOTALMENTE CENA EXECUTIVA, INCLUINDO O QUIZ FINAL!
+    * Criar limbo2 com 2 tasks dailys e 2 dialogos;
+    * Separar a cena cidade em duas (tecnicamente), para executivo e administrativo;
+    * Refinar e polir cena preludio e administrativa para melhor apresentatividade;
+    * Outros patches pequenos aleatórios.
     
-*0.3.0.1 - 16/0/2023
-    *Juntar todas os commits do dia;
-    *Export GitPages.
+* 0.3.0.1 - 16/0/2023
+    * Juntar todas os commits do dia;
+    * Export GitPages.
     
-*0.3.1.0 - 17/0/2023
-    *Adicionar abordagem do chefe do jonas no início da cena administrativo;
-    *Polir partes da cena do apartamento (criar script novo, clonado do de cena adiministrativa, modificar o script do apartamento para poder rodar e modificar tamanho e velocidade do player nessa cena, além de zoom da câmera);
-    *Modificar velocidade de animação de andar do player (em algumas cenas ficava muito e lento parecia que o player estava deslizando).
+* 0.3.1.0 - 17/0/2023
+    * Adicionar abordagem do chefe do jonas no início da cena administrativo;
+    * Polir partes da cena do apartamento (criar script novo, clonado do de cena adiministrativa, modificar o script do apartamento para poder rodar e modificar tamanho e velocidade do player nessa cena, além de zoom da câmera);
+    * Modificar velocidade de animação de andar do player (em algumas cenas ficava muito e lento parecia que o player estava deslizando).
 
 ## 📋 Licença/License
 
