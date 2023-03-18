@@ -11,7 +11,7 @@ func _on_BotaoComputador_pressed():
 	$BotaoComputador.visible = false
 	
 	Global.activeObjective[1] = self.get_parent().get_node("PortaAncora").global_position
-	Global.activeObjective[2] = "Va para o andar Executivo"
+	Global.activeObjective[2] = "Vá para o segundo andar."
 	
 	$TelaComputador.visible = true
 	yield(get_tree().create_timer(1), "timeout")
