@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export1.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export7.png" type="Texture" id=2]
@@ -23,6 +23,9 @@
 [ext_resource path="res://Scripts/Playables/ComputadorJonas.gd" type="Script" id=21]
 [ext_resource path="res://Sprites/Sprites Computador/computador1.png" type="Texture" id=22]
 [ext_resource path="res://Scenes/Overlays/Quizes/QuizDaily3.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scripts/Playables/Task2ADM.gd" type="Script" id=24]
+[ext_resource path="res://Sprites/Sprites Computador/comp_linkedin.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Overlays/Quizes/QuizDaily8.tscn" type="PackedScene" id=26]
 
 [sub_resource type="Animation" id=23]
 resource_name = "AbordagemAnim"
@@ -1242,6 +1245,7 @@ shape = SubResource( 21 )
 position = Vector2( -1, -27 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
+frame = 8
 playing = true
 
 [node name="ComputadorAncora" type="Node2D" parent="Task1ADM"]
@@ -1263,6 +1267,45 @@ texture = ExtResource( 20 )
 [node name="QuizTask" parent="Task1ADM" instance=ExtResource( 23 )]
 visible = false
 
+[node name="Task2ADM" type="Control" parent="."]
+visible = false
+margin_left = 169.0
+margin_top = 250.0
+margin_right = 169.0
+margin_bottom = 250.0
+script = ExtResource( 24 )
+
+[node name="BotaoComputador" type="TouchScreenButton" parent="Task2ADM"]
+position = Vector2( -23, -38 )
+scale = Vector2( 2.28457, 3.26383 )
+shape = SubResource( 21 )
+
+[node name="BalaoObj" type="AnimatedSprite" parent="Task2ADM"]
+position = Vector2( -1, -27 )
+scale = Vector2( 0.05, 0.05 )
+frames = SubResource( 22 )
+frame = 8
+playing = true
+
+[node name="ComputadorAncora" type="Node2D" parent="Task2ADM"]
+
+[node name="TelaComputador" type="CanvasLayer" parent="Task2ADM"]
+visible = false
+offset = Vector2( 180, 320 )
+transform = Transform2D( 1, 0, 0, 1, 180, 320 )
+
+[node name="Computador" type="Sprite" parent="Task2ADM/TelaComputador"]
+texture = ExtResource( 25 )
+
+[node name="Comentarios" type="Sprite" parent="Task2ADM/TelaComputador"]
+visible = false
+position = Vector2( -2, -75 )
+scale = Vector2( 1.1, 1.2 )
+texture = ExtResource( 20 )
+
+[node name="QuizTask" parent="Task2ADM" instance=ExtResource( 26 )]
+visible = false
+
 [node name="AbordagemControl" type="Control" parent="."]
 margin_left = 97.0
 margin_top = -64.0
@@ -1281,3 +1324,4 @@ visible = false
 [connection signal="pressed" from="map/Elevador/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="animation_finished" from="WalkInPlayer" to="." method="_on_WalkInPlayer_animation_finished"]
 [connection signal="pressed" from="Task1ADM/BotaoComputador" to="Task1ADM" method="_on_BotaoComputador_pressed"]
+[connection signal="pressed" from="Task2ADM/BotaoComputador" to="Task2ADM" method="_on_BotaoComputador_pressed"]

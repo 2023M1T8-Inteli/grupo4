@@ -18,7 +18,7 @@
 [ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export7.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export5.png" type="Texture" id=17]
 [ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export4.png" type="Texture" id=18]
-[ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 13.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 17.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=25]
 
 [sub_resource type="RectangleShape2D" id=7]
@@ -1626,16 +1626,16 @@ visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="Eq Compliance/NPC2 (O BOM)"]
 visible = false
-position = Vector2( 0, -19 )
+position = Vector2( 0, -14 )
 scale = Vector2( 1.08, 2.59999 )
 shape = SubResource( 27 )
 
-[node name="DialogBox 13" parent="Eq Compliance/NPC2 (O BOM)" instance=ExtResource( 21 )]
+[node name="DialogBox 17" parent="Eq Compliance/NPC2 (O BOM)" instance=ExtResource( 19 )]
 visible = false
 
 [node name="NPC3" type="ColorRect" parent="Eq Compliance"]
@@ -1661,7 +1661,6 @@ position = Vector2( 11, 14 )
 position = Vector2( 11, -6 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 2
 playing = true
 
 [node name="NPC1Botao" type="TouchScreenButton" parent="SegInfo/NPC1"]

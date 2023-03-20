@@ -1771,7 +1771,7 @@ shape = SubResource( 21 )
 position = Vector2( 10, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="AncoraQuiz1" type="Node2D" parent="NPCQuiz1"]
@@ -1847,7 +1847,7 @@ visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
@@ -1903,28 +1903,27 @@ visible = false
 position = Vector2( 544, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 8
+frame = 1
 playing = true
 
 [node name="BalaoExclamacao2" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 592, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 7
 playing = true
 
 [node name="BalaoExclamacao3" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 6
+frame = 8
 playing = true
 
 [node name="BalaoExclamacao4" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 523 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 5
+frame = 7
 playing = true
 
 [node name="Quiz2Ancora" type="Node2D" parent="ControlQuiz2"]
@@ -1980,7 +1979,7 @@ position = Vector2( 156, 370 )
 position = Vector2( 156, 347 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="NPCCompQuiz2Botao" type="TouchScreenButton" parent="ControlQuiz2/Eq Compliance"]
