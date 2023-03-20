@@ -14,7 +14,7 @@ func _ready():
 	# Define um objetivo como ativo e sua posição
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $PosteCaixa/Node2D.global_position
-	Global.activeObjective[2] = "CoNsErTe A cAiXa De FiOs!1!"
+	Global.activeObjective[2] = "Vá até o poste instalar a fibra!"
 	
 	# Coloca o player na sua posição global
 	$Player.global_position = pos.posPrelude

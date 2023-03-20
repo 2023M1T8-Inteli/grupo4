@@ -14,14 +14,14 @@ func _ready():
 		# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $Predio/admAncora.global_position
-		Global.activeObjective[2] = "Entre no predio da V.Tal"
+		Global.activeObjective[2] = "Entre no predio da V.tal."
 		$Player.objective(true)
 		
 	elif Global.parte == "administrativo":
 		# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $Predio/admAncora.global_position
-		Global.activeObjective[2] = "Entre no predio da V.Tal"
+		Global.activeObjective[2] = "Entre no predio da V.tal."
 		$Player.objective(true)
 		
 		

@@ -20,7 +20,7 @@ func _ready():
 		# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $ReuniaoAncora.global_position
-		Global.activeObjective[2] = "Atenda a \n reuniao"
+		Global.activeObjective[2] = "Vá para a reunião!"
 		$Player.objective(true)
 		$NPCQuiz1.visible = false
 		
@@ -117,7 +117,7 @@ func _reuniao_anim():
 	$NPCQuiz1.visible = true
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $NPCQuiz1/AncoraQuiz1.global_position
-	Global.activeObjective[2] = "Fale com o seu \n colega"
+	Global.activeObjective[2] = "Fale com o seu \n colega."
 
 	$Player.objective(false)
 	
@@ -156,7 +156,7 @@ func _assedio_anim():
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $"ControlAssedio/Eq Compliance/NPC2 (O BOM)/NPCBomAncora".global_position
-	Global.activeObjective[2] = "Fale com a equipe de compliance"
+	Global.activeObjective[2] = "Fale com a equipe de Compliance!"
 
 	$Player.objective(true)
 	
@@ -178,7 +178,7 @@ func _finish_quiz1():
 	Global.canMove = true
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $ControlQuiz2/Quiz2Ancora.global_position
-	Global.activeObjective[2] = "Fale com seus \n colegas"
+	Global.activeObjective[2] = "Fale com seus \n colegas."
 
 	
 	
@@ -228,7 +228,7 @@ func _finish_quiz2():
 	
 	$"ControlQuiz2/Eq Compliance".visible = true
 	Global.activeObjective[1] = $"ControlQuiz2/Eq Compliance/NPCBomAncora".global_position
-	Global.activeObjective[2] = "Fale com a equipe de compliance"
+	Global.activeObjective[2] = "Fale com a equipe de Compliance."
 	$Player.objective(false)
 
 func _on_Reuniao_body_entered(body):
@@ -258,7 +258,7 @@ func _on_NPCBomBotao_pressed():
 		$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/DialogBox 13".visible = false
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $ControlQuiz2/Quiz2Ancora.global_position
-		Global.activeObjective[2] = "Fale com seus \n colegas"
+		Global.activeObjective[2] = "Fale com seus \n colegas."
 		$ControlQuiz2/BaloesExclamacao.visible = true
 		$Player.objective(false)
 
@@ -320,7 +320,7 @@ func _on_NPCCompQuiz2Botao_pressed():
 		
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $PortaAncora.global_position
-		Global.activeObjective[2] = "Va para casa"
+		Global.activeObjective[2] = "Saia do prédio."
 		$Player.objective(false)
 		
 		yield(get_tree().create_timer(3.0), "timeout")

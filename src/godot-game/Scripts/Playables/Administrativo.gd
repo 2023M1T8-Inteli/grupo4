@@ -103,7 +103,7 @@ func _finish_dialog_6():
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
-	Global.activeObjective[2] = "Va para o seu computador trabalhar"
+	Global.activeObjective[2] = "Comece a trabalhar em seu computador."
 	$Player.objective(true)
 	$map/Elevador/TextureButton.visible = true
 
