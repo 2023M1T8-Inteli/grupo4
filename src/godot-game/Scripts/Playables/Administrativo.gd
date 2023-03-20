@@ -31,8 +31,16 @@ func _ready():
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
 		Global.activeObjective[2] = "Volte ao trabalho"
+		$Player.objective(true)
 		$Task2ADM.visible = true
-
+		
+	elif AdmGlobals.currentTask == 2:
+		Global.activeObjective[0] = true
+		Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
+		Global.activeObjective[2] = "Arrume suas coisas e vá para casa"
+		$Player.objective(true)
+		$Task3ADM.visible = true
+		
 	# Se a posição atual for em um cenário jogável, posicione o jogador na posição atual
 	# Caso contrário, posicione-o na posição da cidade e toque a animação de transição
 	if pos.posScene == "res://Scenes/Playables/Environment/Administrativo.tscn":
@@ -83,7 +91,7 @@ func _on_TextureButton_pressed():
 		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada
 		yield(get_tree().create_timer(0.15), "timeout")
 		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
-		if get_tree().change_scene("res://Scenes/Playables/Environment/Cidade.tscn") != OK:
+		if get_tree().change_scene("res://Scenes/Playables/Environment/Limbo3.tscn") != OK:
 			print("ERRO")
 			
 func _play_abordagem_anim():

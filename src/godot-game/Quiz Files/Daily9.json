@@ -1,0 +1,5 @@
+[
+    {"IsCorrect": "N", "Resposta": "Aceita ficar e refazer o trabalho fora do seu expediente."},
+    {"IsCorrect": "N", "Resposta": "Se nega a fazer o trabalho e vai embora."},
+    {"IsCorrect": "Y", "Resposta": "Se nega a fazer o trabalho e reporta para equipe de compliance"},
+]

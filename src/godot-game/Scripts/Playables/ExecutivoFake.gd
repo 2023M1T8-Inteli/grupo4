@@ -59,15 +59,6 @@ func _on_TextureButton_pressed():
 		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
 		if get_tree().change_scene("res://Scenes/Playables/Environment/Administrativo.tscn") != OK:
 			print("ERRO")
-	elif closeToPorta and AdmGlobals.currentTask == 3:
-		# Impede o movimento do jogador durante a transição de cena
-		Global.canMove = false
-		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada
-		yield(get_tree().create_timer(0.15), "timeout")
-		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
-		if get_tree().change_scene("res://Scenes/Playables/Environment/Cidade.tscn") != OK:
-			print("ERRO")
-
 
 func _on_NPC1Botao_pressed():
 	$SegInfo/NPC1/NPC1Botao.visible = false
@@ -76,6 +67,7 @@ func _on_NPC1Botao_pressed():
 	$"SegInfo/DialogBox 16/TexturaCaixa"._startDialog()
 	Global.canMove = false
 	Global.activeObjective[0] = false
+	$map/Elevador/TextureButton.visible = true
 		
 func _on_SegInfo_dialog_finish():
 	Global.canMove = true
@@ -88,8 +80,7 @@ func _on_eq_compliance_dialog_finish():
 	Global.canMove = true
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $PortaAncora.global_position
-	Global.activeObjective[2] = "Vá para casa"
-	AdmGlobals.currentTask = 3
+	Global.activeObjective[2] = "Volte para o setor Administrativo"
 	$Player.objective(true)
 	
 func _on_NPCBomBotao_pressed():
@@ -99,3 +90,4 @@ func _on_NPCBomBotao_pressed():
 	$"Eq Compliance/NPC2 (O BOM)/DialogBox 17/TexturaCaixa"._startDialog()
 	Global.canMove = false
 	Global.activeObjective[0] = false
+	$map/Elevador/TextureButton.visible = true

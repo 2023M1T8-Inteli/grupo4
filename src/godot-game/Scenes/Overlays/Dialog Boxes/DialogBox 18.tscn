@@ -74,7 +74,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="DialogBox 17" type="CanvasLayer"]
+[node name="DialogBox 18" type="CanvasLayer"]
 
 [node name="TexturaCaixa" type="TextureRect" parent="."]
 margin_left = 16.0
@@ -84,7 +84,7 @@ margin_bottom = 623.0
 rect_pivot_offset = Vector2( 51, 17 )
 texture = ExtResource( 2 )
 script = ExtResource( 1 )
-dialogPath = "res://Text Files/Text16.json"
+dialogPath = "res://Text Files/Text17.json"
 
 [node name="NomeNPC" type="RichTextLabel" parent="TexturaCaixa"]
 margin_left = 34.0

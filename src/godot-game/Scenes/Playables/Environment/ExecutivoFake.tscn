@@ -1505,6 +1505,7 @@ scale = Vector2( 0.139323, 0.168083 )
 texture = ExtResource( 6 )
 
 [node name="TextureButton" type="TouchScreenButton" parent="map/Elevador"]
+visible = false
 position = Vector2( -211.429, 205.714 )
 scale = Vector2( 22.1916, -22.9867 )
 shape = SubResource( 7 )
@@ -1626,7 +1627,7 @@ visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="Eq Compliance/NPC2 (O BOM)"]
@@ -1661,6 +1662,7 @@ position = Vector2( 11, 14 )
 position = Vector2( 11, -6 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
+frame = 1
 playing = true
 
 [node name="NPC1Botao" type="TouchScreenButton" parent="SegInfo/NPC1"]
