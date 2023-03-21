@@ -271,14 +271,36 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Refinar e polir cena prelúdio e administrativa para melhor apresentatividade;
     * Outros patches pequenos aleatórios.
     
-* 0.3.0.1 - 16/0/2023
+* 0.3.0.1 - 16/03/2023
     * Juntar todas os commits do dia;
     * Export GitPages.
     
-* 0.3.1.0 - 17/0/2023
+* 0.3.1.0 - 17/03/2023
     * Adicionar abordagem do chefe do jonas no início da cena administrativo;
     * Polir partes da cena do apartamento (criar script novo, clonado do de cena administrativa, modificar o script do apartamento para poder rodar e modificar tamanho e velocidade do player nessa cena, além de zoom da câmera);
     * Modificar velocidade de animação de andar do player (em algumas cenas ficava muito e lento parecia que o player estava deslizando).
+ 
+* 0.3.1.2 - 17/03/2024
+    * Alteração das descrições dos objetivos na tela.
+    
+* 0.3.2.0 - 17/03/2023
+    * Adicionar primeira task do administrativo (ataque hacker, consultar com eq. seguranca de info);
+    * Aplicar sprite nova de acessibilidade para task dos fios;
+    * Consertar merge do script da cidade.
+    
+* 0.3.2.1 - 18/03/2023
+    * Limbo3 com dailies 3 e 4 (nomeadas 4 e 5) implementado;
+    * Export GitPages.
+    
+* 0.3.2.3 - 18/03/2023
+    * Adicionar Limbo4;
+    * Exportar para gitpages.
+    
+* 0.3.3.0 - 20/03/2023
+    * Polir push do thomas (task linkedin);
+    * Task arrumar coisas;
+    * Abordagem chefe final.
+    
 
 ## 📋 Licença/License
 
