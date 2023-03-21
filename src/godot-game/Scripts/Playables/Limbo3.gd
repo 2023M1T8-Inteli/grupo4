@@ -36,5 +36,4 @@ func _quiz2_finish():
 	
 func _on_TexturaCaixa2_finish():
 	Global.parte = "tecnico"
-	#SceneTransition.change_scene("res://Scenes/Playables/Environment/Cidade.tscn", 1, 1)
-	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)
+	SceneTransition.change_scene("res://Scenes/Playables/Environment/Tecnico.tscn", 1, 1)
