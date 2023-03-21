@@ -38,6 +38,7 @@ position = Vector2( 176, 80 )
 position = Vector2( 7.99998, -66 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="OvoButton" type="TextureButton" parent="Logo/AnimatedSprite"]
@@ -113,14 +114,14 @@ custom_fonts/normal_font = SubResource( 2 )
 text = " CONTROLES"
 
 [node name="GameVersion" type="RichTextLabel" parent="."]
-margin_left = 289.0
+margin_left = 270.0
 margin_top = 616.0
-margin_right = 383.0
+margin_right = 364.0
 margin_bottom = 656.0
 mouse_filter = 2
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
-text = " VER 0.3.3.0"
+text = " VER pre0.4.0.0"
 scroll_active = false
 
 [node name="Audio" parent="." instance=ExtResource( 8 )]
