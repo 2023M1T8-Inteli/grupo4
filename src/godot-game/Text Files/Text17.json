@@ -1,5 +1,6 @@
 [
     {"Name":"Chefe", "Text":"Precisa desenvolver novamente o template do feed do próximo mês."},
-    {"Name":"Jonas", "Text":"Não há necessidade de refazer aquilo hoje já que ainda faltam duas semanas para ser aplicado o template."},
-    {"Name":"Chefe", "Text":"Voce é pago para fazer o trabalho quando ele mandar na hora que manda"},
+    {"Name":"Jonas", "Text":"Mas... Não há necessidade de refazer isso hoje, já que ainda faltam duas semanas para ser aplicado o template."},
+    {"Name":"Chefe", "Text":"Voce é pago para fazer o trabalho na hora que eu mandar!"},
+    {"Name":"Chefe", "Text":"Agora volte ao trabalho!"},
 ]
