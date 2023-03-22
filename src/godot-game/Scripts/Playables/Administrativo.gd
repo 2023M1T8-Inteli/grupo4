@@ -18,7 +18,6 @@ func _ready():
 			print("ERROR ON DIALOGBOX 6 CONNECT")
 
 	Global.canMove = true
-	
 	if AdmGlobals.currentTask == 0:
 		# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
 		Global.activeObjective[0] = true
