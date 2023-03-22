@@ -100,8 +100,6 @@ func nextPhrase() -> void:
 	return
 
 
-
-
 func _on_TextureButton_pressed():
 	# Avança para a próxima frase se o diálogo foi finalizado
 	if finished:

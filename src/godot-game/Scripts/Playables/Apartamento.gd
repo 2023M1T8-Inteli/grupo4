@@ -49,6 +49,10 @@ func _abordagem_anim():
 	$"DialogBox 22/TexturaCaixa"._startDialog()
 
 func _on_dialog1_finish():
+	$AnimationPlayer.play_backwards("Abordagem")
+	
+	yield($AnimationPlayer, "animation_finished")
+	
 	$TaskRoteador.visible = true
 	$"DialogBox 22".visible = false
 	
@@ -59,8 +63,11 @@ func _on_dialog1_finish():
 
 
 func _on_BlogueiraButton_pressed():
+	$SpriteBlogueira/TouchScreenButton.visible = false
+	Global.canMove = false
 	$"DialogBox 23".visible = true
 	$"DialogBox 23/TexturaCaixa".connect("finish", self, "_on_dialog2_finish")
+	$"DialogBox 23/TexturaCaixa"._startDialog()
 	
 func _on_dialog2_finish():
 	$QuizTask.visible = true
@@ -69,4 +76,20 @@ func _on_dialog2_finish():
 	
 func _on_quiz_finish():
 	$"DialogBox 24".visible = true
+	$"DialogBox 24/TexturaCaixa"._startDialog()
 	$"DialogBox 24/TexturaCaixa".connect("finish", self, "_on_dialog3_finish")
+	
+func _on_dialog3_finish():
+	Global.canMove = true
+	
+	Global.activeObjective[0] = true
+	Global.activeObjective[1] = $PortaAncora.global_position
+	Global.activeObjective[2] = "Volte para o campo"
+	$Player.objective(false)
+	
+	$Area2D/CollisionShape2D.disabled = false
+
+
+func _on_Area2D_body_entered(body):
+	if body == $Player:
+		SceneTransition.change_scene("res://Scenes/Playables/Environment/Tecnico.tscn", 1, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Sprites/TileMaps/Tileset_16x16_13.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/TileMaps/2_LivingRoom_16x16.png" type="Texture" id=2]
@@ -1789,6 +1789,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 105/shapes = [  ]
 105/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 19, 10.5 )
+
 [sub_resource type="RectangleShape2D" id=26]
 
 [sub_resource type="SpriteFrames" id=23]
@@ -1936,8 +1939,17 @@ tile_data = PoolIntArray( -131033, 92, 0, 458794, 70, 0, 786492, 79, 0, 983096, 
 
 [node name="Audio" parent="GUI" instance=ExtResource( 22 )]
 
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2( 389, -30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 27 )
+disabled = true
+
 [node name="PortaAncora" type="Node2D" parent="."]
-position = Vector2( 381, -9 )
+position = Vector2( 389, -30 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 389, -31 )
@@ -1971,7 +1983,7 @@ scale = Vector2( 0.7, 0.7 )
 position = Vector2( 496, 157 )
 scale = Vector2( 0.04, 0.04 )
 frames = SubResource( 23 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="TaskRoteador"]
@@ -2000,14 +2012,15 @@ anims/RESET = SubResource( 25 )
 [node name="QuizTask" parent="." instance=ExtResource( 26 )]
 visible = false
 
-[node name="DialogBox 23" parent="." instance=ExtResource( 27 )]
+[node name="DialogBox 22" parent="." instance=ExtResource( 25 )]
 visible = false
 
-[node name="DialogBox 22" parent="." instance=ExtResource( 25 )]
+[node name="DialogBox 23" parent="." instance=ExtResource( 27 )]
 visible = false
 
 [node name="DialogBox 24" parent="." instance=ExtResource( 28 )]
 visible = false
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="pressed" from="SpriteBlogueira/TouchScreenButton" to="." method="_on_BlogueiraButton_pressed"]
 [connection signal="pressed" from="TaskRoteador/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
