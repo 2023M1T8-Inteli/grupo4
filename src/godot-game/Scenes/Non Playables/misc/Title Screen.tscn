@@ -121,7 +121,7 @@ margin_bottom = 656.0
 mouse_filter = 2
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
-text = " VER pre0.4.1.0"
+text = " VER pre0.4.1.1"
 scroll_active = false
 
 [node name="Audio" parent="." instance=ExtResource( 8 )]
