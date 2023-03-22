@@ -122,7 +122,7 @@ texture = ExtResource( 6 )
 script = ExtResource( 3 )
 dialogPath = "res://Quiz Files/Quiz0.json"
 jumpStartQuery = [ 0, 2 ]
-jumpStartFeedBack = [ 2, 2 ]
+jumpStartFeedBack = [ 2, 3 ]
 
 [node name="NomeNPC" type="RichTextLabel" parent="DialogBox/TexturaCaixa"]
 margin_left = 34.0
@@ -193,7 +193,7 @@ margin_bottom = 232.0
 mouse_filter = 2
 script = ExtResource( 2 )
 questionPath = "res://Quiz Files/Quiz0.json"
-firstCorrect = 4
+firstCorrect = 5
 
 [node name="Opcao1" type="Sprite" parent="Opcoes"]
 position = Vector2( 111, 278 )
