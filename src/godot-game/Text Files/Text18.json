@@ -1,5 +1,10 @@
 [
     {"Name":"Eq. Compliance", "Text":"Boa tarde, Jonas!"},
-    {"Name":"Eq. Compliance", "Text":"Lamento pelo ocorrido e obrigado por reportar tal situação."},
-    {"Name":"Eq. Compliance", "Text": "Já estamos analisando o caso e iremos tomar as medidas necessárias."},
+    {"Name":"Eq. Compliance", "Text":"No que podemos te ajudar?"},
+    {"Name":"Jonas", "Text":"Estou sofrendo assédio moral do meu chefe."},
+    {"Name":"Eq. Compliance", "Text":"Sentimos muito que esteja passando por isso..."},
+    {"Name":"Eq. Compliance", "Text":"Infelizmente, casos de assédio moral são muito comuns em ambientes de trabalho."},
+    {"Name":"Eq. Compliance", "Text":"Agradecemos sua denúncia, pois agora podemos agir na raiz do problema e assim"},
+    {"Name":"Eq. Compliance", "Text":"criar um ambiente de trabalho mais saudável e seguro para todos."},
+    {"Name":"Jonas", "Text":"Muito obrigado!"},
 ]
