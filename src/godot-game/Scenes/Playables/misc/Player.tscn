@@ -99,6 +99,7 @@ personagemAtivo = "terezinha"
 [node name="ActiveSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
 animation = "joninhasLado"
+frame = 3
 playing = true
 
 [node name="HitBox" type="CollisionShape2D" parent="."]

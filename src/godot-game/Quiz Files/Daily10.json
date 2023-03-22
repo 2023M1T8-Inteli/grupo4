@@ -1,0 +1,5 @@
+[
+    {"IsCorrect": "N", "Resposta": "Aceita tomar uma cervejinha"},
+    {"IsCorrect": "N", "Resposta": "Rejeita tomar a cerveja"},
+    {"IsCorrect": "Y", "Resposta": "Rejeita tomar a cerveja e aconselha seus colegas a fazerem o mesmo."},
+]
