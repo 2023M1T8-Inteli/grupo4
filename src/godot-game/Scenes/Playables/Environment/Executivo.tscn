@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16 - Copia.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 2.tscn" type="PackedScene" id=2]
@@ -26,6 +26,8 @@
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 14.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 15.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Sprites/TileMaps/NPC's/TesteNPC.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/TileMaps/NPC's/TesteNPCCostas.png" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -176,6 +178,50 @@ extents = Vector2( 8.5, 729 )
 12/shape_one_way_margin = 0.0
 12/shapes = [  ]
 12/z_index = 0
+13/name = "TesteNPC.png 13"
+13/texture = ExtResource( 27 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 16, 32 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+
+[sub_resource type="TileSet" id=33]
+0/name = "TesteNPC.png 0"
+0/texture = ExtResource( 27 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "TesteNPCCostas.png 1"
+1/texture = ExtResource( 28 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
@@ -1713,6 +1759,13 @@ cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 format = 1
 tile_data = PoolIntArray( -131069, 12, 0, -131063, -1610612727, 0, -131057, -1610612727, 0, 131081, -1610612727, 0, 131087, -1610612727, 0, 262153, -1610612727, 0, 262159, -1610612727, 0, 458761, -1610612727, 0, 458767, -1610612727, 0, 589839, -1610612727, 0, 786447, -1610612727, 0, 851983, -1610612727, 0 )
 
+[node name="NPC2" type="TileMap" parent="map"]
+position = Vector2( 185, -168 )
+tile_set = SubResource( 33 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+
 [node name="Objeto" type="TileMap" parent="map"]
 tile_set = SubResource( 14 )
 cell_size = Vector2( 16, 16 )
@@ -1756,6 +1809,12 @@ collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, -65505, 8, 0, -65502, 11, 0, -65500, 12, 0, -65497, 13, 0, -65495, 8, 0, 10, 54, 0, 14, 54, 0, 196642, 55, 0, 196646, 55, 0, 393227, 82, 0, 393252, 83, 0, 524302, 76, 0, 589830, 8, 0, 589832, 81, 0, 589834, 11, 0, 589841, 8, 0, 589859, 22, 0, 655394, 63, 0, 655396, 54, 0, 655398, 66, 0, 655400, 45, 0, 983074, 53, 0, 1048587, 83, 0, 1048612, 83, 0, 1179686, 78, 0, 1245190, 8, 0, 1245192, 69, 0, 1245198, 23, 0, 1245201, 8, 0, 1245215, 13, 0, 1245216, 43, 0, 1245218, 11, 0, 1245222, 10, 0, 1572902, 54, 0, 1835017, 78, 0, 1835020, 77, 0, 1835023, 79, 0, 1900551, 13, 0 )
 
+[node name="NPC" type="TileMap" parent="map"]
+tile_set = SubResource( 33 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+
 [node name="NPCQuiz1" type="ColorRect" parent="."]
 margin_left = 310.0
 margin_top = 31.0
@@ -1771,7 +1830,6 @@ shape = SubResource( 21 )
 position = Vector2( 10, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 1
 playing = true
 
 [node name="AncoraQuiz1" type="Node2D" parent="NPCQuiz1"]
@@ -1847,7 +1905,7 @@ visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
@@ -1903,28 +1961,28 @@ visible = false
 position = Vector2( 544, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 8
+frame = 7
 playing = true
 
 [node name="BalaoExclamacao2" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 592, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="BalaoExclamacao3" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="BalaoExclamacao4" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 523 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="Quiz2Ancora" type="Node2D" parent="ControlQuiz2"]
@@ -1980,7 +2038,7 @@ position = Vector2( 156, 370 )
 position = Vector2( 156, 347 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="NPCCompQuiz2Botao" type="TouchScreenButton" parent="ControlQuiz2/Eq Compliance"]

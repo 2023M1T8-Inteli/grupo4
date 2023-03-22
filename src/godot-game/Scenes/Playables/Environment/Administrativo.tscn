@@ -1242,6 +1242,7 @@ shape = SubResource( 21 )
 position = Vector2( -1, -27 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
+frame = 4
 playing = true
 
 [node name="ComputadorAncora" type="Node2D" parent="Task1ADM"]
