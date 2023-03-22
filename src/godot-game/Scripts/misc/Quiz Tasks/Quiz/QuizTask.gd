@@ -3,7 +3,7 @@
 extends CanvasLayer
 
 func _ready():
-	_startQuiz()
+	#_startQuiz()
 	pass
 
 func _startQuiz():

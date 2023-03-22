@@ -29,8 +29,8 @@ func _reset():
 #func _ready():
 	#_startQuiz()
 	#if $DialogBox/TexturaCaixa.connect("quizCorrect", self, "_finish_quiz2") != OK:
-	#		print("ERROR ON QUIZCORRECT CONNECT")
-	pass
+			#print("ERROR ON QUIZCORRECT CONNECT")
+	#pass
 
 func _startQuiz():
 	if $DialogBox/TexturaCaixa.connect("finishDialog", self, "_on_TexturaCaixa_finish") != OK:
