@@ -26,7 +26,7 @@ func _process(_delta):
 	
 	$Task0TEC.visible = true if (TecGlobals.currentTask == 0) else false
 	$Task1TEC.visible = true if (TecGlobals.currentTask == 1) else false
-	$Task2TEC.visible = true if (TecGlobals.currentTask == 2) else false
+	#$Task2TEC.visible = true if (TecGlobals.currentTask == 2) else false
 
 
 

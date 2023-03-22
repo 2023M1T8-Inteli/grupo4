@@ -3858,7 +3858,6 @@ visible = false
 position = Vector2( 1276, 1616 )
 
 [node name="Task2TEC" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 38 )
@@ -3882,7 +3881,7 @@ position = Vector2( 1339, 113 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 2
 frames = SubResource( 50 )
-frame = 3
+frame = 9
 playing = true
 
 [node name="Position2D" type="Position2D" parent="Task2TEC"]
@@ -3949,7 +3948,7 @@ shape = SubResource( 32 )
 position = Vector2( 0, 132.42 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 34 )
-frame = 3
+frame = 9
 playing = true
 
 [connection signal="body_entered" from="Task1TEC/Area2D" to="Task1TEC" method="_on_Area2D_body_entered"]
