@@ -1938,7 +1938,7 @@ scale = Vector2( 0.7, 0.7 )
 position = Vector2( 498, 156 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 21 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="TaskRoteador"]
@@ -1950,6 +1950,7 @@ shape = SubResource( 22 )
 
 [node name="TextureProgress" type="TextureProgress" parent="TaskRoteador"]
 visible = false
+modulate = Color( 1, 1, 1, 0.639216 )
 margin_left = 487.0
 margin_top = 119.0
 margin_right = 665.0

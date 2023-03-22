@@ -6,9 +6,11 @@ func _ready():
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $TaskRoteador/RoteadorAncora.global_position
 	Global.activeObjective[2] = "Consertar o roteador"
+	
+	$Player.objective(false)
 
 func animate():
-	$TaskRoteador/Tween.interpolate_property($TaskRoteador/TextureProgress, "value", 0, 100, 1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	$TaskRoteador/Tween.interpolate_property($TaskRoteador/TextureProgress, "value", 0, 100, 2.5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	$TaskRoteador/Tween.start()
 
 func _on_TouchScreenButton_pressed():
@@ -18,7 +20,7 @@ func _on_TouchScreenButton_pressed():
 		Global.canMove = false
 		
 		animate()
-		yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(2.5), "timeout")
 		
 		Global.canMove = true
 		$TaskRoteador/TextureProgress.visible = false
