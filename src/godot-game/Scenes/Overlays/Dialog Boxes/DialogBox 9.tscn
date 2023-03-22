@@ -4,7 +4,6 @@
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=2]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=4]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 39
 font_data = ExtResource( 4 )
@@ -117,10 +116,10 @@ anims/hover = SubResource( 4 )
 wait_time = 0.05
 
 [node name="TextureButton" type="TextureButton" parent="TexturaCaixa"]
-margin_left = -14.0
-margin_top = -461.0
-margin_right = 346.0
-margin_bottom = 179.0
+margin_left = -16.0
+margin_top = -544.0
+margin_right = 344.0
+margin_bottom = 96.0
 mouse_filter = 1
 action_mode = 0
 
