@@ -6,6 +6,7 @@ onready var lockIf0 = true # Variável de controle para o método _on_ExplodeTim
 
 func _ready():
 	$GUI/Audio.set_volume(Global.volPercentage)
+	Global.playbackPos = 0
 	Global.isDrunk = true # Define o personagem como bêbado
 	Global.activeObjective[0] = false # Define a primeira tarefa como inativa
 
@@ -47,16 +48,18 @@ func _on_ExplodeTimer_timeout():
 	if lockIf0 == true: 
 		lockIf0 = false  # Desativa a variável de controle
 		renderAmong(false)  # Esconde a tarefa de fios
-		$GUI/Audio.play_ambient("res://Audio Files/explosion.mp3") # Toca o som de explosão
+		$GUI/Audio.set_playback_pos("res://Audio Files/explosion.mp3" , Global.playbackPos) # Toca o som de explosão
 		$ExplodeSprite.frame = 0  # Define o primeiro frame da animação de explosão
 		$ExplodeSprite.visible = true  # Torna o sprite de explosão visível
 		$ExplodeSprite.playing = true  # Inicia a animação de explosão
 		$SceneChangeTimer.start()  # Inicia o timer para mudar de cena
 
 func _on_SceneChangeTimer_timeout():
+	# Define onde o som estava quando a cena e trocada
+	$GUI/Audio.get_playback_pos()
+	
 	# Muda para a cena do hospital utilizando a transição.
 	SceneTransition.change_scene("res://Scenes/Non Playables/Animations/ZeHospital.tscn", 3, 1)
-
 func _on_amongButton_pressed():
 	Global.canMove = false  # Impede o jogador de se mover
 	yield(get_tree().create_timer(0.15), "timeout")  # Espera por 0.15 segundos

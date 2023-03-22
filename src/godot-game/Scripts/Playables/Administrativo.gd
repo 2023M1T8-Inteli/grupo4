@@ -18,7 +18,6 @@ func _ready():
 			print("ERROR ON DIALOGBOX 6 CONNECT")
 
 	Global.canMove = true
-	
 	if AdmGlobals.currentTask == 0:
 		# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
 		Global.activeObjective[0] = true
@@ -28,8 +27,18 @@ func _ready():
 		$map/Elevador/TextureButton.visible = false
 		$Task1ADM.visible = true
 	elif AdmGlobals.currentTask == 1:
-		reincarn()
+		Global.activeObjective[0] = true
+		Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
+		Global.activeObjective[2] = "Volte ao trabalho"
+		$Player.objective(true)
+		$Task2ADM.visible = true
 		
+	elif AdmGlobals.currentTask == 2:
+		Global.activeObjective[0] = true
+		Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
+		Global.activeObjective[2] = "Arrume suas coisas e vá para casa"
+		$Player.objective(true)
+		$Task3ADM.visible = true
 		
 	# Se a posição atual for em um cenário jogável, posicione o jogador na posição atual
 	# Caso contrário, posicione-o na posição da cidade e toque a animação de transição
@@ -67,7 +76,7 @@ func _on_TextureButton_pressed():
 		if get_tree().change_scene("res://Scenes/Playables/Environment/Cidade.tscn") != OK:
 			print("ERRO")
 			
-	if closeToPorta and AdmGlobals.currentTask == 1:
+	if closeToPorta and (AdmGlobals.currentTask == 1 or AdmGlobals.currentTask == 2 or AdmGlobals.currentTask == 3):
 		# Impede o movimento do jogador durante a transição de cena
 		Global.canMove = false
 		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada
@@ -75,7 +84,7 @@ func _on_TextureButton_pressed():
 		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
 		if get_tree().change_scene("res://Scenes/Playables/Environment/ExecutivoFake.tscn") != OK:
 			print("ERRO")
-
+			
 func _play_abordagem_anim():
 	Global.canMove = false
 	

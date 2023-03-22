@@ -12,6 +12,9 @@ func set_playback_pos(path, pos):
 	$Music.stream = load(path)
 	$Music.play(pos)
 
+func stop():
+	$Music.playing = false
+
 func set_volume(vol):
 	if vol == 0:
 		volume = -80

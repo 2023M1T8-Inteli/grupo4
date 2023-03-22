@@ -121,8 +121,8 @@ rect_pivot_offset = Vector2( 51, 17 )
 texture = ExtResource( 6 )
 script = ExtResource( 1 )
 dialogPath = "res://Quiz Files/Quiz2.json"
-jumpStartQuery = [ 0, 3 ]
-jumpStartFeedBack = [ 3, 1 ]
+jumpStartQuery = [ 0, 8 ]
+jumpStartFeedBack = [ 8, 1 ]
 
 [node name="NomeNPC" type="RichTextLabel" parent="DialogBox/TexturaCaixa"]
 margin_left = 34.0
@@ -193,7 +193,7 @@ margin_bottom = 134.0
 mouse_filter = 2
 script = ExtResource( 3 )
 questionPath = "res://Quiz Files/Quiz2.json"
-firstCorrect = 4
+firstCorrect = 9
 
 [node name="Opcao1" type="Sprite" parent="Opcoes"]
 position = Vector2( 111, 278 )

@@ -1,8 +1,13 @@
 [
-    {"Name":"Colega 1", "Text":"conversa politica"},
-    {"Name":"Colega 2", "Text":"vo bota nas midias kkkkk"},
-    {"Name":"Colega 3", "Text":"la eele"},
-    {"Name":"Colega 2", "Text": "eu desdenho da ideiakkkkkk se fode"},
+    {"Name":"Colega 1", "Text":"Oi Tereza, como você está?"},
+    {"Name":"Tereza", "Text":"B-bem."},
+    {"Name":"Colega 1", "Text":"Estavamos conversando os motivos do meu político ser o melhor dentre todos."},
+    {"Name":"Colega 2", "Text":"Sim, concordo completamente!"},
+    {"Name":"Colega 1", "Text":"Inclusive pretendo postar meu apoio a ele nas redes sociais."},
+    {"Name":"Colega 1", "Text": "E vou marcar a V.tal, dessa forma ter ainda mais visibilidade!"},
+    {"Name":"Colega 3", "Text":"Você acha que é uma boa ideia?"},
+    {"Name":"Colega 1", "Text": "Claro, por que não seria? Concorda Tereza?"},
+    {"Name":"Colega 1", "Text": "Não concordo com você, vou publicar mesmo assim!"},
     {"IsCorrect": "Y", "Resposta": "O aconselha a procurar a equipe de compliance antes de fazer isso"},
     {"IsCorrect": "N", "Resposta": "Apoiar a decisão do colega"}
 ]

@@ -84,7 +84,7 @@ func getDialog() -> Array:
 
 func nextPhrase() -> void:
 	if (phraseNum - startPhraseNum) == howManyPhrases:
-		if startPhraseNum == 3:
+		if startPhraseNum == 8:
 			self.get_parent().get_parent().visible = false
 			emit_signal("quizCorrect")
 		return

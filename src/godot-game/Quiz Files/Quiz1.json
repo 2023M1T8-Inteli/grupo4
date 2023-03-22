@@ -1,9 +1,10 @@
 [
-    {"Name":"Colaborador", "Text":"cantadas e elogios mal intencionados"},
-    {"Name":"Tereza", "Text":"[color=#7e7e7e]Estou incrivelmente incomodada com a situação[/color]"},
-    {"Name":"Eq. Compliance", "Text":"Boa tarde, Tereza!"},
+    {"Name":"Colaborador", "Text":"Fiu fiu, que gata ein Tereza, ô lá em casa"},
+    {"Name":"Tereza", "Text":"[color=#7e7e7e]Estou incrivelmente incomodada com a situação, vou denunciar esse cara no Compliance.[/color]"},
+    {"Name":"Tereza", "Text":"Gostaria de denunciar um caso de assédio."},
     {"Name":"Eq. Compliance", "Text":"Lamentamos pelo ocorrido, estamos tomando as medidas necessárias para que isso não volte a acontecer e que o colaborador seja punido."},
     {"Name":"Eq. Compliance", "Text":"Qualquer suporte necessário, não existe para nos contactar. Obrigado pela confiança."},
+    {"Name":"Tereza", "Text":"Obrigada!"},
     {"IsCorrect": "N", "Resposta": "Sair do elevador e fingir que nada aconteceu."},
     {"IsCorrect": "N", "Resposta": "Reagir ao assédio de maneira agressiva."},
     {"IsCorrect": "Y", "Resposta": "Sair do elevador e contactar a equipe de compliance imediatamente."},

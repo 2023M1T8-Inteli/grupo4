@@ -1,59 +1,95 @@
 extends Node2D
 
-# Variáveis para referenciar a câmera, o mapa e seus limites
-onready var camera: Camera2D = get_node("Player/Camera2D")
-onready var map = get_node("map")
-onready var children = get_node("map").get_children()
-var map_width = 0
-var map_height = 0
-
-var closeToPorta
+var taskFeita = false
 
 func _ready():
-	# Define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (Representa a entrada do prédio)
-	Global.activeObjective[0] = false # true
-	#Global.activeObjective[1] = $ComputadorJonas/ComputadorAncora.global_position
+	Global.canMove = false
 	
-	# Habilita o movimento do jogador
+	$Player/Camera2D.zoom = Vector2(0.4, 0.4)
+	
+	_abordagem_anim()
+	
+func animate():
+	$TaskRoteador/Tween.interpolate_property($TaskRoteador/TextureProgress, "value", 0, 100, 2.5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	$TaskRoteador/Tween.start()
+
+func _on_TouchScreenButton_pressed():
+	if taskFeita == false:
+		if ($Player.global_position).distance_to($TaskRoteador/RoteadorAncora.global_position) < 30:
+			$TaskRoteador/TextureProgress.visible = true
+			Global.activeObjective[0] = false
+			Global.canMove = false
+			
+			animate()
+			yield(get_tree().create_timer(2.5), "timeout")
+			
+			Global.canMove = true
+			$TaskRoteador/TextureProgress.visible = false
+			$TaskRoteador/BalaoObj.visible = false
+			
+			taskFeita = true
+			
+			Global.activeObjective[1] = $SpriteBlogueira/Position2D.global_position
+			Global.activeObjective[2] = "Fale com a Blogueira"
+			
+			$SpriteBlogueira/TouchScreenButton.visible = true
+			
+			$Player.objective(false)
+			
+			
+func _abordagem_anim():
+	yield(get_tree().create_timer(1), "timeout")
+	
+	$AnimationPlayer.play("Abordagem")
+	
+	yield($AnimationPlayer, "animation_finished")
+	
+	$"DialogBox 22/TexturaCaixa".connect("finish", self, "_on_dialog1_finish")
+	$"DialogBox 22".visible = true
+	$"DialogBox 22/TexturaCaixa"._startDialog()
+
+func _on_dialog1_finish():
+	$AnimationPlayer.play_backwards("Abordagem")
+	
+	yield($AnimationPlayer, "animation_finished")
+	
+	$TaskRoteador.visible = true
+	$"DialogBox 22".visible = false
+	
+	Global.activeObjective[0] = true
+	Global.activeObjective[1] = $TaskRoteador/RoteadorAncora.global_position
+	Global.activeObjective[2] = "Consertar o roteador"
+	$Player.objective(true)
+
+
+func _on_BlogueiraButton_pressed():
+	$SpriteBlogueira/TouchScreenButton.visible = false
+	Global.canMove = false
+	$"DialogBox 23".visible = true
+	$"DialogBox 23/TexturaCaixa".connect("finish", self, "_on_dialog2_finish")
+	$"DialogBox 23/TexturaCaixa"._startDialog()
+	
+func _on_dialog2_finish():
+	$QuizTask.visible = true
+	$QuizTask.connect("quizFinish", self, "_on_quiz_finish")
+	$QuizTask._startQuiz()
+	
+func _on_quiz_finish():
+	$"DialogBox 24".visible = true
+	$"DialogBox 24/TexturaCaixa"._startDialog()
+	$"DialogBox 24/TexturaCaixa".connect("finish", self, "_on_dialog3_finish")
+	
+func _on_dialog3_finish():
 	Global.canMove = true
 	
-	# Se a posição atual for em um cenário jogável, posicione o jogador na posição atual
-	# Caso contrário, posicione-o na posição da cidade e toque a animação de transição
-	if pos.posScene == "res://Scenes/Playables/Environment/Apartamento.tscn":
-		$Player.global_position = pos.currentPos
-		pos.posScene = null
-	else:
-		$Player.global_position = pos.posADM
-		print($Player.global_position)
-		#$WalkInPlayer.play("WalkIn")
-		#Global.moving = true
+	Global.activeObjective[0] = true
+	Global.activeObjective[1] = $PortaAncora.global_position
+	Global.activeObjective[2] = "Volte para o campo"
+	$Player.objective(false)
 	
-	# Define o zoom da câmera e obtém os limites do mapa
-	camera.zoom = Vector2(0.3,0.3)
-	set_process(true)
+	$Area2D/CollisionShape2D.disabled = false
 
-func _process(_delta):
-	# Define os limites da câmera para o tamanho do mapa
-	camera.limit_left = 0
-	camera.limit_top = 0
-	camera.limit_right = 576
-	camera.limit_bottom = 640
-	
-	# Verifica se o jogador está próximo da porta de interação
-	if $Player/HitBox.global_position.distance_to($PortaAncora.global_position) < 160:
-		closeToPorta = true
-	else:
-		closeToPorta = false
-func _on_TextureButton_pressed():
-	# Verifica se o jogador está perto da porta
-	if closeToPorta:
-		# Impede o movimento do jogador durante a transição de cena
-		Global.canMove = false
-		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada
-		yield(get_tree().create_timer(0.15), "timeout")
-		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
-		if get_tree().change_scene("res://Scenes/Playables/Environment/Cidade.tscn") != OK:
-			print("ERRO")
 
-func _on_BotaoComputador_pressed():
-	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)
+func _on_Area2D_body_entered(body):
+	if body == $Player:
+		SceneTransition.change_scene("res://Scenes/Playables/Environment/Tecnico.tscn", 1, 1)
