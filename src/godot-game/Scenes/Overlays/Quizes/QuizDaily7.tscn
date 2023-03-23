@@ -27,6 +27,7 @@ margin_bottom = 637.0
 color = Color( 0, 0, 0, 0.286275 )
 
 [node name="Opcoes" type="Control" parent="."]
+visible = false
 margin_left = 69.0
 margin_top = 232.0
 margin_right = 69.0

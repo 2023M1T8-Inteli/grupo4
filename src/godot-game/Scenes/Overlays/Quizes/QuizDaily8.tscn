@@ -31,6 +31,7 @@ margin_bottom = 637.0
 color = Color( 0, 0, 0, 0.286275 )
 
 [node name="Opcoes" type="Control" parent="."]
+visible = false
 margin_left = 69.0
 margin_top = 232.0
 margin_right = 69.0
@@ -40,6 +41,7 @@ script = ExtResource( 3 )
 questionPath = "res://Quiz Files/Daily8.json"
 
 [node name="Opcao1" type="Sprite" parent="Opcoes"]
+visible = false
 position = Vector2( 111, 278 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 6 )
@@ -119,8 +121,8 @@ margin_right = 234.0
 margin_bottom = -147.0
 custom_fonts/normal_font = SubResource( 10 )
 bbcode_enabled = true
-bbcode_text = "[center]O que devo fazer caso eu sofra ou presencie um caso de assédio na empresa?[/center]"
-text = "O que devo fazer caso eu sofra ou presencie um caso de assédio na empresa?"
+bbcode_text = "[center]Como reagir a comentários ofensivos envolvendo meus colegas ou a empresa?[/center]"
+text = "Como reagir a comentários ofensivos envolvendo meus colegas ou a empresa?"
 scroll_active = false
 
 [connection signal="pressed" from="Opcoes/Opcao1/Opcao1/TextoBut" to="Opcoes/Opcao1/Opcao1/TextoBut" method="_on_TextoBut_pressed"]
