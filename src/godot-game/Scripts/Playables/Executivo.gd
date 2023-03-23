@@ -56,17 +56,13 @@ func _process(_delta):
 	else:
 		closeToPorta = false
 	
-	if $"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa".phraseNum == 1 and $"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa".finished == false and ExecutivoGlobals.deadBolt0:
-			ExecutivoGlobals.deadBolt0 = false
+	if $"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa/NomeNPC".text == "Zé":
 			$ReuniaoAncora/ReuniaoAnim/Camera2D.position = $Player/Camera2D.global_position
-			#_reuniao_anim().resume()
-			print("AGORA?")
-	if $"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa".phraseNum == 2 and $"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa".finished == false and ExecutivoGlobals.deadBolt1:
-			ExecutivoGlobals.deadBolt1 = false
+	elif $"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa/NomeNPC".text == "NPC Chefe":
 			$ReuniaoAncora/ReuniaoAnim/Camera2D.position = Vector2(37,596)
 	
 	if updateTimer:
-		$ControlQuiz2/CanvasLayer/RichTextLabel.text = str(int($ControlQuiz2/Timer.time_left))
+		$ControlQuiz2/CanvasLayer/RichTextLabel.bbcode_text = "[center]"+str(int($ControlQuiz2/Timer.time_left))+"[/center]"
 	
 func _on_TextureButton_pressed():
 	# Verifica se o jogador está perto da porta
@@ -101,9 +97,10 @@ func _reuniao_anim():
 	$"ReuniaoAncora/ReuniaoAnim/DialogBox 2".visible = true
 	$"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa"._startDialog()
 	yield($"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa", "finish")
-	$ReuniaoAncora/ReuniaoAnim.playback_speed = 2
-	$ReuniaoAncora/ReuniaoAnim.play_backwards("CameraFlyOver")
-	yield($ReuniaoAncora/ReuniaoAnim, 'animation_finished')
+#
+#	$ReuniaoAncora/ReuniaoAnim.playback_speed = 2
+#	$ReuniaoAncora/ReuniaoAnim.play_backwards("CameraFlyOver")
+#	yield($ReuniaoAncora/ReuniaoAnim, 'animation_finished')
 	
 	$ReuniaoAncora/ReuniaoAnim.playback_speed = 1
 	
@@ -221,15 +218,18 @@ func _finish_quiz2():
 	$Quiz2/CollisionShape2D.disabled = true
 	#$ControlQuiz2.visible = false
 	
+	
+	$"ControlQuiz2/Eq Compliance".visible = true
+	Global.activeObjective[0] = true
+	Global.activeObjective[1] = $"ControlQuiz2/Eq Compliance/NPCBomAncora".global_position
+	Global.activeObjective[2] = "Fale com a equipe de Compliance."
+	$Player.objective(true)
+	
+	yield(get_tree().create_timer(4), "timeout")
+	
 	$ControlQuiz2/CanvasLayer.visible = true
 	$ControlQuiz2/Timer.start()
 	updateTimer = true
-	
-	
-	$"ControlQuiz2/Eq Compliance".visible = true
-	Global.activeObjective[1] = $"ControlQuiz2/Eq Compliance/NPCBomAncora".global_position
-	Global.activeObjective[2] = "Fale com a equipe de Compliance."
-	$Player.objective(false)
 
 func _on_Reuniao_body_entered(body):
 	if body == $Player and ExecutivoGlobals.reuniao:

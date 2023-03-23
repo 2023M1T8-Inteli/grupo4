@@ -16,9 +16,13 @@ func _on_BotaoComputador_pressed():
 		Global.activeObjective[1] = self.get_parent().get_node("PortaAncora").global_position
 		Global.activeObjective[2] = "Vá para o segundo andar."
 		
+		get_parent().get_node("GUI").visible = false
+		
 		$TelaComputador.visible = true
-		yield(get_tree().create_timer(1), "timeout")
-		$TelaComputador/Comentarios.visible = true #trocar para sprite de comentarios
+		yield(get_tree().create_timer(2), "timeout")
+		$TelaComputador/LinkedIn.visible = true
+		yield(get_tree().create_timer(2), "timeout")
+		$TelaComputador/Comentarios.visible = true
 		
 		yield(get_tree().create_timer(5), "timeout")
 		
@@ -32,7 +36,8 @@ func _on_quiz_finish():
 	Global.canMove = true
 	
 	$TelaComputador.visible = false
-	$TelaComputador/Comentarios.visible = false
+	
+	get_parent().get_node("GUI").visible = true
 	
 	AdmGlobals.currentTask = 2
 	self.get_parent().get_node("map/Elevador/TextureButton").visible = true

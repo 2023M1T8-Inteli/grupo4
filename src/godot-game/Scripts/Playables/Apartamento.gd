@@ -10,6 +10,7 @@ func _ready():
 	
 	Global.canMove = false
 	
+	$Player/Camera2D.current = true
 	$Player/Camera2D.zoom = Vector2(0.3, 0.3)
 	
 	_abordagem_anim()

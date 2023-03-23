@@ -38,6 +38,9 @@ func _on_Area2D_body_entered(body):
 		
 		$"DialogBox 18".visible = true
 		$"DialogBox 18/TexturaCaixa"._startDialog()
+		
+		$Area2D/CollisionShape2D.disabled = true
+		$Area2D/CollisionShape2D2.disabled = true
 
 func _finish_dialog():
 	$QuizTask.visible = true

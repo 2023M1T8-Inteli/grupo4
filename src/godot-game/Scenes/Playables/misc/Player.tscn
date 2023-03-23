@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Sprites/Jonas/joninhasCima1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Playables/Player.gd" type="Script" id=2]
@@ -16,6 +16,18 @@
 [ext_resource path="res://Scripts/misc/Camera2D.gd" type="Script" id=14]
 [ext_resource path="res://Sprites/Jonas/joninhasLado3.png" type="Texture" id=15]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://Sprites/Joao/joaozinhoLado2.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Joao/joaozinhoBaixo2.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Joao/joaozinhoBaixo4.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Joao/joaozinhoLado3.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Joao/joaozinhoLado4.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Joao/joaozinhoCima1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Joao/joaozinhoBaixo1.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Joao/joaozinhoCima4.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Joao/joaozinhoBaixo3.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Joao/joaozinhoLado1.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Joao/joaozinhoCima2.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Joao/joaozinhoCima3.png" type="Texture" id=28]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (3).png" type="Texture" id=35]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (1).png" type="Texture" id=36]
 [ext_resource path="res://Sprites/Ze/zezinhoBaixo (2).png" type="Texture" id=37]
@@ -37,6 +49,21 @@
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "joaozinhoBaixo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "joaozinhoCima",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "joaozinhoLado",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "joninhasBaixo",
@@ -98,8 +125,8 @@ personagemAtivo = "terezinha"
 
 [node name="ActiveSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
-animation = "joninhasLado"
-frame = 2
+animation = "joaozinhoCima"
+frame = 1
 playing = true
 
 [node name="HitBox" type="CollisionShape2D" parent="."]

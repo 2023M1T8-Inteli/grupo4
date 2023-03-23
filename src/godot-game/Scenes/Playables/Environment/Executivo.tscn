@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16 - Copia.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 2.tscn" type="PackedScene" id=2]
@@ -263,12 +263,6 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 12, 0, 12 )
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=38]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
 [sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 
@@ -286,9 +280,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=42]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 24, 0, 24 )
-
-[sub_resource type="ConvexPolygonShape2D" id=43]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=44]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 40, 0, 40 )
@@ -323,27 +314,6 @@ points = PoolVector2Array( 0, 0, 104, 0, 104, 48, 0, 48 )
 [sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 48, 0, 48 )
 
-[sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=53]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=54]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=55]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=56]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=57]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=58]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
 [sub_resource type="ConvexPolygonShape2D" id=59]
 points = PoolVector2Array( 0, 0, 44, 0, 44, 24, 0, 24 )
 
@@ -376,16 +346,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 8 )
 0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 8 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
 0/z_index = 0
 1/name = "Modern_Office_16x16.png 1"
 1/texture = ExtResource( 10 )
@@ -397,16 +360,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 38 )
 1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 38 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
 1/z_index = 0
 2/name = "Modern_Office_16x16.png 2"
 2/texture = ExtResource( 10 )
@@ -418,16 +374,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 43 )
 2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 43 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
 2/z_index = 0
 3/name = "Modern_Office_16x16.png 3"
 3/texture = ExtResource( 10 )
@@ -481,16 +430,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 13 )
 5/shape_one_way = false
-5/shape_one_way_margin = 1.0
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 13 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
 5/z_index = 0
 6/name = "Modern_Office_16x16.png 6"
 6/texture = ExtResource( 10 )
@@ -1292,16 +1234,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 54/navigation_offset = Vector2( 0, 0 )
 54/shape_offset = Vector2( 0, 0 )
 54/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-54/shape = SubResource( 53 )
 54/shape_one_way = false
-54/shape_one_way_margin = 1.0
-54/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 53 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+54/shape_one_way_margin = 0.0
+54/shapes = [  ]
 54/z_index = 0
 55/name = "Modern_Office_16x16.png 55"
 55/texture = ExtResource( 10 )
@@ -1313,16 +1248,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 55/navigation_offset = Vector2( 0, 0 )
 55/shape_offset = Vector2( 0, 0 )
 55/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-55/shape = SubResource( 54 )
 55/shape_one_way = false
-55/shape_one_way_margin = 1.0
-55/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 54 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+55/shape_one_way_margin = 0.0
+55/shapes = [  ]
 55/z_index = 0
 56/name = "Modern_Office_16x16.png 56"
 56/texture = ExtResource( 10 )
@@ -1334,16 +1262,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 56/navigation_offset = Vector2( 0, 0 )
 56/shape_offset = Vector2( 0, 0 )
 56/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-56/shape = SubResource( 55 )
 56/shape_one_way = false
-56/shape_one_way_margin = 1.0
-56/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 55 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+56/shape_one_way_margin = 0.0
+56/shapes = [  ]
 56/z_index = 0
 57/name = "Modern_Office_16x16.png 57"
 57/texture = ExtResource( 10 )
@@ -1355,16 +1276,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 57/navigation_offset = Vector2( 0, 0 )
 57/shape_offset = Vector2( 0, 0 )
 57/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-57/shape = SubResource( 56 )
 57/shape_one_way = false
-57/shape_one_way_margin = 1.0
-57/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 56 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+57/shape_one_way_margin = 0.0
+57/shapes = [  ]
 57/z_index = 0
 58/name = "Modern_Office_16x16.png 58"
 58/texture = ExtResource( 10 )
@@ -1376,16 +1290,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 58/navigation_offset = Vector2( 0, 0 )
 58/shape_offset = Vector2( 0, 0 )
 58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-58/shape = SubResource( 57 )
 58/shape_one_way = false
-58/shape_one_way_margin = 1.0
-58/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 57 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+58/shape_one_way_margin = 0.0
+58/shapes = [  ]
 58/z_index = 0
 59/name = "Modern_Office_16x16.png 59"
 59/texture = ExtResource( 10 )
@@ -1397,16 +1304,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 59/navigation_offset = Vector2( 0, 0 )
 59/shape_offset = Vector2( 0, 0 )
 59/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-59/shape = SubResource( 58 )
 59/shape_one_way = false
-59/shape_one_way_margin = 1.0
-59/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 58 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+59/shape_one_way_margin = 0.0
+59/shapes = [  ]
 59/z_index = 0
 60/name = "Modern_Office_16x16.png 60"
 60/texture = ExtResource( 10 )
@@ -2149,6 +2049,7 @@ shape = SubResource( 21 )
 position = Vector2( 10, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
+frame = 4
 playing = true
 
 [node name="AncoraQuiz1" type="Node2D" parent="NPCQuiz1"]
@@ -2224,7 +2125,7 @@ visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
@@ -2280,28 +2181,27 @@ visible = false
 position = Vector2( 544, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="BalaoExclamacao2" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 592, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="BalaoExclamacao3" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 5
 playing = true
 
 [node name="BalaoExclamacao4" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 523 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 4
+frame = 8
 playing = true
 
 [node name="Quiz2Ancora" type="Node2D" parent="ControlQuiz2"]
@@ -2320,12 +2220,20 @@ one_shot = true
 layer = 2
 visible = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ControlQuiz2/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="ControlQuiz2/CanvasLayer"]
 margin_left = 164.0
 margin_top = 246.0
 margin_right = 208.0
 margin_bottom = 286.0
+color = Color( 0, 0, 0, 0.494118 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ControlQuiz2/CanvasLayer"]
+margin_left = 164.0
+margin_top = 248.0
+margin_right = 208.0
+margin_bottom = 288.0
 custom_fonts/normal_font = SubResource( 29 )
+bbcode_enabled = true
 scroll_active = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ControlQuiz2"]
@@ -2357,7 +2265,7 @@ position = Vector2( 156, 370 )
 position = Vector2( 156, 347 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="NPCCompQuiz2Botao" type="TouchScreenButton" parent="ControlQuiz2/Eq Compliance"]
