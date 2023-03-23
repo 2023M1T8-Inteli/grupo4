@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export1.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/BalaoExclamacao/tiina-hirvonen-mark-export7.png" type="Texture" id=2]
@@ -1342,6 +1342,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 } ]
 48/z_index = 0
 
+[sub_resource type="TileSet" id=61]
+
 [sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
@@ -1487,6 +1489,11 @@ collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -131064, 48, 0, -131054, 47, 0, -131036, 48, 0, 851976, 536870920, 0, 851981, 536870956, 0, 851983, 536870936, 0, 851992, 536870938, 0, 851995, 536870920, 0, 917512, 536870920, 0, 917513, 536870935, 0, 917516, 536870947, 0, 917528, 536870949, 0, 917531, 536870920, 0, 917541, 536870912, 0, 983053, 536870912, 0, 983056, 536870912, 0, 983059, 536870912, 0, 983062, 536870912, 0, 1179656, 536870920, 0, 1179657, 536870938, 0, 1179661, 536870956, 0, 1179669, 536870936, 0, 1179672, 536870938, 0, 1179675, 536870920, 0, 1245192, 536870920, 0, 1245193, 536870949, 0, 1245196, 536870948, 0, 1245199, 536870935, 0, 1245202, 536870947, 0, 1245208, 536870949, 0, 1245211, 536870920, 0, 1245221, 536870912, 0, 1310730, 536870912, 0, 1310733, 536870912, 0, 1310736, 536870912, 0, 1310739, 536870912, 0, 1310742, 536870912, 0, 1507336, 536870920, 0, 1507341, 536870956, 0, 1507343, 536870936, 0, 1507352, 536870938, 0, 1507355, 536870920, 0, 1572872, 536870920, 0, 1572873, 536870935, 0, 1572876, 536870947, 0, 1572888, 536870949, 0, 1572891, 536870920, 0, 1572901, 536870912, 0, 1638410, 536870912, 0, 1638413, 536870912, 0, 1638416, 536870912, 0, 1638419, 536870912, 0, 1638422, 536870912, 0, 1900552, 536870920, 0, 1900553, 536870938, 0, 1900557, 536870956, 0, 1900565, 536870936, 0, 1900568, 536870938, 0, 1900571, 536870920, 0, 1900577, 536870920, 0, 1966088, 536870920, 0, 1966089, 536870949, 0, 1966092, 536870948, 0, 1966095, 536870935, 0, 1966098, 536870947, 0, 1966104, 536870949, 0, 1966107, 536870920, 0, 1966113, 536870920, 0, 1966117, 536870912, 0, 2031626, 536870912, 0, 2031629, 536870912, 0, 2031632, 536870912, 0, 2031635, 536870912, 0, 2031638, 536870912, 0 )
 
+[node name="NPC" type="TileMap" parent="map"]
+tile_set = SubResource( 61 )
+cell_size = Vector2( 8, 8 )
+format = 1
+
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 381, 79 )
 personagemAtivo = "joninhas"
@@ -1524,7 +1531,7 @@ shape = SubResource( 21 )
 position = Vector2( -1, -27 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 3
+frame = 9
 playing = true
 
 [node name="ComputadorAncora" type="Node2D" parent="Task1ADM"]
@@ -1563,7 +1570,7 @@ shape = SubResource( 21 )
 position = Vector2( -1, -27 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="ComputadorAncora" type="Node2D" parent="Task2ADM"]
@@ -1610,7 +1617,7 @@ fill_mode = 4
 position = Vector2( 169, 230 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="BotaoObj" type="TouchScreenButton" parent="Task3ADM"]
