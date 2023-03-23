@@ -120,8 +120,8 @@ margin_right = 234.0
 margin_bottom = -131.0
 custom_fonts/normal_font = SubResource( 10 )
 bbcode_enabled = true
-bbcode_text = "[center]Qual seria a opção mais racional nessa situação?[/center]"
-text = "Qual seria a opção mais racional nessa situação?"
+bbcode_text = "[center]Qual seria a melhor reação nessa situação?[/center]"
+text = "Qual seria a melhor reação nessa situação?"
 scroll_active = false
 
 [connection signal="pressed" from="Opcoes/Opcao1/Opcao1/TextoBut" to="Opcoes/Opcao1/Opcao1/TextoBut" method="_on_TextoBut_pressed"]
