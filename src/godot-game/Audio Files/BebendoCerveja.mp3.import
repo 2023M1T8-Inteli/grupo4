@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BebendoCerveja.mp3-b820ba73a57ab68e52d0e12e271a3503.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/BebendoCerveja.mp3"
+dest_files=[ "res://.import/BebendoCerveja.mp3-b820ba73a57ab68e52d0e12e271a3503.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

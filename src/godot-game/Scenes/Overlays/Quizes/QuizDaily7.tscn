@@ -31,6 +31,7 @@ margin_left = 69.0
 margin_top = 232.0
 margin_right = 69.0
 margin_bottom = 232.0
+rect_rotation = -0.202709
 mouse_filter = 2
 script = ExtResource( 2 )
 questionPath = "res://Quiz Files/Daily7.json"
