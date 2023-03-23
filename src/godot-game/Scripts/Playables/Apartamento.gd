@@ -3,9 +3,14 @@ extends Node2D
 var taskFeita = false
 
 func _ready():
+	$Player/Camera2D.limit_left = 257-97
+	$Player/Camera2D.limit_right = 519-97
+	$Player/Camera2D.limit_bottom = 208+64
+	$Player/Camera2D.limit_top = -32+64
+	
 	Global.canMove = false
 	
-	$Player/Camera2D.zoom = Vector2(0.4, 0.4)
+	$Player/Camera2D.zoom = Vector2(0.3, 0.3)
 	
 	_abordagem_anim()
 	
@@ -59,8 +64,9 @@ func _on_dialog1_finish():
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $TaskRoteador/RoteadorAncora.global_position
 	Global.activeObjective[2] = "Consertar o roteador"
-	$Player.objective(true)
-
+	$Player.objective(false)
+	
+	Global.canMove = true
 
 func _on_BlogueiraButton_pressed():
 	$SpriteBlogueira/TouchScreenButton.visible = false
@@ -93,3 +99,4 @@ func _on_dialog3_finish():
 func _on_Area2D_body_entered(body):
 	if body == $Player:
 		SceneTransition.change_scene("res://Scenes/Playables/Environment/Tecnico.tscn", 1, 1)
+		TecGlobals.currentTask = 3

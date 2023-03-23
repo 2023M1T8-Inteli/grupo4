@@ -3858,7 +3858,6 @@ visible = false
 position = Vector2( 1276, 1616 )
 
 [node name="Task2TEC" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 38 )
