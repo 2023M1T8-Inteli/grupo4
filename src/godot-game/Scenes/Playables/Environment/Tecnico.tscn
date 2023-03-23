@@ -4076,9 +4076,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=82]
-extents = Vector2( 31, 68.5 )
-
 [sub_resource type="SpriteFrames" id=34]
 animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
@@ -4185,7 +4182,7 @@ position = Vector2( -32, 85 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="ColorRect2" type="ColorRect" parent="Task1TEC/NPCs"]
@@ -4199,7 +4196,7 @@ position = Vector2( -70, -126 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="ColorRect3" type="ColorRect" parent="Task1TEC/NPCs"]
@@ -4213,7 +4210,7 @@ position = Vector2( 162, 0 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="Area2D" type="Area2D" parent="Task1TEC"]
@@ -4268,7 +4265,7 @@ position = Vector2( 1339, 113 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 2
 frames = SubResource( 50 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="Position2D" type="Position2D" parent="Task2TEC"]
@@ -4295,7 +4292,7 @@ position = Vector2( 1031, 408 )
 scale = Vector2( 0.10896, 0.0934524 )
 z_index = 2
 frames = SubResource( 34 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="posteSobeButton" type="TouchScreenButton" parent="Task3TEC"]

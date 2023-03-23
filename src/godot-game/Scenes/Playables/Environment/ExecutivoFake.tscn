@@ -3774,7 +3774,7 @@ visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 2
+frame = 7
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="Eq Compliance/NPC2 (O BOM)"]
@@ -3812,7 +3812,7 @@ position = Vector2( 11, 14 )
 position = Vector2( 11, -6 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 1
+frame = 6
 playing = true
 
 [node name="NPC1Botao" type="TouchScreenButton" parent="SegInfo/NPC1"]
