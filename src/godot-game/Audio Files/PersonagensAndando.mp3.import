@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PersonagensAndando.mp3-0107f50f790487f6196edca4441cc6b5.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/PersonagensAndando.mp3"
+dest_files=[ "res://.import/PersonagensAndando.mp3-0107f50f790487f6196edca4441cc6b5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
