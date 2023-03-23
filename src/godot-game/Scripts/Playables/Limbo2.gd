@@ -16,10 +16,14 @@ func _ready():
 	$"DialogBox 4/TexturaCaixa"._startDialog()  # Inicia a animação da caixa de diálogo
 	
 	# Conecta o sinal "finish" da textura da caixa de diálogo a esta cena
-	$"DialogBox 4/TexturaCaixa".connect("finish", self, "_on_TexturaCaixa_finish")
-	$QuizTask.connect("quizFinish", self, "_quiz1_finish")
-	$QuizTask2.connect("quizFinish", self, "_quiz2_finish")
-	$"DialogBox 5/TexturaCaixa".connect("finish", self, "_on_TexturaCaixa2_finish")
+	if $"DialogBox 4/TexturaCaixa".connect("finish", self, "_on_TexturaCaixa_finish") != OK:
+		print("ERRO AO CONECTAR")
+	if $QuizTask.connect("quizFinish", self, "_quiz1_finish") != OK:
+		print("ERRO AO CONECTAR")
+	if $QuizTask2.connect("quizFinish", self, "_quiz2_finish") != OK:
+		print("ERRO AO CONECTAR")
+	if $"DialogBox 5/TexturaCaixa".connect("finish", self, "_on_TexturaCaixa2_finish") != OK:
+		print("ERRO AO CONECTAR")
 # Função chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
 	$QuizTask.visible = true
@@ -36,4 +40,4 @@ func _quiz2_finish():
 	
 func _on_TexturaCaixa2_finish():
 	Global.parte = "administrativo"
-	SceneTransition.change_scene("res://Scenes/Playables/Environment/Cidade.tscn", 1, 1)
+	SceneTransition.change_scene("res://Scenes/Non Playables/Animations/ComecoJonas.tscn", 1, 1)

@@ -7,13 +7,15 @@ func _ready():
 		Global.activeObjective[1] = get_parent().get_node("Task4TEC/Position2D").global_position
 		Global.activeObjective[2] = "O chefe quer falar com voce"
 		get_parent().get_node("Player").objective(true)
+		
+		if $"DialogBox 25/TexturaCaixa".connect("finish", self, "on_dialog_finish") != OK:
+			print("ERRO AO CONECTAR")
 
 func _on_Area2D_body_entered(body):
 	if body == get_parent().get_node("Player"):
 		Global.activeObjective[0] = false
 		Global.canMove = false
 		$"DialogBox 25".visible = true
-		$"DialogBox 25/TexturaCaixa".connect("finish", self, "on_dialog_finish")
 		$"DialogBox 25/TexturaCaixa"._startDialog()
 
 func on_dialog_finish():

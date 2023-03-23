@@ -1,7 +1,8 @@
 extends Control
 
 func _ready():
-	$QuizTask.connect("quizFinish", self, "_on_quiz_finish")
+	if $QuizTask.connect("quizFinish", self, "_on_quiz_finish") != OK:
+		print("ERRO AO CONECTAR")
 	
 func _on_BotaoComputador_pressed():
 	if (self.get_parent().get_node("Player").global_position).distance_to($ComputadorAncora.global_position) < 150:

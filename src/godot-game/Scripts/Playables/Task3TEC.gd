@@ -17,5 +17,6 @@ func _on_posteSobeButton_pressed():
 
 func on_checklist_finish():
 	yield(get_tree().create_timer(0.2), "timeout")
-	get_tree().change_scene("res://Scenes/Playables/Environment/PosteCima2.tscn")
+	if get_tree().change_scene("res://Scenes/Playables/Environment/PosteCima2.tscn") != OK:
+		print("ERRO AO MUDAR DE CENA")
 	pos.posTecnico = get_parent().get_node("Player").global_position

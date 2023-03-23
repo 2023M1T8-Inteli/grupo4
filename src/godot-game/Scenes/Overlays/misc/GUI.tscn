@@ -9,7 +9,7 @@
 [ext_resource path="res://Sprites/Interface/bola.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=8]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -42,13 +42,12 @@ mouse_filter = 1
 
 [node name="Pause" type="Sprite" parent="GUI"]
 position = Vector2( -140, -280 )
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="PauseButton" type="TouchScreenButton" parent="GUI/Pause"]
-position = Vector2( 40, 40 )
-scale = Vector2( -4.03384, -4.01055 )
-shape = SubResource( 3 )
+position = Vector2( -20, -20 )
+scale = Vector2( 2.00049, 1.99986 )
+shape = SubResource( 7 )
 
 [node name="PauseScreen" type="Node2D" parent="."]
 visible = false

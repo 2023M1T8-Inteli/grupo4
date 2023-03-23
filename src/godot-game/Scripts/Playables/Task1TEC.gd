@@ -7,7 +7,6 @@ func _process(_delta):
 	if $"DialogBox 20".visible == true:
 		player.get_node("Camera2D").current = false if $"DialogBox 20/TexturaCaixa/NomeNPC".bbcode_text != "Joao" else true
 		$Camera2D.current = true if $"DialogBox 20/TexturaCaixa/NomeNPC".bbcode_text != "Joao" else false
-		
 
 func _on_Area2D_body_entered(body):
 	if str(body).get_slice(":", 0) == "Player":
@@ -37,6 +36,7 @@ func _on_Area2D_body_entered(body):
 		if $"DialogBox 20/TexturaCaixa".connect("finish", self, "on_dialog1_finish") != OK:
 			print("ERRO AO CONECTAR")
 		$"DialogBox 20".visible = true
+		player.get_node("Camera2D").set_enable_follow_smoothing(false)
 		$"DialogBox 20/TexturaCaixa"._startDialog()
 		
 func on_dialog1_finish():
@@ -56,6 +56,7 @@ func on_dialog1_finish():
 	$QuizTask.visible = true
 	$QuizTask._startQuiz()
 	$"DialogBox 20".visible = false
+	player.get_node("Camera2D").set_enable_follow_smoothing(true)
 
 func _on_quiz_finish():
 	$AnimationPlayer.play_backwards("cameraMoveBack")
@@ -78,6 +79,8 @@ func on_dialog2_finish():
 	
 	TecGlobals.currentTask = 2
 	get_parent().get_node("Task2TEC").visible = true
+	
+	$Area2D/CollisionShape2D.disabled = true
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = self.get_parent().get_node("Task2TEC/Position2D").global_position

@@ -9,7 +9,8 @@ func _on_BackButton_pressed() -> void:
 func _ready():
 	volPer.text = str(Global.volPercentage) + " %"
 	$HSlider.value = Global.volPercentage
-	$HSlider.connect("value_changed", self, "_on_HSlider_value_changed")
+	if $HSlider.connect("value_changed", self, "_on_HSlider_value_changed") != OK:
+		print("ERRO AO CONECTAR")
 	$Audio.set_playback_pos("res://Audio Files/TitleScreen.mp3" , Global.playbackPos)
 	$Audio.set_volume(Global.volPercentage)
 

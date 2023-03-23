@@ -53,8 +53,9 @@ func _abordagem_anim():
 	
 	yield($AnimationPlayer, "animation_finished")
 	
-	$"DialogBox 22/TexturaCaixa".connect("finish", self, "_on_dialog1_finish")
 	$"DialogBox 22".visible = true
+	if $"DialogBox 22/TexturaCaixa".connect("finish", self, "_on_dialog1_finish") != OK:
+		print("ERRO AO CONECTAR")
 	$"DialogBox 22/TexturaCaixa"._startDialog()
 
 func _on_dialog1_finish():
@@ -73,23 +74,27 @@ func _on_dialog1_finish():
 	Global.canMove = true
 
 func _on_BlogueiraButton_pressed():
-	Global.activeObjective[0] = false
+	if $Player.global_position.distance_to($SpriteBlogueira/Position2D.global_position) < 50:
+		Global.activeObjective[0] = false
 	
-	$SpriteBlogueira/TouchScreenButton.visible = false
-	Global.canMove = false
-	$"DialogBox 23".visible = true
-	$"DialogBox 23/TexturaCaixa".connect("finish", self, "_on_dialog2_finish")
-	$"DialogBox 23/TexturaCaixa"._startDialog()
+		$SpriteBlogueira/TouchScreenButton.visible = false
+		Global.canMove = false
+		$"DialogBox 23".visible = true
+		if $"DialogBox 23/TexturaCaixa".connect("finish", self, "_on_dialog2_finish") != OK:
+			print("ERRO AO CONECTAR")
+		$"DialogBox 23/TexturaCaixa"._startDialog()
 	
 func _on_dialog2_finish():
 	$QuizTask.visible = true
-	$QuizTask.connect("quizFinish", self, "_on_quiz_finish")
+	if $QuizTask.connect("quizFinish", self, "_on_quiz_finish") != OK:
+		print("ERRO AO CONECTAR")
 	$QuizTask._startQuiz()
 	
 func _on_quiz_finish():
 	$"DialogBox 24".visible = true
 	$"DialogBox 24/TexturaCaixa"._startDialog()
-	$"DialogBox 24/TexturaCaixa".connect("finish", self, "_on_dialog3_finish")
+	if $"DialogBox 24/TexturaCaixa".connect("finish", self, "_on_dialog3_finish") != OK:
+		print("ERRO AO CONECTAR")
 	
 func _on_dialog3_finish():
 	Global.canMove = true

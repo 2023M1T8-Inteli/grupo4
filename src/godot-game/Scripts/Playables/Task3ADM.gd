@@ -1,8 +1,10 @@
 extends Control
 
 func _ready():
-	$QuizTask.connect("quizFinish", self, "_on_quiz_finish")
-	$"DialogBox 18/TexturaCaixa".connect("finish", self, "_finish_dialog")
+	if $QuizTask.connect("quizFinish", self, "_on_quiz_finish") != OK:
+		print("ERRO AO CONECTAR")
+	if $"DialogBox 18/TexturaCaixa".connect("finish", self, "_finish_dialog") != OK:
+		print("ERRO AO CONECTAR")
 	
 func animate():
 	$Tween.interpolate_property($TextureProgress, "value", 0, 100, 1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
