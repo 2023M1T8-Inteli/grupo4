@@ -21,6 +21,8 @@ func animate():
 func _on_TouchScreenButton_pressed():
 	if taskFeita == false:
 		if ($Player.global_position).distance_to($TaskRoteador/RoteadorAncora.global_position) < 30:
+			Global.activeObjective[0] = false
+			
 			$TaskRoteador/TextureProgress.visible = true
 			Global.activeObjective[0] = false
 			Global.canMove = false
@@ -34,6 +36,7 @@ func _on_TouchScreenButton_pressed():
 			
 			taskFeita = true
 			
+			Global.activeObjective[0] = true
 			Global.activeObjective[1] = $SpriteBlogueira/Position2D.global_position
 			Global.activeObjective[2] = "Fale com a Blogueira"
 			
@@ -69,6 +72,8 @@ func _on_dialog1_finish():
 	Global.canMove = true
 
 func _on_BlogueiraButton_pressed():
+	Global.activeObjective[0] = false
+	
 	$SpriteBlogueira/TouchScreenButton.visible = false
 	Global.canMove = false
 	$"DialogBox 23".visible = true
@@ -94,6 +99,8 @@ func _on_dialog3_finish():
 	$Player.objective(false)
 	
 	$Area2D/CollisionShape2D.disabled = false
+	
+	
 
 
 func _on_Area2D_body_entered(body):

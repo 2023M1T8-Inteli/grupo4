@@ -77,8 +77,9 @@ func on_dialog2_finish():
 	$Camera2D.current = false
 	
 	TecGlobals.currentTask = 2
+	get_parent().get_node("Task2TEC").visible = true
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = self.get_parent().get_node("Task2TEC/Position2D").global_position
-	Global.activeObjective[2] = "Entre na van"
+	Global.activeObjective[2] = "Entre na van de transporte"
 	self.get_parent().get_node("Player").objective(true)

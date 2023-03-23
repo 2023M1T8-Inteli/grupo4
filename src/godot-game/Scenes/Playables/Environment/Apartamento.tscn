@@ -1984,6 +1984,7 @@ scale = Vector2( 0.7, 0.7 )
 position = Vector2( 496, 157 )
 scale = Vector2( 0.04, 0.04 )
 frames = SubResource( 23 )
+frame = 8
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="TaskRoteador"]

@@ -1,5 +1,10 @@
 extends CanvasLayer
 
+# Define o sinal que dita quando a task foi feita
+signal finished
+
+var deadbolt = true
+
 # Define as variáveis iniciais para os botões selecionados.
 var blueSelect = false
 var greenSelect = false
@@ -63,11 +68,14 @@ func _process(_delta):
 		$pinkWire.visible = false
 
 	# Verifica se os quatro botões estão corretamente posicionados.
-	if blueCorrect == true and greenCorrect == true and yellowCorrect == true and pinkCorrect == true:
+	if blueCorrect == true and greenCorrect == true and yellowCorrect == true and pinkCorrect == true and deadbolt:
+		deadbolt = false
 		# Define que a tarefa foi concluída com sucesso.
 		Global.amongDone = true
 		# Define como visível o retângulo verde que mostra ao usuário que a tarefa foi concluída com sucesso.
 		$ColorRect.visible = true
+		# Emite o sinal que dita quando a task foi completada
+		emit_signal("finished")
 		# Redefine o estado das variáveis que armazenam o estado da interação do usuário com os botões.
 		blueCorrect = false
 		pinkCorrect = false
