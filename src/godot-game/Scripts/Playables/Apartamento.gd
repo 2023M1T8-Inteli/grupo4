@@ -67,7 +67,7 @@ func _on_dialog1_finish():
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $TaskRoteador/RoteadorAncora.global_position
-	Global.activeObjective[2] = "Consertar o roteador"
+	Global.activeObjective[2] = "Conserte o roteador"
 	$Player.objective(false)
 	
 	Global.canMove = true
