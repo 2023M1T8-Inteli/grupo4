@@ -3128,12 +3128,12 @@ margin_bottom = -17.0
 position = Vector2( -148, -67 )
 scale = Vector2( 0.0808908, 0.0797043 )
 frames = SubResource( 9 )
-frame = 4
+frame = 8
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -182, 4 )
-personagemAtivo = "zezinho"
+personagemAtivo = "joaozinho"
 
 [node name="AmongAncora" type="Node2D" parent="."]
 position = Vector2( -144, -48 )
