@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Assedio.mp3-300d6dd3bcc5982326e2a88ab51486c0.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Assedio.mp3"
+dest_files=[ "res://.import/Assedio.mp3-300d6dd3bcc5982326e2a88ab51486c0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TransicaoTelas.mp3-fa08aafa199a90d0accba7ea9dcd46e6.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/TransicaoTelas.mp3"
+dest_files=[ "res://.import/TransicaoTelas.mp3-fa08aafa199a90d0accba7ea9dcd46e6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

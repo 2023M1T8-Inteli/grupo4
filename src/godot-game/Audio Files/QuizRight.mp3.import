@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/QuizRight.mp3-3ef2b178b548165b9368c798da6166e6.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/QuizRight.mp3"
+dest_files=[ "res://.import/QuizRight.mp3-3ef2b178b548165b9368c798da6166e6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
