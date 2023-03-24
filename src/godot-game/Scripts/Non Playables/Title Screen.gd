@@ -4,6 +4,10 @@ extends Control
 
 # Este script é responsável por controlar as funcionalidades dos botões da tela inicial.
 func _ready():
+	if Global.parte == "fim":
+		$StartButton.visible = false
+	
+	
 	# Checa se o jogador já passou pelo diálogo do limbo, se sim, disponibiliza o botão como "Voltar" e não como "Jogar"
 	if Global.finishDialog1 == false:
 		$StartButton/RichTextLabel.bbcode_text = "[center]JOGAR[/center]"

@@ -1,7 +1,8 @@
 extends Control
 
 func _ready():
-	$QuizTask.connect("quizFinish", self, "_on_quiz_finish")
+	if $QuizTask.connect("quizFinish", self, "_on_quiz_finish") != OK:
+		print("ERRO AO CONECTAR")
 
 
 func _on_BotaoComputador_pressed():
@@ -15,6 +16,7 @@ func _on_BotaoComputador_pressed():
 		
 		Global.activeObjective[1] = self.get_parent().get_node("PortaAncora").global_position
 		Global.activeObjective[2] = "Vá para o setor Executivo."
+		AdmGlobals.canGo = true
 		
 		get_parent().get_node("GUI").visible = false
 		

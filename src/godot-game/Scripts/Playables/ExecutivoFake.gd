@@ -26,9 +26,12 @@ func _ready():
 		$"Eq Compliance/NPC2 (O BOM)/BalaoExclamacao".visible = true
 		$Player.objective(true)
 
-	$"SegInfo/DialogBox 16/TexturaCaixa".connect("finish", self, "_on_SegInfo_dialog_finish")
-	$"Eq Compliance/NPC2 (O BOM)/DialogBox 17/TexturaCaixa".connect("finish", self, "_on_eq_compliance_dialog_finish")
-	$"Eq Compliance/NPC2 (O BOM)/DialogBox 19/TexturaCaixa".connect("finish", self, "_on_eq_compliance_dialog2_finish")
+	if $"SegInfo/DialogBox 16/TexturaCaixa".connect("finish", self, "_on_SegInfo_dialog_finish") != OK:
+		print("ERRO AO CONECTAR")
+	if $"Eq Compliance/NPC2 (O BOM)/DialogBox 17/TexturaCaixa".connect("finish", self, "_on_eq_compliance_dialog_finish") != OK:
+		print("ERRO AO CONECTAR")
+	if $"Eq Compliance/NPC2 (O BOM)/DialogBox 19/TexturaCaixa".connect("finish", self, "_on_eq_compliance_dialog2_finish") != OK:
+		print("ERRO AO CONECTAR")
 
 func _process(_delta):
 	# Define os limites da câmera para o tamanho do mapa

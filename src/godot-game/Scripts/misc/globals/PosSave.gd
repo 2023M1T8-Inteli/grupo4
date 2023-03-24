@@ -7,7 +7,7 @@ var savePosCommand = false
 var posCidade = Vector2(368, 624)
 var posADM = Vector2(294,87)
 var posPrelude = Vector2(117, 175)
-var posTecnico = Vector2(915, 748)
+var posTecnico = Vector2(915, 530)
 
 # Define a posição da cena atual e a posição atual do jogador
 var posScene

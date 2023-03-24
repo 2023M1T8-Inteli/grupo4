@@ -1,8 +1,10 @@
 extends Control
 
 func _ready():
-	$QuizTask.connect("quizFinish", self, "_on_quiz_finish")
-	$"DialogBox 18/TexturaCaixa".connect("finish", self, "_finish_dialog")
+	if $QuizTask.connect("quizFinish", self, "_on_quiz_finish") != OK:
+		print("ERRO AO CONECTAR")
+	if $"DialogBox 18/TexturaCaixa".connect("finish", self, "_finish_dialog") != OK:
+		print("ERRO AO CONECTAR")
 	
 func animate():
 	$Tween.interpolate_property($TextureProgress, "value", 0, 100, 1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
@@ -11,13 +13,16 @@ func animate():
 
 func _on_BotaoObj_pressed():
 	if (self.get_parent().get_node("Player").global_position).distance_to($ComputadorAncora.global_position) < 150:
+		Global.activeObjective[0] = false
 		Global.canMove = false
 		animate()
 		yield(get_tree().create_timer(1), "timeout")
 		Global.canMove = true
 		$TextureProgress.visible = false
 		$BalaoObj.visible = false
+		$BotaoObj.visible = false
 		yield(get_tree().create_timer(0.2), "timeout")
+		Global.activeObjective[0] = true
 		Global.activeObjective[1] = get_parent().get_node("PortaAncora").global_position
 		Global.activeObjective[2] = "Saia do prédio."
 		get_parent().get_node("Player").objective(true)
@@ -56,8 +61,8 @@ func _on_quiz_finish():
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[2] = "Vá para o setor Executivo."
+	AdmGlobals.canGo = true
 	get_parent().get_node("Player").objective(false)
-	
 	
 	
 	

@@ -130,17 +130,25 @@ func _assedio_anim():
 	$ControlAssedio/Camera2D.current = true
 	$Player/Camera2D.current = false
 	
-	$ControlAssedio/AnimationPlayer.get_animation("WalkUp").track_set_key_value(0, 1, Vector2($Player.position.x-10, 191))
-	$ControlAssedio/AnimationPlayer.get_animation("WalkUpBackwards").track_set_key_value(0, 0, Vector2($Player.position.x-10, 191))
+	$ControlAssedio/AnimationPlayer.get_animation("WalkUp").track_set_key_value(0, 1, Vector2($Player.position.x, 208))
+	$ControlAssedio/AnimationPlayer.get_animation("WalkUpBackwards").track_set_key_value(0, 0, Vector2($Player.position.x, 208))
 	$ControlAssedio/AnimationPlayer.play("WalkUp")
 	yield($ControlAssedio/AnimationPlayer, "animation_finished")
+	
+	$ControlAssedio/ColorRect.visible = false
+	$ControlAssedio/AssediadorCima.position = $ControlAssedio/ColorRect.position
+	$ControlAssedio/AssediadorCima.visible = true
 	
 	$"ControlAssedio/DialogBox 12".visible = true
 	$"ControlAssedio/DialogBox 12/TexturaCaixa"._startDialog()
 	
 	yield($"ControlAssedio/DialogBox 12/TexturaCaixa", "finish")
 	
-	$ControlAssedio/AnimationPlayer.play("WalkUpBackwards")
+	$ControlAssedio/AssediadorCima.queue_free()
+	$ControlAssedio/ColorRect.visible = true
+	
+	$ControlAssedio/ColorRect.flip_h = true
+	$ControlAssedio/AnimationPlayer.play_backwards("WalkUp")
 	yield($ControlAssedio/AnimationPlayer, "animation_finished")
 	$ControlAssedio/ColorRect.visible = false
 	$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/BalaoExclamacao".visible = true

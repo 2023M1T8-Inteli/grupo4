@@ -104,12 +104,13 @@ font_data = ExtResource( 5 )
 [node name="QuizTask" type="CanvasLayer"]
 script = ExtResource( 2 )
 
-[node name="Filter" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 360.0
-margin_bottom = 637.0
-color = Color( 0, 0, 0, 0.286275 )
+margin_bottom = 640.0
+color = Color( 0, 0, 0, 0.509804 )
 
 [node name="DialogBox" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="TexturaCaixa" type="TextureRect" parent="DialogBox"]
 visible = false
