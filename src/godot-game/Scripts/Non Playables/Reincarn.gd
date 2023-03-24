@@ -49,7 +49,7 @@ var credits = [
 		"https://www.aseprite.org/"
 	],[
 		"Dedicado à",
-		"Natalia e Fabricio da V.tal"
+		"Nathalia e Fabrício da V.tal"
 	],[
 		"Agradecimentos Especiais",
 		"Egon Daxbacher",
