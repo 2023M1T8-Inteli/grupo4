@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=2]
+[gd_scene load_steps=127 format=2]
 
 [ext_resource path="res://Scripts/Playables/Tecnico.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=2]
@@ -4327,6 +4327,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=86]
+extents = Vector2( 31.5, 69 )
+
 [sub_resource type="SpriteFrames" id=34]
 animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
@@ -4486,7 +4489,6 @@ position = Vector2( -32, 85 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 3
 playing = true
 
 [node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect"]
@@ -4506,7 +4508,7 @@ position = Vector2( -70, -126 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 8
+frame = 5
 playing = true
 
 [node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect2"]
@@ -4526,7 +4528,7 @@ position = Vector2( 162, 0 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 8
+frame = 5
 playing = true
 
 [node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect3"]
@@ -4573,7 +4575,6 @@ rotation = -3.14159
 scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 48 )
-frame = 1
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Task2TEC/Caminhao"]
@@ -4586,18 +4587,22 @@ position = Vector2( 1339, 113 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 2
 frames = SubResource( 50 )
-frame = 6
+frame = 9
 playing = true
 
 [node name="Position2D" type="Position2D" parent="Task2TEC"]
 position = Vector2( 1339, 87 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Task2TEC"]
-position = Vector2( 1309, 21 )
+position = Vector2( 1307, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Task2TEC/StaticBody2D"]
-position = Vector2( 29, 63.5 )
-shape = SubResource( 82 )
+position = Vector2( 31.5, 69 )
+shape = SubResource( 86 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Task2TEC"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Task2TEC/StaticBody2D2"]
 
 [node name="Task3TEC" type="Control" parent="."]
 visible = false
@@ -4613,7 +4618,6 @@ position = Vector2( 1031, 408 )
 scale = Vector2( 0.10896, 0.0934524 )
 z_index = 2
 frames = SubResource( 34 )
-frame = 7
 playing = true
 
 [node name="posteSobeButton" type="TouchScreenButton" parent="Task3TEC"]
@@ -4625,6 +4629,7 @@ shape = SubResource( 32 )
 position = Vector2( 1031, 405 )
 
 [node name="Task4TEC" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 42 )

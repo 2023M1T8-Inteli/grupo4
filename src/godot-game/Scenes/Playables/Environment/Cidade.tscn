@@ -4094,7 +4094,7 @@ position = Vector2( 1539, 811.329 )
 scale = Vector2( 2.82727, 2.82543 )
 frames = SubResource( 51 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Predio"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Predio"]
 position = Vector2( 1540, 905.75 )
 shape = SubResource( 52 )
 
@@ -4102,7 +4102,7 @@ shape = SubResource( 52 )
 position = Vector2( 1540, 968 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 42 )
-frame = 6
+frame = 8
 playing = true
 
 [node name="admAncora" type="Node2D" parent="Predio"]
@@ -4112,9 +4112,6 @@ position = Vector2( 1540, 1075 )
 position = Vector2( 1474, 938 )
 scale = Vector2( 6.88825, 8.15016 )
 shape = SubResource( 43 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Predio"]
-position = Vector2( 1538.75, 865.25 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Predio"]
 position = Vector2( 1623, 1114 )

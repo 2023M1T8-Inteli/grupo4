@@ -2,7 +2,7 @@ extends Node2D
 
 const section_time := 2.0
 const line_time := 0.3
-const base_speed := 100
+const base_speed := 60
 const speed_up_multiplier := 10.0
 const title_color := Color("D5FF00")
 
@@ -49,7 +49,7 @@ var credits = [
 		"https://www.aseprite.org/"
 	],[
 		"Dedicado à",
-		"Natalia e Fabricio da V.Tal"
+		"Natalia e Fabricio da V.tal"
 	],[
 		"Agradecimentos Especiais",
 		"Egon Daxbacher",
