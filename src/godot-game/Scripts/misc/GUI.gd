@@ -3,6 +3,8 @@ extends CanvasLayer
 # Variável para armazenar se a interface do usuário estava visível antes da pausa
 onready var guiWasVisible
 
+var couldMove
+
 func _ready():
 	$PauseScreen/HSlider.value = Global.volPercentage
 
@@ -13,7 +15,12 @@ func _on_HSlider_value_changed(value):
 	
 func _on_PauseButton_pressed():
 	# Desabilita o movimento do jogador
-	Global.canMove = false
+	if Global.canMove == false:
+		Global.canMove = false
+		couldMove = false
+	elif Global.canMove == true:
+		Global.canMove = false
+		couldMove = true
 	
 	# Esconde a interface do usuário
 	$GUI.visible = false
@@ -25,7 +32,7 @@ func _on_PauseButton_pressed():
 
 func _on_StartButton_pressed():
 	# Habilita o movimento do jogador
-	Global.canMove = true
+	Global.canMove = couldMove
 
 	# Mostra novamente a interface do usuário
 	$GUI.visible = true

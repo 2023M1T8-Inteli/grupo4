@@ -1,11 +1,11 @@
-[gd_scene load_steps=123 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16 - Copia.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Playables/Executivo.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Overlays/misc/GUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sprites/Elevador/Elevador.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Elevador/Elevador_segundo_andar.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/TileMaps/Room_Builder_free_32x32.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/TileMaps/tilemap escritorio.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/BalaoExclamacao2/tiina-hirvonen-mark-export6.png" type="Texture" id=9]
@@ -32,6 +32,14 @@
 [ext_resource path="res://addons/AsepriteWizard/export/assediador.res" type="SpriteFrames" id=30]
 [ext_resource path="res://Sprites/TileMaps/NPC's/NPCExec1.png" type="Texture" id=31]
 [ext_resource path="res://Sprites/TileMaps/NPC's/NPCBoss.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/NPCs/NPCNovo2.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/NPC1.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/NPCs/NPCNovo4.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/NPCs/NPCNovo3.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/NPCs/NPCNovo6.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/NPCs/NPCNovo8.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/NPCs/NPCNovo5.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/NPCs/NPCNovo7.png" type="Texture" id=40]
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -237,71 +245,8 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 12, 0, 12 )
 13/shapes = [  ]
 13/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=66]
-points = PoolVector2Array( 0, 0, 19, 0, 19, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=67]
-points = PoolVector2Array( 0, 0, 20, 0, 20, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=68]
-points = PoolVector2Array( 0, 0, 20, 0, 20, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=69]
-points = PoolVector2Array( 0, 0, 20, 0, 20, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=70]
-points = PoolVector2Array( 0, 0, 20, 0, 20, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=71]
-points = PoolVector2Array( 0, 0, 21, 0, 21, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=72]
-points = PoolVector2Array( 0, 0, 18, 0, 18, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=73]
-points = PoolVector2Array( 0, 0, 20, 0, 20, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=74]
-points = PoolVector2Array( 0, 0, 19, 0, 19, 31, 0, 31 )
-
-[sub_resource type="ConvexPolygonShape2D" id=75]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=76]
-points = PoolVector2Array( 0, 0, 18, 0, 18, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=77]
-points = PoolVector2Array( 0, 0, 18, 0, 18, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=78]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=79]
-points = PoolVector2Array( 0, 0, 18, 0, 18, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=80]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=81]
-points = PoolVector2Array( 0, 0, 18, 0, 18, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=82]
-points = PoolVector2Array( 0, 0, 17, 0, 17, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=83]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=84]
-points = PoolVector2Array( 0, 0, 18, 0, 18, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=85]
-points = PoolVector2Array( 0, 0, 17, 0, 17, 32, 0, 32 )
-
 [sub_resource type="ConvexPolygonShape2D" id=86]
 points = PoolVector2Array( 0, 0, 17, 0, 17, 24, 0, 24 )
-
-[sub_resource type="ConvexPolygonShape2D" id=87]
-points = PoolVector2Array( 0, 0, 18, 0, 18, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=88]
 points = PoolVector2Array( 0, 0, 18, 0, 18, 24, 0, 24 )
@@ -320,24 +265,6 @@ points = PoolVector2Array( 0, 0, 18, 0, 18, 24, 0, 24 )
 
 [sub_resource type="ConvexPolygonShape2D" id=93]
 points = PoolVector2Array( 0, 0, 14, 0, 14, 24, 0, 24 )
-
-[sub_resource type="ConvexPolygonShape2D" id=99]
-points = PoolVector2Array( 0, 0, 17, 0, 17, 30, 0, 30 )
-
-[sub_resource type="ConvexPolygonShape2D" id=94]
-points = PoolVector2Array( 0, 0, 18, 0, 18, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=95]
-points = PoolVector2Array( 0, 0, 20, 0, 20, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=96]
-points = PoolVector2Array( 0, 0, 20, 0, 20, 33, 0, 33 )
-
-[sub_resource type="ConvexPolygonShape2D" id=97]
-points = PoolVector2Array( 0, 0, 20, 0, 20, 34, 0, 34 )
-
-[sub_resource type="ConvexPolygonShape2D" id=98]
-points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 
 [sub_resource type="TileSet" id=33]
 0/name = "TesteNPC.png 0"
@@ -378,16 +305,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 76 )
 2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 76 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
 2/z_index = 0
 3/name = "NPCExec1.png 3"
 3/texture = ExtResource( 31 )
@@ -399,16 +319,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 87 )
 3/shape_one_way = false
-3/shape_one_way_margin = 1.0
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 87 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
 3/z_index = 0
 4/name = "NPCExec1.png 4"
 4/texture = ExtResource( 31 )
@@ -420,16 +333,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 94 )
 4/shape_one_way = false
-4/shape_one_way_margin = 1.0
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 94 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
 4/z_index = 0
 5/name = "NPCExec1.png 5"
 5/texture = ExtResource( 31 )
@@ -441,16 +347,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 95 )
 5/shape_one_way = false
-5/shape_one_way_margin = 1.0
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 95 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
 5/z_index = 0
 6/name = "NPCExec1.png 6"
 6/texture = ExtResource( 31 )
@@ -462,16 +361,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 96 )
 6/shape_one_way = false
-6/shape_one_way_margin = 1.0
-6/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 96 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
 6/z_index = 0
 7/name = "NPCExec1.png 7"
 7/texture = ExtResource( 31 )
@@ -497,16 +389,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 8/navigation_offset = Vector2( 0, 0 )
 8/shape_offset = Vector2( 0, 0 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape = SubResource( 97 )
 8/shape_one_way = false
-8/shape_one_way_margin = 1.0
-8/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 97 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
 8/z_index = 0
 9/name = "NPCExec1.png 9"
 9/texture = ExtResource( 31 )
@@ -518,16 +403,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 98 )
 9/shape_one_way = false
-9/shape_one_way_margin = 1.0
-9/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 98 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
 9/z_index = 0
 10/name = "NPCExec1.png 10"
 10/texture = ExtResource( 31 )
@@ -539,16 +417,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 10/navigation_offset = Vector2( 0, 0 )
 10/shape_offset = Vector2( 0, 0 )
 10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape = SubResource( 66 )
 10/shape_one_way = false
-10/shape_one_way_margin = 1.0
-10/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 66 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
 10/z_index = 0
 11/name = "NPCExec1.png 11"
 11/texture = ExtResource( 31 )
@@ -560,16 +431,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 11/navigation_offset = Vector2( 0, 0 )
 11/shape_offset = Vector2( 0, 0 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape = SubResource( 67 )
 11/shape_one_way = false
-11/shape_one_way_margin = 1.0
-11/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 67 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
 11/z_index = 0
 12/name = "NPCExec1.png 12"
 12/texture = ExtResource( 31 )
@@ -581,16 +445,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 12/navigation_offset = Vector2( 0, 0 )
 12/shape_offset = Vector2( 0, 0 )
 12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-12/shape = SubResource( 68 )
 12/shape_one_way = false
-12/shape_one_way_margin = 1.0
-12/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 68 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
 12/z_index = 0
 13/name = "NPCExec1.png 13"
 13/texture = ExtResource( 31 )
@@ -602,16 +459,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 13/navigation_offset = Vector2( 0, 0 )
 13/shape_offset = Vector2( 0, 0 )
 13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-13/shape = SubResource( 69 )
 13/shape_one_way = false
-13/shape_one_way_margin = 1.0
-13/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 69 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
 13/z_index = 0
 14/name = "NPCExec1.png 14"
 14/texture = ExtResource( 31 )
@@ -623,16 +473,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 14/navigation_offset = Vector2( 0, 0 )
 14/shape_offset = Vector2( 0, 0 )
 14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-14/shape = SubResource( 70 )
 14/shape_one_way = false
-14/shape_one_way_margin = 1.0
-14/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 70 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
 14/z_index = 0
 15/name = "NPCExec1.png 15"
 15/texture = ExtResource( 31 )
@@ -644,16 +487,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 15/navigation_offset = Vector2( 0, 0 )
 15/shape_offset = Vector2( 0, 0 )
 15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-15/shape = SubResource( 71 )
 15/shape_one_way = false
-15/shape_one_way_margin = 1.0
-15/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 71 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
 15/z_index = 0
 16/name = "NPCExec1.png 16"
 16/texture = ExtResource( 31 )
@@ -665,16 +501,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 16/navigation_offset = Vector2( 0, 0 )
 16/shape_offset = Vector2( 0, 0 )
 16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-16/shape = SubResource( 72 )
 16/shape_one_way = false
-16/shape_one_way_margin = 1.0
-16/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 72 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
 16/z_index = 0
 17/name = "NPCExec1.png 17"
 17/texture = ExtResource( 31 )
@@ -686,16 +515,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 17/navigation_offset = Vector2( 0, 0 )
 17/shape_offset = Vector2( 0, 0 )
 17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-17/shape = SubResource( 73 )
 17/shape_one_way = false
-17/shape_one_way_margin = 1.0
-17/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 73 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
 17/z_index = 0
 18/name = "NPCExec1.png 18"
 18/texture = ExtResource( 31 )
@@ -707,16 +529,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 18/navigation_offset = Vector2( 0, 0 )
 18/shape_offset = Vector2( 0, 0 )
 18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-18/shape = SubResource( 74 )
 18/shape_one_way = false
-18/shape_one_way_margin = 1.0
-18/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 74 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
 18/z_index = 0
 19/name = "NPCExec1.png 19"
 19/texture = ExtResource( 31 )
@@ -728,16 +543,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 19/navigation_offset = Vector2( 0, 0 )
 19/shape_offset = Vector2( 0, 0 )
 19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-19/shape = SubResource( 75 )
 19/shape_one_way = false
-19/shape_one_way_margin = 1.0
-19/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 75 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
 19/z_index = 0
 20/name = "NPCExec1.png 20"
 20/texture = ExtResource( 31 )
@@ -749,16 +557,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 20/navigation_offset = Vector2( 0, 0 )
 20/shape_offset = Vector2( 0, 0 )
 20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-20/shape = SubResource( 77 )
 20/shape_one_way = false
-20/shape_one_way_margin = 1.0
-20/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 77 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
 20/z_index = 0
 21/name = "NPCExec1.png 21"
 21/texture = ExtResource( 31 )
@@ -770,16 +571,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 0, 0 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-21/shape = SubResource( 78 )
 21/shape_one_way = false
-21/shape_one_way_margin = 1.0
-21/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 78 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
 21/z_index = 0
 22/name = "NPCExec1.png 22"
 22/texture = ExtResource( 31 )
@@ -791,16 +585,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 22/navigation_offset = Vector2( 0, 0 )
 22/shape_offset = Vector2( 0, 0 )
 22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-22/shape = SubResource( 79 )
 22/shape_one_way = false
-22/shape_one_way_margin = 1.0
-22/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 79 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
 22/z_index = 0
 23/name = "NPCExec1.png 23"
 23/texture = ExtResource( 31 )
@@ -812,16 +599,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 23/navigation_offset = Vector2( 0, 0 )
 23/shape_offset = Vector2( 0, 0 )
 23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-23/shape = SubResource( 80 )
 23/shape_one_way = false
-23/shape_one_way_margin = 1.0
-23/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 80 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
 23/z_index = 0
 24/name = "NPCExec1.png 24"
 24/texture = ExtResource( 31 )
@@ -833,16 +613,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 24/navigation_offset = Vector2( 0, 0 )
 24/shape_offset = Vector2( 0, 0 )
 24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-24/shape = SubResource( 81 )
 24/shape_one_way = false
-24/shape_one_way_margin = 1.0
-24/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 81 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
 24/z_index = 0
 25/name = "NPCExec1.png 25"
 25/texture = ExtResource( 31 )
@@ -854,16 +627,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 25/navigation_offset = Vector2( 0, 0 )
 25/shape_offset = Vector2( 0, 0 )
 25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-25/shape = SubResource( 82 )
 25/shape_one_way = false
-25/shape_one_way_margin = 1.0
-25/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 82 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
 25/z_index = 0
 26/name = "NPCExec1.png 26"
 26/texture = ExtResource( 31 )
@@ -875,16 +641,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 26/navigation_offset = Vector2( 0, 0 )
 26/shape_offset = Vector2( 0, 0 )
 26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-26/shape = SubResource( 83 )
 26/shape_one_way = false
-26/shape_one_way_margin = 1.0
-26/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 83 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
 26/z_index = 0
 27/name = "NPCExec1.png 27"
 27/texture = ExtResource( 31 )
@@ -896,16 +655,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 27/navigation_offset = Vector2( 0, 0 )
 27/shape_offset = Vector2( 0, 0 )
 27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-27/shape = SubResource( 84 )
 27/shape_one_way = false
-27/shape_one_way_margin = 1.0
-27/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 84 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
 27/z_index = 0
 28/name = "NPCExec1.png 28"
 28/texture = ExtResource( 31 )
@@ -917,16 +669,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 28/navigation_offset = Vector2( 0, 0 )
 28/shape_offset = Vector2( 0, 0 )
 28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-28/shape = SubResource( 85 )
 28/shape_one_way = false
-28/shape_one_way_margin = 1.0
-28/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 85 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
 28/z_index = 0
 29/name = "NPCExec1.png 29"
 29/texture = ExtResource( 31 )
@@ -1085,16 +830,9 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 33, 0, 33 )
 36/navigation_offset = Vector2( 0, 0 )
 36/shape_offset = Vector2( 0, 0 )
 36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-36/shape = SubResource( 99 )
 36/shape_one_way = false
-36/shape_one_way_margin = 1.0
-36/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 99 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+36/shape_one_way_margin = 0.0
+36/shapes = [  ]
 36/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
@@ -1113,6 +851,15 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=42]
+points = PoolVector2Array( 0, 0, 48, 0, 48, 24, 0, 24 )
+
+[sub_resource type="ConvexPolygonShape2D" id=104]
+points = PoolVector2Array( 0, 0, 48, 0, 48, 24, 0, 24 )
+
+[sub_resource type="ConvexPolygonShape2D" id=105]
+points = PoolVector2Array( 0, 0, 48, 0, 48, 24, 0, 24 )
+
+[sub_resource type="ConvexPolygonShape2D" id=106]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 24, 0, 24 )
 
 [sub_resource type="ConvexPolygonShape2D" id=44]
@@ -1147,6 +894,9 @@ points = PoolVector2Array( 0, 0, 104, 0, 104, 48, 0, 48 )
 
 [sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 48, 0, 48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=107]
+points = PoolVector2Array( 0, 0, 48, 0, 48, 40, 0, 40 )
 
 [sub_resource type="ConvexPolygonShape2D" id=59]
 points = PoolVector2Array( 0, 0, 44, 0, 44, 24, 0, 24 )
@@ -1515,9 +1265,16 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 19/navigation_offset = Vector2( 0, 0 )
 19/shape_offset = Vector2( 0, 0 )
 19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape = SubResource( 104 )
 19/shape_one_way = false
-19/shape_one_way_margin = 0.0
-19/shapes = [  ]
+19/shape_one_way_margin = 1.0
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 104 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 19/z_index = 0
 20/name = "Modern_Office_16x16.png 20"
 20/texture = ExtResource( 10 )
@@ -1529,9 +1286,16 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 20/navigation_offset = Vector2( 0, 0 )
 20/shape_offset = Vector2( 0, 0 )
 20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape = SubResource( 105 )
 20/shape_one_way = false
-20/shape_one_way_margin = 0.0
-20/shapes = [  ]
+20/shape_one_way_margin = 1.0
+20/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 105 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 20/z_index = 0
 21/name = "Modern_Office_16x16.png 21"
 21/texture = ExtResource( 10 )
@@ -1543,9 +1307,16 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 0, 0 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape = SubResource( 106 )
 21/shape_one_way = false
-21/shape_one_way_margin = 0.0
-21/shapes = [  ]
+21/shape_one_way_margin = 1.0
+21/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 106 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 21/z_index = 0
 22/name = "Modern_Office_16x16.png 22"
 22/texture = ExtResource( 10 )
@@ -1970,9 +1741,16 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 47/navigation_offset = Vector2( 0, 0 )
 47/shape_offset = Vector2( 0, 0 )
 47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape = SubResource( 107 )
 47/shape_one_way = false
-47/shape_one_way_margin = 0.0
-47/shapes = [  ]
+47/shape_one_way_margin = 1.0
+47/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 107 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 47/z_index = 0
 48/name = "Modern_Office_16x16.png 48"
 48/texture = ExtResource( 10 )
@@ -2588,13 +2366,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=102]
+[sub_resource type="AtlasTexture" id=139]
 atlas = ExtResource( 29 )
 region = Rect2( 25, 31, 16, 23 )
 
 [sub_resource type="SpriteFrames" id=103]
 animations = [ {
-"frames": [ SubResource( 102 ) ],
+"frames": [ SubResource( 139 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -2603,7 +2381,7 @@ animations = [ {
 [sub_resource type="Animation" id=25]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/path = NodePath("ColorRect:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2665,6 +2443,57 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 0.4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 591, 526 ) ]
+}
+
+[sub_resource type="Animation" id=140]
+resource_name = "cameraMove"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 0.4 ), Vector2( 0.4, 0.4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 591, 526 ), Vector2( 591, 526 ) ]
 }
 
 [sub_resource type="Animation" id=32]
@@ -2810,14 +2639,16 @@ position = Vector2( 1, 0 )
 mode = 2
 tile_set = SubResource( 6 )
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 format = 1
-tile_data = PoolIntArray( -131067, 12, 0, -131065, 12, 0, -131064, 12, 0, -131058, 12, 0, -131057, -1610612727, 0, -131056, 12, 0, -131054, 12, 0, -131053, 12, 0, 3, 536870914, 0, 6, 2, 0, 9, 536870914, 0, 12, 2, 0, 15, 536870914, 0, 18, 2, 0, 131075, 1610612738, 0, 131078, 1073741826, 0, 131081, 1610612738, 0, 131084, 1073741826, 0, 131087, 1610612738, 0, 131090, 1073741826, 0, 196611, 12, 0, 262147, 536870914, 0, 262150, 2, 0, 262153, 536870914, 0, 262156, 2, 0, 262159, 536870914, 0, 262162, 2, 0, 393219, 1610612738, 0, 393222, 1073741826, 0, 393225, 1610612738, 0, 393228, 1073741826, 0, 393231, 1610612738, 0, 393234, 1073741826, 0, 524291, 536870914, 0, 524294, 2, 0, 524297, 536870914, 0, 524300, 2, 0, 524303, 536870914, 0, 524306, 2, 0, 655363, 1610612738, 0, 655366, 1073741826, 0, 655369, 1610612738, 0, 655372, 1073741826, 0, 655375, 1610612738, 0, 655378, 1073741826, 0, 786435, 536870914, 0, 786438, 2, 0, 786441, 536870914, 0, 786444, 2, 0, 786447, 536870914, 0, 786450, 2, 0, 917507, 1610612738, 0, 917510, 1073741826, 0, 917513, 1610612738, 0, 917516, 1073741826, 0, 917519, 1610612738, 0, 917522, 1073741826, 0, 1048579, 536870914, 0, 1048582, 2, 0, 1048585, 536870914, 0, 1048588, 2, 0, 1048591, 536870914, 0, 1048594, 2, 0 )
+tile_data = PoolIntArray( -131067, 12, 0, -131065, 12, 0, -131064, 12, 0, -131058, 12, 0, -131057, -1610612727, 0, -131056, 12, 0, -131054, 12, 0, -131053, 12, 0, 3, 536870914, 0, 6, 2, 0, 9, 536870914, 0, 12, 2, 0, 15, 536870914, 0, 18, 2, 0, 131075, 1610612738, 0, 131078, 1073741826, 0, 131081, 1610612738, 0, 131084, 1073741826, 0, 131087, 1610612738, 0, 131090, 1073741826, 0, 196611, 12, 0, 262147, 536870914, 0, 262150, 2, 0, 262153, 536870914, 0, 262156, 2, 0, 262159, 536870914, 0, 262162, 2, 0, 393219, 1610612738, 0, 393222, 1073741826, 0, 393225, 1610612738, 0, 393228, 1073741826, 0, 393231, 1610612738, 0, 393234, 1073741826, 0, 524291, 536870914, 0, 524294, 2, 0, 524297, 536870914, 0, 524300, 2, 0, 524303, 536870914, 0, 524306, 2, 0, 655363, 1610612738, 0, 655366, 1073741826, 0, 655369, 1610612738, 0, 655372, 1073741826, 0, 655375, 1610612738, 0, 655378, 1073741826, 0, 786435, 536870914, 0, 786438, 2, 0, 786441, 536870914, 0, 786444, 2, 0, 786447, 536870914, 0, 786450, 2, 0, 917507, 1610612738, 0, 917510, 1073741826, 0, 917513, 1610612738, 0, 917516, 1073741826, 0, 917519, 1610612738, 0, 917522, 1073741826, 0, 1048579, 536870914, 0, 1048582, 2, 0, 1048585, 536870914, 0, 1048588, 2, 0, 1048591, 536870914, 0, 1048594, 2, 0, 1310723, 1610612738, 0, 1310726, 1073741826, 0, 1310729, 1610612738, 0, 1310732, 1073741826, 0, 1310735, 1610612738, 0, 1310738, 1073741826, 0, 1441795, 536870914, 0, 1441798, 2, 0, 1441801, 536870914, 0, 1441804, 2, 0, 1441807, 536870914, 0, 1441810, 2, 0, 1572867, 1610612738, 0, 1572870, 1073741826, 0, 1572873, 1610612738, 0, 1572876, 1073741826, 0, 1572879, 1610612738, 0, 1572882, 1073741826, 0 )
 
 [node name="Paredes" type="TileMap" parent="map"]
 position = Vector2( 1, 0 )
 mode = 2
 tile_set = SubResource( 6 )
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 format = 1
 tile_data = PoolIntArray( -131069, 12, 0, -131063, 12, 0, -131059, 12, 0, -65527, -1610612727, 0, -65521, -1610612727, 0, 131081, -1610612727, 0, 131087, -1610612727, 0, 196611, 12, 0, 196613, 12, 0, 196615, 12, 0, 196617, -1610612727, 0, 196623, 12, 0, 196625, 12, 0, 196627, 12, 0, 524291, 12, 0, 524293, 12, 0, 524295, 12, 0, 524297, -1610612727, 0, 524303, 12, 0, 524305, 12, 0, 524307, 12, 0, 589833, -1073741815, 0, 786441, -1073741815, 0, 851971, 12, 0, 851973, 12, 0, 851975, 12, 0, 851977, 12, 0, 851979, 12, 0, 851981, -1073741815, 0, 851983, 12, 0, 851985, 12, 0, 851987, 12, 0 )
 
@@ -2826,6 +2657,7 @@ position = Vector2( 1, 0 )
 mode = 2
 tile_set = SubResource( 6 )
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 format = 1
 tile_data = PoolIntArray( -131069, 12, 0, -131063, 12, 0, -131059, 12, 0, -65527, -1610612727, 0, -65521, -1610612727, 0, 131081, -1610612727, 0, 131087, -1610612727, 0, 196611, 12, 0, 196613, 12, 0, 196615, 12, 0, 196617, -1610612727, 0, 196623, 12, 0, 196625, 12, 0, 196627, 12, 0, 524291, 12, 0, 524293, 12, 0, 524295, 12, 0, 524297, -1610612727, 0, 524303, 12, 0, 524305, 12, 0, 524307, 12, 0, 589833, -1073741815, 0, 786441, -1073741815, 0, 851971, 12, 0, 851973, 12, 0, 851975, 12, 0, 851977, 12, 0, 851979, 12, 0, 851981, -1073741815, 0, 851983, 12, 0, 851985, 12, 0, 851987, 12, 0 )
 
@@ -2834,6 +2666,7 @@ position = Vector2( 1, 0 )
 mode = 2
 tile_set = SubResource( 6 )
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 format = 1
 tile_data = PoolIntArray( -131069, 12, 0, -131063, -1610612727, 0, -131057, -1610612727, 0, 131081, -1610612727, 0, 131087, -1610612727, 0, 262153, -1610612727, 0, 262159, -1610612727, 0, 458761, -1610612727, 0, 458767, -1610612727, 0, 589839, -1610612727, 0, 786447, -1610612727, 0, 851983, -1610612727, 0 )
 
@@ -2842,12 +2675,14 @@ position = Vector2( 185, -168 )
 tile_set = SubResource( 33 )
 cell_size = Vector2( 8, 8 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+show_collision = true
 format = 1
 
 [node name="NPC" type="TileMap" parent="map"]
 tile_set = SubResource( 33 )
 cell_size = Vector2( 8, 8 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+show_collision = true
 format = 1
 tile_data = PoolIntArray( 458772, 20, 0, 458780, 18, 0, 1769544, 22, 0, 3080222, 21, 0, 3997716, 23, 0, 3997720, 24, 0, 3997724, 25, 0, 3997730, 26, 0, 3997734, 27, 0, 3997738, 28, 0 )
 
@@ -2856,6 +2691,7 @@ tile_set = SubResource( 14 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 64
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -262117, 82, 0, -262109, 82, 0, -131045, 28, 0, -65517, 13, 0, -65515, 10, 0, -65510, 10, 0, 8, 71, 0, 10, 74, 0, 11, 71, 0, 13, 74, 0, 14, 71, 0, 131105, 47, 0, 131107, 75, 0, 131108, 75, 0, 131109, 47, 0, 262163, 10, 0, 262173, 10, 0, 327688, 71, 0, 327690, 74, 0, 327691, 74, 0, 327692, 74, 0, 327693, 74, 0, 327694, 71, 0, 393230, 82, 0, 393231, 82, 0, 524296, 82, 0, 589855, 8, 0, 589865, 8, 0, 655379, 10, 0, 655389, 10, 0, 655393, 71, 0, 655397, 71, 0, 786440, 47, 0, 786445, 47, 0, 917523, 10, 0, 917533, 10, 0, 983071, 8, 0, 983077, 71, 0, 983081, 8, 0, 1310733, 45, 0, 1310739, 10, 0, 1310749, 10, 0, 1507365, 47, 0, 1507367, 66, 0, 1572883, 10, 0, 1572893, 10, 0, 1638407, 8, 0, 1638412, 13, 0, 1835018, 78, 0, 1835021, 77, 0, 1835024, 79, 0, 1835027, 76, 0, 1835041, 77, 0, 1835044, 78, 0, 1900550, 8, 0, 1900551, 13, 0, 1900568, 43, 0, 1900570, 10, 0, 1900574, 10, 0, 1900579, 9, 0, 1900582, 9, 0, 1966113, 39, 0, 1966116, 39, 0, 1966119, 40, 0, 2097161, 47, 0, 2097172, 47, 0, 2097175, 58, 0, 2162721, 71, 0, 2162724, 71, 0, 2228230, 8, 0 )
@@ -2865,6 +2701,7 @@ tile_set = SubResource( 14 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 64
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -262133, 82, 0, -65530, 10, 0, -65498, 81, 0, 10, 74, 0, 14, 74, 0, 17, 45, 0, 131105, 17, 0, 131108, 75, 0, 131109, 23, 0, 196642, 51, 0, 327686, 10, 0, 327689, 26, 0, 327693, 24, 0, 393227, 82, 0, 458784, 84, 0, 524302, 76, 0, 589856, 81, 0, 655395, 74, 0, 655396, 74, 0, 786442, 75, 0, 786444, 75, 0, 983073, 71, 0, 983075, 74, 0, 983076, 74, 0, 1114150, 78, 0, 1179659, 78, 0, 1179686, 78, 0, 1179687, 78, 0, 1245195, 80, 0, 1310756, 39, 0, 1310759, 40, 0, 1441833, 81, 0, 1507365, 37, 0, 1572873, 57, 0, 1638408, 71, 0, 1638414, 71, 0, 1638417, 8, 0, 1703946, 82, 0, 1703957, 82, 0, 1703975, 82, 0, 2097163, 75, 0, 2097164, 75, 0, 2097165, 65, 0, 2097166, 75, 0, 2097167, 75, 0, 2097168, 75, 0, 2097169, 75, 0, 2097170, 66, 0, 2097171, 75, 0, 2097173, 53, 0, 2162697, 65, 0, 2162703, 66, 0, 2162722, 66, 0, 2162723, 74, 0, 2162724, 44, 0 )
@@ -2874,6 +2711,7 @@ tile_set = SubResource( 14 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 64
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, -65505, 8, 0, -65502, 11, 0, -65500, 12, 0, -65497, 13, 0, -65495, 8, 0, 10, 54, 0, 14, 54, 0, 196642, 55, 0, 196646, 55, 0, 393227, 82, 0, 589859, 22, 0, 655394, 63, 0, 655396, 54, 0, 655398, 66, 0, 655400, 45, 0, 786440, 22, 0, 786443, 33, 0, 786445, 22, 0, 851977, 54, 0, 983074, 53, 0, 983075, 49, 0, 1179686, 78, 0, 1310728, 71, 0, 1310729, 54, 0, 1310734, 71, 0, 1638408, 26, 0, 1638414, 48, 0, 1638415, 1610612786, 0 )
@@ -2882,14 +2720,16 @@ tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, -65505, 8, 0, -65502, 11
 tile_set = SubResource( 15 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 format = 1
-tile_data = PoolIntArray( 393222, 0, 0, 393226, 0, 0, 393230, 0, 0, 1048607, 0, 0, 1048611, 0, 0, 1048614, 0, 0, 1703943, 0, 0, 1703947, 0, 0, 1703951, 0, 0 )
+tile_data = PoolIntArray( 393222, 0, 0, 393226, 0, 0, 393230, 0, 0, 1048607, 0, 0, 1048611, 0, 0, 1048614, 0, 0, 1703943, 0, 0, 1703947, 0, 0, 1703951, 0, 0, 2359302, 0, 0, 2359304, 0, 0, 2359305, 0, 0, 2359306, 0, 0, 2359307, 0, 0, 2359308, 0, 0, 2359309, 0, 0, 2359310, 0, 0, 2359311, 0, 0, 2359312, 0, 0, 2359313, 0, 0, 2359314, 0, 0, 2359315, 0, 0, 2359316, 0, 0, 2359320, 0, 0, 2359321, 0, 0, 2359322, 0, 0, 2359323, 0, 0, 2359324, 0, 0, 2359325, 0, 0, 2359326, 0, 0, 2359327, 0, 0, 2359328, 0, 0, 2359329, 0, 0, 2359330, 0, 0, 2359331, 0, 0, 2359332, 0, 0, 2359333, 0, 0, 2359334, 0, 0 )
 
 [node name="Objeto5" type="TileMap" parent="map"]
 tile_set = SubResource( 14 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 64
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+show_collision = true
 collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, -65505, 8, 0, -65502, 11, 0, -65500, 12, 0, -65497, 13, 0, -65495, 8, 0, 10, 54, 0, 14, 54, 0, 196642, 55, 0, 196646, 55, 0, 393227, 82, 0, 393252, 83, 0, 524302, 76, 0, 589830, 8, 0, 589832, 81, 0, 589834, 11, 0, 589841, 8, 0, 589859, 22, 0, 655394, 63, 0, 655396, 54, 0, 655398, 66, 0, 655400, 45, 0, 983074, 53, 0, 1048587, 83, 0, 1048612, 83, 0, 1179686, 78, 0, 1245190, 8, 0, 1245192, 69, 0, 1245198, 23, 0, 1245201, 8, 0, 1245215, 13, 0, 1245216, 43, 0, 1245218, 11, 0, 1245222, 10, 0, 1835017, 78, 0, 1835020, 77, 0, 1835023, 79, 0, 1900551, 13, 0 )
@@ -2898,6 +2738,7 @@ tile_data = PoolIntArray( -65527, 37, 0, -65523, 35, 0, -65505, 8, 0, -65502, 11
 tile_set = SubResource( 33 )
 cell_size = Vector2( 8, 8 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+show_collision = true
 format = 1
 tile_data = PoolIntArray( 20, 3, 0, 393292, 2, 0, 1703964, 5, 0, 2621470, 10, 0, 3145804, 7, 0, 4194320, 36, 0, 4325396, 9, 0, 4325400, 8, 0, 4325404, 11, 0, 4325410, 17, 0, 4325414, 14, 0, 4325418, 2, 0 )
 
@@ -2906,6 +2747,12 @@ margin_left = 310.0
 margin_top = 31.0
 margin_right = 331.0
 margin_bottom = 63.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Sprite" type="Sprite" parent="NPCQuiz1"]
+position = Vector2( 10, 14 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 34 )
 
 [node name="Quiz1Button" type="TouchScreenButton" parent="NPCQuiz1"]
 position = Vector2( -1, -19 )
@@ -2916,7 +2763,7 @@ shape = SubResource( 21 )
 position = Vector2( 10, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="AncoraQuiz1" type="Node2D" parent="NPCQuiz1"]
@@ -2958,7 +2805,7 @@ zoom = Vector2( 0.5, 0.5 )
 
 [node name="ColorRect" type="AnimatedSprite" parent="ControlAssedio"]
 visible = false
-position = Vector2( 400, 208 )
+position = Vector2( 533, 191 )
 scale = Vector2( 1.2, 1.2 )
 frames = ExtResource( 30 )
 frame = 4
@@ -2984,27 +2831,33 @@ anims/WalkUpBackwards = SubResource( 28 )
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="NPC1" type="ColorRect" parent="ControlAssedio/Eq Compliance"]
-margin_left = 261.0
-margin_top = 368.0
-margin_right = 282.0
-margin_bottom = 400.0
+[node name="NPC1" type="Sprite" parent="ControlAssedio/Eq Compliance"]
+position = Vector2( 230, 387 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 33 )
 
 [node name="NPC2 (O BOM)" type="ColorRect" parent="ControlAssedio/Eq Compliance"]
 margin_left = 145.0
 margin_top = 354.0
 margin_right = 166.0
 margin_bottom = 386.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Sprite" type="Sprite" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
+position = Vector2( 1, 0 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 36 )
+centered = false
+offset = Vector2( 0.35, 2 )
 
 [node name="NPCBomAncora" type="Node2D" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
 position = Vector2( 11, 16 )
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
-visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 5
+frame = 7
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
@@ -3016,11 +2869,11 @@ shape = SubResource( 27 )
 [node name="DialogBox 13" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)" instance=ExtResource( 21 )]
 visible = false
 
-[node name="NPC3" type="ColorRect" parent="ControlAssedio/Eq Compliance"]
-margin_left = 186.0
-margin_top = 325.0
-margin_right = 207.0
-margin_bottom = 357.0
+[node name="NPC3" type="Sprite" parent="ControlAssedio/Eq Compliance"]
+position = Vector2( 225, 326 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 35 )
+centered = false
 
 [node name="DialogBox 12" parent="ControlAssedio" instance=ExtResource( 20 )]
 visible = false
@@ -3029,29 +2882,25 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="NPC1" type="ColorRect" parent="ControlQuiz2"]
-margin_left = 533.0
-margin_top = 485.0
-margin_right = 554.0
-margin_bottom = 517.0
+[node name="NPC1" type="Sprite" parent="ControlQuiz2"]
+position = Vector2( 543, 495 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 39 )
 
-[node name="NPC3" type="ColorRect" parent="ControlQuiz2"]
-margin_left = 633.0
-margin_top = 487.0
-margin_right = 654.0
-margin_bottom = 519.0
+[node name="NPC3" type="Sprite" parent="ControlQuiz2"]
+position = Vector2( 643, 499 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 37 )
 
-[node name="NPC2" type="ColorRect" parent="ControlQuiz2"]
-margin_left = 581.0
-margin_top = 485.0
-margin_right = 602.0
-margin_bottom = 517.0
+[node name="NPC2" type="Sprite" parent="ControlQuiz2"]
+position = Vector2( 591, 495 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 40 )
 
-[node name="NPC4" type="ColorRect" parent="ControlQuiz2"]
-margin_left = 632.0
-margin_top = 527.0
-margin_right = 653.0
-margin_bottom = 559.0
+[node name="NPC4" type="Sprite" parent="ControlQuiz2"]
+position = Vector2( 643, 540 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 38 )
 
 [node name="BaloesExclamacao" type="Control" parent="ControlQuiz2"]
 visible = false
@@ -3060,27 +2909,27 @@ visible = false
 position = Vector2( 544, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="BalaoExclamacao2" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 592, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
+frame = 2
 playing = true
 
 [node name="BalaoExclamacao3" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 8
+frame = 1
 playing = true
 
 [node name="BalaoExclamacao4" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 523 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 7
 playing = true
 
 [node name="Quiz2Ancora" type="Node2D" parent="ControlQuiz2"]
@@ -3118,6 +2967,7 @@ scroll_active = false
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ControlQuiz2"]
 root_node = NodePath("../CanvasLayer2")
 anims/RESET = SubResource( 31 )
+anims/cameraMove = SubResource( 140 )
 anims/flash = SubResource( 32 )
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="ControlQuiz2"]
@@ -3144,7 +2994,7 @@ position = Vector2( 156, 370 )
 position = Vector2( 156, 347 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="NPCCompQuiz2Botao" type="TouchScreenButton" parent="ControlQuiz2/Eq Compliance"]
@@ -3155,12 +3005,19 @@ shape = SubResource( 27 )
 [node name="DialogBox 15" parent="ControlQuiz2/Eq Compliance" instance=ExtResource( 26 )]
 visible = false
 
+[node name="Camera2D" type="Camera2D" parent="ControlQuiz2"]
+position = Vector2( 591, 526 )
+zoom = Vector2( 0.4, 0.4 )
+
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 381, 79 )
 speed = 150
 size = 0.6
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
+
+[node name="QuitButton" parent="GUI/PauseScreen" index="2"]
+visible = false
 
 [node name="Audio" parent="GUI" instance=ExtResource( 25 )]
 
@@ -3203,3 +3060,5 @@ visible = false
 [connection signal="timeout" from="ControlQuiz2/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="ControlQuiz2/Eq Compliance/NPCCompQuiz2Botao" to="." method="_on_NPCCompQuiz2Botao_pressed"]
 [connection signal="animation_finished" from="WalkInPlayer" to="." method="_on_WalkInPlayer_animation_finished"]
+
+[editable path="GUI"]

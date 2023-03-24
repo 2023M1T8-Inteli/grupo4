@@ -43,11 +43,17 @@ func _ready():
 	# Se a posição atual for em um cenário jogável, posicione o jogador na posição atual
 	# Caso contrário, posicione-o na posição da cidade e toque a animação de transição
 	if pos.posScene == "res://Scenes/Playables/Environment/Administrativo.tscn":
+		$Player/Camera2D.smoothing_enabled = false
 		$Player.global_position = pos.currentPos
 		pos.posScene = null
+		yield(get_tree().create_timer(0.05), "timeout")
+		$Player/Camera2D.smoothing_enabled = true
 	else:
+		$Player/Camera2D.smoothing_enabled = false
 		$Player.global_position = pos.posADM
 		print($Player.global_position)
+		yield(get_tree().create_timer(0.05), "timeout")
+		$Player/Camera2D.smoothing_enabled = true
 	
 	# Define o zoom da câmera e obtém os limites do mapa
 	camera.zoom = Vector2(0.5,0.5)
@@ -67,16 +73,17 @@ func _process(_delta):
 		closeToPorta = false
 func _on_TextureButton_pressed():
 	# Verifica se o jogador está perto da porta
-	if closeToPorta and AdmGlobals.currentTask == 0:
+	#if closeToPorta and AdmGlobals.currentTask == 0:
 		# Impede o movimento do jogador durante a transição de cena
-		Global.canMove = false
+		#Global.canMove = false
 		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada
-		yield(get_tree().create_timer(0.15), "timeout")
+		#yield(get_tree().create_timer(0.15), "timeout")
 		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
-		if get_tree().change_scene("res://Scenes/Playables/Environment/Cidade.tscn") != OK:
-			print("ERRO")
+		#if get_tree().change_scene("res://Scenes/Playables/Environment/Cidade.tscn") != OK:
+		#	print("ERRO")
 			
-	if closeToPorta and (AdmGlobals.currentTask == 1 or AdmGlobals.currentTask == 2 or AdmGlobals.currentTask == 3):
+	if closeToPorta and (AdmGlobals.currentTask == 1 or AdmGlobals.currentTask == 2 or AdmGlobals.currentTask == 3) and AdmGlobals.canGo:
+		AdmGlobals.canGo = false
 		# Impede o movimento do jogador durante a transição de cena
 		Global.canMove = false
 		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada

@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/misc/Textura Caixa.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Interface/gradientRect.png" type="Texture" id=3]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=4]
-
 
 [sub_resource type="DynamicFont" id=1]
 size = 39
@@ -132,6 +132,11 @@ tracks/0/keys = {
 
 [node name="DialogBox 1" type="CanvasLayer"]
 
+[node name="ColorRect" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.509804 )
+position = Vector2( 180, 320 )
+texture = ExtResource( 3 )
+
 [node name="TexturaCaixa" type="TextureRect" parent="."]
 margin_left = 16.0
 margin_top = 544.0
@@ -184,10 +189,10 @@ anims/RESET = SubResource( 5 )
 anims/dissolve = SubResource( 6 )
 
 [node name="TextureButton" type="TextureButton" parent="TexturaCaixa"]
-margin_left = -14.0
-margin_top = -461.0
-margin_right = 346.0
-margin_bottom = 179.0
+margin_left = -16.0
+margin_top = -547.0
+margin_right = 344.0
+margin_bottom = 93.0
 mouse_filter = 1
 action_mode = 0
 

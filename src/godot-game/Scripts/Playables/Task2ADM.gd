@@ -16,6 +16,7 @@ func _on_BotaoComputador_pressed():
 		
 		Global.activeObjective[1] = self.get_parent().get_node("PortaAncora").global_position
 		Global.activeObjective[2] = "Vá para o segundo andar."
+		AdmGlobals.canGo = true
 		
 		get_parent().get_node("GUI").visible = false
 		

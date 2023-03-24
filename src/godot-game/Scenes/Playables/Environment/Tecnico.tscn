@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=126 format=2]
 
 [ext_resource path="res://Scripts/Playables/Tecnico.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Playables/misc/Player.tscn" type="PackedScene" id=2]
@@ -42,6 +42,16 @@
 [ext_resource path="res://Scripts/Playables/Task3TEC.gd" type="Script" id=40]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 25.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Scripts/Playables/Task4TEC.gd" type="Script" id=42]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC1.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC2.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC6.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC3.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC10.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC5.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC4.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC7.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC8.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/NPCs/NPCNovoTEC9.png" type="Texture" id=52]
 
 [sub_resource type="TileSet" id=21]
 0/name = "tilemap_packed.png 0"
@@ -3915,34 +3925,154 @@ points = PoolVector2Array( 0.102005, 5.94556, 15.6065, 5.94556, 16, 16, 0, 16 )
 [sub_resource type="Animation" id=41]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/path = NodePath("Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 915, 700 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0.7, 0.7 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Camera2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node2D/NPC1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 915, 912 ) ]
+"values": [ Vector2( 915, 584 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node2D/NPC2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 955, 584 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node2D/NPC3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 876, 584 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node2D/NPC7:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 955, 633 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node2D/NPC6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 915, 633 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node2D/NPC5:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 876, 633 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Node2D/NPC8:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 876, 682 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node2D/NPC4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 915, 682 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Node2D/NPC9:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 955, 682 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("NPCBoss:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 915, 734 ) ]
 }
 
 [sub_resource type="Animation" id=42]
 resource_name = "cameraMove"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/path = NodePath("Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -3951,10 +4081,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.7, 0.7 ), Vector2( 0.7, 0.7 ) ]
+"values": [ Vector2( 915, 700 ), Vector2( 915, 531 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Camera2D:global_position")
+tracks/1/path = NodePath("Camera2D:zoom")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3963,7 +4093,127 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 915, 912 ), Vector2( 915, 912 ) ]
+"values": [ Vector2( 0.7, 0.7 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node2D/NPC1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 915, 584 ), Vector2( 1115, 584 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node2D/NPC2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 955, 584 ), Vector2( 1155, 584 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node2D/NPC3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 876, 584 ), Vector2( 676, 584 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node2D/NPC7:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 955, 633 ), Vector2( 1155, 633 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node2D/NPC6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 915, 633 ), Vector2( 615, 633 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node2D/NPC5:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 876, 633 ), Vector2( 576, 633 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Node2D/NPC8:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 876, 682 ), Vector2( 676, 682 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node2D/NPC4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 915, 682 ), Vector2( 1115, 682 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Node2D/NPC9:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 955, 682 ), Vector2( 1155, 682 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("NPCBoss:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 915, 734 ), Vector2( 915, 1000 ) ]
 }
 
 [sub_resource type="SpriteFrames" id=43]
@@ -4033,6 +4283,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=47]
 resource_name = "cameraMoveBack"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Camera2D:zoom")
 tracks/0/interp = 1
@@ -4040,7 +4291,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.6, 0.6 ), Vector2( 0.6, 0.6 ) ]
@@ -4052,7 +4303,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1276, 1616 ), Vector2( 1276, 1616 ) ]
@@ -4123,7 +4374,7 @@ collision_layer = 4
 format = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 915, 748 )
+position = Vector2( 915, 530 )
 personagemAtivo = "joaozinho"
 
 [node name="Objetos" type="TileMap" parent="."]
@@ -4150,16 +4401,68 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 8 )
 
-[node name="Camera2D" type="Camera2D" parent="Task0TEC"]
-position = Vector2( 915, 912 )
-zoom = Vector2( 0.7, 0.7 )
-
 [node name="DialogBox 9" parent="Task0TEC" instance=ExtResource( 9 )]
 visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Task0TEC"]
 anims/RESET = SubResource( 41 )
 anims/cameraMove = SubResource( 42 )
+
+[node name="Node2D" type="Node2D" parent="Task0TEC"]
+
+[node name="NPC1" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 915, 584 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 44 )
+
+[node name="NPC2" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 955, 584 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 46 )
+
+[node name="NPC3" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 876, 584 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 49 )
+
+[node name="NPC4" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 915, 682 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 45 )
+
+[node name="NPC5" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 876, 633 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 48 )
+
+[node name="NPC6" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 915, 633 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 50 )
+
+[node name="NPC7" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 955, 633 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 51 )
+
+[node name="NPC8" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 876, 682 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 52 )
+
+[node name="NPC9" type="Sprite" parent="Task0TEC/Node2D"]
+position = Vector2( 955, 682 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 47 )
+
+[node name="NPCBoss" type="Sprite" parent="Task0TEC"]
+position = Vector2( 915, 734 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 43 )
+
+[node name="Camera2D" type="Camera2D" parent="Task0TEC"]
+position = Vector2( 915, 700 )
+zoom = Vector2( 0.7, 0.7 )
 
 [node name="Task1TEC" type="Control" parent="."]
 visible = false
@@ -4176,42 +4479,60 @@ margin_left = 1317.0
 margin_top = 1554.0
 margin_right = 1357.0
 margin_bottom = 1634.0
+color = Color( 1, 1, 1, 0 )
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="Task1TEC/NPCs/ColorRect"]
 position = Vector2( -32, 85 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 7
+frame = 3
 playing = true
+
+[node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect"]
+position = Vector2( 20, 27 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 48 )
 
 [node name="ColorRect2" type="ColorRect" parent="Task1TEC/NPCs"]
 margin_left = 1265.0
 margin_top = 1654.0
 margin_right = 1305.0
 margin_bottom = 1734.0
+color = Color( 1, 1, 1, 0 )
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="Task1TEC/NPCs/ColorRect2"]
 position = Vector2( -70, -126 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 3
+frame = 8
 playing = true
+
+[node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect2"]
+position = Vector2( 20, 25 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 50 )
 
 [node name="ColorRect3" type="ColorRect" parent="Task1TEC/NPCs"]
 margin_left = 1175.0
 margin_top = 1540.0
 margin_right = 1215.0
 margin_bottom = 1620.0
+color = Color( 1, 1, 1, 0 )
 
 [node name="BalaoExclamacao" type="AnimatedSprite" parent="Task1TEC/NPCs/ColorRect3"]
 position = Vector2( 162, 0 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 3
+frame = 8
 playing = true
+
+[node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect3"]
+position = Vector2( 20, 27 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 51 )
 
 [node name="Area2D" type="Area2D" parent="Task1TEC"]
 position = Vector2( 1276, 1616 )
@@ -4265,7 +4586,7 @@ position = Vector2( 1339, 113 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 2
 frames = SubResource( 50 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="Position2D" type="Position2D" parent="Task2TEC"]
@@ -4292,7 +4613,7 @@ position = Vector2( 1031, 408 )
 scale = Vector2( 0.10896, 0.0934524 )
 z_index = 2
 frames = SubResource( 34 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="posteSobeButton" type="TouchScreenButton" parent="Task3TEC"]
@@ -4304,13 +4625,12 @@ shape = SubResource( 32 )
 position = Vector2( 1031, 405 )
 
 [node name="Task4TEC" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 42 )
 
 [node name="Position2D" type="Position2D" parent="Task4TEC"]
-position = Vector2( 915, 807 )
+position = Vector2( 915, 950 )
 
 [node name="Area2D" type="Area2D" parent="Task4TEC"]
 position = Vector2( 915, 950 )
@@ -4324,11 +4644,18 @@ margin_left = -20.0
 margin_top = -39.0
 margin_right = 20.0
 margin_bottom = 41.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Sprite" type="Sprite" parent="Task4TEC/Area2D/ColorRect"]
+position = Vector2( 20, 39 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 43 )
 
 [node name="DialogBox 25" parent="Task4TEC" instance=ExtResource( 41 )]
 visible = false
 
 [node name="StaticBody2D (Bounds)" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2( 360, 104 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D (Bounds)"]

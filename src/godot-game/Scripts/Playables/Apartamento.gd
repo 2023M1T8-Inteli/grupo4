@@ -22,6 +22,7 @@ func animate():
 func _on_TouchScreenButton_pressed():
 	if taskFeita == false:
 		if ($Player.global_position).distance_to($TaskRoteador/RoteadorAncora.global_position) < 30:
+			taskFeita = true
 			Global.activeObjective[0] = false
 			
 			$TaskRoteador/TextureProgress.visible = true
@@ -34,8 +35,6 @@ func _on_TouchScreenButton_pressed():
 			Global.canMove = true
 			$TaskRoteador/TextureProgress.visible = false
 			$TaskRoteador/BalaoObj.visible = false
-			
-			taskFeita = true
 			
 			Global.activeObjective[0] = true
 			Global.activeObjective[1] = $SpriteBlogueira/Position2D.global_position

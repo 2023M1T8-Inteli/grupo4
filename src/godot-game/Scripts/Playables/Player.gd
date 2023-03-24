@@ -114,6 +114,7 @@ func _physics_process(_delta):
 func objective(withAnim):
 	if withAnim:
 		yield(get_tree().create_timer(0.5), "timeout")
+		get_parent().get_node("GUI").visible = false
 		Global.canMove = false
 	
 		var currentCameraZoom = $Camera2D.zoom
@@ -136,6 +137,7 @@ func objective(withAnim):
 		yield($Tween, "tween_completed")
 	
 		Global.canMove = true
+		get_parent().get_node("GUI").visible = true
 	
 	$CanvasLayer.visible = true
 	$CanvasLayer/RichTextLabel.bbcode_text = "[center]"+Global.activeObjective[2]+"[/center]"

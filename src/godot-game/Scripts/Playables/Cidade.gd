@@ -28,11 +28,17 @@ func _ready():
 	# Verifica se o jogador tem uma posição salva na cena Cidade
 	if pos.posScene == "res://Scenes/Playables/Environment/Cidade.tscn":
 		# Redefine a posição atual do jogador
+		$Player/Camera2D.smoothing_enabled = false
 		$Player.global_position = pos.currentPos
 		pos.posScene = null
+		yield(get_tree().create_timer(0.05), "timeout")
+		$Player/Camera2D.smoothing_enabled = true
 	else:
 		# Caso contrário, define a posição do jogador na cidade como a posição padrão
+		$Player/Camera2D.smoothing_enabled = false
 		$Player.global_position = pos.posCidade
+		yield(get_tree().create_timer(0.05), "timeout")
+		$Player/Camera2D.smoothing_enabled = true
 
 	# Permite o movimento do jogador
 	Global.canMove = true

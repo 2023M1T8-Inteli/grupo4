@@ -3128,6 +3128,7 @@ margin_bottom = -17.0
 position = Vector2( -148, -67 )
 scale = Vector2( 0.0808908, 0.0797043 )
 frames = SubResource( 9 )
+frame = 6
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]

@@ -79,6 +79,7 @@ custom_fonts/normal_font = SubResource( 1 )
 text = "VOLTAR"
 
 [node name="QuitButton" type="TextureButton" parent="PauseScreen"]
+visible = false
 margin_left = -136.0
 margin_top = 145.0
 margin_right = 136.0

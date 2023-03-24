@@ -11,9 +11,12 @@ func _on_BotaoComputador_pressed():
 		yield(get_tree().create_timer(0.05), "timeout")
 		
 		$BotaoComputador.visible = false
+		get_parent().get_node("GUI").visible = false
+		
 		
 		Global.activeObjective[1] = self.get_parent().get_node("PortaAncora").global_position
 		Global.activeObjective[2] = "Vá para o segundo andar."
+		AdmGlobals.canGo = true
 		
 		$TelaComputador.visible = true
 		yield(get_tree().create_timer(1), "timeout")
@@ -39,3 +42,5 @@ func _on_quiz_finish():
 	AdmGlobals.currentTask = 1
 	
 	self.get_parent().get_node("Player").objective(true)
+	
+	get_parent().get_node("GUI").visible = true
