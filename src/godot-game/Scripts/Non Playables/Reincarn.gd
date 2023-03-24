@@ -109,7 +109,7 @@ func finish():
 		yield(get_tree().create_timer(2), "timeout")
 		if get_tree().change_scene("res://Scenes/Non Playables/misc/Title Screen.tscn") != OK:
 			print("ERROR ON SCENE CHANGE")
-		#Global.parte = "fim"
+		Global.parte = "fim"
 
 func add_line():
 	var new_line = line.duplicate()
