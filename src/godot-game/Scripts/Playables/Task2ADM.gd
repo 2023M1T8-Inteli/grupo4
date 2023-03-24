@@ -14,7 +14,7 @@ func _on_BotaoComputador_pressed():
 		$BotaoComputador.visible = false
 		
 		Global.activeObjective[1] = self.get_parent().get_node("PortaAncora").global_position
-		Global.activeObjective[2] = "Vá para o segundo andar."
+		Global.activeObjective[2] = "Vá para o setor Executivo."
 		
 		get_parent().get_node("GUI").visible = false
 		

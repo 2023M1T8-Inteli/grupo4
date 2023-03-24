@@ -5,7 +5,7 @@ func _ready():
 		$Area2D/CollisionShape2D.disabled = false
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = get_parent().get_node("Task4TEC/Position2D").global_position
-		Global.activeObjective[2] = "O chefe quer falar com voce"
+		Global.activeObjective[2] = "O chefe quer falar com você!"
 		get_parent().get_node("Player").objective(true)
 
 func _on_Area2D_body_entered(body):

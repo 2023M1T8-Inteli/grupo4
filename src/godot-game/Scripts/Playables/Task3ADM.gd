@@ -55,7 +55,7 @@ func _on_quiz_finish():
 	Global.canMove = true
 	
 	Global.activeObjective[0] = true
-	Global.activeObjective[2] = "Vá para o segundo andar."
+	Global.activeObjective[2] = "Vá para o setor Executivo."
 	get_parent().get_node("Player").objective(false)
 	
 	

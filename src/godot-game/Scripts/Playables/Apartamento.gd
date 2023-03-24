@@ -39,7 +39,7 @@ func _on_TouchScreenButton_pressed():
 			
 			Global.activeObjective[0] = true
 			Global.activeObjective[1] = $SpriteBlogueira/Position2D.global_position
-			Global.activeObjective[2] = "Fale com a Blogueira"
+			Global.activeObjective[2] = "Fale com a Blogueira."
 			
 			$SpriteBlogueira/TouchScreenButton.visible = true
 			
@@ -67,7 +67,7 @@ func _on_dialog1_finish():
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $TaskRoteador/RoteadorAncora.global_position
-	Global.activeObjective[2] = "Conserte o roteador"
+	Global.activeObjective[2] = "Conserte o roteador."
 	$Player.objective(false)
 	
 	Global.canMove = true
@@ -96,7 +96,7 @@ func _on_dialog3_finish():
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $PortaAncora.global_position
-	Global.activeObjective[2] = "Volte para o campo"
+	Global.activeObjective[2] = "Volte para o campo."
 	$Player.objective(false)
 	
 	$Area2D/CollisionShape2D.disabled = false

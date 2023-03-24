@@ -1,5 +1,5 @@
 [
     {"IsCorrect": "Y", "Resposta": "Tentar resolver com o meu colega com calma, e se eu não conseguir, levar a situação para o departamento de Compliance."},
-    {"IsCorrect": "N", "Resposta": "Acatar às exigências sem questionar e ficar frustrado"},
-    {"IsCorrect": "N", "Resposta": "Responder com palavras de baixo calão"}
+    {"IsCorrect": "N", "Resposta": "Acatar às exigências sem questionar e ficar frustrado."},
+    {"IsCorrect": "N", "Resposta": "Responder com palavras de baixo calão."}
 ]

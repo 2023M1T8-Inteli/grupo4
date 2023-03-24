@@ -37,5 +37,5 @@ func on_dialog_finish():
 	
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = self.get_parent().get_node("Task1TEC/Position2D").global_position
-	Global.activeObjective[2] = "Fale com seus colegas"
+	Global.activeObjective[2] = "Fale com seus colegas."
 	self.get_parent().get_node("Player").objective(true)

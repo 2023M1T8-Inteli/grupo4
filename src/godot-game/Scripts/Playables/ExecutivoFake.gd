@@ -21,7 +21,7 @@ func _ready():
 	elif AdmGlobals.currentTask == 2 or AdmGlobals.currentTask == 3:
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $"Eq Compliance/NPC2 (O BOM)/NPCBomAncora".global_position
-		Global.activeObjective[2] = "Fale com a Eq. de Compliance"
+		Global.activeObjective[2] = "Fale com a Eq. de Compliance."
 		$"Eq Compliance/NPC2 (O BOM)/NPCBomBotao".visible = true
 		$"Eq Compliance/NPC2 (O BOM)/BalaoExclamacao".visible = true
 		$Player.objective(true)
@@ -81,14 +81,14 @@ func _on_SegInfo_dialog_finish():
 	Global.canMove = true
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $PortaAncora.global_position
-	Global.activeObjective[2] = "Volte para o setor Administrativo"
+	Global.activeObjective[2] = "Volte para o setor Administrativo."
 	$Player.objective(false)
 
 func _on_eq_compliance_dialog_finish():
 	Global.canMove = true
 	Global.activeObjective[0] = true
 	Global.activeObjective[1] = $PortaAncora.global_position
-	Global.activeObjective[2] = "Volte para o setor Administrativo"
+	Global.activeObjective[2] = "Volte para o setor Administrativo."
 	$Player.objective(true)
 	
 func _on_eq_compliance_dialog2_finish():

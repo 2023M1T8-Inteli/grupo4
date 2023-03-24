@@ -29,14 +29,14 @@ func _ready():
 	elif AdmGlobals.currentTask == 1:
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
-		Global.activeObjective[2] = "Volte ao trabalho"
+		Global.activeObjective[2] = "Volte ao trabalho."
 		$Player.objective(true)
 		$Task2ADM.visible = true
 		
 	elif AdmGlobals.currentTask == 2:
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
-		Global.activeObjective[2] = "Arrume suas coisas e vá para casa"
+		Global.activeObjective[2] = "Arrume suas coisas e vá para casa."
 		$Player.objective(true)
 		$Task3ADM.visible = true
 		
