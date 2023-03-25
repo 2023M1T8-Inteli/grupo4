@@ -65,8 +65,8 @@ func _on_TextureButton_pressed():
 	# Mostra o filtro de cores
 	$DrunkFilter.visible = true
 	
+	# Espera a animacao de objetivo tocar
 	yield(get_tree().create_timer(4.05), "timeout")
 	
+	# Define que o jogador esta bebado
 	Global.isDrunk = true
-	
-	yield()

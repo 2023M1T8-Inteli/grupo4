@@ -27,14 +27,14 @@ func _ready():
 		
 	# Verifica se o jogador tem uma posição salva na cena Cidade
 	if pos.posScene == "res://Scenes/Playables/Environment/Cidade.tscn":
-		# Redefine a posição atual do jogador
+		# Redefine a posição atual do jogador, removendo temporariamente o "smoothing" da camera
 		$Player/Camera2D.smoothing_enabled = false
 		$Player.global_position = pos.currentPos
 		pos.posScene = null
 		yield(get_tree().create_timer(0.05), "timeout")
 		$Player/Camera2D.smoothing_enabled = true
 	else:
-		# Caso contrário, define a posição do jogador na cidade como a posição padrão
+		# Caso contrário, define a posição do jogador na cidade como a posição padrão, removendo temporariamente o "smoothing" da camera
 		$Player/Camera2D.smoothing_enabled = false
 		$Player.global_position = pos.posCidade
 		yield(get_tree().create_timer(0.05), "timeout")
@@ -73,5 +73,6 @@ func _on_admButton_pressed():
 		if get_tree().change_scene("res://Scenes/Playables/Environment/Administrativo.tscn") != OK:
 			print("ERRO")
 
+# Guarda o local em que o audio estava quando o player saiu da cena
 func _on_Cidade_tree_exiting():
 	$GUI/Audio.get_playback_pos()

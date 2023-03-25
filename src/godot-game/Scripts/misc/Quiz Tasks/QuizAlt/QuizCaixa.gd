@@ -1,5 +1,3 @@
-# O CÓDIGO ABAIXO ESTÁ PARCIALMENTE COMENTADO, POIS NÃO ESTA IMPLEMENTADO NO JOGO AINDA E ESTEVE SERVINDO SOMENTE PARA TESTAGEM
-
 extends TextureRect
 
 # Define o caminho do arquivo de diálogo
@@ -80,7 +78,6 @@ func getDialog() -> Array:
 		return output
 	else:
 		return []
-
 
 func nextPhrase() -> void:
 	if (phraseNum - startPhraseNum) == howManyPhrases:

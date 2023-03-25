@@ -24,21 +24,33 @@ func _ready():
 		print("ERRO AO CONECTAR")
 	if $"DialogBox 11/TexturaCaixa".connect("finish", self, "_on_TexturaCaixa2_finish") != OK:
 		print("ERRO AO CONECTAR")
+
 # Função chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
+	# Torna o nó QuizTask visível
 	$QuizTask.visible = true
+	# Inicia o quiz
 	$QuizTask._startQuiz()
 
+# Função chamada quando o primeiro quiz é finalizado
 func _quiz1_finish():
+	# Torna o nó QuizTask invisível
 	$QuizTask.visible = false
+	# Torna o nó QuizTask2 visível
 	$QuizTask2.visible = true
+	# Inicia o segundo quiz
 	$QuizTask2._startQuiz()
 	
+# Função chamada quando o segundo quiz é finalizado
 func _quiz2_finish():
+	# Torna o nó "DialogBox 11" visível
 	$"DialogBox 11".visible = true
+	# Inicia o diálogo
 	$"DialogBox 11/TexturaCaixa"._startDialog() 
 	
+# Função chamada quando a animação da segunda caixa de diálogo termina
 func _on_TexturaCaixa2_finish():
+	# Define a variável global "parte" como "fim"
 	Global.parte = "fim"
-	#SceneTransition.change_scene("res://Scenes/Playables/Environment/Cidade.tscn", 1, 1)
+	# Muda para a cena Reincarn.tscn usando a SceneTransition
 	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Reincarn.tscn", 1, 1)

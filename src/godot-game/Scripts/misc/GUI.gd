@@ -6,6 +6,8 @@ onready var guiWasVisible
 var couldMove
 
 func _ready():
+	
+# Define a posicao do HSlider na tela de pause como o volume definido globalmente
 	$PauseScreen/HSlider.value = Global.volPercentage
 
 func _on_HSlider_value_changed(value):

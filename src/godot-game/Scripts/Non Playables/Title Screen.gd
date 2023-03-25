@@ -4,6 +4,8 @@ extends Control
 
 # Este script é responsável por controlar as funcionalidades dos botões da tela inicial.
 func _ready():
+	# Se o jogador esta voltando dos creditos, esconde o botao de jogar o jogo pois isso estava
+	# quebrando parcialmente o jogo (por causa da funcionalidade de salvar que nao foi atualizada)
 	if Global.parte == "fim":
 		$StartButton.visible = false
 	

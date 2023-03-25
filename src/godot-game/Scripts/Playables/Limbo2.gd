@@ -24,20 +24,33 @@ func _ready():
 		print("ERRO AO CONECTAR")
 	if $"DialogBox 5/TexturaCaixa".connect("finish", self, "_on_TexturaCaixa2_finish") != OK:
 		print("ERRO AO CONECTAR")
-# Função chamada quando a animação da caixa de diálogo termina
+
+# Esta função é chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
+	# Torna o nó QuizTask visível
 	$QuizTask.visible = true
+	# Chama a função _startQuiz do nó QuizTask
 	$QuizTask._startQuiz()
 
+# Função chamada quando o primeiro quiz é finalizado
 func _quiz1_finish():
+	# Torna o nó QuizTask invisível
 	$QuizTask.visible = false
+	# Torna o nó QuizTask2 visível
 	$QuizTask2.visible = true
+	# Chama a função _startQuiz do nó QuizTask2
 	$QuizTask2._startQuiz()
 	
+# Função chamada quando o segundo quiz é finalizado
 func _quiz2_finish():
+	# Torna o nó "DialogBox 5" visível
 	$"DialogBox 5".visible = true
+	# Chama a função _startDialog do nó "TexturaCaixa" do "DialogBox 5"
 	$"DialogBox 5/TexturaCaixa"._startDialog() 
-	
+
+# Função chamada quando a animação da segunda caixa de diálogo termina
 func _on_TexturaCaixa2_finish():
+	# Define a variável global "parte" como "administrativo"
 	Global.parte = "administrativo"
+	# Muda a cena para "res://Scenes/Non Playables/Animations/ComecoJonas.tscn" com uma transição suave
 	SceneTransition.change_scene("res://Scenes/Non Playables/Animations/ComecoJonas.tscn", 1, 1)

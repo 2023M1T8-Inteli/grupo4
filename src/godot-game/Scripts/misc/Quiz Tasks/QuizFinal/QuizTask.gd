@@ -1,20 +1,31 @@
-# O CÓDIGO ABAIXO NÃO ESTÁ COMENTADO, POIS NÃO ESTA IMPLEMENTADO NO JOGO AINDA E ESTEVE SERVINDO SOMENTE PARA TESTAGEM
-
 extends CanvasLayer
 
+# Sinal emitido quando o quiz é finalizado
 signal quizFinish
 
 func _ready():
+	# Define que a resposta do quiz ainda não foi respondida
 	Global.quizAnswered = false
+	
+	# Inicia o quiz
 	#_startQuiz()
-	pass
 
 func _startQuiz():
+	# Chama a função "startQuiz" do nó filho "Opcoes"
 	$Opcoes.startQuiz()
 
 func _answered_quiz():
+	# Aguarda 1.2 segundos
 	yield(get_tree().create_timer(1.2), "timeout")
-	print("FINISHING QUIZ")
+	
+	# Imprime no console que o quiz está sendo finalizado
+	print("FINALIZANDO QUIZ")
+	
+	# Emite o sinal "quizFinish"
 	emit_signal("quizFinish")
+	
+	# Define que a resposta do quiz ainda não foi respondida
 	Global.quizAnswered = false
+	
+	# Desaloca o nó atual
 	self.queue_free()

@@ -1,6 +1,6 @@
 extends Node2D
 
-var amongComplete = false # Variável para verificar se a tarefa de fois foi completada
+var amongComplete = false # Variável para verificar se a tarefa de foi concluída
 
 onready var lockIf0 = true # Variável de controle para o método _on_ExplodeTimer_timeout()
 
@@ -24,7 +24,7 @@ func renderAmong(value):
 	$ColorRect/WiresTask.visible = value
 
 func on_among_finished():
-		# Inicia o timer de sair da tarefa após a conclusão da tarefa
+	# Inicia o timer de sair da tarefa após a conclusão da tarefa
 	$ColorRect/Timer.start()
 	
 	$BalaoExclamacao.visible = false
@@ -35,7 +35,7 @@ func on_among_finished():
 	# Mostra a interface do usuário novamente e esconde a tarefa de fios
 	renderAmong(false)
 	
-	# Define a task como completa
+	# Define a tarefa como concluída
 	amongComplete = true
 	
 	$AmongAncora/amongButton.visible = false
@@ -43,7 +43,7 @@ func on_among_finished():
 	yield(get_tree().create_timer(1), "timeout")
 	
 	_on_escadaButton_pressed()
-	
+
 func _on_amongButton_pressed():
 	Global.canMove = false  # Impede o jogador de se mover
 	yield(get_tree().create_timer(0.15), "timeout")  # Espera por 0.15 segundos

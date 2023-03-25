@@ -24,20 +24,34 @@ func _ready():
 		print("ERRO AO CONECTAR")
 	if $"DialogBox 8/TexturaCaixa".connect("finish", self, "_on_TexturaCaixa2_finish") != OK:
 		print("ERRO AO CONECTAR")
+
 # Função chamada quando a animação da caixa de diálogo termina
 func _on_TexturaCaixa_finish():
+	# Quando a animação da caixa de diálogo termina, a variável 'visible' do nó 'QuizTask' é alterada para 'true'
 	$QuizTask.visible = true
+	# Em seguida, a função '_startQuiz()' é chamada no nó 'QuizTask' para iniciar o quiz
 	$QuizTask._startQuiz()
 
+# Função chamada quando o primeiro quiz é finalizado
 func _quiz1_finish():
+	# Quando o primeiro quiz é finalizado, a variável 'visible' do nó 'QuizTask' é alterada para 'false'
 	$QuizTask.visible = false
+	# Em seguida, a variável 'visible' do nó 'QuizTask2' é alterada para 'true'
 	$QuizTask2.visible = true
+	# A função '_startQuiz()' é chamada no nó 'QuizTask2' para iniciar o segundo quiz
 	$QuizTask2._startQuiz()
-	
+
+# Função chamada quando o segundo quiz é finalizado
 func _quiz2_finish():
+	# Quando o segundo quiz é finalizado, a variável 'visible' do nó 'DialogBox 8' é alterada para 'true'
 	$"DialogBox 8".visible = true
+	# Em seguida, a função '_startDialog()' é chamada no nó 'TexturaCaixa' que está dentro de 'DialogBox 8', para iniciar uma nova caixa de diálogo
 	$"DialogBox 8/TexturaCaixa"._startDialog() 
 	
+# Função chamada quando a animação da segunda caixa de diálogo termina
 func _on_TexturaCaixa2_finish():
+	# Quando a animação da segunda caixa de diálogo termina, a variável global 'parte' é atualizada para 'tecnico'
 	Global.parte = "tecnico"
+	# Em seguida, a função 'change_scene()' do nó 'SceneTransition' é chamada para mudar a cena para 'Tecnico.tscn'
+	# Os dois últimos argumentos (1, 1) indicam que a transição será suave e a tela não será limpa antes da transição
 	SceneTransition.change_scene("res://Scenes/Playables/Environment/Tecnico.tscn", 1, 1)
