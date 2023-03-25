@@ -299,8 +299,101 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 0.3.3.0 - 20/03/2023
     * Polir push do thomas (task linkedin);
     * Task arrumar coisas;
-    * Abordagem chefe final.
+    * Abordagem /chefe final.
     
+* pre0.4.0.0 - 20/03/2023
+    * Transição de cena pro limbo e consertar pos-abordagem na cena adm;
+    * Iniciar a preparação da cena técnico para introdução das tasks novas.
+    
+* pre0.4.0.1 - 21/03/2023
+    * Consertar áudio no game, especialmente o barulho de explosão na cena prelúdio;
+    * Revisão, correção e reforma em todos os diálogos e quizes.
+    
+* pre0.4.0.2 - 21/03/2023
+    * Adicionar primeira "Task" técnico (abordagem chefe);
+    * Polir levemente cena técnico como preparações para implementação das novas tasks;
+    * Iniciar Task1 Técnico (amb trabalho, brejinha).
+    
+* pre0.4.1.0 - 21/03/2023
+    * Finalizar task1 técnico (brejinha);
+    * Preparar task2 técnico.
+    
+* pre0.4.1.2 - 22/03/2023
+    * Finalizar task blogueira (TASK2TEC).
+    
+* pre0.4.1.3 - 22/03/2023
+    * Consertar cenas técnico e apartamento (corrompidas no push).
+    
+* pre0.4.2.0 - 22/03/2023
+    * Finalizar todas as tasks do técnico.
+    
+* 0.5.0.0 - 22/03/2023
+    * (PULAMOS DE VER pre0.4 PRA 0.5)!
+    * Consertar bug hitbox da interação final com o chefe (TEC;
+    * Consertar hitbox cadeiras (Exec e ADM);
+    * Consertar task3 EXEC (Timer);
+    * Consertar Reunião EXEC (Posicionamento de Câmera);
+    * Finalizar e polir técnico;
+    * Adicionar Jaoãozinho (p/ TEC);
+    * Consertar bug de câmera que tava acontecendo com o Player em algumas cenas;
+    * Consertar um bug q tava acontecendo com a sprite do joninhas;
+    * Consertar task linkedin ADM (agora tem novas texturas);
+    * Implementar sprite checkbox;
+    * Export GitPages.
+    
+* 0.5.0.1 - 22/03/2023 
+    * Consertar personagem q aparecia no postecima2;
+    * Consertar balão de obj na cena TEC (que aparecia em cima do poste);
+    * Juntar pushes;
+    * Alteração nas perguntas dos quizes.
+    
+* 0.5.1.0 - 23/03/2023
+    * Adicionar animações ComecoTereza e ComecoJonas;
+    * Consertar bugs da Van (TEC);
+    * Consertar bugs da Task1TEC (Area2D);
+    * Adicionar assediador (a sprite);
+    * Consertar boa parte dos warns do console;
+    * Consertar textura botão pause (tava quebrada faz mto tempo).
+    
+* 0.5.1.1 - 23/03/2023
+    * Juntar commits e solucionar conflitos;
+    * Refazer sprites do assediador (tinha quebrado);
+    * Export gitpages.
+    
+* 1.0.0.0 - 24/03/2023
+    * Adicionar filtros bonitinhos nos diálogos para facilitar leitura mas manter foco no jogo;
+    * Checar incompatibilidades com funções velhas e desativar algumas delas (incluindo o botão SAIR do GUI, que usava um método de salvar posição velho que será atualizado na Sprint 5, mas por enquanto deve permanecer desligado se não quebra o jogo...);
+    * Consertar filtro pre-existente nos quizzes;
+    * Modificar hitboxes de cadeiras/mesas que faltavam, padronizando o jogo e providenciando uma experiência mais suave;
+    * Inserir NPCs novos em TEC, ADM e EXEC/EXECFake (falta blogueira e chefe ADM);
+    * Aperfeiçoar Task0TEC (reunião chefe) com os novos NPCs;
+    * Consertar bug do ADM na abordagem final do chefe;
+    * Consertar bug onde o pause do GUI sobreescrevia o Global.canMove, resultando em algumas situações bem engracadas onde o player podia andar;
+    * Renovar totalmente a cena Reincarn (antes era o "aqui tem mais", agora, os créditos do jogo!);
+    * Desativar botão jogar depois que o player passa pelos créditos (vai ser implementado um "replay" ainda);
+    * Consertar inconsistências no movimento da câmera em algumas cenas;
+    * Consertar bug na cena apartamento onde o player podia interagir várias vezes com o roteador antes do "yield" acabar;
+    * Consertar textura dos comentarios do LInkedIN;
+    * Fazer o botão de pause ficar invisível em lugares onde ele não deveria estar visível ou quebrava alguma coisa (tipo numa tela de computador ou durante uma animação de objetivo);
+    * Consertar um bug com todas as tasks do ADM que incluiam subir para o andar EXECFake, onde o player podia subir de volta infinitas vezes;
+    * Adicionar elevador com andar #2 para os andares EXEC/EXECFake, manter elevador com andar #3 para ADM;
+    * Adicionar acentos na prompt de ataque hacker;
+    * Corrigir capitalização em algumas caixas de dialogo;
+    * Export GitPages.
+    * EBAAAAAA VERSAO 1.0.0.0 :confetti_ball: !!
+    
+* 1.0.0.1 - 24/03/2023
+    * Mini patch: visibilidade do balão de exclamação na eq de compliance no EXEC.
+
+* 1.0.0.2 - 24/03/2023
+    * Consertar hitbox do prédio (CIDADE);
+    * Consertar hitbox da van (TEC);
+    * Desacelerar scrollspeed créditos;
+    * Reverter tela comentários.
+
+* 1.0.0.4 - 24/03/2023
+    * Correções na parte escrita apontada pelos parceiros.
+
 
 ## 📋 Licença/License
 

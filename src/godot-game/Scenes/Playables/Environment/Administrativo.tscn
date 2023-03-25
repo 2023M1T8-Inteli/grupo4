@@ -1673,7 +1673,7 @@ shape = SubResource( 21 )
 position = Vector2( -1, -27 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 1
+frame = 9
 playing = true
 
 [node name="ComputadorAncora" type="Node2D" parent="Task1ADM"]
@@ -1712,7 +1712,7 @@ shape = SubResource( 21 )
 position = Vector2( -1, -27 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="ComputadorAncora" type="Node2D" parent="Task2ADM"]
@@ -1759,7 +1759,7 @@ fill_mode = 4
 position = Vector2( 169, 230 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="BotaoObj" type="TouchScreenButton" parent="Task3ADM"]
