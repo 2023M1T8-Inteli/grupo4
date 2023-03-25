@@ -161,8 +161,8 @@ func add_line():
 		new_line.add_color_override("font_color", title_color)
 		new_line.rect_position = Vector2(new_line.rect_position.x - 35, new_line.rect_position.y)
 		new_line.set_scale(Vector2(1.2, 1.2))
-		# Adiciona a nova linha como uma criança do nó CreditsContainer para ser exibido na tela
-		$CreditsContainer.add_child(new_line)
+	# Adiciona a nova linha como uma criança do nó CreditsContainer para ser exibido na tela
+	$CreditsContainer.add_child(new_line)
 	
 	# Verifica se ainda existem elementos na lista de seções. Se existir, avança para a próxima linha da seção atual.
 	if section.size() > 0:

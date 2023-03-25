@@ -135,7 +135,7 @@ func _physics_process(_delta):
 				# pra cima parado
 				pass
 
-func objetivo(comAnimacao):
+func objective(comAnimacao):
 	if comAnimacao:
 		# Cria um timer com um atraso de 0,5 segundos e espera até que ele expire
 		yield(get_tree().create_timer(0.5), "timeout")

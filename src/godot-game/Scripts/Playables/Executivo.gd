@@ -3,7 +3,7 @@ extends Node2D
 # Variáveis para referenciar a câmera, o mapa e seus limites
 onready var camera: Camera2D = get_node("Player/Camera2D")
 onready var map = get_node("map")
-onready var children = map.get_children()  # Não é necessário chamar get_node novamente, já que 'map' já foi declarado
+onready var children = get_node("map").get_children()
 var map_width = 0
 var map_height = 0
 
@@ -40,18 +40,18 @@ func _ready():
 	# Define o zoom da câmera e obtém os limites do mapa
 	camera.zoom = Vector2(0.5, 0.5)
 	set_process(true)
-	
-	# Obtém a largura e altura do mapa somando as larguras e alturas dos filhos de 'map'
-	for child in children:
-		map_width += child.rect_size.x
-		map_height += child.rect_size.y
 
 func _process(_delta):
 	# Define os limites da câmera para o tamanho do mapa
 	camera.limit_left = 0
 	camera.limit_top = 0
-	camera.limit_right = map_width
-	camera.limit_bottom = map_height
+	camera.limit_right = 576
+	camera.limit_bottom = 640
+	
+	if $"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa/NomeNPC".text == "Zé":
+			$ReuniaoAncora/ReuniaoAnim/Camera2D.position = $Player/Camera2D.global_position
+	elif $"ReuniaoAncora/ReuniaoAnim/DialogBox 2/TexturaCaixa/NomeNPC".text == "Chefe":
+			$ReuniaoAncora/ReuniaoAnim/Camera2D.position = Vector2(37,596)
 	
 	# Verifica se o jogador está próximo da porta de interação
 	if $Player/HitBox.global_position.distance_to($PortaAncora.global_position) < 40:
@@ -287,6 +287,10 @@ func _on_NPCBomBotao_pressed():
 		$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/NPCBomBotao".visible = false
 		# Torna o balão de exclamação do NPCBom invisível
 		$"ControlAssedio/Eq Compliance/NPC2 (O BOM)/BalaoExclamacao".visible = false
+		
+		# Espera o quiz de compliance acabar antes de resumir o jogo
+		yield($"ControlAssedio/Eq Compliance/NPC2 (O BOM)/DialogBox 13/TexturaCaixa", "finish")
+		
 		# Define a variável global canMove como verdadeira, permitindo que o jogador se mova novamente
 		Global.canMove = true
 		# Torna a caixa de diálogo do NPCBom invisível

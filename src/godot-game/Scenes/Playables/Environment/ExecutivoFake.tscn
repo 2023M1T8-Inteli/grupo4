@@ -3183,7 +3183,7 @@ visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 4
+frame = 8
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="Eq Compliance/NPC2 (O BOM)"]
@@ -3227,7 +3227,7 @@ position = Vector2( 11, 14 )
 position = Vector2( 11, -6 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="NPC1Botao" type="TouchScreenButton" parent="SegInfo/NPC1"]
@@ -3250,9 +3250,6 @@ speed = 150
 size = 0.6
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
-
-[node name="QuitButton" parent="GUI/PauseScreen" index="2"]
-visible = false
 
 [node name="Audio" parent="GUI" instance=ExtResource( 25 )]
 

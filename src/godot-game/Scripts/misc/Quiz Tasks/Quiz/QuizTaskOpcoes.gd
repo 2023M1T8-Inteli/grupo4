@@ -48,17 +48,16 @@ func getQuestions() -> Array:
 		return []
 
 func renderQuestions() -> void:
-	# Seleciona as perguntas corretas para o quiz
-	var firstCorrect = randi() % len(dialog) - 1
-
 	# Adiciona as duas primeiras perguntas corretas na lista de perguntas
 	questions.append(dialog[firstCorrect])
 	questions.append(dialog[firstCorrect+1])
+	questions.append(dialog[firstCorrect+2])
 
 	# Embaralha as perguntas restantes aleatoriamente
 	randomize()
 	var retries = randi() % 20
-	for i in range(retries):
+	for i in retries:
+		randomize()
 		questions.shuffle()
 
 	# Exibe as perguntas nas caixas de texto

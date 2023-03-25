@@ -69,8 +69,8 @@ func _process(_delta):
 		closeToPorta = false
 
 func _on_TextureButton_pressed():
-	# Verifica se o jogador está próximo da porta e se a tarefa atual é igual a 0, 1 ou 2
-	if closeToPorta and (AdmGlobals.currentTask == 0 or AdmGlobals.currentTask == 1 or AdmGlobals.currentTask == 2):
+	# Verifica se o jogador está próximo da porta e se a tarefa atual é igual a 0
+	if closeToPorta and AdmGlobals.currentTask == 0:
 		# Impede o movimento do jogador durante a transição de cena
 		Global.canMove = false
 		
@@ -79,6 +79,16 @@ func _on_TextureButton_pressed():
 		
 		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
 		if get_tree().change_scene("res://Scenes/Playables/Environment/Cidade.tscn") != OK:
+			print("ERRO")
+	
+	# Verifica se o jogador está próximo da porta e se a tarefa atual é igual a 1 ou 2
+	elif closeToPorta and AdmGlobals.currentTask == 1 or AdmGlobals.currentTask == 2:
+		# Impede o movimento do jogador durante a transição de cena
+		Global.canMove = false
+		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada
+		yield(get_tree().create_timer(0.15), "timeout")
+		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
+		if get_tree().change_scene("res://Scenes/Playables/Environment/Administrativo.tscn") != OK:
 			print("ERRO")
 	
 	# Verifica se o jogador está próximo da porta e se a tarefa atual é igual a 3
