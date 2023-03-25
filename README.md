@@ -385,13 +385,13 @@ A cada atualização os detalhes devem ser lançados aqui.
 * 1.0.0.1 - 23/03/2023
     * Mini patch: visibilidade do balão de exclamação na eq de compliance no EXEC.
 
-*1.0.0.2 - 23/03/2023
+* 1.0.0.2 - 23/03/2023
     * Consertar hitbox do prédio (CIDADE);
     * Consertar hitbox da van (TEC);
     * Desacelerar scrollspeed créditos;
     * Reverter tela comentários.
 
-*1.0.0.4 - 23/03/2023
+* 1.0.0.4 - 23/03/2023
     * Correções na parte escrita apontada pelos parceiros.
 
 
