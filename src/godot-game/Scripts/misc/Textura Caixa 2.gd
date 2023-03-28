@@ -17,6 +17,11 @@ var dialog
 var buttonPressed
 var phraseNum = 0
 
+func _reset():
+	# Reseta o diálogo
+	phraseNum = 0
+	$Label.visible_characters = 0
+
 func _ready():
 	#_startDialog()
 	pass

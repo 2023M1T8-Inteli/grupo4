@@ -28,7 +28,7 @@ func _on_TouchScreenButton_pressed():
 	# Verificando se a tarefa ainda não foi concluída
 	if taskFeita == false:
 		# Verificando se o jogador está próximo ao objeto que precisa ser consertado
-		if ($Player.global_position).distance_to($TaskRoteador/RoteadorAncora.global_position) < 30:
+		if ($Player.global_position).distance_to($TaskRoteador/RoteadorAncora.global_position) < 50:
 			taskFeita = true
 			Global.activeObjective[0] = false
 			

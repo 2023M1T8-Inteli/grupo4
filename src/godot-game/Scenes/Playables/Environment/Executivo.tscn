@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=111 format=2]
 
 [ext_resource path="res://Sprites/TileMaps/Modern_Office_Revamped/Modern_Office_16x16 - Copia.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 2.tscn" type="PackedScene" id=2]
@@ -21,7 +21,7 @@
 [ext_resource path="res://Scenes/Overlays/Quizes/QuizTask0.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 12.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 13.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/Overlays/Quizes/QuizTask2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Overlays/Quizes/QuizDaily12.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Fonte/DTM-Mono.ttf" type="DynamicFontData" id=23]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 14.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=25]
@@ -40,6 +40,8 @@
 [ext_resource path="res://Sprites/NPCs/NPCNovo8.png" type="Texture" id=38]
 [ext_resource path="res://Sprites/NPCs/NPCNovo5.png" type="Texture" id=39]
 [ext_resource path="res://Sprites/NPCs/NPCNovo7.png" type="Texture" id=40]
+[ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 26.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 27.tscn" type="PackedScene" id=42]
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -2763,6 +2765,7 @@ shape = SubResource( 21 )
 position = Vector2( 10, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
+frame = 1
 playing = true
 
 [node name="AncoraQuiz1" type="Node2D" parent="NPCQuiz1"]
@@ -2856,7 +2859,7 @@ visible = false
 position = Vector2( 11.0001, -7 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="NPCBomBotao" type="TouchScreenButton" parent="ControlAssedio/Eq Compliance/NPC2 (O BOM)"]
@@ -2908,28 +2911,28 @@ visible = false
 position = Vector2( 544, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 7
+frame = 8
 playing = true
 
 [node name="BalaoExclamacao2" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 592, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="BalaoExclamacao3" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 480 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="BalaoExclamacao4" type="AnimatedSprite" parent="ControlQuiz2/BaloesExclamacao"]
 position = Vector2( 643, 523 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="Quiz2Ancora" type="Node2D" parent="ControlQuiz2"]
@@ -2938,6 +2941,12 @@ position = Vector2( 591, 527 )
 [node name="Tween" type="Tween" parent="ControlQuiz2"]
 
 [node name="QuizTask" parent="ControlQuiz2" instance=ExtResource( 22 )]
+visible = false
+
+[node name="DialogBox 26" parent="ControlQuiz2" instance=ExtResource( 41 )]
+visible = false
+
+[node name="DialogBox 27" parent="ControlQuiz2" instance=ExtResource( 42 )]
 visible = false
 
 [node name="Timer" type="Timer" parent="ControlQuiz2"]
@@ -2994,7 +3003,7 @@ position = Vector2( 156, 370 )
 position = Vector2( 156, 347 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="NPCCompQuiz2Botao" type="TouchScreenButton" parent="ControlQuiz2/Eq Compliance"]

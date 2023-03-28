@@ -40,6 +40,16 @@ func _ready():
 	# Define o zoom da câmera e obtém os limites do mapa
 	camera.zoom = Vector2(0.5, 0.5)
 	set_process(true)
+	
+	# Conecta a função de finalização do dialogo antes do quiz com o sinal de finalizacao do mesmo
+	if $"ControlQuiz2/DialogBox 26/TexturaCaixa".connect("finish", self, "_finish_quiz2_dialog1") != OK:
+		print("ERROR ON FINISH CONNECT")
+	# Conecta a função de finalização do dialogo depois do quiz com o sinal de finalizacao do mesmo
+	if $"ControlQuiz2/DialogBox 27/TexturaCaixa".connect("finish", self, "_finish_quiz2_dialog2") != OK:
+		print("ERROR ON FINISH CONNECT")
+	# Conecta a função de finalização do quiz com o sinal de acerto do mesmo
+	if $ControlQuiz2/QuizTask.connect("quizFinish", self, "_finish_quiz2_quiz") != OK:
+		print("ERROR ON QUIZCORRECT CONNECT")
 
 func _process(_delta):
 	# Define os limites da câmera para o tamanho do mapa
@@ -223,19 +233,29 @@ func _on_Area2D_body_entered(body):
 	if body == $Player:
 		playerSavePos = $Player.global_position # Salva a posição atual do jogador
 		
-		$ControlQuiz2/QuizTask.visible = true # Mostra a tarefa do quiz do segundo NPC
-		$ControlQuiz2/QuizTask._startQuiz() # Inicia o quiz do segundo NPC
+		$"ControlQuiz2/DialogBox 26".visible = true # Mostra o dialogo que antecede o quiz
+		$"ControlQuiz2/DialogBox 26/TexturaCaixa"._startDialog() # Inicia o dialogo que antecede o quiz
 		
 		Global.canMove = false # Define a possibilidade de movimentação do jogador como falsa
 		Global.activeObjective[0] = false # Define a primeira missão como inativa
 		$ControlQuiz2/BaloesExclamacao.visible = false # Esconde o balão de exclamação do NPC
 		
-		# Conecta a função de finalização do quiz com o sinal de acerto do mesmo
-		if $ControlQuiz2/QuizTask/DialogBox/TexturaCaixa.connect("quizCorrect", self, "_finish_quiz2") != OK:
-			print("ERROR ON QUIZCORRECT CONNECT")
+
+func _finish_quiz2_dialog1():
+	$"ControlQuiz2/DialogBox 26".visible = false
+	
+	$ControlQuiz2/QuizTask.visible = true # Mostra a tarefa do quiz
+	$ControlQuiz2/QuizTask._startQuiz() # Inicia o quiz
+
+func _finish_quiz2_quiz():
+	$ControlQuiz2/QuizTask.visible = false # Esconde a tarefa do quiz
+	
+	$"ControlQuiz2/DialogBox 27".visible = true # Mostra o dialogo que antecede o quiz
+	$"ControlQuiz2/DialogBox 27/TexturaCaixa"._startDialog() # Inicia o dialogo que antecede o quiz
 
 # Esta função é chamada quando o quiz 2 é concluído.
-func _finish_quiz2():
+func _finish_quiz2_dialog2():
+	$"ControlQuiz2/DialogBox 27".visible = false
 	yield(get_tree().create_timer(0.5), "timeout") # Espera um pouquinho antes de iniciar a funcao
 	Global.canMove = true # Desativa a movimentacao do player
 	$Quiz2/CollisionShape2D.disabled = true # Desativa a caixa de colisao do Quiz2
@@ -340,6 +360,8 @@ func _finish_quiz2_part2():
 	# Reinicia o quiz, revertendo as variaveis para o seu estado padrao
 	Global.quizAnswered = false
 	$ControlQuiz2/QuizTask._reset()
+	$"ControlQuiz2/DialogBox 26/TexturaCaixa"._reset()
+	$"ControlQuiz2/DialogBox 27/TexturaCaixa"._reset()
 	_on_Area2D_body_entered($Player)
 	
 	# Toca a animacao de flash ao inverso e esconde o canvaslayer2 que controla essa animacao

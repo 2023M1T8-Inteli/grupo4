@@ -2365,7 +2365,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 105/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 19, 10.5 )
+extents = Vector2( 19, 18 )
 
 [sub_resource type="RectangleShape2D" id=26]
 
@@ -2529,7 +2529,7 @@ visible = false
 position = Vector2( 389, -30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 0.5 )
+position = Vector2( 0, 8 )
 shape = SubResource( 27 )
 disabled = true
 
@@ -2569,7 +2569,6 @@ scale = Vector2( 0.7, 0.7 )
 position = Vector2( 496, 157 )
 scale = Vector2( 0.04, 0.04 )
 frames = SubResource( 23 )
-frame = 7
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="TaskRoteador"]

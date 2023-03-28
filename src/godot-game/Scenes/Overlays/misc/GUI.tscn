@@ -97,6 +97,26 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 text = " SAIR"
 
+[node name="EthicButton" type="TextureButton" parent="PauseScreen"]
+margin_left = -136.0
+margin_top = 145.0
+margin_right = 136.0
+margin_bottom = 233.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="PauseScreen/EthicButton"]
+margin_left = 30.0
+margin_top = 25.0
+margin_right = 253.0
+margin_bottom = 105.0
+mouse_filter = 2
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]CÓDIGO DE ÉTICA [/center]"
+text = "CÓDIGO DE ÉTICA "
+
 [node name="RichTextLabel" type="RichTextLabel" parent="PauseScreen"]
 margin_left = -159.0
 margin_top = -222.5
@@ -137,4 +157,5 @@ value = 100.0
 [connection signal="pressed" from="GUI/Pause/PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="pressed" from="PauseScreen/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="PauseScreen/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="PauseScreen/EthicButton" to="." method="_on_EthicButton_pressed"]
 [connection signal="value_changed" from="PauseScreen/HSlider" to="." method="_on_HSlider_value_changed"]

@@ -4489,7 +4489,6 @@ position = Vector2( -32, 85 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 2
 playing = true
 
 [node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect"]
@@ -4509,7 +4508,7 @@ position = Vector2( -70, -126 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect2"]
@@ -4529,7 +4528,7 @@ position = Vector2( 162, 0 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
 frames = SubResource( 43 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="Sprite" type="Sprite" parent="Task1TEC/NPCs/ColorRect3"]
@@ -4576,6 +4575,7 @@ rotation = -3.14159
 scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 48 )
+frame = 1
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Task2TEC/Caminhao"]
@@ -4588,7 +4588,7 @@ position = Vector2( 1339, 113 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 2
 frames = SubResource( 50 )
-frame = 9
+frame = 8
 playing = true
 
 [node name="Position2D" type="Position2D" parent="Task2TEC"]
@@ -4619,6 +4619,7 @@ position = Vector2( 1031, 408 )
 scale = Vector2( 0.10896, 0.0934524 )
 z_index = 2
 frames = SubResource( 34 )
+frame = 9
 playing = true
 
 [node name="posteSobeButton" type="TouchScreenButton" parent="Task3TEC"]
@@ -4654,7 +4655,7 @@ color = Color( 1, 1, 1, 0 )
 
 [node name="Sprite" type="Sprite" parent="Task4TEC/Area2D/ColorRect"]
 position = Vector2( 20, 39 )
-scale = Vector2( 2.5, 2.5 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 43 )
 
 [node name="DialogBox 25" parent="Task4TEC" instance=ExtResource( 41 )]

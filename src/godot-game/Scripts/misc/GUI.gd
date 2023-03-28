@@ -47,3 +47,8 @@ func _on_QuitButton_pressed():
 	# Executa a função de salvar a posição e cena atual do jogador e sair para tela de início (essa função é executada no script Player.gd)
 	pos.savePosCommand = true
 	SceneTransition.change_scene("res://Scenes/Non Playables/misc/Title Screen.tscn", 1.5 , 1.5)
+
+
+func _on_EthicButton_pressed():
+	# redireciona para site da vtal no browser
+	OS.shell_open("https://www.vtal.com/wp-content/uploads/2022/10/man-00002-codigo-de-etica-e-conduta-da-vtal.pdf")

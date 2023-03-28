@@ -3,6 +3,15 @@ extends CanvasLayer
 # Sinal emitido quando o quiz é finalizado
 signal quizFinish
 
+func _reset():
+	# Define que a resposta do quiz ainda não foi respondida
+	Global.quizAnswered = false
+	
+	$Opcoes.visible = false
+
+	$Opcoes.questions = []
+	$Opcoes.phraseNum = 0
+
 func _ready():
 	# Define que a resposta do quiz ainda não foi respondida
 	Global.quizAnswered = false
@@ -27,5 +36,5 @@ func _answered_quiz():
 	# Define que a resposta do quiz ainda não foi respondida
 	Global.quizAnswered = false
 	
-	# Desaloca o nó atual
-	self.queue_free()
+	# Some
+	self.visible = false

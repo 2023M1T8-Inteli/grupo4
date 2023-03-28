@@ -55,7 +55,7 @@ offset = Vector2( 1312, 345 )
 position = Vector2( 522, 310 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 4 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
