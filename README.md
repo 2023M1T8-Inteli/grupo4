@@ -8,8 +8,7 @@
 
 ## Group for()
 
-## Integrantes: Gabrielle Dias Cartaxo, Gustavo Wagon Widman, Izadora Luz Rodrigues Novaes, Matheus Ferreira Mendes, Olin Medeiros Costa, Thomas Reitzfeld.
-
+## Integrantes:<a href="www.linkedin.com/in/gabriellediascartaxo">Gabrielle Dias Cartaxo</a>, <a href="https://www.linkedin.com/in/gustavo-widman/">Gustavo Wagon Widman</a>, <a href="https://www.linkedin.com/in/izadora-luz-r-novaes-22419526a/">Izadora Luz Rodrigues Novaesx</a>, <a href="https://www.linkedin.com/in/matheusmeendes/">Matheus Ferreira Mendes</a>, <a href="https://www.linkedin.com/in/%C3%B3lin-medeiros-costa-b0a1b426a/">Ólin Costa</a>, <a href="https://www.linkedin.com/in/thomasreitzfeld/">Thomas Reitzfeld</a>
 ## Descrição
 
 O desenvolvimento desse jogo tem como objetivo suprir as necessidades do nosso cliente, V.tal, em gamificar o atual processo de treinamento do código de ética da empresa. A gamificação visa tornar melhor a didática do treinamento e dinamizar a experiência do colaborador ao longo do processo. Além disso, a ideia também é ter uma maior aderência e aumentar o conhecimento referente ao código de ética e evitar infrações a esse código.
@@ -393,6 +392,14 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 * 1.0.0.4 - 24/03/2023
     * Correções na parte escrita apontada pelos parceiros.
+    
+* 1.0.1.0 - 28/03/2023
+    * Consulta do codigo de Ética (Tela Pause/ Tela Início);
+    * Consertar bug "NULL" (REFAZER TASK TIMER);
+    * Aumentar Area2D para sair da casa da blogueira;
+    * Aumentar minimum distance_to Roteeador (Casa Blogueira);
+    * Diminuir tamanho da sprite do Chefe TEC.
+
 
 
 ## 📋 Licença/License
