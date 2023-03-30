@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/Interface/botao-hover.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Interface/botao-export.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Non Playables/Info.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/Interface/seta.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+outline_size = 2
+font_data = ExtResource( 1 )
+
+[node name="Info" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="EthicButton" type="TextureButton" parent="."]
+margin_left = 45.0
+margin_top = 524.0
+margin_right = 317.0
+margin_bottom = 612.0
+rect_pivot_offset = Vector2( 136, 44 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="EthicButton"]
+margin_left = 30.0
+margin_top = 25.0
+margin_right = 253.0
+margin_bottom = 105.0
+mouse_filter = 2
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]CÓDIGO DE ÉTICA [/center]"
+text = "CÓDIGO DE ÉTICA "
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 60.0
+margin_bottom = 60.0
+
+[node name="Seta" type="Sprite" parent="BackButton"]
+position = Vector2( 20, 20 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[connection signal="pressed" from="EthicButton" to="." method="_on_EthicButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

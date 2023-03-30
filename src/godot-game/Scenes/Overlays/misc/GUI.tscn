@@ -492,7 +492,7 @@ texture = ExtResource( 9 )
 anchor_right = 0.155
 margin_left = -76.0
 margin_top = -104.0
-margin_right = -56.65
+margin_right = 14.65
 margin_bottom = -54.0
 texture_normal = ExtResource( 15 )
 

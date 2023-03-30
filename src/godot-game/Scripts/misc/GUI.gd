@@ -8,7 +8,7 @@ var couldMove
 var localCurrentApp = "null"
 
 func _ready():
-	Global.celularVisible = true
+	# Global.celularVisible = true
 	# Define a posicao do HSlider na tela de pause como o volume definido globalmente
 	$PauseScreen/HSlider.value = Global.volPercentage
 	
@@ -17,6 +17,7 @@ func _process(_delta):
 	$Celular/CelularBase/IconeLinkedin.rect_pivot_offset = Vector2(27.5*$Celular/CelularBase/IconeLinkedin.rect_scale.x, 25*$Celular/CelularBase/IconeLinkedin.rect_scale.y)
 	$Celular/CelularBase/IconeTempo.rect_pivot_offset = Vector2(27.5*$Celular/CelularBase/IconeTempo.rect_scale.x, 25*$Celular/CelularBase/IconeTempo.rect_scale.y)
 	$Celular/CelularBase/IconeEmail.rect_pivot_offset = Vector2(27.5*$Celular/CelularBase/IconeEmail.rect_scale.x, 25*$Celular/CelularBase/IconeEmail.rect_scale.y)
+	
 	
 	if $Celular.visible != Global.celularVisible:
 		$Celular.visible = Global.celularVisible

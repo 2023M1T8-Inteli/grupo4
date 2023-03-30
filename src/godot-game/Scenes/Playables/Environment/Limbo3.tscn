@@ -1,11 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Playables/Limbo3.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Overlays/Quizes/QuizDaily5.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 7.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/Backgrounds/sky-starry-black-night-background-with-star-starry-galaxy-space-8bit-texture-in-flat-style.jpg" type="Texture" id=4]
-[ext_resource path="res://Audio Files/deepblue.mp3" type="AudioStream" id=5]
-[ext_resource path="res://Audio Files/wind woosh loop.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/sprite/frame_2_delay-0.2s.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/sprite/frame_1_delay-0.2s.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/sprite/frame_4_delay-0.2s.png" type="Texture" id=9]
@@ -55,6 +54,7 @@ offset = Vector2( 1312, 345 )
 position = Vector2( 522, 310 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 4 )
+frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -81,13 +81,6 @@ shape = SubResource( 3 )
 position = Vector2( 770, 349 )
 shape = SubResource( 3 )
 
-[node name="LimboMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-volume_db = -5.0
-
-[node name="LimboAmbience" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-
 [node name="QuizTask" parent="." instance=ExtResource( 13 )]
 visible = false
 
@@ -99,3 +92,5 @@ visible = false
 
 [node name="DialogBox 8" parent="." instance=ExtResource( 12 )]
 visible = false
+
+[node name="Audio" parent="." instance=ExtResource( 5 )]
