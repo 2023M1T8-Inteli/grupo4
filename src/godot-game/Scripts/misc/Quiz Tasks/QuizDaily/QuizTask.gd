@@ -8,7 +8,7 @@ func _ready():
 	Global.quizAnswered = false
 	
 	# Inicia o quiz
-	#_startQuiz()
+	_startQuiz()
 
 func _startQuiz():
 	# Chama a função "startQuiz" do nó filho "Opcoes"

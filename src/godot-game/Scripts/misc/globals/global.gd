@@ -37,3 +37,7 @@ var volPercentage = 100
 # Variavel que armazena o volume do jogo
 var volume = (volPercentage * 0.25) - 35
 
+# Variavel que controla a visibilidade do celular no GUI
+var celularVisible = false
+
+var currentApp = "null"

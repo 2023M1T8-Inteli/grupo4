@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scripts/misc/GUI.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=2]
@@ -8,6 +8,14 @@
 [ext_resource path="res://Sprites/Interface/botao-export.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Interface/bola.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/Celular/celular base.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Celular/loading screen.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Celular/black screen.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Celular/icone linkedin.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Celular/ícone email.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Celular/icone tempo.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Celular/icone insta.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Celular/botão celular.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -29,6 +37,297 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 180, 900 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Celular/CloseArrow:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Celular/CloseArrow:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -186 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "hover"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CloseArrow:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -10 ), Vector2( 0, 5 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "popup"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CloseArrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -186 ), Vector2( 0, -235 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "slideUp"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 4, 1 ),
+"update": 0,
+"values": [ Vector2( 180, 900 ), Vector2( 180, 360 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeInsta:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Celular/CelularBase/IconeInsta:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Celular/CelularBase/IconeLinkedin:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Celular/CelularBase/IconeTempo:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Celular/CelularBase/IconeEmail:rect_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Celular/CelularBase/IconeEmail:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Celular/CelularBase/IconeEmail:rect_pivot_offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Celular/CelularBase/IconeEmail:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 21, -10 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Celular/CelularBase/IconeInsta:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -76, -104 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Celular/CelularBase/IconeLinkedin:rect_position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 21, -104 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Celular/CelularBase/IconeTempo:rect_position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -76, -10 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "email"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeEmail:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
+"update": 0,
+"values": [ Vector2( 21, -10 ), Vector2( 21, -17 ), Vector2( 21, -10 ), Vector2( 21, -17 ), Vector2( 21, -10 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "insta"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeInsta:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
+"update": 0,
+"values": [ Vector2( -76, -104 ), Vector2( -76, -111 ), Vector2( -76, -104 ), Vector2( -76, -111 ), Vector2( -76, -104 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "linkedin"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeLinkedin:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
+"update": 0,
+"values": [ Vector2( 21, -104 ), Vector2( 21, -111 ), Vector2( 21, -104 ), Vector2( 21, -111 ), Vector2( 21, -104 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "tempo"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeTempo:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
+"update": 0,
+"values": [ Vector2( -76, -10 ), Vector2( -76, -17 ), Vector2( -76, -10 ), Vector2( -76, -17 ), Vector2( -76, -10 ) ]
+}
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -154,8 +453,111 @@ value = 100.0
 
 [node name="Audio" parent="PauseScreen" instance=ExtResource( 8 )]
 
+[node name="Celular" type="Control" parent="."]
+visible = false
+margin_left = 180.0
+margin_top = 900.0
+margin_right = 180.0
+margin_bottom = 900.0
+
+[node name="MouseFilter" type="Control" parent="Celular"]
+visible = false
+margin_left = -180.0
+margin_top = -360.0
+margin_right = 180.0
+margin_bottom = 280.0
+
+[node name="CloseArrow" type="Polygon2D" parent="Celular"]
+position = Vector2( 0, -186 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 0, 0, -50, -32, 0, -15, 50, -32 )
+
+[node name="CloseButton" type="TextureButton" parent="Celular/CloseArrow"]
+margin_left = -115.0
+margin_top = -46.0
+margin_right = 118.0
+margin_bottom = 10.0
+
+[node name="OpenButtonOLD" type="TextureButton" parent="Celular"]
+visible = false
+margin_left = -115.0
+margin_top = -220.0
+margin_right = 115.0
+margin_bottom = -160.0
+
+[node name="CelularBase" type="Sprite" parent="Celular"]
+texture = ExtResource( 9 )
+
+[node name="IconeInsta" type="TextureButton" parent="Celular/CelularBase"]
+anchor_right = 0.155
+margin_left = -76.0
+margin_top = -104.0
+margin_right = -56.65
+margin_bottom = -54.0
+texture_normal = ExtResource( 15 )
+
+[node name="IconeLinkedin" type="TextureButton" parent="Celular/CelularBase"]
+margin_left = 21.0
+margin_top = -104.0
+margin_right = 76.0
+margin_bottom = -54.0
+texture_normal = ExtResource( 12 )
+
+[node name="IconeTempo" type="TextureButton" parent="Celular/CelularBase"]
+margin_left = -76.0
+margin_top = -10.0
+margin_right = -21.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 14 )
+
+[node name="IconeEmail" type="TextureButton" parent="Celular/CelularBase"]
+margin_left = 21.0
+margin_top = -10.0
+margin_right = 76.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 13 )
+
+[node name="BlackScreen" type="Sprite" parent="Celular"]
+visible = false
+position = Vector2( -0.75, 0 )
+scale = Vector2( 1.00273, 1 )
+texture = ExtResource( 11 )
+
+[node name="LoadingScreen" type="Sprite" parent="Celular"]
+visible = false
+texture = ExtResource( 10 )
+
+[node name="OpenButton" type="TextureButton" parent="Celular"]
+margin_left = 86.0
+margin_top = -354.0
+margin_right = 156.0
+margin_bottom = -284.0
+texture_normal = ExtResource( 16 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 8 )
+anims/hover = SubResource( 10 )
+anims/popup = SubResource( 11 )
+anims/slideUp = SubResource( 9 )
+
+[node name="InteractablePlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 12 )
+anims/email = SubResource( 14 )
+anims/insta = SubResource( 13 )
+anims/linkedin = SubResource( 15 )
+anims/tempo = SubResource( 16 )
+
+[node name="Tween" type="Tween" parent="."]
+
 [connection signal="pressed" from="GUI/Pause/PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="pressed" from="PauseScreen/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="PauseScreen/QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="pressed" from="PauseScreen/EthicButton" to="." method="_on_EthicButton_pressed"]
 [connection signal="value_changed" from="PauseScreen/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="Celular/CloseArrow/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="Celular/OpenButtonOLD" to="." method="_on_OpenButton_pressed"]
+[connection signal="pressed" from="Celular/CelularBase/IconeInsta" to="." method="_on_IconeInsta_pressed"]
+[connection signal="pressed" from="Celular/CelularBase/IconeLinkedin" to="." method="_on_IconeLinkedin_pressed"]
+[connection signal="pressed" from="Celular/CelularBase/IconeTempo" to="." method="_on_IconeTempo_pressed"]
+[connection signal="pressed" from="Celular/CelularBase/IconeEmail" to="." method="_on_IconeEmail_pressed"]
+[connection signal="pressed" from="Celular/OpenButton" to="." method="_on_OpenButton_pressed"]
