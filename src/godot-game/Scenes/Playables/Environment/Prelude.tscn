@@ -3956,7 +3956,6 @@ shape = SubResource( 32 )
 position = Vector2( 0, 132.42 )
 scale = Vector2( 0.125, 0.125 )
 frames = SubResource( 34 )
-frame = 7
 playing = true
 
 [node name="Prompt" type="Control" parent="."]
