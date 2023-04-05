@@ -100,23 +100,9 @@ func _on_BlogueiraButton_pressed():
 		$"DialogBox 23".visible = true  # Torna visível a caixa de diálogo "DialogBox 23"
 		
 		# Conecta o sinal "finish" do objeto "TexturaCaixa" à função "_on_dialog2_finish"
-		if $"DialogBox 23/TexturaCaixa".connect("finish", self, "_on_dialog2_finish") != OK:
+		if $"DialogBox 23/TexturaCaixa".connect("finish", self, "_on_dialog3_finish") != OK:
 			print("ERRO AO CONECTAR")
 		$"DialogBox 23/TexturaCaixa"._startDialog()  # Inicia a caixa de diálogo "TexturaCaixa"
-	
-func _on_dialog2_finish():
-	# Define a variável QuizTask como visível e inicia o quiz
-	$QuizTask.visible = true
-	if $QuizTask.connect("quizFinish", self, "_on_quiz_finish") != OK:
-		print("ERRO AO CONECTAR")
-	$QuizTask._startQuiz()
-	
-func _on_quiz_finish():
-	# Define a caixa de diálogo 24 como visível e inicia o diálogo
-	$"DialogBox 24".visible = true
-	$"DialogBox 24/TexturaCaixa"._startDialog()
-	if $"DialogBox 24/TexturaCaixa".connect("finish", self, "_on_dialog3_finish") != OK:
-		print("ERRO AO CONECTAR")
 	
 func _on_dialog3_finish():
 	# Define a variável canMove como verdadeira para permitir o movimento do jogador
