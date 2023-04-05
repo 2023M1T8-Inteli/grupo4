@@ -2020,7 +2020,7 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 180, 320 )
 frames = SubResource( 498 )
-frame = 356
+frame = 481
 playing = true
 
 [node name="Logo" type="Node2D" parent="."]
