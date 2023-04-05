@@ -328,7 +328,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     
 * 0.5.0.0 - 22/03/2023
     * (PULAMOS DE VER pre0.4 PRA 0.5)!
-    * Consertar bug hitbox da interação final com o chefe (TEC;
+    * Consertar bug hitbox da interação final com o chefe (TEC);
     * Consertar hitbox cadeiras (Exec e ADM);
     * Consertar task3 EXEC (Timer);
     * Consertar Reunião EXEC (Posicionamento de Câmera);
