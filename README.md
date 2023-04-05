@@ -400,7 +400,13 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Aumentar minimum distance_to Roteeador (Casa Blogueira);
     * Diminuir tamanho da sprite do Chefe TEC.
 
-
+* 1.0.2.0 - 29/03/2023
+    * Implementação rudimentar do celular, com animações de abrir, fechar e ícones.
+    
+* 1.0.2.1 - 29/03/2023
+    * Parcialmente implementar temas trabalhados/abordados no jogo/tela inicial;
+    * Consertar Volume Global não Aplicado em Limbos.
+    
 
 ## 📋 Licença/License
 
