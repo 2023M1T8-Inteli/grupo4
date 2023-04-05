@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scripts/misc/GUI.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=2]
@@ -16,13 +16,12 @@
 [ext_resource path="res://Sprites/Celular/icone tempo.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Celular/icone insta.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Celular/botão celular.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/button.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/button.2.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/voltar.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Código_de_ética.png" type="Texture" id=20]
 
 [sub_resource type="RectangleShape2D" id=7]
-
-[sub_resource type="DynamicFont" id=1]
-size = 26
-outline_size = 2
-font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 26
@@ -364,18 +363,12 @@ margin_left = -136.0
 margin_top = -18.0
 margin_right = 136.0
 margin_bottom = 70.0
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 17 )
+texture_hover = ExtResource( 18 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PauseScreen/StartButton"]
-margin_left = 92.0
-margin_top = 23.0
-margin_right = 185.0
-margin_bottom = 63.0
-mouse_filter = 2
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = SubResource( 1 )
-text = "VOLTAR"
+[node name="Sprite" type="Sprite" parent="PauseScreen/StartButton"]
+position = Vector2( 135, 41 )
+texture = ExtResource( 19 )
 
 [node name="QuitButton" type="TextureButton" parent="PauseScreen"]
 visible = false
@@ -401,20 +394,13 @@ margin_left = -136.0
 margin_top = 145.0
 margin_right = 136.0
 margin_bottom = 233.0
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 17 )
+texture_hover = ExtResource( 18 )
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="PauseScreen/EthicButton"]
-margin_left = 30.0
-margin_top = 25.0
-margin_right = 253.0
-margin_bottom = 105.0
-mouse_filter = 2
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = SubResource( 2 )
-bbcode_enabled = true
-bbcode_text = "[center]CÓDIGO DE ÉTICA [/center]"
-text = "CÓDIGO DE ÉTICA "
+[node name="Sprite" type="Sprite" parent="PauseScreen/EthicButton"]
+position = Vector2( 132, 44 )
+scale = Vector2( 0.525919, 0.613051 )
+texture = ExtResource( 20 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PauseScreen"]
 margin_left = -159.0
