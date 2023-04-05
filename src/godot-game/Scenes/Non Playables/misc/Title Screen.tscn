@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Non Playables/Title Screen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Logo/logo frame 2.png" type="Texture" id=2]
@@ -8,6 +8,10 @@
 [ext_resource path="res://Sprites/Interface/botao-hover.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Logo/logo-no-background.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/button.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/button.2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/controles (1).png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Jogar.png" type="Texture" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -26,12 +30,22 @@ font_data = ExtResource( 3 )
 size = 14
 font_data = ExtResource( 3 )
 
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="Title Screen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 1.0
 margin_bottom = 1.0
 script = ExtResource( 1 )
+
+[node name="Audio" parent="." instance=ExtResource( 8 )]
 
 [node name="Logo" type="Node2D" parent="."]
 position = Vector2( 176, 80 )
@@ -64,18 +78,13 @@ margin_left = 48.0
 margin_top = 334.0
 margin_right = 320.0
 margin_bottom = 422.0
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 6 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="StartButton"]
-margin_left = -4.0
-margin_top = 23.0
-margin_right = 272.0
-margin_bottom = 63.0
-mouse_filter = 2
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = SubResource( 2 )
-bbcode_enabled = true
+[node name="Sprite" type="Sprite" parent="StartButton"]
+position = Vector2( 134, 43 )
+scale = Vector2( 0.766055, 0.652381 )
+texture = ExtResource( 12 )
 
 [node name="QuitButton" type="TextureButton" parent="."]
 visible = false
@@ -101,18 +110,13 @@ margin_left = 48.0
 margin_top = 469.0
 margin_right = 320.0
 margin_bottom = 557.0
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 6 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="ControlsButton"]
-margin_left = 65.0
-margin_top = 24.0
-margin_right = 240.0
-margin_bottom = 64.0
-mouse_filter = 2
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = SubResource( 2 )
-text = " CONTROLES"
+[node name="Sprite" type="Sprite" parent="ControlsButton"]
+position = Vector2( 136, 33 )
+scale = Vector2( 0.930556, 0.89604 )
+texture = ExtResource( 11 )
 
 [node name="GameVersion" type="RichTextLabel" parent="."]
 margin_left = 288.0
@@ -125,7 +129,8 @@ custom_fonts/normal_font = SubResource( 3 )
 text = " VER 1.0.2.1"
 scroll_active = false
 
-[node name="Audio" parent="." instance=ExtResource( 8 )]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 4 )
 
 [connection signal="tree_exiting" from="." to="." method="_on_Title_Screen_tree_exiting"]
 [connection signal="pressed" from="Logo/AnimatedSprite/OvoButton" to="." method="_on_OvoButton_pressed"]
