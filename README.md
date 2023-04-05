@@ -8,7 +8,7 @@
 
 ## Group for()
 
-## Integrantes: <a href="https://www.linkedin.com/in/gabrielle-dias-cartaxo-85b19526a/">Gabrielle Dias Cartaxo</a>, <a href="https://www.linkedin.com/in/gustavo-widman/">Gustavo Wagon Widman</a>, <a href="https://www.linkedin.com/in/izadora-luz-r-novaes-22419526a/">Izadora Luz Rodrigues Novaes</a>, <a href="https://www.linkedin.com/in/matheusmeendes/">Matheus Ferreira Mendes</a>, <a href="https://www.linkedin.com/in/%C3%B3lin-medeiros-costa-b0a1b426a/">Ólin Costa</a> e <a href="https://www.linkedin.com/in/thomasreitzfeld/">Thomas Reitzfeld</a>
+## Integrantes: <a href="https://www.linkedin.com/in/gabrielle-dias-cartaxo-85b19526a/">Gabrielle Dias Cartaxo</a>, <a href="https://www.linkedin.com/in/gustavo-widman/">Gustavo Wagon Widman</a>, <a href="https://www.linkedin.com/in/izadora-luz-r-novaes-22419526a/">Izadora Luz Rodrigues Novaes</a>, <a href="https://www.linkedin.com/in/matheusmeendes/">Matheus Ferreira Mendes</a>, <a href="https://www.linkedin.com/in/%C3%B3lin-medeiros-costa-b0a1b426a/">Ólin Medeiros Costa</a> e <a href="https://www.linkedin.com/in/thomasreitzfeld/">Thomas Reitzfeld</a>
 ## Descrição
 
 O desenvolvimento desse jogo tem como objetivo suprir as necessidades do nosso cliente, V.tal, em gamificar o atual processo de treinamento do código de ética da empresa. A gamificação visa tornar melhor a didática do treinamento e dinamizar a experiência do colaborador ao longo do processo. Além disso, a ideia também é ter uma maior aderência e aumentar o conhecimento referente ao código de ética e evitar infrações a esse código.
@@ -328,7 +328,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     
 * 0.5.0.0 - 22/03/2023
     * (PULAMOS DE VER pre0.4 PRA 0.5)!
-    * Consertar bug hitbox da interação final com o chefe (TEC;
+    * Consertar bug hitbox da interação final com o chefe (TEC);
     * Consertar hitbox cadeiras (Exec e ADM);
     * Consertar task3 EXEC (Timer);
     * Consertar Reunião EXEC (Posicionamento de Câmera);
@@ -400,7 +400,13 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Aumentar minimum distance_to Roteeador (Casa Blogueira);
     * Diminuir tamanho da sprite do Chefe TEC.
 
-
+* 1.0.2.0 - 29/03/2023
+    * Implementação rudimentar do celular, com animações de abrir, fechar e ícones.
+    
+* 1.0.2.1 - 29/03/2023
+    * Parcialmente implementar temas trabalhados/abordados no jogo/tela inicial;
+    * Consertar Volume Global não Aplicado em Limbos.
+    
 
 ## 📋 Licença/License
 

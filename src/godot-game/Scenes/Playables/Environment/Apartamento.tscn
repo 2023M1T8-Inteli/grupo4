@@ -297,6 +297,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 36, 0, 36 )
 [sub_resource type="ConvexPolygonShape2D" id=35]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 36, 0, 36 )
 
+[sub_resource type="ConvexPolygonShape2D" id=100]
+points = PoolVector2Array( 10.1903, 8.25545, 10.1903, 1.5575, 14.0974, 1.5575, 14.0974, 18.3024, 12.1439, 22.4886, 1.25967, 20.535, 2.09692, 8.81361, 2.09692, 8.81361 )
+
 [sub_resource type="ConvexPolygonShape2D" id=38]
 points = PoolVector2Array( 0, 44, 32, 44, 32, 44, 0, 44 )
 
@@ -2242,9 +2245,16 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 102/navigation_offset = Vector2( 0, 0 )
 102/shape_offset = Vector2( 0, 0 )
 102/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+102/shape = SubResource( 100 )
 102/shape_one_way = false
-102/shape_one_way_margin = 0.0
-102/shapes = [  ]
+102/shape_one_way_margin = 1.0
+102/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 100 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 102/z_index = 0
 103/name = "12_Kitchen_16x16.png 103"
 103/texture = ExtResource( 13 )
