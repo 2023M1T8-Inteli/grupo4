@@ -17,6 +17,11 @@ func _on_TextoBut_pressed():
 		emit_signal("answeredQuiz")
 		# Define que o quiz foi respondido corretamente
 		Global.quizAnswered = true
+		
+		get_parent().get_parent().get_parent().get_parent().get_node("Audio").set_playback_pos("res://Audio Files/QuizRight.mp3" , 0)
+		get_parent().get_parent().get_parent().get_parent().get_node("Audio").set_volume(Global.volPercentage)
+		yield(get_tree().create_timer(2), "timeout")
+		get_parent().get_parent().get_parent().get_parent().get_node("Audio").stop()
 	else:
 		# Se a caixa clicada for a errada, seta o texto formatado da caixa como errado
 		self.get_parent().bbcode_text = "[center][color=#FF7085]"+self.get_parent().text+"[/color][/center]"

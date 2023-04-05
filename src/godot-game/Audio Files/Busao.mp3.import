@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Busao.mp3-53aec6833e6c49d9e981dbbdd796b668.mp3str"
+
+[deps]
+
+source_file="res://Audio Files/Busao.mp3"
+dest_files=[ "res://.import/Busao.mp3-53aec6833e6c49d9e981dbbdd796b668.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
