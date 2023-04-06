@@ -1,10 +1,6 @@
 [
     {"Name":"Tereza", "Text":"Gostaria de denunciar um caso de assédio."},
     {"Name":"Eq. Compliance", "Text":"Lamentamos muito, esse colaborador será orientado! Iremos tomar as medidas necessárias para que isso não volte a acontecer."},
-    {"Name":"Eq. Compliance", "Text":"Caso queira nos contatar no futuro novamente, você também pode utilizar o canal confidencial!. Obrigado pela confiança."},
-    {"Name":"Tereza", "Text":"Canal confidencial?"},
-    {"Name":"Eq. Compliance", "Text":"Sim, é um site no qual você pode registrar os seus relatos. Você pode acessá-lo em qualquer lugar, inclusive no celular."},
-    {"Name":"Eq. Compliance", "Text":"A partir dos relatos, iremos orientar os colaboradores envolvidos e realizar investigações, caso seja necessário."},
-    {"Name":"Tereza", "Text":"Isso é muito útil, assim não preciso vir pessoalmente todas as vezes que precisar. Obrigada!"},
-    {"Name":"Eq. Compliance", "Text":"Disponha!"},
+    {"Name":"Eq. Compliance", "Text":"Qualquer suporte necessário, não hesite em nos contactar. Obrigado pela confiança."},
+    {"Name":"Tereza", "Text":"Obrigada!"}
 ]
