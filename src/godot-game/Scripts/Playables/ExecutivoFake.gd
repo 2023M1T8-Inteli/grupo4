@@ -10,8 +10,8 @@ onready var camera = $Player/Camera2D
 # Função _ready é executada ao iniciar o jogo
 func _ready():
 	# Toca o som do ambiente
-	$Audio.set_volume(Global.volPercentage)
-	$Audio.play_ambient("res://Audio Files/OfficeAmbiente2.mp3")
+	$GUI/Audio.set_volume(Global.volPercentage)
+	$GUI/Audio.play_ambient("res://Audio Files/OfficeAmbiente2.mp3")
 	
 	# Define a variável global canMove como verdadeira
 	Global.canMove = true
