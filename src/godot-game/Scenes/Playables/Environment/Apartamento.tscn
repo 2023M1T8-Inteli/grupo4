@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=2]
+[gd_scene load_steps=121 format=2]
 
 [ext_resource path="res://Sprites/TileMaps/Tileset_16x16_13.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/TileMaps/2_LivingRoom_16x16.png" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 22.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Scenes/Overlays/Quizes/QuizDaily11.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Scenes/Overlays/Dialog Boxes/DialogBox 23.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Sprites/NPCs/Blogueirinha.png" type="Texture" id=28]
 
 [sub_resource type="SegmentShape2D" id=16]
 a = Vector2( 584, -2.28882e-05 )
@@ -2378,6 +2379,76 @@ extents = Vector2( 19, 18 )
 
 [sub_resource type="RectangleShape2D" id=26]
 
+[sub_resource type="AtlasTexture" id=102]
+atlas = ExtResource( 28 )
+region = Rect2( 53, 64, 16, 22 )
+
+[sub_resource type="AtlasTexture" id=103]
+atlas = ExtResource( 28 )
+region = Rect2( 16, 4, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=104]
+atlas = ExtResource( 28 )
+region = Rect2( 32, 4, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=105]
+atlas = ExtResource( 28 )
+region = Rect2( 48, 4, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=106]
+atlas = ExtResource( 28 )
+region = Rect2( 64, 4, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=107]
+atlas = ExtResource( 28 )
+region = Rect2( 80, 4, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=110]
+atlas = ExtResource( 28 )
+region = Rect2( 1, 38, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=111]
+atlas = ExtResource( 28 )
+region = Rect2( 17, 38, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=112]
+atlas = ExtResource( 28 )
+region = Rect2( 33, 38, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=113]
+atlas = ExtResource( 28 )
+region = Rect2( 50, 38, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=114]
+atlas = ExtResource( 28 )
+region = Rect2( 66, 38, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=115]
+atlas = ExtResource( 28 )
+region = Rect2( 82, 38, 16, 23 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 28 )
+region = Rect2( 98, 38, 16, 23 )
+
+[sub_resource type="SpriteFrames" id=109]
+animations = [ {
+"frames": [ SubResource( 102 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ) ],
+"loop": true,
+"name": "horizontal",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ) ],
+"loop": true,
+"name": "up",
+"speed": 12.0
+} ]
+
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
 "frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ) ],
@@ -2556,6 +2627,7 @@ margin_left = 470.0
 margin_top = 34.0
 margin_right = 485.0
 margin_bottom = 64.0
+color = Color( 1, 1, 1, 0 )
 
 [node name="Position2D" type="Position2D" parent="SpriteBlogueira"]
 position = Vector2( 7, 14 )
@@ -2564,6 +2636,13 @@ position = Vector2( 7, 14 )
 visible = false
 scale = Vector2( 0.775325, 1.52237 )
 shape = SubResource( 26 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SpriteBlogueira"]
+position = Vector2( 7, 14 )
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 109 )
+animation = "horizontal"
+playing = true
 
 [node name="TaskRoteador" type="Control" parent="."]
 visible = false
@@ -2578,7 +2657,6 @@ scale = Vector2( 0.7, 0.7 )
 position = Vector2( 496, 157 )
 scale = Vector2( 0.04, 0.04 )
 frames = SubResource( 23 )
-frame = 1
 playing = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="TaskRoteador"]

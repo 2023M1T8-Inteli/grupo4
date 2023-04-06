@@ -11,13 +11,13 @@ func _ready():
 	
 	
 	# Checa se o jogador já passou pelo diálogo do limbo, se sim, disponibiliza o botão como "Voltar" e não como "Jogar"
-	if Global.finishDialog1 == false:
-		$StartButton/RichTextLabel.bbcode_text = "[center]JOGAR[/center]"
-	elif Global.parte == "tecnico":
-		$StartButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		$StartButton/RichTextLabel.bbcode_text = "[center]AQUI ACABOU![/center]"
-	else:
-		$StartButton/RichTextLabel.bbcode_text = "[center]VOLTAR[/center]"
+	#if Global.finishDialog1 == false:
+	#	$StartButton/RichTextLabel.bbcode_text = "[center]JOGAR[/center]"
+	#elif Global.parte == "tecnico":
+	#	$StartButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	#	$StartButton/RichTextLabel.bbcode_text = "[center]AQUI ACABOU![/center]"
+	#else:
+	#	$StartButton/RichTextLabel.bbcode_text = "[center]VOLTAR[/center]"
 	
 	if Global.playbackPos == 0:
 		$Audio.set_playback_pos("res://Audio Files/TitleScreen.mp3" , 0)

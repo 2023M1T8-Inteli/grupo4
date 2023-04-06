@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/QuizTask.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/TextoBut.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizDaily/QuizTaskOpcoes.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=6]
 
@@ -123,6 +124,8 @@ bbcode_enabled = true
 bbcode_text = "[center]Qual seria a melhor reação nessa situação?[/center]"
 text = "Qual seria a melhor reação nessa situação?"
 scroll_active = false
+
+[node name="Audio" parent="." instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="Opcoes/Opcao1/Opcao1/TextoBut" to="Opcoes/Opcao1/Opcao1/TextoBut" method="_on_TextoBut_pressed"]
 [connection signal="pressed" from="Opcoes/Opcao2/Opcao2/TextoBut" to="Opcoes/Opcao2/Opcao2/TextoBut" method="_on_TextoBut_pressed"]

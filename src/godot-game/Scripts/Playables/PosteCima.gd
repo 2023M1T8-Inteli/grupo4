@@ -16,6 +16,8 @@ func _ready():
 	
 	# Habilita o movimento do jogador
 	Global.canMove = true
+	
+	$"ColorRect/WiresTask".connect("prompt_pressed", self, "on_prompt_clicked")
 
 func renderAmong(value):
 	$AmongAncora/amongButton.visible = not value
@@ -26,10 +28,6 @@ func renderAmong(value):
 	$ColorRect/WiresTask.visible = value
 	$DrunkFilter.visible = not value
 	
-	
-	if value == true:
-		$ExplodeTimer.wait_time = 3
-		$ExplodeTimer.start() # Inicia o timer para a explosão do jogador
 	
 func task_complete():
 	# Inicia o timer de sair da tarefa após a conclusão da tarefa
@@ -52,7 +50,7 @@ func _on_ExplodeTimer_timeout():
 		$ExplodeSprite.frame = 0  # Define o primeiro frame da animação de explosão
 		$ExplodeSprite.visible = true  # Torna o sprite de explosão visível
 		$ExplodeSprite.playing = true  # Inicia a animação de explosão
-		$SceneChangeTimer.start()  # Inicia o timer para mudar de cena
+		$SceneChangeTimer.start()
 
 func _on_SceneChangeTimer_timeout():
 	# Define onde o som estava quando a cena e trocada
@@ -72,3 +70,7 @@ func _on_escadaButton_pressed():
 	# Muda para a cena "Prelude" e imprime uma mensagem de erro se houver algum problema
 	if get_tree().change_scene("res://Scenes/Playables/Environment/Prelude.tscn") != OK:
 		print("ERRO")
+
+func on_prompt_clicked():
+	$ExplodeTimer.wait_time = 3
+	$ExplodeTimer.start()
