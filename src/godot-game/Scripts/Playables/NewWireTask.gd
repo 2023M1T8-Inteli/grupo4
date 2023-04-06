@@ -2,6 +2,7 @@ extends CanvasLayer
 
 # Define o sinal que dita quando a task foi feita
 signal finished
+signal prompt_pressed
 
 var deadbolt = true
 
@@ -239,3 +240,4 @@ func _on_pinkButton_button_up():
 # Esta função é responsável por ocultar a caixa de diálogo de prompt quando o botão de textura é pressionado.
 func _on_TextureButton_pressed():
 	$Prompt.visible = false
+	emit_signal("prompt_pressed")

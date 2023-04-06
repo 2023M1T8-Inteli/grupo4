@@ -62,9 +62,16 @@ func _abordagem_anim():
 	yield(get_tree().create_timer(1), "timeout")  # Espera por 1 segundo antes de continuar
 
 	$AnimationPlayer.play("Abordagem")  # Toca a animação "Abordagem"
+	
+	yield(get_tree().create_timer(1), "timeout")
+	
+	$SpriteBlogueira/AnimatedSprite.animation = "up"
 
 	yield($AnimationPlayer, "animation_finished")  # Espera a animação terminar
 
+	$SpriteBlogueira/AnimatedSprite.playing = false
+	$SpriteBlogueira/AnimatedSprite.frame = 6
+	
 	$"DialogBox 22".visible = true  # Torna visível a caixa de diálogo "DialogBox 22"
 	
 	# Conecta o sinal "finish" do objeto "TexturaCaixa" à função "_on_dialog1_finish"
@@ -77,8 +84,20 @@ func _abordagem_anim():
 func _on_dialog1_finish():
 	$AnimationPlayer.play_backwards("Abordagem")  # Toca a animação "Abordagem" em reverso
 	
+	$SpriteBlogueira/AnimatedSprite.animation = "down"
+	
+	yield(get_tree().create_timer(0.5), "timeout")
+	
+	$SpriteBlogueira/AnimatedSprite.playing = true
+	$SpriteBlogueira/AnimatedSprite.flip_h = true
+	$SpriteBlogueira/AnimatedSprite.animation = "horizontal"
+	
 	yield($AnimationPlayer, "animation_finished")  # Espera a animação terminar
-
+	
+	$SpriteBlogueira/AnimatedSprite.playing = false
+	$SpriteBlogueira/AnimatedSprite.flip_h = false
+	$SpriteBlogueira/AnimatedSprite.frame = 2
+	
 	$TaskRoteador.visible = true  # Torna visível a tarefa "TaskRoteador"
 	$"DialogBox 22".visible = false  # Torna invisível a caixa de diálogo "DialogBox 22"
 	
