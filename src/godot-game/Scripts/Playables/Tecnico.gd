@@ -1,6 +1,11 @@
 extends Node2D
 
 func _ready():
+	
+	# Toca o som do ambiente
+	$Audio.set_volume(Global.volPercentage)
+	$Audio.play_ambient("res://Audio Files/CidadeAmbiente.mp3")
+	
 	Global.celularVisible = false
 	# Ativa a movimentacao do player
 	Global.canMove = true
