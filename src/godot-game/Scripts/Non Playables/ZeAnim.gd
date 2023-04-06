@@ -11,7 +11,11 @@ func _ready():
 	
 	# Set variavel global playbackPos para 0 para ser usada para a cidade
 	Global.playbackPos = 0
-
+	
+	# Som dos passaros
+	$Audio.set_playback_pos("res://Audio Files/Passaros.mp3" , 10)
+	yield(get_tree().create_timer(4), "timeout")
+	$Audio.stop()
 # Função chamada quando o botão de pular animação é pressionado
 func _on_TextureButton_pressed():
 	SceneTransition.change_scene("res://Scenes/Playables/Environment/Prelude.tscn", 0.5, 0.5)

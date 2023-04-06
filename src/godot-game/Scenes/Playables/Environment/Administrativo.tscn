@@ -1985,7 +1985,7 @@ size = 0.6
 [node name="GUI" parent="." instance=ExtResource( 5 )]
 
 [node name="IconeInsta" parent="GUI/Celular/CelularBase" index="0"]
-margin_right = 85.95
+margin_right = 121.6
 
 [node name="Audio" parent="GUI" instance=ExtResource( 18 )]
 
@@ -2016,7 +2016,7 @@ shape = SubResource( 21 )
 position = Vector2( -1, -27 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 1
+frame = 9
 playing = true
 
 [node name="ComputadorAncora" type="Node2D" parent="Task1ADM"]
@@ -2055,7 +2055,7 @@ shape = SubResource( 21 )
 position = Vector2( -1, -27 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="ComputadorAncora" type="Node2D" parent="Task2ADM"]
@@ -2102,7 +2102,7 @@ fill_mode = 4
 position = Vector2( 169, 230 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 22 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="BotaoObj" type="TouchScreenButton" parent="Task3ADM"]
@@ -2138,7 +2138,6 @@ margin_bottom = -24.0
 [node name="AnimatedSprite" type="AnimatedSprite" parent="AbordagemControl"]
 position = Vector2( 482, 152 )
 frames = SubResource( 104 )
-frame = 2
 playing = true
 
 [node name="NPC1" type="ColorRect" parent="AbordagemControl"]
@@ -2150,6 +2149,8 @@ margin_bottom = 166.0
 
 [node name="DialogBox 6" parent="AbordagemControl" instance=ExtResource( 19 )]
 visible = false
+
+[node name="Audio" parent="." instance=ExtResource( 18 )]
 
 [connection signal="pressed" from="map/Elevador/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="animation_finished" from="WalkInPlayer" to="." method="_on_WalkInPlayer_animation_finished"]

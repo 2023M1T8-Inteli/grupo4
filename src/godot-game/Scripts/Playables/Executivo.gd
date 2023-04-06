@@ -162,6 +162,11 @@ func _assedio_anim():
 	$ControlAssedio/AssediadorCima.position = $ControlAssedio/ColorRect.position
 	$ControlAssedio/AssediadorCima.visible = true
 	
+	# Toca o som do assovio
+	$GUI/Audio.set_playback_pos("res://Audio Files/Assedio.mp3" , 0)
+	yield(get_tree().create_timer(1.29), "timeout")
+	$GUI/Audio.stop()
+	
 	# Torna visível uma caixa de diálogo e inicia o evento de diálogo
 	$"ControlAssedio/DialogBox 12".visible = true
 	$"ControlAssedio/DialogBox 12/TexturaCaixa"._startDialog()
