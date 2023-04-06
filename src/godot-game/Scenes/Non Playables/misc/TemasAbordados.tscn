@@ -2,16 +2,16 @@
 
 [ext_resource path="res://Sprites/Interface/Second_Title_scene.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Non Playables/TemasAbordados.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Non Playables/misc/Title Screen.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://addons/AsepriteWizard/export/titlescreen.png" type="Texture" id=3]
 
 [node name="TemasAbordados" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" type="Sprite" parent="."]
 position = Vector2( 180, 319 )
-frames = ExtResource( 3 )
+texture = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 360.0
