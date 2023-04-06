@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizAlt/QuizCaixa.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizAlt/QuizTask.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scripts/misc/Quiz Tasks/QuizAlt/TextoBut.gd" type="Script" id=4]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Sprites/Interface/dialogue_box.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 39
@@ -244,6 +245,8 @@ margin_left = -69.0
 margin_top = -232.0
 margin_right = 291.0
 margin_bottom = 408.0
+
+[node name="Audio" parent="." instance=ExtResource( 7 )]
 
 [connection signal="pressed" from="DialogBox/TexturaCaixa/TextureButton" to="DialogBox/TexturaCaixa" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="DialogBox/TexturaCaixa/ReturnArrow/ReturnButton" to="DialogBox/TexturaCaixa" method="_on_ReturnButton_pressed"]
