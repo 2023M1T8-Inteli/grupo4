@@ -407,6 +407,22 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Parcialmente implementar temas trabalhados/abordados no jogo/tela inicial;
     * Consertar Volume Global não Aplicado em Limbos.
     
+* 1.1.0.0 - 06/04/2023
+    * Implementação total do novo sistema de celular, que abrange a task LinkedIn na parte ADM e a ultima task do ADM (abordagem com o chefe);
+    * Adicionar cena/botão de "temas abordados" pelo jogo;
+    * Polir tela inicial, toques finais do novo look;
+    * Inserir novas sprites (blogueira animada, chefe animado, zezinho neutro, joaozinho neutro, tecnicos neutros);
+    * Substituir tela de comentários.
+    
+* 1.1.0.1 - 06/04/2023
+    * Consertar tela inicial;
+    * Consertar uma fala dentro da parte EXEC;
+    * Export gitpages.
+    
+* 1.1.0.3 - 06/04/2023
+    * Consertar bug da van (TEC, voltando do AP).
+    * Entrega final do MVP. Essa é a última atualização! Agradecemos o acompanhamento através de todas as versões que construímos!
+    
 
 ## 📋 Licença/License
 
