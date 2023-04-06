@@ -50,6 +50,7 @@ position = Vector2( 176, 80 )
 position = Vector2( 7.99998, -66 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="Seta" type="Sprite" parent="."]
