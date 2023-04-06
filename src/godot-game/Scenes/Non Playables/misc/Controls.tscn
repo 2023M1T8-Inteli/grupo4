@@ -9,7 +9,7 @@
 [ext_resource path="res://Sprites/Interface/bola.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/misc/Controls.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/Overlays/Audio/Audio.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Non Playables/misc/Title Screen.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://addons/AsepriteWizard/export/titlescreen.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
@@ -33,9 +33,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 8 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" type="Sprite" parent="."]
 position = Vector2( 180, 320 )
-frames = ExtResource( 10 )
+texture = ExtResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.654902 )
@@ -50,7 +50,6 @@ position = Vector2( 176, 80 )
 position = Vector2( 7.99998, -66 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
 
 [node name="Seta" type="Sprite" parent="."]
