@@ -45,6 +45,7 @@ func _on_TouchScreenButton_pressed():
 			Global.canMove = true
 			$TaskRoteador/TextureProgress.visible = false
 			$TaskRoteador/BalaoObj.visible = false
+			$SpriteBlogueira/BalaoObj.visible = true
 			
 			# Definindo a próxima tarefa e objetivo
 			Global.activeObjective[0] = true
@@ -85,10 +86,10 @@ func _on_dialog1_finish():
 	$AnimationPlayer.play_backwards("Abordagem")  # Toca a animação "Abordagem" em reverso
 	
 	$SpriteBlogueira/AnimatedSprite.animation = "down"
+	$SpriteBlogueira/AnimatedSprite.playing = true
 	
 	yield(get_tree().create_timer(0.5), "timeout")
 	
-	$SpriteBlogueira/AnimatedSprite.playing = true
 	$SpriteBlogueira/AnimatedSprite.flip_h = true
 	$SpriteBlogueira/AnimatedSprite.animation = "horizontal"
 	
@@ -132,6 +133,7 @@ func _on_dialog3_finish():
 	Global.activeObjective[1] = $PortaAncora.global_position
 	Global.activeObjective[2] = "Volte para o campo."
 	$Player.objective(false)
+	$SpriteBlogueira/BalaoObj.visible = false
 	
 	# Ativa a colisão do objeto Area2D/CollisionShape2D
 	$Area2D/CollisionShape2D.disabled = false

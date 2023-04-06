@@ -17,6 +17,8 @@ var dialog
 var buttonPressed
 var phraseNum = 0
 
+var celularWasVisible = false
+
 func _ready():
 	$FinishArrow/AnimationPlayer.play("hover")
 	$ReturnArrow/ReturnButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -33,6 +35,9 @@ func _ready():
 func start_dialog():
 	# Avança para a próxima frase
 	nextPhrase()
+	if Global.celularVisible == true:
+		celularWasVisible = true
+		Global.celularVisible = false
 	
 func _process(_delta):
 	# Torna as setinhas visíveis quando o diálogo termina e ativa o botao de retorno de dialogo
@@ -117,6 +122,9 @@ func _on_TextureButton_pressed():
 	# Verifica se o diálogo foi finalizado e emite o sinal de "finish"
 	if phraseNum == len(dialog) and finished == true:
 		emit_signal("finish")
+		if celularWasVisible:
+			Global.celularVisible = true
+			celularWasVisible = false
 
 # Funcao que roda para voltar falas
 func _on_ReturnButton_pressed():

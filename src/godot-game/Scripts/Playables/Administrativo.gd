@@ -11,6 +11,8 @@ var map_height = 0
 var closeToPorta = false
 
 func _ready() -> void:
+	Global.celularVisible = true
+	
 	# Define a parte do jogo atual
 	Global.parte = "administrativo"
 
@@ -28,13 +30,13 @@ func _ready() -> void:
 		_play_abordagem_anim()
 		$map/Elevador/TextureButton.visible = false
 		$Task1ADM.visible = true
-	elif AdmGlobals.currentTask == 1:
+	elif AdmGlobals.currentTask == 2:
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
 		Global.activeObjective[2] = "Volte ao trabalho."
 		$Player.objective(true)
 		$Task2ADM.visible = true
-	elif AdmGlobals.currentTask == 2:
+	elif AdmGlobals.currentTask == 3:
 		Global.activeObjective[0] = true
 		Global.activeObjective[1] = $Task1ADM/ComputadorAncora.global_position
 		Global.activeObjective[2] = "Arrume suas coisas e vá para casa."
@@ -74,7 +76,7 @@ func _process(_delta: float) -> void:
 
 func _on_TextureButton_pressed():
 	# Verifica se o jogador está perto da porta, se a tarefa atual é 1, 2 ou 3 e se ele pode se mover
-	if closeToPorta and (AdmGlobals.currentTask == 1 or AdmGlobals.currentTask == 2 or AdmGlobals.currentTask == 3) and AdmGlobals.canGo:
+	if closeToPorta and AdmGlobals.currentTask == 1 and AdmGlobals.canGo:
 		AdmGlobals.canGo = false
 		# Impede o movimento do jogador durante a transição de cena
 		Global.canMove = false
@@ -84,6 +86,17 @@ func _on_TextureButton_pressed():
 		if get_tree().change_scene("res://Scenes/Playables/Environment/ExecutivoFake.tscn") != OK:
 			print("ERRO")
 			
+			
+	if closeToPorta and AdmGlobals.currentTask == 5:
+		# Impede o movimento do jogador durante a transição de cena
+		Global.canMove = false
+		
+		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada
+		yield(get_tree().create_timer(0.15), "timeout")
+		
+		# Tenta mudar para a cena "Limbo3.tscn", exibindo uma mensagem de erro em caso de falha
+		SceneTransition.change_scene("res://Scenes/Playables/Environment/Limbo3.tscn", 1, 1)
+		
 # Executa a animação de abordagem
 func _play_abordagem_anim():
 	# Desativa o movimento do player
@@ -98,6 +111,10 @@ func _play_abordagem_anim():
 	
 	# Aguarda o término da animação de abordagem
 	yield($AnimationHandler, "animation_finished")
+	
+	$AbordagemControl/NPC1/AnimatedSprite.animation = "up"
+	$AbordagemControl/NPC1/AnimatedSprite.playing = false
+	$AbordagemControl/NPC1/AnimatedSprite.frame = 0
 	
 	# Exibe a caixa de diálogo e inicia a conversa
 	$"AbordagemControl/DialogBox 6".visible = true
@@ -114,8 +131,16 @@ func _finish_dialog_6():
 	# Reverte a animação de abordagem
 	$AnimationHandler.play_backwards("AbordagemAnim")
 	
+	$AbordagemControl/NPC1/AnimatedSprite.flip_h = true
+	$AbordagemControl/NPC1/AnimatedSprite.playing = true
+	$AbordagemControl/NPC1/AnimatedSprite.animation = "horizontal"
+	
 	# Aguarda o término da animação
 	yield($AnimationHandler, "animation_finished")
+	
+	$AbordagemControl/NPC1/AnimatedSprite.flip_h = false
+	$AbordagemControl/NPC1/AnimatedSprite.playing = false
+	$AbordagemControl/NPC1/AnimatedSprite.frame = 0
 	
 	# Espera um curto período antes de permitir que o jogador se mova novamente
 	yield(get_tree().create_timer(0.1), "timeout")

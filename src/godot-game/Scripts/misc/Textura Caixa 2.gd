@@ -17,6 +17,8 @@ var dialog
 var buttonPressed
 var phraseNum = 0
 
+var celularWasVisible = false
+
 func _reset():
 	# Reseta o diálogo
 	phraseNum = 0
@@ -29,6 +31,10 @@ func _ready():
 func _startDialog():
 	$FinishArrow/AnimationPlayer.play("hover")
 	$ReturnArrow/ReturnButton.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
+	if Global.celularVisible == true:
+		celularWasVisible = true
+		Global.celularVisible = false
 	
 	# Define o tempo de espera do Timer
 	$Timer.wait_time = textSpeed
@@ -116,6 +122,9 @@ func _on_TextureButton_pressed():
 	# Verifica se o diálogo foi finalizado e emite o sinal de "finish"
 	if phraseNum == len(dialog) and finished == true:
 		emit_signal("finish")
+		if celularWasVisible:
+			Global.celularVisible = true
+			celularWasVisible = false
 
 
 # Funcao que roda para voltar falas

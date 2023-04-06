@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Scripts/misc/GUI.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=2]
@@ -20,6 +20,14 @@
 [ext_resource path="res://Sprites/button.2.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/voltar.png" type="Texture" id=19]
 [ext_resource path="res://Sprites/Código_de_ética.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/ADM/tela_comentarios.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/ADM/tela linkedin.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Celular/linkedin_title_screen.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Celular/white_screen.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Overlays/Quizes/QuizDaily8.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Sprites/Celular/compliance_tela (1).png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Celular/balão_de_fala_compliance (1).png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Celular/balão_de_fala_idividuo (1).png" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -36,6 +44,13 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 35, 35 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 13
+font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=8]
 length = 0.001
@@ -277,6 +292,22 @@ tracks/0/keys = {
 "values": [ Vector2( 21, -10 ), Vector2( 21, -17 ), Vector2( 21, -10 ), Vector2( 21, -17 ), Vector2( 21, -10 ) ]
 }
 
+[sub_resource type="Animation" id=17]
+resource_name = "email_error"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeEmail:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
+"update": 0,
+"values": [ Vector2( 21, -10 ), Vector2( 24, -10 ), Vector2( 18, -10 ), Vector2( 24, -10 ), Vector2( 21, -10 ) ]
+}
+
 [sub_resource type="Animation" id=13]
 resource_name = "insta"
 length = 2.0
@@ -294,8 +325,24 @@ tracks/0/keys = {
 "values": [ Vector2( -76, -104 ), Vector2( -76, -111 ), Vector2( -76, -104 ), Vector2( -76, -111 ), Vector2( -76, -104 ) ]
 }
 
+[sub_resource type="Animation" id=18]
+resource_name = "insta_error"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeInsta:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
+"update": 0,
+"values": [ Vector2( -76, -104 ), Vector2( -73, -104 ), Vector2( -79, -104 ), Vector2( -73, -104 ), Vector2( -76, -104 ) ]
+}
+
 [sub_resource type="Animation" id=15]
-resource_name = "linkedin"
+resource_name = "linkedIn"
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -309,6 +356,22 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
 "update": 0,
 "values": [ Vector2( 21, -104 ), Vector2( 21, -111 ), Vector2( 21, -104 ), Vector2( 21, -111 ), Vector2( 21, -104 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "linkedin_error"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeLinkedin:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
+"update": 0,
+"values": [ Vector2( 21, -104 ), Vector2( 24, -104 ), Vector2( 18, -104 ), Vector2( 24, -104 ), Vector2( 21, -104 ) ]
 }
 
 [sub_resource type="Animation" id=16]
@@ -326,6 +389,54 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
 "update": 0,
 "values": [ Vector2( -76, -10 ), Vector2( -76, -17 ), Vector2( -76, -10 ), Vector2( -76, -17 ), Vector2( -76, -10 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "tempo_error"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/CelularBase/IconeTempo:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1e-05 ),
+"update": 0,
+"values": [ Vector2( -76, -10 ), Vector2( -73, -10 ), Vector2( -79, -10 ), Vector2( -73, -10 ), Vector2( -76, -10 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/OpenButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 86, -354 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "shake_phone"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Celular/OpenButton:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 0.5, 0.5, 0.5, 1e-05 ),
+"update": 0,
+"values": [ Vector2( 86, -354 ), Vector2( 86, -368 ), Vector2( 86, -354 ), Vector2( 86, -368 ), Vector2( 86, -354 ) ]
 }
 
 [node name="GUI" type="CanvasLayer"]
@@ -440,7 +551,6 @@ value = 100.0
 [node name="Audio" parent="PauseScreen" instance=ExtResource( 8 )]
 
 [node name="Celular" type="Control" parent="."]
-visible = false
 margin_left = 180.0
 margin_top = 900.0
 margin_right = 180.0
@@ -464,13 +574,6 @@ margin_top = -46.0
 margin_right = 118.0
 margin_bottom = 10.0
 
-[node name="OpenButtonOLD" type="TextureButton" parent="Celular"]
-visible = false
-margin_left = -115.0
-margin_top = -220.0
-margin_right = 115.0
-margin_bottom = -160.0
-
 [node name="CelularBase" type="Sprite" parent="Celular"]
 texture = ExtResource( 9 )
 
@@ -478,7 +581,7 @@ texture = ExtResource( 9 )
 anchor_right = 0.155
 margin_left = -76.0
 margin_top = -104.0
-margin_right = 14.65
+margin_right = 763.3
 margin_bottom = -54.0
 texture_normal = ExtResource( 15 )
 
@@ -499,7 +602,7 @@ texture_normal = ExtResource( 14 )
 [node name="IconeEmail" type="TextureButton" parent="Celular/CelularBase"]
 margin_left = 21.0
 margin_top = -10.0
-margin_right = 76.0
+margin_right = 76.0001
 margin_bottom = 40.0
 texture_normal = ExtResource( 13 )
 
@@ -513,12 +616,384 @@ texture = ExtResource( 11 )
 visible = false
 texture = ExtResource( 10 )
 
-[node name="OpenButton" type="TextureButton" parent="Celular"]
-margin_left = 86.0
-margin_top = -354.0
-margin_right = 156.0
-margin_bottom = -284.0
-texture_normal = ExtResource( 16 )
+[node name="OpenButton" type="TouchScreenButton" parent="Celular"]
+position = Vector2( 86, -354 )
+normal = ExtResource( 16 )
+shape = SubResource( 21 )
+
+[node name="LinkedIn Control" type="Control" parent="Celular"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="WhiteScreen" type="Sprite" parent="Celular/LinkedIn Control"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 24 )
+
+[node name="LinkedIn TitleScreen" type="Sprite" parent="Celular/LinkedIn Control"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 23 )
+
+[node name="Email Control" type="Control" parent="Celular"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="WhiteScreen" type="Sprite" parent="Celular/Email Control"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 24 )
+
+[node name="Email Logo" type="Sprite" parent="Celular/Email Control"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 13 )
+
+[node name="ComplianceTela" type="Sprite" parent="Celular/Email Control"]
+visible = false
+texture = ExtResource( 26 )
+
+[node name="ControlDialogo1" type="Control" parent="Celular/Email Control"]
+margin_left = -91.0
+margin_top = -108.0
+margin_right = 91.0
+margin_bottom = 107.0
+rect_clip_content = true
+mouse_filter = 2
+
+[node name="Fala1" type="Control" parent="Celular/Email Control/ControlDialogo1"]
+visible = false
+margin_left = 91.0
+margin_top = 108.0
+margin_right = 131.0
+margin_bottom = 148.0
+
+[node name="SpriteFalaCompliance1" type="Sprite" parent="Celular/Email Control/ControlDialogo1/Fala1"]
+position = Vector2( -23.75, -72.625 )
+scale = Vector2( 2.72826, 2.17105 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo1/Fala1"]
+margin_left = -76.0
+margin_top = -84.0
+margin_right = 70.0
+margin_bottom = -68.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Boa tarde, Jonas."
+scroll_active = false
+
+[node name="Fala2" type="Control" parent="Celular/Email Control/ControlDialogo1"]
+visible = false
+margin_left = 91.0
+margin_top = 108.0
+margin_right = 131.0
+margin_bottom = 148.0
+
+[node name="SpriteFalaIndividuo1" type="Sprite" parent="Celular/Email Control/ControlDialogo1/Fala2"]
+position = Vector2( 0.875, 24.375 )
+scale = Vector2( 3.54592, 7.11842 )
+texture = ExtResource( 28 )
+
+[node name="FalaIndividuo1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo1/Fala2"]
+margin_left = -76.0
+margin_top = -36.0
+margin_right = 70.0
+margin_bottom = 68.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Gostaria de denunciar um colaborador que fez um comentário preconceituoso na página do LinkedIn da empresa."
+scroll_active = false
+
+[node name="Fala3" type="Control" parent="Celular/Email Control/ControlDialogo1"]
+visible = false
+margin_left = 91.0
+margin_top = 232.0
+margin_right = 131.0
+margin_bottom = 272.0
+
+[node name="SpriteFalaCompliance2" type="Sprite" parent="Celular/Email Control/ControlDialogo1/Fala3"]
+position = Vector2( -0.250002, -58.625 )
+scale = Vector2( 3.75, 3.64474 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance2" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo1/Fala3"]
+margin_left = -77.0
+margin_top = -90.0
+margin_right = 78.0
+margin_bottom = -30.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Iremos tomar as medidas necessárias a respeito desse colaborador."
+scroll_active = false
+
+[node name="Fala4" type="Control" parent="Celular/Email Control/ControlDialogo1"]
+visible = false
+margin_left = 91.0
+margin_top = 175.0
+margin_right = 131.0
+margin_bottom = 215.0
+
+[node name="SpriteFalaCompliance2" type="Sprite" parent="Celular/Email Control/ControlDialogo1/Fala4"]
+position = Vector2( -0.250002, -30.125 )
+scale = Vector2( 3.75, 6.64474 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance2" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo1/Fala4"]
+margin_left = -77.0
+margin_top = -91.0
+margin_right = 78.0
+margin_bottom = 16.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "A V.tal não aceita nenhum caso de desrespeito, seja machismo, racismo ou homofobia com ou entre nossos colaboradores."
+scroll_active = false
+
+[node name="Fala5" type="Control" parent="Celular/Email Control/ControlDialogo1"]
+visible = false
+margin_left = 91.0
+margin_top = 179.0
+margin_right = 131.0
+margin_bottom = 219.0
+
+[node name="SpriteFalaIndividuo1" type="Sprite" parent="Celular/Email Control/ControlDialogo1/Fala5"]
+position = Vector2( 0.875, -15.125 )
+scale = Vector2( 3.54592, 2.96053 )
+texture = ExtResource( 28 )
+
+[node name="FalaIndividuo1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo1/Fala5"]
+margin_left = -76.0
+margin_top = -36.0
+margin_right = 70.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Eu sei, por isso vim avisar."
+scroll_active = false
+
+[node name="Fala6" type="Control" parent="Celular/Email Control/ControlDialogo1"]
+visible = false
+margin_left = 91.0
+margin_top = 167.0
+margin_right = 131.0
+margin_bottom = 207.0
+
+[node name="SpriteFalaCompliance2" type="Sprite" parent="Celular/Email Control/ControlDialogo1/Fala6"]
+position = Vector2( -0.250002, -78.625 )
+scale = Vector2( 3.75, 1.53947 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance2" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo1/Fala6"]
+margin_left = -77.0
+margin_top = -91.0
+margin_right = 78.0
+margin_bottom = 16.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Agradecemos novamente."
+scroll_active = false
+
+[node name="ControlDialogo2" type="Control" parent="Celular/Email Control"]
+margin_left = -91.0
+margin_top = -108.0
+margin_right = 91.0
+margin_bottom = 107.0
+rect_clip_content = true
+mouse_filter = 2
+
+[node name="Fala1" type="Control" parent="Celular/Email Control/ControlDialogo2"]
+visible = false
+margin_left = 91.0
+margin_top = 108.0
+margin_right = 131.0
+margin_bottom = 148.0
+
+[node name="SpriteFalaCompliance1" type="Sprite" parent="Celular/Email Control/ControlDialogo2/Fala1"]
+position = Vector2( -23.75, -72.625 )
+scale = Vector2( 2.72826, 2.17105 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo2/Fala1"]
+margin_left = -76.0
+margin_top = -84.0
+margin_right = 70.0
+margin_bottom = -68.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Boa tarde, Jonas!"
+scroll_active = false
+
+[node name="Fala2" type="Control" parent="Celular/Email Control/ControlDialogo2"]
+visible = false
+margin_left = 91.0
+margin_top = 158.0
+margin_right = 131.0
+margin_bottom = 198.0
+
+[node name="SpriteFalaCompliance1" type="Sprite" parent="Celular/Email Control/ControlDialogo2/Fala2"]
+position = Vector2( 0.749996, -72.625 )
+scale = Vector2( 3.79348, 2.17105 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo2/Fala2"]
+margin_left = -79.0
+margin_top = -84.0
+margin_right = 83.0
+margin_bottom = -68.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "No que podemos te ajudar?"
+scroll_active = false
+
+[node name="Fala3" type="Control" parent="Celular/Email Control/ControlDialogo2"]
+visible = false
+margin_left = 91.0
+margin_top = 160.0
+margin_right = 131.0
+margin_bottom = 200.0
+
+[node name="SpriteFalaIndividuo1" type="Sprite" parent="Celular/Email Control/ControlDialogo2/Fala3"]
+position = Vector2( 0.875, -4.62499 )
+scale = Vector2( 3.54592, 4.06579 )
+texture = ExtResource( 28 )
+
+[node name="FalaIndividuo1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo2/Fala3"]
+margin_left = -76.0
+margin_top = -36.0
+margin_right = 70.0
+margin_bottom = 68.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Estou sofrendo assédio moral do meu chefe."
+scroll_active = false
+
+[node name="Fala4" type="Control" parent="Celular/Email Control/ControlDialogo2"]
+visible = false
+margin_left = 91.0
+margin_top = 181.0
+margin_right = 131.0
+margin_bottom = 221.0
+
+[node name="SpriteFalaCompliance1" type="Sprite" parent="Celular/Email Control/ControlDialogo2/Fala4"]
+position = Vector2( 0.749996, -61.125 )
+scale = Vector2( 3.79348, 3.38158 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo2/Fala4"]
+margin_left = -81.0
+margin_top = -84.0
+margin_right = 86.0
+margin_bottom = -33.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Sentimos muito que esteja passando por isso..."
+scroll_active = false
+
+[node name="Fala5" type="Control" parent="Celular/Email Control/ControlDialogo2"]
+visible = false
+margin_left = 91.0
+margin_top = 173.0
+margin_right = 131.0
+margin_bottom = 213.0
+
+[node name="SpriteFalaCompliance1" type="Sprite" parent="Celular/Email Control/ControlDialogo2/Fala5"]
+position = Vector2( 0.749996, -43.625 )
+scale = Vector2( 3.79348, 5.22369 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo2/Fala5"]
+margin_left = -81.0
+margin_top = -84.0
+margin_right = 86.0
+margin_bottom = -15.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Infelizmente, casos de assédio moral são muito comuns em ambientes de trabalho."
+scroll_active = false
+
+[node name="Fala6" type="Control" parent="Celular/Email Control/ControlDialogo2"]
+visible = false
+margin_left = 91.0
+margin_top = 204.0
+margin_right = 131.0
+margin_bottom = 244.0
+
+[node name="SpriteFalaCompliance1" type="Sprite" parent="Celular/Email Control/ControlDialogo2/Fala6"]
+position = Vector2( 0.749996, -43.625 )
+scale = Vector2( 3.79348, 5.22369 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo2/Fala6"]
+margin_left = -81.0
+margin_top = -84.0
+margin_right = 86.0
+margin_bottom = -15.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Agradecemos sua denúncia, pois agora podemos agir na raiz do problema e assim conseguimos -"
+scroll_active = false
+
+[node name="Fala7" type="Control" parent="Celular/Email Control/ControlDialogo2"]
+visible = false
+margin_left = 91.0
+margin_top = 202.0
+margin_right = 131.0
+margin_bottom = 242.0
+
+[node name="SpriteFalaCompliance1" type="Sprite" parent="Celular/Email Control/ControlDialogo2/Fala7"]
+position = Vector2( 0.749996, -54.125 )
+scale = Vector2( 3.79348, 4.11842 )
+texture = ExtResource( 27 )
+
+[node name="FalaCompliance1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo2/Fala7"]
+margin_left = -81.0
+margin_top = -84.0
+margin_right = 86.0
+margin_bottom = -15.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "- criar um ambiente de trabalho mais saudável e seguro para todos."
+scroll_active = false
+
+[node name="Fala8" type="Control" parent="Celular/Email Control/ControlDialogo2"]
+visible = false
+margin_left = 91.0
+margin_top = 137.0
+margin_right = 131.0
+margin_bottom = 177.0
+
+[node name="SpriteFalaIndividuo1" type="Sprite" parent="Celular/Email Control/ControlDialogo2/Fala8"]
+position = Vector2( 24.875, -26.125 )
+scale = Vector2( 2.56633, 1.80263 )
+texture = ExtResource( 28 )
+
+[node name="FalaIndividuo1" type="RichTextLabel" parent="Celular/Email Control/ControlDialogo2/Fala8"]
+margin_left = -25.0
+margin_top = -38.0
+margin_right = 81.0
+margin_bottom = 66.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Muito obrigado!"
+scroll_active = false
+
+[node name="LinkedInTask" type="CanvasLayer" parent="."]
+layer = 5
+visible = false
+offset = Vector2( 180, 320 )
+transform = Transform2D( 1, 0, 0, 1, 180, 320 )
+
+[node name="LinkedIn" type="Sprite" parent="LinkedInTask"]
+visible = false
+texture = ExtResource( 22 )
+
+[node name="Comentarios" type="Sprite" parent="LinkedInTask"]
+visible = false
+texture = ExtResource( 21 )
+
+[node name="QuizTask" parent="LinkedInTask" instance=ExtResource( 25 )]
+layer = 6
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 8 )
@@ -529,9 +1004,17 @@ anims/slideUp = SubResource( 9 )
 [node name="InteractablePlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 12 )
 anims/email = SubResource( 14 )
+anims/email_error = SubResource( 17 )
 anims/insta = SubResource( 13 )
-anims/linkedin = SubResource( 15 )
+anims/insta_error = SubResource( 18 )
+anims/linkedIn = SubResource( 15 )
+anims/linkedin_error = SubResource( 19 )
 anims/tempo = SubResource( 16 )
+anims/tempo_error = SubResource( 20 )
+
+[node name="PhoneIconShaker" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 23 )
+anims/shake_phone = SubResource( 24 )
 
 [node name="Tween" type="Tween" parent="."]
 
@@ -541,7 +1024,6 @@ anims/tempo = SubResource( 16 )
 [connection signal="pressed" from="PauseScreen/EthicButton" to="." method="_on_EthicButton_pressed"]
 [connection signal="value_changed" from="PauseScreen/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="Celular/CloseArrow/CloseButton" to="." method="_on_CloseButton_pressed"]
-[connection signal="pressed" from="Celular/OpenButtonOLD" to="." method="_on_OpenButton_pressed"]
 [connection signal="pressed" from="Celular/CelularBase/IconeInsta" to="." method="_on_IconeInsta_pressed"]
 [connection signal="pressed" from="Celular/CelularBase/IconeLinkedin" to="." method="_on_IconeLinkedin_pressed"]
 [connection signal="pressed" from="Celular/CelularBase/IconeTempo" to="." method="_on_IconeTempo_pressed"]

@@ -124,21 +124,22 @@ mouse_filter = 2
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "
-   VER 1.0.2.1"
+   VER 1.1.0.0"
 scroll_active = false
 
-[node name="Sprite" type="TextureButton" parent="."]
-margin_left = -21.0
-margin_top = 580.0
-margin_right = 231.0
-margin_bottom = 748.0
+[node name="Audio" parent="." instance=ExtResource( 8 )]
+
+[node name="BotaoTema" type="TextureButton" parent="."]
+margin_left = 10.0
+margin_top = 588.0
+margin_right = 123.0
+margin_bottom = 700.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 7 )
-
-[node name="Audio" parent="." instance=ExtResource( 8 )]
 
 [connection signal="tree_exiting" from="." to="." method="_on_Title_Screen_tree_exiting"]
 [connection signal="pressed" from="Logo/AnimatedSprite/OvoButton" to="." method="_on_OvoButton_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="pressed" from="ControlsButton" to="." method="_on_ControlsButton_pressed"]
+[connection signal="pressed" from="BotaoTema" to="." method="_on_BotaoTema_pressed"]

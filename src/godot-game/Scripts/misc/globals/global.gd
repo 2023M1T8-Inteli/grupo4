@@ -41,3 +41,5 @@ var volume = (volPercentage * 0.25) - 35
 var celularVisible = false
 
 var currentApp = "null"
+
+var celularComplianceTask = 0

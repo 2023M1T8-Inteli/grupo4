@@ -52,3 +52,7 @@ func _on_Title_Screen_tree_exiting():
 # Quando o botão "Sair" é pressionado, o programa é encerrado. 
 #func _on_QuitButton_pressed():
 #	get_tree().quit()
+
+
+func _on_BotaoTema_pressed():
+	get_tree().change_scene("res://Scenes/Non Playables/misc/TemasAbordados.tscn")

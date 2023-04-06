@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	Global.celularVisible = false
 	# Ativa a movimentacao do player
 	Global.canMove = true
 	
