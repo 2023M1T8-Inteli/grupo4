@@ -108,7 +108,8 @@ func _on_quiz_finish():
 	get_parent().get_node("GUI").shake_phone_icon(true)
 	Global.currentApp = "email"
 	get_parent().get_node("Player").objective(false)
-	get_parent().get_node("GUI").connect("finishedCompliance2", self, "on_task_finish")
+	if get_parent().get_node("GUI").connect("finishedCompliance2", self, "on_task_finish") != OK:
+		print("ERRO AO CONECTAR")
 
 	# Torna o próprio nó invisível
 	self.visible = false

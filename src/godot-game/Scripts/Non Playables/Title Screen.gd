@@ -55,4 +55,5 @@ func _on_Title_Screen_tree_exiting():
 
 
 func _on_BotaoTema_pressed():
-	get_tree().change_scene("res://Scenes/Non Playables/misc/TemasAbordados.tscn")
+	if get_tree().change_scene("res://Scenes/Non Playables/misc/TemasAbordados.tscn") != OK:
+		print("ERRO AO MUDAR DE CENA")

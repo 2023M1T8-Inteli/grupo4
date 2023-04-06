@@ -174,7 +174,8 @@ func _on_IconeLinkedin_pressed():
 		$LinkedInTask/Comentarios.visible = true
 		yield(get_tree().create_timer(5), "timeout")
 		$LinkedInTask/QuizTask.visible = true
-		$LinkedInTask/QuizTask.connect("quizFinish", self, "_on_linkedin_quiz_finished")
+		if $LinkedInTask/QuizTask.connect("quizFinish", self, "_on_linkedin_quiz_finished") != OK:
+			print("ERRO AO CONECTAR")
 		$LinkedInTask/QuizTask._startQuiz()
 		Global.activeObjective[0] = true
 		Global.activeObjective[2] = "No seu celular, acesse o app do eMail"

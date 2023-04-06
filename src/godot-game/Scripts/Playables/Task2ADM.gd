@@ -10,7 +10,8 @@ func _on_Area2D_body_entered(body):
 		$BalaoObj.visible = false
 		get_parent().get_node("Player").objective(false)
 		get_parent().get_node("GUI").shake_phone_icon(true)
-		get_parent().get_node("GUI").connect("finishedCompliance1", self, "finished_cellphone_task")
+		if get_parent().get_node("GUI").connect("finishedCompliance1", self, "finished_cellphone_task") != OK:
+			print("ERRO AO CONECTAR")
 		
 func finished_cellphone_task():
 	AdmGlobals.currentTask = 3

@@ -12,6 +12,9 @@ var close_to_porta = false  # Renomeei para close_to_porta para seguir as conven
 var updateTimer = false
 var playerSavePos
 
+
+var canLeave = false
+
 func _ready():
 	# Se o jogador estiver em uma reunião, define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (representa a entrada do prédio)
 	if ExecutivoGlobals.reuniao:
@@ -76,14 +79,13 @@ func _process(_delta):
 # Função chamada quando o botão é pressionado
 func _on_TextureButton_pressed():
 	# Verifica se o jogador está perto da porta
-	if close_to_porta:
+	if close_to_porta and canLeave == true:
 		# Impede o movimento do jogador durante a transição de cena
 		Global.canMove = false
 		# Aguarda um curto período antes de mudar de cena, para que a animação da porta seja executada
 		yield(get_tree().create_timer(0.15), "timeout")
-		# Tenta mudar para a cena "Cidade.tscn", exibindo uma mensagem de erro em caso de falha		
-		if get_tree().change_scene("res://Scenes/Playables/Environment/Cidade.tscn") != OK:
-			print("ERRO")
+		# Muda para a cena "Limbo2.tscn"
+		SceneTransition.change_scene("res://Scenes/Playables/Environment/Limbo2.tscn", 1, 1)
 
 # Função chamada quando a animação de entrada do jogador termina
 func _on_WalkInPlayer_animation_finished(_anim_name):
@@ -407,8 +409,8 @@ func _on_NPCCompQuiz2Botao_pressed():
 		Global.activeObjective[2] = "Saia do prédio."
 		# Renderiza o objetivo na tela
 		$Player.objective(false)
+		Global.celularVisible = true
 		
 		# Aguarda 3 segundos antes de mudar para a próxima cena
-		yield(get_tree().create_timer(3.0), "timeout")
-		# Muda para a cena "Limbo2.tscn"
-		SceneTransition.change_scene("res://Scenes/Playables/Environment/Limbo2.tscn", 1, 1)
+		canLeave = true
+

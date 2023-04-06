@@ -17,7 +17,8 @@ func _ready():
 	# Habilita o movimento do jogador
 	Global.canMove = true
 	
-	$"ColorRect/WiresTask".connect("prompt_pressed", self, "on_prompt_clicked")
+	if $"ColorRect/WiresTask".connect("prompt_pressed", self, "on_prompt_clicked") != OK:
+		print("ERROR ON CONNECT")
 
 func renderAmong(value):
 	$AmongAncora/amongButton.visible = not value
