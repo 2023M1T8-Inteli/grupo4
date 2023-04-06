@@ -27,7 +27,11 @@ func _on_BotaoComputador_pressed():
 		$TelaComputador.visible = true
 		yield(get_tree().create_timer(1), "timeout")
 		$TelaComputador/AtaqueHacker.visible = true
-
+		
+		get_parent().get_node("Audio").set_playback_pos("res://Audio Files/AtaqueHacker.mp3" , 0)
+		yield(get_tree().create_timer(2.3), "timeout")
+		get_parent().get_node("Audio").stop()
+		
 		# Pausa a execução por um curto período de tempo para dar tempo das animações ocorrerem
 		yield(get_tree().create_timer(5), "timeout")
 

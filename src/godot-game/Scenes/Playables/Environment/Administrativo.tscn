@@ -2151,6 +2151,12 @@ margin_top = -64.0
 margin_right = 137.0
 margin_bottom = -24.0
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="AbordagemControl"]
+position = Vector2( 482, 152 )
+frames = SubResource( 104 )
+frame = 3
+playing = true
+
 [node name="NPC1" type="ColorRect" parent="AbordagemControl"]
 margin_left = 470.0
 margin_top = 134.0
@@ -2168,6 +2174,8 @@ playing = true
 
 [node name="DialogBox 6" parent="AbordagemControl" instance=ExtResource( 19 )]
 visible = false
+
+[node name="Audio" parent="." instance=ExtResource( 18 )]
 
 [connection signal="pressed" from="map/Elevador/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="animation_finished" from="WalkInPlayer" to="." method="_on_WalkInPlayer_animation_finished"]
