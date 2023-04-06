@@ -77,6 +77,11 @@ func _process(_delta):
 		$ColorRect.visible = true
 		# Emite o sinal que dita quando a task foi completada
 		emit_signal("finished")
+		
+		# Toca o som de correto quando task é finalizada
+		$Audio.set_volume(Global.volPercentage)
+		$Audio.set_playback_pos("res://Audio Files/QuizRight.mp3", 0)
+		
 		# Redefine o estado das variáveis que armazenam o estado da interação do usuário com os botões.
 		blueCorrect = false
 		pinkCorrect = false

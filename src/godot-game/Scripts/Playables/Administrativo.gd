@@ -13,8 +13,8 @@ var closeToPorta = false
 func _ready() -> void:
 	
 	# Toca o som do ambiente
-	$Audio.set_volume(Global.volPercentage)
-	$Audio.play_ambient("res://Audio Files/OfficeAmbiente2.mp3")
+	$GUI/Audio.set_volume(Global.volPercentage)
+	$GUI/Audio.play_ambient("res://Audio Files/OfficeAmbiente2.mp3")
 	
 	Global.celularVisible = true
 	
