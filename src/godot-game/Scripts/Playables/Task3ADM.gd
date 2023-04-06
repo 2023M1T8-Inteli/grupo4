@@ -103,7 +103,7 @@ func _on_quiz_finish():
 
 	# Define a primeira tarefa como ativa novamente, define a terceira tarefa e permite que o jogador vá para o setor executivo
 	Global.activeObjective[0] = true
-	Global.activeObjective[2] = "No seu celular, acesse o app do eMail"
+	Global.activeObjective[2] = "No seu celular, acesse o app do Email"
 	Global.celularComplianceTask = 1
 	get_parent().get_node("GUI").shake_phone_icon(true)
 	Global.currentApp = "email"

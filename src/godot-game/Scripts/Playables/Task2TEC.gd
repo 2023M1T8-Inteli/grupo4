@@ -28,6 +28,7 @@ func _ready():
 		$Caminhao.rotation = 0
 		$BalaoObj.visible = false
 		$Caminhao/TouchScreenButton.visible = false
+		$Caminhao.position = Vector2($Caminhao.position.x, $Caminhao.position.y-30)
 		
 		# Define o objetivo ativo como true e define sua posição e descrição
 		Global.activeObjective[0] = true

@@ -125,7 +125,7 @@ mouse_filter = 2
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "
-   VER 1.1.0.2"
+   VER 1.1.0.3"
 scroll_active = false
 
 [node name="Audio" parent="." instance=ExtResource( 8 )]

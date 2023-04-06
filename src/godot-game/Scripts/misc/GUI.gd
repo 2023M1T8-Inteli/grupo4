@@ -178,7 +178,7 @@ func _on_IconeLinkedin_pressed():
 			print("ERRO AO CONECTAR")
 		$LinkedInTask/QuizTask._startQuiz()
 		Global.activeObjective[0] = true
-		Global.activeObjective[2] = "No seu celular, acesse o app do eMail"
+		Global.activeObjective[2] = "No seu celular, acesse o app do Email"
 		get_parent().get_node("Player").objective(true)
 		yield(get_tree().create_timer(0.5), "timeout")
 		Global.canMove = false
