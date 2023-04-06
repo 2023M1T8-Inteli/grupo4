@@ -143,7 +143,7 @@ func finish():
 		# Espera 2 segundos antes de mudar de cena.
 		yield(get_tree().create_timer(2), "timeout")
 		# Muda para a cena do menu principal.
-		if get_tree().change_scene("res://Scenes/Non Playables/misc/Title Screen.tscn") != OK:
+		if get_tree().change_scene("res://Scenes/Non Playables/Animations/ZeAcordando.tscn") != OK:
 			print("ERRO AO MUDAR DE CENA")
 		Global.parte = "fim"
 

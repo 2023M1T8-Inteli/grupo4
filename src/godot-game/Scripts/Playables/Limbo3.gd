@@ -56,4 +56,4 @@ func _on_TexturaCaixa2_finish():
 	Global.parte = "tecnico"
 	# Em seguida, a função 'change_scene()' do nó 'SceneTransition' é chamada para mudar a cena para 'Tecnico.tscn'
 	# Os dois últimos argumentos (1, 1) indicam que a transição será suave e a tela não será limpa antes da transição
-	SceneTransition.change_scene("res://Scenes/Playables/Environment/Tecnico.tscn", 1, 1)
+	SceneTransition.change_scene("res://Scenes/Non Playables/Animations/ComecoJoao.tscn", 1, 1)
