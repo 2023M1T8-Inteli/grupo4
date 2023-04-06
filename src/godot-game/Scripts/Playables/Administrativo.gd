@@ -11,6 +11,11 @@ var map_height = 0
 var closeToPorta = false
 
 func _ready() -> void:
+	
+	# Toca o som do ambiente
+	$Audio.set_volume(Global.volPercentage)
+	$Audio.play_ambient("res://Audio Files/OfficeAmbiente2.mp3")
+	
 	Global.celularVisible = true
 	
 	# Define a parte do jogo atual
@@ -22,6 +27,7 @@ func _ready() -> void:
 
 	# Define que o jogador pode se mover
 	Global.canMove = true
+	
 
 	# Define qual é o objetivo atual
 	if AdmGlobals.currentTask == 0:

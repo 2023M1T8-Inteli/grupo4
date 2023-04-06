@@ -3322,6 +3322,7 @@ position = Vector2( 11, 14 )
 position = Vector2( 11, -6 )
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 20 )
+frame = 5
 playing = true
 
 [node name="NPC1Botao" type="TouchScreenButton" parent="SegInfo/NPC1"]

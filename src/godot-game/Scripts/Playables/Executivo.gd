@@ -16,6 +16,10 @@ var playerSavePos
 var canLeave = false
 
 func _ready():
+	# Toca o som do ambiente
+	$GUI/Audio.set_volume(Global.volPercentage)
+	$GUI/Audio.play_ambient("res://Audio Files/OfficeAmbiente.mp3")
+
 	# Se o jogador estiver em uma reunião, define que o primeiro objetivo está ativo e qual é a posição do objeto 'ADM' (representa a entrada do prédio)
 	if ExecutivoGlobals.reuniao:
 		Global.activeObjective[0] = true
@@ -23,10 +27,7 @@ func _ready():
 		Global.activeObjective[2] = "Vá para a reunião!"
 		$Player.objective(true)
 		$NPCQuiz1.visible = false
-		
-		$GUI/Audio.set_volume(Global.volPercentage)
-		$GUI/Audio.play_ambient("res://Audio Files/OfficeAmbiente.mp3")
-	
+
 	# Habilita o movimento do jogador
 	Global.canMove = true
 	
